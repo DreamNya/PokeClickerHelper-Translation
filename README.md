@@ -1,4 +1,8 @@
 # 宝可梦点击（Poke Clicker）内核汉化脚本
+脚本猫安装地址：
+https://scriptcat.org/zh-CN/script-show-page/837/
+
+
 
 独立脚本 不依赖宝可梦点击（Poke Clicker）辅助脚本 脚本核心模块
 
