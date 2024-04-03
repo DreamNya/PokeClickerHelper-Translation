@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         宝可梦点击（Poke Clicker）内核汉化脚本
 // @namespace    PokeClickerHelper
-// @version      0.10.19-b
+// @version      0.10.19-c
 // @description  采用内核汉化形式，目前汉化范围：所有任务线、城镇名
-// @author       DreamNya, ICEYe, iktsuarpok, 我是谁？, 顶不住了, 银☆星
+// @author       DreamNya, ICEYe, iktsuarpok, 我是谁？, 顶不住了, 银☆星c
 // @match        http://localhost:3000/
 // @match        https://www.pokeclicker.com
 // @match        https://g8hh.github.io/pokeclicker/
@@ -49,7 +49,7 @@ for (const resource of resources) {
 }
 
 async function FetchResource(resource) {
-    const past = +localStorage.getItem(`PokeClickerHelper-Translation-${resource}-lastModified`) ?? 0;
+    const past = +(localStorage.getItem(`PokeClickerHelper-Translation-${resource}-lastModified`) ?? 0);
     if (now - past <= 86400 * 3 * 1000) {
         const cache = localStorage.getItem(`PokeClickerHelper-Translation-${resource}`);
         if (cache) {
@@ -98,7 +98,7 @@ QuestLine.prototype.addQuest = new Proxy(QuestLine.prototype.realAddQuest, {
             }
             if (quest instanceof MultipleQuestsQuest) {
                 quest.quests.forEach((q) => {
-                    const description = quest.description;
+                    const description = q.description;
                     const displayDescription = translation.descriptions[description];
                     if (displayDescription) {
                         Object.defineProperty(q, "description", {
@@ -145,18 +145,7 @@ document
     .querySelectorAll('#questsModalQuestLinesPane knockout.font-weight-bold.d-block[data-bind="text: $data.name"]')
     .forEach((i) => (i.dataset.bind = "text: $data.displayName"));
 
-/*
-Translations = Object.assign({}, ...Object.values(Translation));
-q = App.game.quests.questLines();
-q.reduce((obj, questline) => {
-    const subObj = {};
-    subObj.name = Translations[questline.name] ?? questline.name;
-    subObj.description = Object.fromEntries(questline.quests?.().map((i) => [i.description, Translations[i.description] ?? ""]));
-    obj[questline.name] = subObj;
-    return obj;
-}, {});
-*/
-
+// 导出完整json方法
 TranslationHelper.ExportTranslation = {};
 TranslationHelper.ExportTranslation.QuestLine = function () {
     TranslationHelper.exporting = true;
