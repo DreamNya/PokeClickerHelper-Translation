@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         宝可梦点击（Poke Clicker）内核汉化脚本
 // @namespace    PokeClickerHelper
-// @version      0.10.19-c
+// @version      0.10.19-d
 // @description  采用内核汉化形式，目前汉化范围：所有任务线、城镇名
-// @author       DreamNya, ICEYe, iktsuarpok, 我是谁？, 顶不住了, 银☆星c
+// @author       DreamNya, ICEYe, iktsuarpok, 我是谁？, 顶不住了, 银☆星, TerVoid
 // @match        http://localhost:3000/
 // @match        https://www.pokeclicker.com
 // @match        https://g8hh.github.io/pokeclicker/
@@ -17,18 +17,20 @@
 // @license      MIT
 // @connect      cdn.jsdelivr.net
 // ==/UserScript==
-/* global TownList, QuestLine:true, Notifier, MultipleQuestsQuest, App */
+/* global TownList, QuestLine:true, Notifier, MultipleQuestsQuest, App, NPC, NPCController */
 
 //储存汉化文本
 const Translation = {};
 const TranslationHelper = { Translation, exporting: false };
-(window.PokeClickerHelper || window.PokeClickerHelperPlus || window).TranslationHelper = TranslationHelper;
+const CoreModule = window.PokeClickerHelper ?? window.PokeClickerHelperPlus;
+(CoreModule ?? window).TranslationHelper = TranslationHelper;
 
 // 引用外部资源
 // CDN: https://cdn.jsdelivr.net
 // GIT: https://github.com/DreamNya/PokeClickerHelper-Translation
-const resources = ["QuestLine", "Town"];
+const resources = ["QuestLine", "Town", "NPC"];
 const now = Date.now();
+const failed = [];
 
 for (const resource of resources) {
     Translation[resource] = await FetchResource(resource).catch(() => {
@@ -38,6 +40,7 @@ for (const resource of resources) {
             return JSON.parse(cache);
         } else {
             console.log("PokeClickerHelper-Translation", "all failed获取json", resource);
+            failed.push(resource);
             Notifier.notify({
                 title: "宝可梦点击（Poke Clicker）内核汉化脚本",
                 message: `请求汉化json失败，请检查网络链接或更新脚本\n无法完成汉化：${resource}`,
@@ -58,7 +61,9 @@ async function FetchResource(resource) {
         }
     }
     const url = `https://cdn.jsdelivr.net/gh/DreamNya/PokeClickerHelper-Translation/json/${resource}.json`;
-    const response = await fetch(url);
+    const response = await fetch(url, {
+        cache: "no-cache",
+    });
     if (response.status == 200) {
         const json = await response.json();
         console.log("PokeClickerHelper-Translation", "从CDN获取json", resource);
@@ -69,6 +74,10 @@ async function FetchResource(resource) {
         throw new Error();
     }
 }
+
+Translation.NPCName = Translation.NPC.NPCName ?? {};
+Translation.NPCDialog = Translation.NPC.NPCDialog ?? {};
+TranslationHelper.toggleRaw = false;
 
 // 汉化城镇
 Object.values(TownList).forEach((t) => {
@@ -145,6 +154,30 @@ document
     .querySelectorAll('#questsModalQuestLinesPane knockout.font-weight-bold.d-block[data-bind="text: $data.name"]')
     .forEach((i) => (i.dataset.bind = "text: $data.displayName"));
 
+// 汉化NPC
+Object.values(TownList)
+    .flatMap((i) => i.npcs)
+    .forEach((npc) => {
+        if (!npc) {
+            return;
+        }
+        npc.displayName = Translation.NPCName[npc.name] ?? npc.name;
+        npc.rawDialog = npc.dialog;
+        npc.translatedDialog = npc.rawDialog?.map((d) => Translation.NPCDialog[d] ?? d);
+        delete npc.dialog;
+    });
+Object.defineProperty(NPC.prototype, "dialog", {
+    get() {
+        return TranslationHelper.toggleRaw ? this.rawDialog : this.translatedDialog;
+    },
+});
+
+// 修改NPC文本显示绑定
+document.querySelector(
+    "#townView button[data-bind='text: $data.name, click: () => NPCController.openDialog($data)']"
+).dataset.bind = "text: $data.displayName, click: () => NPCController.openDialog($data)";
+document.querySelector("#npc-modal h5").dataset.bind = "text: $data.displayName";
+
 // 导出完整json方法
 TranslationHelper.ExportTranslation = {};
 TranslationHelper.ExportTranslation.QuestLine = function () {
@@ -170,3 +203,73 @@ TranslationHelper.ExportTranslation.QuestLine = function () {
     TranslationHelper.exporting = false;
     return json;
 };
+
+TranslationHelper.ExportTranslation.NPC_format = function () {
+    const toggleRaw = TranslationHelper.toggleRaw;
+    TranslationHelper.toggleRaw = true;
+    const json = Object.values(TownList).reduce((obj, town) => {
+        const npcs = town.npcs;
+        if (npcs?.length > 0) {
+            obj[town.name] = npcs.map((npc) => {
+                const subObj = {
+                    name: { [npc.name]: Translation.NPCName[npc.name] ?? "" },
+                };
+                if (npc.dialog?.length > 0) {
+                    subObj.dialog = Object.fromEntries(npc.dialog.map((d) => [d, Translation.NPCDialog[d] ?? ""]));
+                }
+                return subObj;
+            });
+        }
+        return obj;
+    }, {});
+    TranslationHelper.toggleRaw = toggleRaw;
+    return json;
+};
+
+// UI (需要PokeClickerHelper)
+if (CoreModule) {
+    const prefix = CoreModule.UIContainerID[0].replace("#", "").replace("Container", "") + "TranslationHelper";
+
+    CoreModule.UIDOM.push(`
+    <div id="${prefix}" class="custom-row">
+        <div class="contentLabel">
+            <label>内核汉化</label>
+        </div>
+        <div style="flex: auto;">
+            <button id="${prefix}Refresh" class="btn btn-sm btn-primary mr-1" data-save="false" title="刷新游戏后强制请求汉化json&#10;*仅清空脚本缓存，可能存在浏览器缓存需手动清理">清空缓存</button>
+            <button id="${prefix}Toggle" class="btn btn-sm btn-primary mr-1" data-save="false" value="切换原文" title="仅NPC对话支持热切换（*其他汉化暂不支持）">切换原文</button>
+        </div>
+    </div>
+    `);
+    CoreModule.UIlistener.push(() => {
+        $(`#${prefix}`)
+            .on("click", `#${prefix}Refresh`, function () {
+                this.disabled = true;
+                window.PCH_ForceRefreshTranslation(false);
+            })
+            .on("click", `#${prefix}Toggle`, function () {
+                if (this.value == "切换原文") {
+                    $(this).text((this.value = "切换汉化"));
+                    TranslationHelper.toggleRaw = true;
+                } else {
+                    $(this).text((this.value = "切换原文"));
+                    TranslationHelper.toggleRaw = false;
+                }
+                if ($("#npc-modal").is(":visible")) {
+                    NPCController.selectedNPC(NPCController.selectedNPC());
+                }
+            });
+    });
+}
+
+if (failed.length == 0) {
+    window.PCH_ForceRefreshTranslation = (refresh = true) => {
+        resources.forEach((resource) => localStorage.removeItem(`PokeClickerHelper-Translation-${resource}-lastModified`));
+        refresh && location.reload();
+    };
+    Notifier.notify({
+        title: "宝可梦点击（Poke Clicker）内核汉化脚本",
+        message: `汉化加载完毕\n可以正常加载存档\n\n<button class="btn btn-block btn-success" onclick="window.PCH_ForceRefreshTranslation()" data-dismiss="toast">清空脚本汉化缓存并刷新</button>`,
+        timeout: 15000,
+    });
+}
