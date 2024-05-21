@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         宝可梦点击（Poke Clicker）内核汉化脚本
 // @namespace    PokeClickerHelper
-// @version      0.10.19-d
-// @description  采用内核汉化形式，目前汉化范围：所有任务线、城镇名
+// @version      0.10.19-e
+// @description  采用内核汉化形式，目前汉化范围：所有任务线、城镇名、NPC及对话
 // @author       DreamNya, ICEYe, iktsuarpok, 我是谁？, 顶不住了, 银☆星, TerVoid
 // @match        http://localhost:3000/
 // @match        https://www.pokeclicker.com
@@ -16,6 +16,7 @@
 // @run-at       document-end
 // @license      MIT
 // @connect      cdn.jsdelivr.net
+// @connect      raw.githubusercontent.com
 // ==/UserScript==
 /* global TownList, QuestLine:true, Notifier, MultipleQuestsQuest, App, NPC, NPCController */
 
@@ -24,10 +25,20 @@ const Translation = {};
 const TranslationHelper = { Translation, exporting: false };
 const CoreModule = window.PokeClickerHelper ?? window.PokeClickerHelperPlus;
 (CoreModule ?? window).TranslationHelper = TranslationHelper;
+TranslationHelper.config = {
+    CDN: CoreModule?.get("CDN", "jsDelivr", true) ?? "jsDelivr",
+    UpdateDelay: CoreModule?.get("UpdateDelay", 3, true) ?? 3,
+    Timeout: CoreModule?.get("Timeout", 10000, true) ?? 10000,
+};
 
 // 引用外部资源
-// CDN: https://cdn.jsdelivr.net
+// CDN-jsDelivr: https://cdn.jsdelivr.net
+// CDN-GitHub: https://raw.githubusercontent.com
 // GIT: https://github.com/DreamNya/PokeClickerHelper-Translation
+const CDN = {
+    jsDelivr: "https://cdn.jsdelivr.net/gh/DreamNya/PokeClickerHelper-Translation/json/",
+    GitHub: "https://raw.githubusercontent.com/DreamNya/PokeClickerHelper-Translation/main/json/",
+};
 const resources = ["QuestLine", "Town", "NPC"];
 const now = Date.now();
 const failed = [];
@@ -51,18 +62,23 @@ for (const resource of resources) {
     });
 }
 
-async function FetchResource(resource) {
+async function FetchResource(resource, force = false) {
     const past = +(localStorage.getItem(`PokeClickerHelper-Translation-${resource}-lastModified`) ?? 0);
-    if (now - past <= 86400 * 3 * 1000) {
+    if (
+        !force &&
+        (TranslationHelper.config.UpdateDelay < 0 || now - past <= 86400 * 1000 * TranslationHelper.config.UpdateDelay)
+    ) {
         const cache = localStorage.getItem(`PokeClickerHelper-Translation-${resource}`);
         if (cache) {
             console.log("PokeClickerHelper-Translation", "从存储获取json", resource);
             return JSON.parse(cache);
         }
     }
-    const url = `https://cdn.jsdelivr.net/gh/DreamNya/PokeClickerHelper-Translation/json/${resource}.json`;
+    const url = `${CDN[TranslationHelper.config.CDN]}${resource}.json`;
     const response = await fetch(url, {
-        cache: "no-cache",
+        cache: "no-store",
+        // 超时中断
+        signal: AbortSignal.timeout(TranslationHelper.config.Timeout),
     });
     if (response.status == 200) {
         const json = await response.json();
@@ -239,6 +255,41 @@ if (CoreModule) {
             <button id="${prefix}Refresh" class="btn btn-sm btn-primary mr-1" data-save="false" title="刷新游戏后强制请求汉化json&#10;*仅清空脚本缓存，可能存在浏览器缓存需手动清理">清空缓存</button>
             <button id="${prefix}Toggle" class="btn btn-sm btn-primary mr-1" data-save="false" value="切换原文" title="仅NPC对话支持热切换（*其他汉化暂不支持）">切换原文</button>
         </div>
+        <div class="contentContainer d-flex ml-2 mt-2" style="flex: auto;align-items: center;flex-wrap: wrap;">
+            <div class="m-auto d-flex" style="align-items: baseline; width: 100%;">
+                <label>
+                    CDN
+                </label>
+                <select id="${prefix}CDN" title="选择任一可连通CDN即可" data-save="global" class="custom-select m-2" style="width: 67%; text-align: center;">
+                    <option value="jsDelivr">
+                        cdn.jsdelivr.net
+                    </option>
+                    <option value="GitHub">
+                        raw.githubusercontent.com
+                    </option>
+                </select>
+                <button id="${prefix}Test" class="btn btn-sm btn-primary" data-save="false" title="测试CDN连通情况">
+                    测试
+                </button>
+            </div>
+            <div class="mt-2 m-auto d-flex">
+                <div class="form-floating" style="width: 30%;">
+                    <input type="number" class="form-control" id="${prefix}UpdateDelay" data-save="global" step="1" value="${TranslationHelper.config.UpdateDelay}" style="text-align: right; height: 45px;">
+                    <label style="padding-right: 0!important; padding-top: 12px!important; font-size: 12px;">
+                        更新周期（天）
+                    </label>
+                </div>
+                <div class="form-floating ml-3" style="width: 32%;">
+                    <input type="number" class="form-control" id="${prefix}Timeout" data-save="global" step="100" value="${TranslationHelper.config.Timeout}" min="3000" style="text-align: right; height: 45px;">
+                    <label style="padding-right: 0!important; padding-top: 12px!important; font-size: 12px;">
+                        请求超时（毫秒）
+                    </label>
+                </div>
+                <div id="${prefix}TestResult" style="margin: auto; width: 30%; text-align: center; color: blue;">
+                    测试结果：未测试
+                </div>
+            </div>
+        </div>
     </div>
     `);
     CoreModule.UIlistener.push(() => {
@@ -258,6 +309,26 @@ if (CoreModule) {
                 if ($("#npc-modal").is(":visible")) {
                     NPCController.selectedNPC(NPCController.selectedNPC());
                 }
+            })
+            .on("change", "[data-save=global]", function () {
+                const id = this.id.replace(prefix, "");
+                if (this.value != "") {
+                    TranslationHelper.config[id] = this.value;
+                }
+            })
+            .on("click", `#${prefix}Test`, async function () {
+                this.disabled = true;
+                const start = Date.now();
+                const result = await FetchResource("Town", true)
+                    .then(() => {
+                        const now = Date.now();
+                        return `测试结果：成功<br>${now - start}ms`;
+                    })
+                    .catch(() => {
+                        return `测试结果：超时<br>不够科学`;
+                    });
+                this.disabled = false;
+                $(`#${prefix}TestResult`).html(result);
             });
     });
 }

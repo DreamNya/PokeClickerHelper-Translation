@@ -10,7 +10,7 @@ https://scriptcat.org/zh-CN/script-show-page/837/
 ## 脚本说明
 独立脚本   
 **UI界面**依赖宝可梦点击（Poke Clicker）辅助脚本 脚本核心模块  
-（不安装亦可正常运行，但不支持UI界面及汉化热切换功能）
+（不安装亦可正常运行，但不支持UI界面交互设置及汉化热切换功能）
 
 采用内核汉化形式，效率较高但缺少兼容性  
 目前主要汉化范围：任务线、城镇名称、NPC名称、NPC对话
@@ -20,7 +20,8 @@ https://scriptcat.org/zh-CN/script-show-page/837/
 
 ## 引用外部资源声明
 
-CDN: https://cdn.jsdelivr.net  
+CDN-jsDelivr: https://cdn.jsdelivr.net
+CDN-GitHub: https://raw.githubusercontent.com
 GIT: https://github.com/DreamNya/PokeClickerHelper-Translation
 
 脚本代码、汉化文本完全由GitHub仓库开源托管
