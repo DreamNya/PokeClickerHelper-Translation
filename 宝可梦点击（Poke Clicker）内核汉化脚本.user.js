@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         宝可梦点击（Poke Clicker）内核汉化脚本
 // @namespace    PokeClickerHelper
-// @version      0.10.19-e
+// @version      0.10.19-f
 // @description  采用内核汉化形式，目前汉化范围：所有任务线、城镇名、NPC及对话
-// @author       DreamNya, ICEYe, iktsuarpok, 我是谁？, 顶不住了, 银☆星, TerVoid
+// @author       DreamNya, ICEYe, iktsuarpok, 我是f谁？, 顶不住了, 银☆星, TerVoid
 // @match        http://localhost:3000/
 // @match        https://www.pokeclicker.com
 // @match        https://g8hh.github.io/pokeclicker/
@@ -26,9 +26,9 @@ const TranslationHelper = { Translation, exporting: false };
 const CoreModule = window.PokeClickerHelper ?? window.PokeClickerHelperPlus;
 (CoreModule ?? window).TranslationHelper = TranslationHelper;
 TranslationHelper.config = {
-    CDN: CoreModule?.get("CDN", "jsDelivr", true) ?? "jsDelivr",
-    UpdateDelay: CoreModule?.get("UpdateDelay", 3, true) ?? 3,
-    Timeout: CoreModule?.get("Timeout", 10000, true) ?? 10000,
+    CDN: CoreModule?.get("TranslationHelperCDN", "jsDelivr", true) ?? "jsDelivr",
+    UpdateDelay: CoreModule?.get("TranslationHelperUpdateDelay", 3, true) ?? 3,
+    Timeout: CoreModule?.get("TranslationHelperTimeout", 10000, true) ?? 10000,
 };
 
 // 引用外部资源
@@ -78,7 +78,7 @@ async function FetchResource(resource, force = false) {
     const response = await fetch(url, {
         cache: "no-store",
         // 超时中断
-        signal: AbortSignal.timeout(TranslationHelper.config.Timeout),
+        signal: AbortSignal.timeout(+TranslationHelper.config.Timeout || 10000),
     });
     if (response.status == 200) {
         const json = await response.json();
