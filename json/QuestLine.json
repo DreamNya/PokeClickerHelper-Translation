@@ -44,7 +44,7 @@
             "Bill's Grandpa wants you to catch a Pokémon that is round, blue, and has leaves growing on its head.": "正辉的爷爷想让你抓一只蓝色圆形且头上长着叶子的宝可梦。",
             "Defeat 100 Grass-type Pokémon.": "击败100只草属性宝可梦",
             "Show your Oddish to Bill's Grandpa.": "向正辉的爷爷展示你的走路草。",
-            "Bill's Grandpa wants you to catch a Pokémon that it has a red sphere in its body and is shaped like a star.": "正辉的爷爷想让你抓住一只身体里有一个红星的宝可梦。",
+            "Bill's Grandpa wants you to catch a Pokémon that has a red sphere in its body and is shaped like a star.": "正辉的爷爷想让你抓住一只身体里有一个红星的宝可梦。",
             "Defeat 100 Water-type Pokémon.": "击败100只水属性宝可梦",
             "Show your Staryu to Bill's Grandpa.": "向正辉的爷爷展示你的海星星。",
             "Bill's Grandpa wants you to catch a Pokémon that is very loyal and supposedly roars pretty well.": "正辉的爷爷想让你抓一只忠诚且会咆哮的宝可梦。",
@@ -90,6 +90,19 @@
         "descriptions": {
             "Talk to the Breeder in Saffron City.": "前往金黄市与培育家谈谈。",
             "Talk to the Gem Scientist in Pewter City.": "前往深灰市与宝石大师谈谈。"
+        }
+    },
+    "The Sick Ampharos": {
+        "name": "生病的电龙",
+        "description": {
+            "Jasmines Ampharos seems to be sick!": "阿蜜的电龙似乎病了！"
+        },
+        "descriptions": {
+            "Clear the Olivine Lighthouse dungeon in Olivine City": "清理浅葱市的浅葱灯塔地牢",
+            "Talk to Jasmine in the Olivine Lighthouse.": "在浅葱灯塔和阿蜜谈谈。",
+            "Talk to the Pharmacist in Cianwood City.": "在湛蓝市和药剂师谈谈。",
+            "The Pharmacist said he needs some time to finish Amphys medicine. Clear the Cianwood City Gym in the meantime.": "药剂师说他需要一些时间来完成光儿的药物。与此同时清理湛蓝市道馆。",
+            "Give Amphy their medicine in the Olivine Lighthouse.": "在浅葱灯塔将药物给光儿"
         }
     },
     "Team Rocket Again": {
@@ -224,7 +237,7 @@
             "Defeat 50 Pokémon on Hoenn Route 129.": "在１２９号水路（丰缘）击败50个宝可梦。",
             "Defeat 500 Psychic-type Pokémon.": "击败500只超能力属性宝可梦。",
             "Capture or hatch 200 Psychic-type Pokémon.": "捕捉或孵化200只超能力属性宝可梦。",
-            "Defeat stage 100 in the Battle Frontier.": "通过对战开拓区100层。"
+            "Enter the Battle Frontier and defeat stage 100.": "通过对战开拓区100层。"
         }
     },
     "The Eon Duo": {
@@ -480,6 +493,44 @@
             "Defeat Ghetsis one final time!": "最后一次击败魁奇思。"
         }
     },
+    "Swords of Justice": {
+        "name": "圣剑士",
+        "description": {
+            "The Swords of Justice sense something bad is about to happen, will you be able to help them out?": "圣剑士预感到一些不好的事情即将发生，你能帮助他们吗？"
+        },
+        "descriptions": {
+            "Talk to the Old Man in Mistralton Cave for clues on where the Swords of Justice are.": "前往吹寄洞穴与老人交谈，寻找圣剑士的线索。",
+            "Search around Mistralton Cave to see if you can find Cobalion, as the Old Man said.": "按照老人的说法，在吹寄洞穴周围搜索，看看能否找到勾帕路翁。",
+            "It looks like you've found Cobalion! Talk to them.": "看起来你找到了勾帕路翁！上前与他们交谈吧。",
+            "Start reuniting the Swords of Justice once again. You should probably start looking for Terrakion around Unova's Victory Road.": "重新集结圣剑士。你应该开始在合众地区的冠军之路附近寻找代拉基翁。",
+            "You've found Terrakion! Talk to them about the reunion.": "你找到了代拉基翁！与他们讨论集结的事。",
+            "Defeat Terrakion to prove you're worthy of their trust.": "击败代拉基翁以证明你值得他们的信任。",
+            "Talk to Cobalion at the Moor of Icirrus to learn where to find Virizion.": "前往雪花湿地与勾帕路翁交谈，了解如何找到毕力吉翁。",
+            "Now that you know where to find Virizion, search for them in Pinwheel Forest.": "现在你知道在哪里可以找到毕力吉翁，前往矢车森林中搜索他们。",
+            "Now that you've found Virizion, tell them to meet the others at the Moor of Icirrus.": "现在你已经找到毕力吉翁，告诉他们在雪花湿地与其他人会面。",
+            "Virizion is asking you to gather 5,000 Grass Gems to prove you're a trustworthy ally. Collect the gems and return to Pinwheel Forest to prove your worth.": "毕力吉翁要求你收集5,000个草系宝石以证明你是一个值得信赖的盟友。收集宝石并返回矢车森林证明你的价值。",
+            "Now that you've gathered all of the Grass Gems, talk to Virizion in Pinwheel Forest once again.": "现在你已经收集了所有草系宝石，再次前往矢车森林与毕力吉翁交谈。",
+            "Meet up with the Swords of Justice at Moor of Icirrus and talk to Cobalion.": "在雪花湿地与圣剑士会面，并与勾帕路翁交谈。",
+            "They need you to prove you're strong enough to deal with the possible dangers. Defeat the Swords of Justice!": "他们需要你证明自己足够强大，能够应对可能的危险。击败圣剑士！",
+            "Now that you've proven you're strong enough to help, take Cobalion's advice and search for Kyurem in the Giant Chasm.": "现在你已证明自己足够强大可以帮助他们，听取勾帕路翁的建议，在巨人洞窟中寻找酋雷姆。",
+            "Report your findings to Cobalion at the Moor of Icirrus.": "在雪花湿地向勾帕路翁报告你的发现。",
+            "Looks like Cobalion has seen Kyurem near Lacunosa Town. Go there and defeat Kyurem before it hurts any citizens.": "看起来勾帕路翁在笼目镇附近看到了酋雷姆。前往那里，在它伤害市民之前击败酋雷姆。",
+            "Seems like Kyurem has fled the town. You should talk to Cobalion while you're there.": "看起来酋雷姆已经逃离了镇上。你在那里时应该与勾帕路翁交谈。",
+            "Kyurem is probably hiding in the Giant Chasm. Find its lair.": "酋雷姆可能藏在巨人洞窟中。找到它的巢穴。",
+            "You've finally found Kyurem! Defeat it with the help of the Swords of Justice.": "你终于找到酋雷姆了！在圣剑士的帮助下击败它。",
+            "Kyurem has injured the Swords of Justice, go check on Cobalion.": "酋雷姆伤害了圣剑士，去看看勾帕路翁的情况。",
+            "Defeat Kyurem and stop it from causing any more harm!": "击败酋雷姆，阻止它造成更多伤害！",
+            "You've finally defeated Kyurem, sealing it within the Giant Chasm forever. Talk to the Swords of Justice in the Giant Chasm.": "你终于击败了酋雷姆，将其永远封印在巨人洞窟内。在巨人洞窟与圣剑士交谈。",
+            "Talk to Cobalion.": "与勾帕路翁交谈。",
+            "Talk to Terrakion.": "与代拉基翁交谈。",
+            "Talk to Virizion.": "与毕力吉翁交谈。",
+            "The Swords of Justice all depart for their homes to wait for your arrival. Go catch your new friends and add them to your team!": "圣剑士全部返回各自的家中等待你的到来。去抓捕你的新朋友，并将他们加入你的队伍！",
+            "Capture the Leader of the Swords of Justice, Cobalion, in Mistralton Cave.": "前往吹寄洞穴捕获圣剑士的领袖勾帕路翁。",
+            "Capture the Toughest of the Swords of Justice, Terrakion, in Victory Road.": "在冠军之路捕获圣剑士中最坚韧的代拉基翁。",
+            "Capture the Cleverest of the Swords of Justice, Virizion, in Pinwheel Forest.": "在矢车森林捕获圣剑士中最聪明的毕力吉翁。"
+        }
+    },
+
     "The Legend Awakened": {
         "name": "超梦觉醒",
         "description": {
@@ -769,20 +820,6 @@
             "Defeat the Unbound Hoopa near Kiloude City, this time for real.": "前往奇楠市附近击败胡帕（解放），这次是真的。"
         }
     },
-    "The New Kid": {
-        "name": "新人",
-        "description": {
-            "A new kid from your home town is making waves. Show him who the real prodigy of Pallet Town is.": "一个来自你家乡的新人正在大出风头，让他看看谁才是真新镇真正的天才"
-        },
-        "descriptions": {
-            "Defeat the kid near Pallet Town.": "在真新镇附近击败新人。",
-            "He's not stopping. Find the kid in Johto.": "他没有停下来，在城都地区寻找新人。",
-            "He just won't learn his lesson. Defeat the kid again in Hoenn.": "他就是不吸取教训，在丰缘地区再次击败新人。",
-            "Who does this kid think he is anyway? Pretending he's the main character. He's in Sinnoh now.": "新人以为自己是谁啊？假装自己是主角，他现在在神奥地区。",
-            "The kid is hiding in Unova!": "新人躲在合众地区。",
-            "Maybe you were too hard on the kid... You should offer him an apology in Kalos.": "也许你对新人太严厉了，你应该在卡洛斯地区向他道歉。"
-        }
-    },
     "An Unrivaled Power": {
         "name": "无与伦比的力量",
         "description": {
@@ -815,33 +852,112 @@
             "Defeat Anomaly Mewtwo in Pokémon Village.": "前往宝可梦村击败异常的超梦。"
         }
     },
+    "Welcome to Paradise, Cousin!": {
+        "name": "欢迎来到天堂!",
+        "description": {
+            "Time to kick off your Alolan vacation! See the sights around Melemele Island.": "是时候开始你的阿罗拉假期了！参观美乐美乐岛周围的景点。"
+        },
+        "descriptions": {
+            "Protect the mysterious girl's Pokémon! Battle the Spearow near the Ruins of Conflict.": "保护神秘女孩的宝可梦！在战争遗迹附近与烈雀战斗。",
+            "Ask the mysterious girl if she's okay.": "询问神秘女孩是否安好。",
+            "Follow Lillie to the Trainers' School dungeon and clear it.": "跟随莉莉艾前往训练家学校地牢并清理它。",
+            "Beat up the Team Skull grunts loitering on Hau'oli City's Dock.": "在好奥乐市的码头打败闲逛的骷髅队小兵。",
+            "Battle Ilima in Hau'oli City.": "在好奥乐市与伊利马战斗。",
+            "Clear Ilima's Trial at Verdant Cavern.": "在葱郁洞窟完成伊利马的考验",
+            "Lillie needs your help. Continue past Route 3 and clear Melemele Meadow.": "莉莉艾需要你的帮助。继续通过３号道路并清理美乐美乐花园。",
+            "Nebby escaped into a hole! Clear the Seaward Cave dungeon.": "小星云逃到了一个洞里！清理通海洞穴地牢。",
+            "The Ultra Recon Squad is awaiting a battle in Seaward Cave. Show them the thrill of the fight!": "究极调查队正在通海洞穴等待一场战斗。向他们展示一场刺激的战斗！",
+            "Return Nebby to Lillie in Melemele Meadow.": "在美乐美乐花园将小星云还给莉莉艾。",
+            "Lillie still has something on her mind. Talk to her in Iki Town.": "莉莉艾心里还有事。在利利小镇与她交谈。",
+            "Defeat Hala in Iki Town complete Melemele's Grand Trial!": "在利利小镇击败哈拉，完成美乐美乐岛的大考验！",
+            "There is one more Z Crystal on Ten Carat Hill. Find the Trial Site and claim it!": "在十克拉山丘上还有一个Ｚ纯晶。找到考验地点并获取它！"
+        }
+    },
+    "Symbiotic Relations": {
+        "name": "共生关系",
+        "description": {
+            "Help Lillie and Nebby on Akala Island and meet some friendly faces.": "帮助阿卡拉岛上的莉莉艾和小星云并结识一些友好的面孔。"
+        },
+        "descriptions": {
+            "Plan out your course of action with Lillie in Heahea City.": "在慷待市与莉莉艾计划你的行动路线。",
+            "Clear Lana's Trial at Brooklet Hill.": "在潺潺之丘完成水莲的考验。",
+            "The Ultra Recon Squad is investigating an oddly familiar tree. Go check it out on Route 5.": "究极调查队正在调查一个奇怪而熟悉的树。去５号道路查看。",
+            "Team Skull is causing trouble on Route 6! Looks like they haven't learned their lesson.": "骷髅队在６号道路制造麻烦！看来他们还没吸取教训。",
+            "Clear Kiawe's Trial at Wela Volcano Park.": "在维拉火山公园完成卡奇的考验。",
+            "Clear Mallow's Trial at Lush Jungle.": "在树荫丛林完成玛奥的考验。",
+            "Talk to Professor Burnet in Heahea City after you've finished exploring Lush Jungle.": "探索树荫丛林后，在慷待市与芭内特博士交谈。",
+            "You hear the echoes of bad rap and low self-esteem in the distance. Clear Diglett's Tunnel.": "你远处听到了糟糕说唱和低自尊的回音。清理地鼠隧道。",
+            "Reach Kahuna Olivia and Lillie at the Ruins of Life and complete Akala's Grand Trial!": "到达生命遗迹与岛屿之王丽姿和莉莉艾会面并完成阿卡拉的大考验！",
+            "A strange creature has appeared in Aether Paradise. Make it go away. Clear the Ultra Wormhole.": "在以太乐园中出现了一个奇怪的生物。赶走它，清理究极之洞。"
+        }
+    },
+    "Child of the Stars": {
+        "name": "传说的宇宙宝可梦",
+        "description": {
+            "Learn more about Nebby's origins with Lillie on Ula'Ula Island.": "在乌拉乌拉岛向莉莉艾进一步了解小星云的起源。"
+        },
+        "descriptions": {
+            "Read about the legends of Alola with Lillie in Malie City.": "在马利埃静市与莉莉艾一起了解阿罗拉的传说。",
+            "Team Skull are trying to steal a bus stop sign on Route 10! This misdeed won't go unpunished!": "骷髅队试图在１０号道路偷走公交站牌！这种行为不会不受惩罚！",
+            "Clear Sophocles's Trial at Hokulani Observatory.": "在辉克拉尼天文台完成索马玛内的考验。",
+            "Team Skull are being annoying. Get rid of them. Beat their boss Guzma in the Malie Garden dungeon.": "骷髅队又来捣乱了。赶走他们。在马利埃庭园地牢打败他们的老大古兹马。",
+            "Lillie has run into a Team Skull grunt at Aether House. Politely beat up his Pokémon.": "莉莉艾在以太之家遇到了一个骷髅队手下。礼貌地打败他的宝可梦。",
+            "Clear Acerola's Trial at Thrifty Megamart.": "在超值超市旧址完成阿塞萝拉的考验。",
+            "Team Skull have stolen the Yungoos from Aether House. Raid their base. Clear the Po Town dungeon.": "骷髅队从以太之家偷走了猫鼬少。突袭他们的基地。清理魄镇地牢。",
+            "Team Skull have stolen Nebby! Battle Gladion at Aether House.": "骷髅队偷走了小星云！在以太之家与格拉吉欧战斗。",
+            "Kahuna Nanu is challenging you to a Grand Trial in Malie City! Test your strength before you go to Aether by defeating him.": "队长默丹在马利埃静市挑战你进行大考验！在前往以太之家前通过击败他来测试你的实力。",
+            "Aether president Lusamine has recruited Team Skull and is using Nebby to open an Ultra Wormhole. Stop her. Clear the Aether Foundation dungeon.": "以太理事长露莎米奈招募了骷髅队并利用小星云开启了超空洞。阻止她。清理以太基金会地牢。",
+            "Aether Branch Faba's ego is blocking your way. Defeat him in the Aether Foundation dungeon to get closer to Lusamine.": "以太分部长扎奥博的自负阻碍了你的前进。在以太基金会地牢击败他，接近露莎米奈。",
+            "Ya boy Guzma is here. Defeat him in the Aether Foundation dungeon. Lusamine is next.": "古兹马在这里。在以太基金会地牢打败他。下一个是露莎米奈。",
+            "Lusamine is using Nebby to open an Ultra Wormhole! Defeat her in the Aether Foundation dungeon to put a stop to this.": "露莎米奈利用小星云开启了超空洞！在以太基金会地牢打败她，阻止这一切。",
+            "Talk to Lillie and Gladion at Aether Paradise when you're ready to go to the next island.": "准备前往下一个岛屿时，在以太乐园与莉莉艾和格拉吉欧交谈。",
+            "Talk to Lillie.": "与莉莉艾交谈。",
+            "Talk to Gladion.": "与格拉吉欧交谈。",
+            "There are more Z Crystals on Ula'ula. Find the Trial Site hidden in Haina Desert after clearing the Route.": "在乌拉乌拉岛上还有更多Ｚ纯晶。在清理完路线后，在哈伊纳沙漠中找到隐藏的考验场。",
+            "Get the Steelium Z. Defeat Molayne in Hokulani Observatory.": "获得钢系Ｚ纯晶。在辉克拉尼天文台击败马睿因。"
+        }
+    },
+    "Emissary of Light": {
+        "name": "光之使者",
+        "description": {
+            "Seek out the Pokémon of Alola's legends on Poni Island.": "在波尼岛寻找阿罗拉传说中的神奇宝贝。"
+        },
+        "descriptions": {
+            "Explore Poni Island for signs of its kahuna. Clear Ancient Poni Path.": "在波尼岛探索其岛长的迹象。清理波尼古道。",
+            "Talk to Hapu at the Ruins of Hope.": "在彼岸遗迹与哈普乌交谈。",
+            "Hapu has permitted you to visit sacred ground. Find the other flute by clearing Exeggutor Island Hill.": "哈普乌允许你参观圣地。通过清理椰蛋树岛山丘找到另一支笛子。",
+            "Team Skull are being annoying again. Settle the score with them near Vast Poni Canyon.": "骷髅队又来捣乱了。在波尼大峡谷附近解决这个问题。",
+            "Proceed to Vast Poni Canyon and prove your skills in a Grand Trial against Poni's new kahuna, Hapu!": "前往波尼大峡谷并在波尼岛新岛屿之王哈普乌的大考验中证明你的实力！",
+            "Clear the ancient Trial Site of Vast Poni Canyon.": "清理波尼大峡谷的古老考验之地。",
+            "Choose a time of day to play a flute with Lillie at the Altar.": "选择一个时间与莉莉艾在祭坛上吹笛子。",
+            "Play the Sun Flute during Day or Dusk.": "在白天或黄昏吹太阳笛子。",
+            "Play the Moon Flute during Night or Dawn.": "在夜晚或黎明吹月亮笛子。",
+            "Help Lillie get through to her mother! Defeat Lusamine at the Altar of the Sunne and Moone.": "帮助莉莉艾理解她的母亲！在日月祭坛打败露莎米奈。",
+            "Everyone is finally safe. Talk to Lillie.": "大家终于安全了。与莉莉艾交谈。"
+        }
+    },
     "Eater of Light": {
         "name": "食光者",
         "description": {
             "A dangerous Pokémon from another world threatens the Alola region.": "来自另一个世界的危险宝可梦威胁着阿罗拉地区"
         },
         "descriptions": {
-            "A strange creature has appeared in Aether Paradise. Make it go away. Clear the Ultra Wormhole.": "一个奇怪的生物出现在以太乐园，让它消失，清理究极之洞。",
-            "Team Skull are being annoying. Get rid of them. Clear the Malie Garden dungeon.": "骷髅队很烦人，摆脱他们，清理马利埃庭园。",
-            "Team Skull have stolen a child's Yungoos. Raid their base. Clear the Po Town dungeon.": "骷髅队抢夺了一个孩子的猫鼬少，突袭他们的基地，清理魄镇地牢。",
-            "Aether president Lusamine has recruited Team Skull in her own plan to stop the Eater of Light. Stop her. Clear the Aether Foundation dungeon.": "以太理事长露莎米奈在她自己的计划着招募骷髅队来阻止食光者，阻止她。清理以太基金会。",
-            "Stop the Eater of Light from absorbing all light in Alola. Clear Ultra Megalopolis at the Altar of the Sunne and Moone.": "阻止食光者吸收阿罗拉的所有光源。清理日月的究极大都会。"
+            "Stop the Eater of Light from absorbing all light in Alola. Defeat Ultra Necrozma at the Altar of the Sunne and Moone.": "阻止光之食者吸收阿罗拉所有的光。在日月祭坛击败究极奈克洛兹玛。",
+            "Everyone is finally safe again. Talk to Lillie.": "大家再次安全了。与莉莉艾交谈。",
+            "You are challenged by Pokémon Trainer Lillie! Welcome her to the world of trainers by battling her at the Altar of the Sunne and Moone.": "宝可梦训练家莉莉艾挑战你！在日月祭坛与她进行战斗，欢迎她加入训练家的世界。",
+            "Clear Mina's Trial at Mina's Houseboat.": "在茉莉的船屋完成茉莉的考验。",
+            "Battle Gladion on Ula'ula one last time before ascending to the Pokémon League.": "在乌拉乌拉岛与格拉吉欧最后一次战斗，然后前往宝可梦联盟。",
+            "One step closer to victory: Clear Mount Lanakila!": "距离胜利更近一步：清理拉纳基拉山！",
+            "You were so distracted by Necrozma you forgot about the Z Crystal! Find the Trial Site in the Mount Lanakila dungeon.": "你被奈克洛兹玛分心忘记了Ｚ纯晶！在拉纳基拉山地牢找到考验之地。"
         }
     },
-    "Mina's Trial": {
-        "name": "茉莉的考验",
+    "Island Challenge": {
+        "name": "诸岛巡礼",
         "description": {
-            "Mina has asked you to battle the Trial captains of the other islands to earn access to her Trial site.": "茉莉要求你与其他岛屿的考验队长进行战斗，以获得进入考验地点的权利"
+            "Embark on the Island Challenge and be graced by the Tapus' presence!": "开始诸岛巡礼，感受卡璞们的魅力"
         },
         "descriptions": {
-            "Defeat Captain Mina in Seafolk Village.": "在海洋居民之村击败队长茉莉。",
-            "Defeat Captain Ilima in Hau'oli Cemetery.": "在好奥乐墓园击败队长伊利马。",
-            "Defeat Captain Mallow in Lush Jungle.": "在树荫丛林击败队长玛奥。",
-            "Defeat Captain Lana in Lush Jungle.": "在树荫丛林击败队长水莲。",
-            "Defeat Captain Kiawe in Wela Volcano Park.": "在维拉火山公园击败队长卡奇。",
-            "Defeat Captain Sophocles in Hokulani Observatory.": "在辉克拉尼天文台击败队长马玛内。",
-            "Captain Acerola is apparently busy with something at the top of Mount Lanakila. Defeat Kahuna Nanu in Tapu Village instead.": "队长阿塞萝拉显然在拉纳基拉山顶忙着什么。在卡璞村击败队长默丹。",
-            "Complete the Trial! Clear Mina's Houseboat in Seafolk Village.": "完成考验！在海洋居民之村清理茉莉的游艇。"
+            "Start your Island Challenge at Professor Kukui's Lab.": "从库库伊博士实验室开始你的诸岛巡礼"
         }
     },
     "Typing some Memories": {
@@ -1243,10 +1359,10 @@
     "Starfall Street": {
         "name": "流星街",
         "description": {
-            "Help Casseiopia disband Team Star.": "帮助仙后解散天星队。"
+            "Help Cassiopeia disband Team Star.": "帮助仙后解散天星队。"
         },
         "descriptions": {
-            "Penny has revealed herself to be Casseiopia. Defeat her at Naranjuva Academy.": "牡丹已经暴露了自己是仙后。在橘子学院打败她。"
+            "Penny has revealed herself to be Cassiopeia. Defeat her at Naranjuva Academy.": "牡丹已经暴露了自己是仙后。在橘子学院打败她。"
         }
     },
     "The Way Home": {
