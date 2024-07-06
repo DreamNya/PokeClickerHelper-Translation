@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         宝可梦点击（Poke Clicker）内核汉化脚本
 // @namespace    PokeClickerHelper
-// @version      0.10.19-f
+// @version      0.10.20-a
 // @description  采用内核汉化形式，目前汉化范围：所有任务线、城镇名、NPC及对话
-// @author       DreamNya, ICEYe, iktsuarpok, 我是f谁？, 顶不住了, 银☆星, TerVoid
+// @author       DreamNya, ICEYe, iktsuarpok, 我是谁？, 顶不住了, 银☆星, TerVoid
 // @match        http://localhost:3000/
 // @match        https://www.pokeclicker.com
 // @match        https://g8hh.github.io/pokeclicker/
@@ -18,7 +18,7 @@
 // @connect      cdn.jsdelivr.net
 // @connect      raw.githubusercontent.com
 // ==/UserScript==
-/* global TownList, QuestLine:true, Notifier, MultipleQuestsQuest, App, NPC, NPCController */
+/* global TownList, QuestLine:true, Notifier, MultipleQuestsQuest, App, NPC, NPCController, GameController */
 
 //储存汉化文本
 const Translation = {};
@@ -42,6 +42,12 @@ const CDN = {
 const resources = ["QuestLine", "Town", "NPC"];
 const now = Date.now();
 const failed = [];
+
+Notifier.notify({
+    title: "宝可梦点击（Poke Clicker）内核汉化脚本",
+    message: `汉化正在加载中\n此时加载存档可能导致游戏错误\n若超过1分钟此提示仍未消失，则脚本可能运行出错`,
+    timeout: 600000,
+});
 
 for (const resource of resources) {
     Translation[resource] = await FetchResource(resource).catch(() => {
@@ -101,11 +107,17 @@ Object.values(TownList).forEach((t) => {
     t.displayName = name ?? t.name;
 });
 // 修改城镇文本显示绑定
-$('[data-bind="text: player.town().name"]').attr("data-bind", "text: player.town().displayName");
+$('[data-bind="text: player.town.name"]').attr("data-bind", "text: player.town.displayName");
 $("[data-town]").each(function () {
     const name = $(this).attr("data-town");
     $(this).attr("data-town", Translation.Town[name] || name);
 });
+
+GameController.realShowMapTooltip = GameController.showMapTooltip;
+GameController.showMapTooltip = function (tooltipText) {
+    const translationTown = Translation.Town[tooltipText];
+    return this.realShowMapTooltip(translationTown ?? tooltipText);
+};
 
 // 汉化任务线
 QuestLine.prototype.realAddQuest = QuestLine.prototype.addQuest;
@@ -202,13 +214,13 @@ TranslationHelper.ExportTranslation.QuestLine = function () {
         const { name, description } = questline;
         const translation = Translation.QuestLine[name];
         const subObj = {};
-        subObj.name = translation.name ?? name;
-        subObj.description = { [description]: translation.description[description] ?? "" };
+        subObj.name = translation?.name ?? name;
+        subObj.description = { [description]: translation?.description[description] ?? "" };
         subObj.descriptions = questline.quests().reduce((d, q) => {
-            d[q.description] = translation.descriptions[q.description] ?? "";
+            d[q.description] = translation?.descriptions[q.description] ?? "";
             if (q instanceof MultipleQuestsQuest) {
                 q.quests.forEach((qq) => {
-                    d[qq.description] = translation.descriptions[qq.description] ?? "";
+                    d[qq.description] = translation?.descriptions[qq.description] ?? "";
                 });
             }
             return d;
@@ -239,6 +251,15 @@ TranslationHelper.ExportTranslation.NPC_format = function () {
         return obj;
     }, {});
     TranslationHelper.toggleRaw = toggleRaw;
+    return json;
+};
+
+TranslationHelper.ExportTranslation.Town = function () {
+    const json = Object.fromEntries(
+        Object.keys(TownList).map((townName) => {
+            return [townName, Translation.Town[townName] ?? ""];
+        })
+    );
     return json;
 };
 
@@ -344,3 +365,5 @@ if (failed.length == 0) {
         timeout: 15000,
     });
 }
+
+setTimeout(() => $('.toast:contains("汉化正在加载中") [data-dismiss="toast"]').click(), 1000);

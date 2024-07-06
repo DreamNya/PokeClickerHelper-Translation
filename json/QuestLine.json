@@ -70,7 +70,7 @@
     "Bill's Errand": {
         "name": "正辉的差事",
         "description": {
-            "Bill has asked you to journey to the Sevii Islands with him to set up a digital connection to mainland Kanto.": "正辉让你和他一起去七之岛建立一个与关东大陆的数字连接"
+            "Bill has asked you to journey to the Sevii Islands with him to set up a digital connection to mainland Kanto.": "正辉让你和他一起去七之岛建立一个与关都大陆的数字连接"
         },
         "descriptions": {
             "Use the Subregional Travel button at the top of the map to travel to the Sevii Islands and speak with Celio on One Island.": "点击地图上方的子区域旅行按钮到达七之岛，跟第１岛的锦辉谈谈。",
@@ -203,7 +203,7 @@
             "Put a stop to the schemes of Team Aqua and Team Magma!": "阻止海洋队和熔岩队的阴谋!"
         },
         "descriptions": {
-            "Stop Team Magma at Mt. Chimney Crater.": "前往烟囱山阻止熔岩队。",
+            "Stop Team Magma at Mt. Chimney Crater.": "前往烟囱山火山口阻止熔岩队。",
             "Stop Team Aqua at the Weather Institute.": "前往天气研究所阻止海洋队。",
             "Raid the Team Magma hideout.": "突袭熔岩队基地。",
             "Raid the Team Aqua hideout.": "突袭海洋队基地。",
@@ -286,8 +286,8 @@
             "Talk to Team Rocket on Pinkan Island to hear about their plans.": "与平柑岛的火箭队谈谈，听听他们的计划。",
             "Mutate and harvest 1 Pinkan Berry at the farm.": "在农场变异并收获1个Pinkan树果",
             "Help Team Rocket recruit some Pinkan Pokémon": "帮助火箭队招募一些粉色宝可梦。",
-            "Defeat 500 Pokémon on Pinkan Forest in Kanto.": "前往关东地区的平柑岛森林击败500只宝可梦",
-            "Defeat 500 Pokémon on Pinkan Plains in Kanto.": "前往关东地区的平柑岛平原击败500只宝可梦",
+            "Defeat 500 Pokémon on Pinkan Forest in Kanto.": "前往关都地区的平柑岛森林击败500只宝可梦",
+            "Defeat 500 Pokémon on Pinkan Plains in Kanto.": "前往关都地区的平柑岛平原击败500只宝可梦",
             "Collect Fairy Gems and Pixie Plates": "收集妖精宝石和妖精石板。",
             "Gain 1,000 Fairy gems.": "获得1000个妖精宝石",
             "Gain 10 Pixie Plates": "获得10个妖精石板",
@@ -325,10 +325,10 @@
             "Attend the opening ceremony of the Millennium Festival near Lavaridge Town.": "在釜炎镇附近参加宝可梦游乐园开幕式。",
             "Defeat Team Rocket Jessie & James at the Millennium Festival near Lavaridge Town.": "前往釜炎镇附近的宝可梦游乐园击败火箭队武藏和小次郎。",
             "Learn the legend of the Millennium Comet from Butler near Lavaridge Town.": "从釜炎镇附近的巴特勒那里了解千年彗星的传说。",
-            "Climb to the Mt. Chimney Crater to get a better view of the Millennium Comet as it passes.": "前往烟囱山，当千年彗星经过时，能够更好地观察它。",
+            "Climb to the Mt. Chimney Crater to get a better view of the Millennium Comet as it passes.": "前往烟囱山火山口，当千年彗星经过时，能够更好地观察它。",
             "You are being stalked by Absol, the Disaster Pokémon. Capture it or hatch your own to befriend it.": "你被灾难宝可梦阿勃梭鲁跟踪，捕捉或孵化出来和他做朋友。",
-            "Examine the crystalline cocoon Butler gave you while at the Mt. Chimney Crater.": "前往烟囱山检查巴特勒给你的水晶茧。",
-            "Butler has followed you to the Mt. Chimney Crater and is trying to kidnap Jirachi!": "巴特勒跟踪你到了烟囱山陨石坑并试图绑架基拉祈。",
+            "Examine the crystalline cocoon Butler gave you while at the Mt. Chimney Crater.": "前往烟囱山火山口检查巴特勒给你的水晶茧。",
+            "Butler has followed you to the Mt. Chimney Crater and is trying to kidnap Jirachi!": "巴特勒跟踪你到了烟囱山火山口并试图绑架基拉祈。",
             "Butler has escaped through the Jagged Pass and hooked Jirachi up to some sort of machine. Fight him to free Jirachi.": "巴特勒从凹凸山道逃了出来，把基拉祈抓到某种机器上。请将他击败，尽快解救基拉祈。",
             "Butler's attempts to resurrect Groudon have gone terribly wrong! Fight the resulting abomination!": "巴特勒复活固拉多的行动出现了差错！进入战斗对抗由此产生的可憎之物。",
             "Jirachi has escaped in the chaos and is roaming Hoenn. Catch or hatch Jirachi.": "基拉祈从混乱中逃了出来，在丰缘地区游荡，捕获或孵化基拉祈。"
@@ -508,8 +508,8 @@
             "Talk to Cobalion at the Moor of Icirrus to learn where to find Virizion.": "前往雪花湿地与勾帕路翁交谈，了解如何找到毕力吉翁。",
             "Now that you know where to find Virizion, search for them in Pinwheel Forest.": "现在你知道在哪里可以找到毕力吉翁，前往矢车森林中搜索他们。",
             "Now that you've found Virizion, tell them to meet the others at the Moor of Icirrus.": "现在你已经找到毕力吉翁，告诉他们在雪花湿地与其他人会面。",
-            "Virizion is asking you to gather 5,000 Grass Gems to prove you're a trustworthy ally. Collect the gems and return to Pinwheel Forest to prove your worth.": "毕力吉翁要求你收集5,000个草系宝石以证明你是一个值得信赖的盟友。收集宝石并返回矢车森林证明你的价值。",
-            "Now that you've gathered all of the Grass Gems, talk to Virizion in Pinwheel Forest once again.": "现在你已经收集了所有草系宝石，再次前往矢车森林与毕力吉翁交谈。",
+            "Virizion is asking you to gather 5,000 Grass Gems to prove you're a trustworthy ally. Collect the gems and return to Pinwheel Forest to prove your worth.": "毕力吉翁要求你收集5,000个草之宝石以证明你是一个值得信赖的盟友。收集宝石并返回矢车森林证明你的价值。",
+            "Now that you've gathered all of the Grass Gems, talk to Virizion in Pinwheel Forest once again.": "现在你已经收集了所有草之宝石，再次前往矢车森林与毕力吉翁交谈。",
             "Meet up with the Swords of Justice at Moor of Icirrus and talk to Cobalion.": "在雪花湿地与圣剑士会面，并与勾帕路翁交谈。",
             "They need you to prove you're strong enough to deal with the possible dangers. Defeat the Swords of Justice!": "他们需要你证明自己足够强大，能够应对可能的危险。击败圣剑士！",
             "Now that you've proven you're strong enough to help, take Cobalion's advice and search for Kyurem in the Giant Chasm.": "现在你已证明自己足够强大可以帮助他们，听取勾帕路翁的建议，在巨人洞窟中寻找酋雷姆。",
@@ -826,7 +826,7 @@
             "It has been said that Mewtwo can Mega Evolve. Search for clues on how to find its Mega Stones, so you can control this unrivaled power.": "据说超梦可以极巨化。寻找有关如何找到Mega宝石的线索，这样你就可以控制这种无与伦比的力量。"
         },
         "descriptions": {
-            "Red might know something. Fight him at Indigo Plateau Kanto then ask him what he knows.": "赤红可能知道些什么。前往关东关东石英高原和他对战，然后问他知道什么。",
+            "Red might know something. Fight him at Indigo Plateau Kanto then ask him what he knows.": "赤红可能知道些什么。前往关都石英高原和他对战，然后问他知道什么。",
             ".....right. Of course..... Well, you have no leads for now, so may as well defeat and catch some Psychic and Fighting-type Pokémon.": "当然……你现在还没有线索，所以不妨打败和抓住一些超能力属性和格斗属性的宝可梦。",
             "Defeat 1500 Psychic-type Pokémon.": "击败1500只超能力属性宝可梦",
             "Capture or hatch 600 Psychic-type Pokémon.": "捕捉或孵化600只超能力属性宝可梦",
@@ -905,15 +905,15 @@
             "Clear Acerola's Trial at Thrifty Megamart.": "在超值超市旧址完成阿塞萝拉的考验。",
             "Team Skull have stolen the Yungoos from Aether House. Raid their base. Clear the Po Town dungeon.": "骷髅队从以太之家偷走了猫鼬少。突袭他们的基地。清理魄镇地牢。",
             "Team Skull have stolen Nebby! Battle Gladion at Aether House.": "骷髅队偷走了小星云！在以太之家与格拉吉欧战斗。",
-            "Kahuna Nanu is challenging you to a Grand Trial in Malie City! Test your strength before you go to Aether by defeating him.": "队长默丹在马利埃静市挑战你进行大考验！在前往以太之家前通过击败他来测试你的实力。",
+            "Kahuna Nanu is challenging you to a Grand Trial in Malie City! Test your strength before you go to Aether by defeating him.": "队长默丹在马利埃静市道馆对你进行大考验！在前往以太之家前通过击败他来测试你的实力。",
             "Aether president Lusamine has recruited Team Skull and is using Nebby to open an Ultra Wormhole. Stop her. Clear the Aether Foundation dungeon.": "以太理事长露莎米奈招募了骷髅队并利用小星云开启了超空洞。阻止她。清理以太基金会地牢。",
             "Aether Branch Faba's ego is blocking your way. Defeat him in the Aether Foundation dungeon to get closer to Lusamine.": "以太分部长扎奥博的自负阻碍了你的前进。在以太基金会地牢击败他，接近露莎米奈。",
-            "Ya boy Guzma is here. Defeat him in the Aether Foundation dungeon. Lusamine is next.": "古兹马在这里。在以太基金会地牢打败他。下一个是露莎米奈。",
+            "Ya boy Guzma is here. Defeat him in the Aether Foundation dungeon. Lusamine is next.": "古兹马也在这里。在以太基金会地牢打败他。下一个是露莎米奈。",
             "Lusamine is using Nebby to open an Ultra Wormhole! Defeat her in the Aether Foundation dungeon to put a stop to this.": "露莎米奈利用小星云开启了超空洞！在以太基金会地牢打败她，阻止这一切。",
             "Talk to Lillie and Gladion at Aether Paradise when you're ready to go to the next island.": "准备前往下一个岛屿时，在以太乐园与莉莉艾和格拉吉欧交谈。",
             "Talk to Lillie.": "与莉莉艾交谈。",
             "Talk to Gladion.": "与格拉吉欧交谈。",
-            "There are more Z Crystals on Ula'ula. Find the Trial Site hidden in Haina Desert after clearing the Route.": "在乌拉乌拉岛上还有更多Ｚ纯晶。在清理完路线后，在哈伊纳沙漠中找到隐藏的考验场。",
+            "There are more Z Crystals on Ula'ula. Find the Trial Site hidden in Haina Desert after clearing the Route.": "在乌拉乌拉岛上还有更多Ｚ纯晶。在清理完道路后，在哈伊纳沙漠中找到隐藏的考验场。",
             "Get the Steelium Z. Defeat Molayne in Hokulani Observatory.": "获得钢系Ｚ纯晶。在辉克拉尼天文台击败马睿因。"
         }
     },
@@ -923,15 +923,15 @@
             "Seek out the Pokémon of Alola's legends on Poni Island.": "在波尼岛寻找阿罗拉传说中的神奇宝贝。"
         },
         "descriptions": {
-            "Explore Poni Island for signs of its kahuna. Clear Ancient Poni Path.": "在波尼岛探索其岛长的迹象。清理波尼古道。",
+            "Explore Poni Island for signs of its kahuna. Clear Ancient Poni Path.": "在波尼岛探索其岛屿之王的踪迹。清理波尼古道。",
             "Talk to Hapu at the Ruins of Hope.": "在彼岸遗迹与哈普乌交谈。",
             "Hapu has permitted you to visit sacred ground. Find the other flute by clearing Exeggutor Island Hill.": "哈普乌允许你参观圣地。通过清理椰蛋树岛山丘找到另一支笛子。",
             "Team Skull are being annoying again. Settle the score with them near Vast Poni Canyon.": "骷髅队又来捣乱了。在波尼大峡谷附近解决这个问题。",
             "Proceed to Vast Poni Canyon and prove your skills in a Grand Trial against Poni's new kahuna, Hapu!": "前往波尼大峡谷并在波尼岛新岛屿之王哈普乌的大考验中证明你的实力！",
             "Clear the ancient Trial Site of Vast Poni Canyon.": "清理波尼大峡谷的古老考验之地。",
             "Choose a time of day to play a flute with Lillie at the Altar.": "选择一个时间与莉莉艾在祭坛上吹笛子。",
-            "Play the Sun Flute during Day or Dusk.": "在白天或黄昏吹太阳笛子。",
-            "Play the Moon Flute during Night or Dawn.": "在夜晚或黎明吹月亮笛子。",
+            "Play the Sun Flute during Day or Dusk.": "在白天或黄昏吹奏太阳之笛。",
+            "Play the Moon Flute during Night or Dawn.": "在夜晚或黎明吹奏月亮之笛。",
             "Help Lillie get through to her mother! Defeat Lusamine at the Altar of the Sunne and Moone.": "帮助莉莉艾理解她的母亲！在日月祭坛打败露莎米奈。",
             "Everyone is finally safe. Talk to Lillie.": "大家终于安全了。与莉莉艾交谈。"
         }
@@ -1378,7 +1378,7 @@
             "A basket of strange eggs has been spotted, see if you can find it!": "一篮奇怪的蛋被发现了，看看你能找到它吗！"
         },
         "descriptions": {
-            "Some strange eggs have been seen around Kanto. Go look for it! Maybe Erika knows more?": "在关东附近看到了一些奇怪的鸡蛋。去找吧！也许莉佳知道的更多？",
+            "Some strange eggs have been seen around Kanto. Go look for it! Maybe Erika knows more?": "在关都附近看到了一些奇怪的鸡蛋。去找吧！也许莉佳知道的更多？",
             "Seems like this was just an Easter egg after all... But no time to dwell on that. Another report just came in, there have been sightings of some strange eggs in a forest in Johto!": "这似乎只是一个复活节彩蛋……但没时间细想了。另一份报告刚刚收到，有人在城都的森林里看到了一些奇怪的蛋！",
             "That looked like a Togepi!... well, maybe not. Anyway, there is a big Egg Hunt going on in the woods south of Rustboro in Hoenn; maybe you should take a look?": "那看起来像只波克比！好吧，也许不是。总之，在丰源卡那兹市南部的树林里正在进行一场大型的寻蛋活动都，也许你应该去看看？",
             "The eggs ran away! Talk to the egg hunter in Petalburg Woods.": "蛋跑掉了！前往卡绿森林与蛋猎人谈谈。"
