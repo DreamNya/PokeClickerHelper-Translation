@@ -107,7 +107,7 @@
             }
         }
     ],
-    "Route 3 Pokémon Center": [
+    "Route 4 Pokémon Center": [
         {
             "name": {
                 "Shady Salesman": "奸商"
@@ -2231,7 +2231,7 @@
             "dialog": {
                 "I, the Great Butler, thank you for saving me from the wrath of Meta Groudon.": "我，伟大的巴特勒，感谢你救我脱离了怪物固拉多的愤怒。",
                 "My wish was to resurrect Groudon for Team Magma, but it proved too difficult, and you have showed me that it would be irresponsible to put that much power in the hands of evil doers.": "我的愿望是为了熔岩队复活固拉多，但这证明太困难了，你让我看到，把这么大的力量交给坏人是不负责任的。",
-                "I can try the experiment again using what was learned from the previous failure, but I will need your help. If we are successful, I will give control of the resulting Meta Groudon to you.": "我可以利用之前失败中学到的东西再次尝试实验，但我需要你的帮助。如果我们成功了，我会把结果中的怪物固拉多的控制权交给你。",
+                "I can try the experiment again using what was learned from the previous failure, but I will need your help. If we are successful, I will give you the opportunity to catch the resulting Meta Groudon to you.": "我可以利用之前失败中学到的东西再次尝试实验，但我需要你的帮助。如果我们成功了，我会给你机会去捕捉由此产生的怪物固拉多。",
                 "To rebuild my machine, I will need a hundred power-generating Pokémon to run the machine, shiny pokemon to stabilize the energy matrix, and to conduct a new dig for fossilized Groudon materials. After that, I will need to calibrate the machine using DNA from Groudon itself.": "为了重建我的机器，我需要一百只发电的宝可梦来运行机器，闪光宝可梦来稳定能量矩阵，并进行新的挖掘来获取化石化的固拉多材料。之后，我将需要使用固拉多本身的DNA来校准机器。"
             }
         },
@@ -2241,7 +2241,7 @@
             },
             "dialog": {
                 "I, the Great Butler, thank you for all of your help in fulfilling my greatest wish!": "我，伟大的巴特勒，感谢你帮助我实现了我最大的愿望！",
-                "Please treat this Meta Groudon responsibly, and go forth to do great things!": "请负责任地对待这个怪物固拉多，并且去做伟大的事情！"
+                "Meta Groudon has been revived! It is safely contained in this crater. Catch it whenever you are ready!": "怪物固拉多复活了！它被安全地控制在这个陨石坑里。准备好后就去捕捉它吧！"
             }
         }
     ],
@@ -3446,7 +3446,7 @@
             },
             "dialog": {
                 "Thank you, $playername$. Your assistance with reuniting the Swords of Justice is greatly appreciated.": "谢谢你，$playername$。非常感谢你帮助圣剑士重聚。",
-                "Now that you've found and brought back Terrakion you should probably look for Virizion. Virizion usually likes to meditate to the sound of nature, so Pinwheel Forest might be a good place to search in. Good luck, and report back once you've found each other.": "既然你已经找到并带回了代拉基翁，那么你也许应该去寻找毕力吉翁。毕力吉翁通常喜欢在大自然的声音中冥想，所以矢车森林可能是个不错的搜索地点。祝你好运，找到彼此后再汇报。"
+                "Now that you've found and brought back Terrakion, you should probably look for Virizion. Virizion usually likes to meditate to the sound of nature, so Pinwheel Forest might be a good place to search in. Good luck, and report back once you've found each other.": "既然你已经找到并带回了代拉基翁，那么你也许应该去寻找毕力吉翁。毕力吉翁通常喜欢在大自然的声音中冥想，所以矢车森林可能是个不错的搜索地点。祝你好运，找到彼此后再汇报。"
             }
         },
         {
@@ -3454,7 +3454,7 @@
                 "Cobalion": "勾帕路翁"
             },
             "dialog": {
-                "Welcome back, $playername$! I can see you've brought back Virizion, thank you for your assistance towards reuniting the Swords of Justice.": "欢迎回来，$playername$！我看到你带回了毕力吉翁，感谢你帮助圣剑士重聚。",
+                "Welcome back, $playername$! I can see you've brought back Virizion. Thank you for your assistance towards reuniting the Swords of Justice.": "欢迎回来，$playername$！我看到你带回了毕力吉翁。感谢你帮助圣剑士重聚。",
                 "Now, let's discuss the plan. Wait, you want to help too? You should know this will be a very dangerous mission, $playername$. We may not be able to fully protect you from the dangers we may face. The only way we can be sure of your safety is if you can hold your own against all three of us in battle. If you succeed, we will happily accept your assistance, but should you fail, then I apologise, but we cannot allow you to join the mission. What say you? Shall we spar?": "现在，让我们讨论一下计划。等等，你也想帮忙吗？你应该知道这将是一次非常危险的任务，$playername$。我们可能无法完全保护你免受我们可能面临的危险。我们能确保你安全的唯一方法是，你能在战斗中与我们三人抗衡。如果你成功了，我们会很高兴接受你的帮助，但如果你失败了，那么我很抱歉，但我们不能让你参加任务。你觉得怎么样？我们可以比试一下吗？"
             }
         },
@@ -3564,11 +3564,11 @@
         },
         {
             "name": {
-                "Sage Chen": "僧侣"
+                "Sage Chen": "僧侣 Chen"
             },
             "dialog": {
                 "Ever since growing old I'm no longer the Pokémon Trainer that I used to be. Now I always like to keep my garden full of Kasib Berries.": "自从长大以后，我不再是以前的宝可梦训练家了。现在我总是喜欢让我的花园里长满Kasib树果。",
-                "One day, I forgot to harvest them, and within its withered husk, I found a small stone that enabled my Banette to perform a Mega Evolution.\"": "有一天，我忘记收割它们了，在它枯萎的外壳里，我发现了一块小石头，它使我的诅咒娃娃能够进行Mega进化。\""
+                "One day, I forgot to harvest them, and within its withered husk, I found a small stone that enabled my Banette to perform a Mega Evolution.": "有一天，我忘记收割它们了，在它枯萎的外壳里，我发现了一块小石头，它使我的诅咒娃娃能够进行Mega进化。"
             }
         }
     ],
@@ -3744,7 +3744,7 @@
             "dialog": {
                 "Hey uh.... twerp. Would you happen to have any Dungeon Tokens? We've, uh, run out.": "嘿呃……笨蛋。你有没有地牢币？呃，我们已经用完了。",
                 "I'll give you that Pikachu costume my Inkay was wearing for some?": "我可以给你我好啦鱿穿的那件皮卡丘服装吗？",
-                "...Give me a break. I know that you knew that the Pikachu was a costume. You could see right through us, as if you could just see it's name over its head or something.": "...饶了我吧。我知道你知道皮卡丘是一种服装。你可以看穿我们，就好像你能看到它头上的名字或别的什么东西一样。"
+                "...Give me a break. I know that you knew that the Pikachu was a costume. You could see right through us, as if you could just see its name over its head or something.": "...饶了我吧。我知道你知道皮卡丘是一种服装。你可以看穿我们，就好像你能看到它头上的名字或别的什么东西一样。"
             }
         }
     ],
@@ -4260,7 +4260,7 @@
             },
             "dialog": {
                 "Congratulations once again. Looker told me he wants to take us to a great restaurant to celebrate. I don't know how he knows any restaurants around here, we've only just arrived.": "再次祝贺你。帅哥告诉我他想带我们去一家很棒的餐厅庆祝。我不知道他怎么会知道这附近有什么餐厅，我们才刚到。",
-                "It doesn't matter though. There is no rest for us. Captain Mina is here with news, but she insist on battling you before she'll tell us anything.": "不过这无关紧要。我们没有休息的时间。队长茉莉带来了消息，但她坚持要与你战斗后才肯告诉我们任何事情。"
+                "It doesn't matter though. There is no rest for us. Captain Mina is here with news, but she insists on battling you before she'll tell us anything.": "不过这无关紧要。我们没有休息的时间。队长茉莉带来了消息，但她坚持要与你战斗后才肯告诉我们任何事情。"
             }
         },
         {
@@ -4290,8 +4290,8 @@
             },
             "dialog": {
                 "...": "...",
-                "Good job on rounding up those creatures kid.": "干得好，小家伙，成功捕获那些生物。",
-                "Now, how about one more battle? I insist.": "现在，再来一场战斗怎么样？我坚持。"
+                "Good job on rounding up those creatures, kid.": "干得好，小家伙，成功捕捉到了那些生物。",
+                "Now, how about one more battle? I insist.": "现在，再来一场对战怎么样？我坚持。"
             }
         },
         {
@@ -4327,6 +4327,16 @@
                 "Captain Lana's trial in Brooklet Hill, Captain Kiawe's trial in Wela Volcano Park and Captain Mallow's trial in Lush Jungle.": "队长水莲的考验在潺潺之丘，队长卡奇的考验在维拉火山公园，队长玛奥的考验在树荫丛林。",
                 "For what it's worth, I say don't go to any of those places. Too wet, too hot and too... jungly. Why not stay here? Have a coffee! Enjoy the city!": "不管怎样，我建议不要去那些地方。太湿、太热还有太……丛林化了。为什么不留在这里呢？喝杯咖啡！享受城市生活！",
                 "Or go to Konikoni City down south. You might even meet our kahuna there!": "或者去往南边的可霓可市。你甚至可能在那里遇见我们的岛屿之王！"
+            }
+        },
+        {
+            "name": {
+                "Gentleman": "绅士"
+            },
+            "dialog": {
+                "There's an ancient legend here on Akala Island that tells of Marshadow.": "阿卡拉岛上流传着有关玛夏多的古老传说。",
+                "It is said that when Marshadow is defeated, it sometimes leaves behind a rare crystallized fragment of its shadow.": "据说当玛夏多被打败时，它有时会留下一个稀有的影子结晶碎片。",
+                "According to the legend this fragment is known as the Crystallized Shadow and if you reunite Marshadow with it, Marshadow will unlock a hidden potential.": "根据传说，这块碎片被称为Crystallized Shadow，如果你让玛夏多与它重聚，玛夏多将释放一个隐藏的潜力。"
             }
         },
         {
@@ -4508,7 +4518,7 @@
         },
         {
             "name": {
-                "Talk to Lillie": "和莉莉艾对话"
+                "Talk to Lillie": "与莉莉艾交谈"
             },
             "dialog": {
                 "There's an old book with myths about Alola's Legendary Pokémon here. It seems to suggest they came from another world and brought life to an heir that was to be protected by the island guardians.": "这里有一本关于阿罗拉岛传说宝可梦的神话故事古书。书中似乎暗示这些宝可梦来自另一个世界，为岛上守护者所保护的继承人带来了生命。"
@@ -4681,7 +4691,7 @@
         },
         {
             "name": {
-                "Talk to Lillie": "和莉莉艾对话"
+                "Talk to Lillie": "与莉莉艾交谈"
             },
             "dialog": {
                 "I...I've been wanting to thank you for saving Nebby that day. Back then I was so desperate... It hasn't all been easy... but I'm really glad that I came to Alola! I've decided I'm going to become a real Trainer and meet all kinds of wonderful Pokémon!": "我……我一直想感谢你那天救了小星云。当时我非常绝望……这一切都不容易……但我真的很高兴我来到了阿罗拉！我决定成为一名真正的训练家，并结识各种奇妙的宝可梦！",
@@ -5183,7 +5193,7 @@
             },
             "dialog": {
                 "Hey, $playername$. Looking for a battle? Hm, ok. Can I say something to you anyway? It will be quick. I want to propose to my girlfriend, but I can't afford the ring she really wants. It's so expensive, and I feel guilty not being able to give her what she deserves. I don't know what to do! Maybe I could pick up some extra work to hire more Miners for some Diamonds.": "嘿，$playername$。寻找战斗吗？嗯，好吧。我能对你说点什么吗？这会很快。我想向我的女朋友求婚，但我买不起她真正想要的戒指。它太贵了，我觉得对不起她，不能给她应得的东西。我不知道该怎么办！也许我可以做一些额外的工作，雇佣更多的矿工来挖一些钻石。",
-                "Anyway what did you want to ask me? Hmm, if I've seen a Silvally Memory anywhere near? Sure, it's in my pocket right here. It even is coloured like a diamond! I wish I could trade it for some... hm? You're asking if we could do a trade? Sure, I'll sell it to you for 5k Diamonds, so I can buy my lovely fiancée-to-be an engagement ring. I'll always be here in the same place at all times, we can trade anytime you want.": "无论如何，你想问我什么？嗯，我附近有没有看到过银伴战兽的存储碟？当然，就在我的口袋里。它甚至像钻石一样有颜色！我希望我可以用它交换一些……嗯？你问我们能做交易吗？当然，我会以 5k 钻石卖给你，这样我就可以给我可爱的未婚妻买一个订婚戒指。我会一直在同一个地方，我们可以随时交易。"
+                "Anyway what did you want to ask me? Hmm, if I've seen a Silvally Memory anywhere near? Sure, it's in my pocket right here. It even is coloured like a diamond! I wish I could trade it for some... hm? You're asking if we could do a trade? Sure, I'll sell it to you for 1k Diamonds, so I can buy my lovely fiancée-to-be an engagement ring. I'll always be here in the same place at all times, we can trade anytime you want.": "无论如何，你想问我什么？嗯，我附近有没有看到过银伴战兽的存储碟？当然，就在我的口袋里。它甚至像钻石一样有颜色！我希望我可以用它交换一些……嗯？你问我们能做交易吗？当然，我会以 1k 钻石卖给你，这样我就可以给我可爱的未婚妻买一个订婚戒指。我会一直呆在同一个地方，我们可以随时交易。"
             }
         }
     ],
@@ -5459,6 +5469,17 @@
                 "Our Marnie’s Morpeko is so cute, don’tcha think?": "我们的玛俐的莫鲁贝可很可爱，你不觉得吗？",
                 "When it’s hungry, though, it gets so angry it changes forms.": "但是它饿的时候，会变得非常生气而且会变换形态。",
                 "If you want to catch it in that form, you would probably be best trying to attract it with a berry that electric Pokémon like.": "如果你想在那种形态下抓捕它，最好尝试用电属性宝可梦喜欢的树果吸引它。"
+            }
+        }
+    ],
+    "Wyndon": [
+        {
+            "name": {
+                "Richard": "凯尔"
+            },
+            "dialog": {
+                "This might sound cheesy, but I love Milcery so much! I wasn't sure which Alcremie form I liked the most, so I just grabbed a Sweet at random and started to spin and spin for what seemed like an hour.": "这听起来可能有点俗气，但我太喜欢小仙奶了！我不确定我最喜欢哪种霜奶仙形态，所以我随便抓了一个糖饰开始旋转，旋转了好像一个小时。",
+                "I saw my partner liked it a lot! Maybe you should try the same one day!": "我看到我的伙伴很喜欢它！也许有一天你也应该尝试一下！"
             }
         }
     ],
@@ -5914,7 +5935,7 @@
             "dialog": {
                 "Amazing, you even beat Dada! It's really clear that he is really amazed by your strength!": "太棒了，你甚至打败了阿爸！很明显，他真的对你的力量感到惊讶！",
                 "Hang on, did you guys see something? Oh, over there, it's Celebi! It must have come now things are peaceful here. It looks like it wants to play!": "等一下，你们看到什么了吗？哦，在那边，是时拉比！它一定是因为这里现在和平了才来的。看起来它想玩耍！",
-                "Actually, it looks interested in you in particular. Maybe it wants you to try and catch it? You should give it a shot!": "实际上，它似乎对你特别感兴趣。也许它想让你尝试捕捉它？你应该试一试！"
+                "Actually, it looks interested in you in particular. You should challenge it to a fight!": "实际上，它似乎对你特别感兴趣。你应该向它发起挑战！"
             }
         },
         {
@@ -5922,7 +5943,7 @@
                 "Koko": "可可"
             },
             "dialog": {
-                "Wow, you actually caught Celebi! Well, I'm not sure why, but it looks like that is what it wanted.": "哇，你真的捕捉到了时拉比！嗯，我不确定为什么，但看起来那是它想要的。",
+                "Wow, you actually beat Celebi! It looked like it had fun! It's ran off for now, but maybe if you find it again, itll let you catch it.": "哇，你居然打败了时拉比！它看起来玩得很开心！它现在跑掉了，但也许如果你再次找到它，它会让你抓住它。",
                 "Oh, also, Dada said he would be interested in travelling with you. Although, he also said he needed to deal with the shortage of Quest Points the tribe is dealing with right now.": "哦，还有，阿爸说他有兴趣和你一起旅行。虽然，他也说他现在需要处理部落正在面临的任务点数短缺问题。",
                 "If you help him with that, I'm sure he'll join you!": "如果你帮助他解决那个问题，我相信他一定会加入你的！"
             }

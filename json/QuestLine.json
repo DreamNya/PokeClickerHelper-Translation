@@ -95,14 +95,14 @@
     "The Sick Ampharos": {
         "name": "生病的电龙",
         "description": {
-            "Jasmines Ampharos seems to be sick!": "阿蜜的电龙似乎病了！"
+            "Jasmine's Ampharos seems to be sick!": "阿蜜的电龙似乎病了！"
         },
         "descriptions": {
-            "Clear the Olivine Lighthouse dungeon in Olivine City": "清理浅葱市的浅葱灯塔地牢",
+            "Clear the Olivine Lighthouse dungeon in Olivine City.": "清理浅葱市的浅葱灯塔地牢。",
             "Talk to Jasmine in the Olivine Lighthouse.": "在浅葱灯塔和阿蜜谈谈。",
             "Talk to the Pharmacist in Cianwood City.": "在湛蓝市和药剂师谈谈。",
             "The Pharmacist said he needs some time to finish Amphys medicine. Clear the Cianwood City Gym in the meantime.": "药剂师说他需要一些时间来完成光儿的药物。与此同时清理湛蓝市道馆。",
-            "Give Amphy their medicine in the Olivine Lighthouse.": "在浅葱灯塔将药物给光儿"
+            "Give Amphy their medicine in the Olivine Lighthouse.": "在浅葱灯塔将药物给光儿。"
         }
     },
     "Team Rocket Again": {
@@ -346,7 +346,8 @@
             "Mine 25 layers in the Underground.": "挖掘地下矿场25层",
             "Catch 3 shiny Pokémon.": "捕捉3只闪光宝可梦",
             "Calibrate the machine by catching or hatching 5 Groudon": "捕捉或孵化5只固拉多来校准机器。",
-            "Deliver the materials to Butler in the Jagged Pass and start the resurrection machine.": "前往凹凸山道把材料交给巴特勒，启动复活机器。"
+            "Deliver the materials to Butler in Mt. Chimney Crater and start the resurrection machine.": "前往烟囱山火山口把材料交给巴特勒，启动复活机器。",
+            "Butler has revived Meta Groudon at Mt. Chimney Crater. Catch Meta Groudon.": "巴特勒在烟囱山火山口复活了怪物固拉多。捕捉怪物固拉多。"
         }
     },
     "Shadows in the Desert": {
@@ -447,11 +448,11 @@
             "Talk to Zero in the Fight Area.": "前往战斗区与杰洛谈谈。",
             "Read the recently discovered book in Canalave City.": "前往水脉市阅读最近在发现的书。",
             "Report to Zero what was in the book.": "向杰洛报告书里的内容。",
-            "Ask Mesprit about the Distortion World in Lake Verity.": "前往心齐湖向艾姆利多询问关于毁坏的世界的情况。",
+            "At Lake Verity, ask Mesprit about the Distortion World.": "前往心齐湖向艾姆利多询问关于毁坏的世界的情况。",
             "Obtain 10 Purple Shards.": "获得10个紫色碎片。",
-            "Ask Azelf about the Distortion World in Lake Valor.": "前往立志湖向亚克诺姆询问关于毁坏的世界的情况。",
+            "At Lake Valor, ask Azelf about the Distortion World.": "前往立志湖向亚克诺姆询问关于毁坏的世界的情况。",
             "Obtain 10 Ochre Shards.": "获得10个褐色碎片。",
-            "Ask Uxie about the Distortion World in Lake Acuity.": "前往睿智湖向由克希询问关于毁坏的世界的情况。",
+            "At Lake Acuity, ask Uxie about the Distortion World.": "前往睿智湖向由克希询问关于毁坏的世界的情况。",
             "Obtain 10 Crimson Shards.": "获得10个深红色的碎片。",
             "Clear Sendoff Spring to meet the Lake Trio.": "通关送行之泉以见到湖之三神。",
             "Talk to the Lake Trio in Sendoff Spring.": "在送行之泉与湖之三神谈谈。",
@@ -530,7 +531,6 @@
             "Capture the Cleverest of the Swords of Justice, Virizion, in Pinwheel Forest.": "在矢车森林捕获圣剑士中最聪明的毕力吉翁。"
         }
     },
-
     "The Legend Awakened": {
         "name": "超梦觉醒",
         "description": {
@@ -869,7 +869,7 @@
             "The Ultra Recon Squad is awaiting a battle in Seaward Cave. Show them the thrill of the fight!": "究极调查队正在通海洞穴等待一场战斗。向他们展示一场刺激的战斗！",
             "Return Nebby to Lillie in Melemele Meadow.": "在美乐美乐花园将小星云还给莉莉艾。",
             "Lillie still has something on her mind. Talk to her in Iki Town.": "莉莉艾心里还有事。在利利小镇与她交谈。",
-            "Defeat Hala in Iki Town complete Melemele's Grand Trial!": "在利利小镇击败哈拉，完成美乐美乐岛的大考验！",
+            "Defeat Hala in Iki Town to complete Melemele's Grand Trial!": "在利利小镇击败哈拉，完成美乐美乐岛的大考验！",
             "There is one more Z Crystal on Ten Carat Hill. Find the Trial Site and claim it!": "在十克拉山丘上还有一个Ｚ纯晶。找到考验地点并获取它！"
         }
     },
