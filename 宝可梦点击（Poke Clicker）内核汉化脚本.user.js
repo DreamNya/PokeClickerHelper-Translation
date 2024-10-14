@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         宝可梦点击（Poke Clicker）内核汉化脚本
 // @namespace    PokeClickerHelper
-// @version      0.10.20-a
+// @version      0.10.21-a
 // @description  采用内核汉化形式，目前汉化范围：所有任务线、城镇名、NPC及对话
 // @author       DreamNya, ICEYe, iktsuarpok, 我是谁？, 顶不住了, 银☆星, TerVoid
 // @match        http://localhost:3000/
@@ -58,11 +58,6 @@ for (const resource of resources) {
         } else {
             console.log("PokeClickerHelper-Translation", "all failed获取json", resource);
             failed.push(resource);
-            Notifier.notify({
-                title: "宝可梦点击（Poke Clicker）内核汉化脚本",
-                message: `请求汉化json失败，请检查网络链接或更新脚本\n无法完成汉化：${resource}`,
-                timeout: 6000000,
-            });
             return {};
         }
     });
@@ -254,6 +249,29 @@ TranslationHelper.ExportTranslation.NPC_format = function () {
     return json;
 };
 
+TranslationHelper.ExportTranslation.NPC = function (override) {
+    const NPC_format = override || this.NPC_format();
+    const NPCDialog = Object.assign(
+        {},
+        ...Object.values(NPC_format)
+            .flat()
+            .map((i) => i.dialog)
+            .filter((i) => i)
+    );
+    const NPCName = Object.assign(
+        {},
+        ...Object.values(NPC_format)
+            .flat()
+            .map((i) => i.name)
+            .filter((i) => i)
+    );
+    const json = {
+        NPCName,
+        NPCDialog,
+    };
+    return json;
+};
+
 TranslationHelper.ExportTranslation.Town = function () {
     const json = Object.fromEntries(
         Object.keys(TownList).map((townName) => {
@@ -363,6 +381,12 @@ if (failed.length == 0) {
         title: "宝可梦点击（Poke Clicker）内核汉化脚本",
         message: `汉化加载完毕\n可以正常加载存档\n\n<button class="btn btn-block btn-success" onclick="window.PCH_ForceRefreshTranslation()" data-dismiss="toast">清空脚本汉化缓存并刷新</button>`,
         timeout: 15000,
+    });
+} else {
+    Notifier.notify({
+        title: "宝可梦点击（Poke Clicker）内核汉化脚本",
+        message: `请求汉化json失败，请检查网络链接或更新脚本\n无法完成汉化：${failed.join(" / ")}`,
+        timeout: 6000000,
     });
 }
 

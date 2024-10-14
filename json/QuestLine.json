@@ -36,7 +36,7 @@
             "Check the hints and bring Bill's Grandpa the Pokémon he wants to see.": "查看任务提示，将正辉的爷爷想要的宝可梦带给他看"
         },
         "descriptions": {
-            "Talk to Bill's Grandpa in Bill's House.": "在正辉的家里跟他爷爷谈谈。",
+            "Talk to Bill's Grandpa in Bill's House.": "在正辉的家里跟正辉的爷爷谈谈。",
             "Bill's Grandpa wants you to catch a Pokémon that is pink and like a balloon.": "正辉的爷爷想让你捕捉一只像粉红色气球一样的宝可梦。",
             "Catch the desired Pokémon.": "捕捉想要的宝可梦",
             "Defeat 100 Normal-type Pokémon.": "击败100只一般属性宝可梦",
@@ -75,9 +75,9 @@
         "descriptions": {
             "Use the Subregional Travel button at the top of the map to travel to the Sevii Islands and speak with Celio on One Island.": "点击地图上方的子区域旅行按钮到达七之岛，跟第１岛的锦辉谈谈。",
             "Ask the Game Corner owner on Two Island about the meteorite.": "询问第２岛游戏城老板关于陨石的事。",
-            "A biker gang has invaded Three island. They will not let you continue to Berry Forest. Defeat the Biker Goons.": "飞车党入侵了第３岛并封锁了前往果实森林的道路，请击败他们。",
+            "A biker gang has invaded Three island. They will not let you continue to Berry Forest. Defeat the Biker Goons.": "飙车族入侵了第３岛并封锁了前往树果森林的道路，请击败他们。",
             "Defeat the biker gang's leader.": "击败飞车党首领。",
-            "Find Lostelle. Clear Berry Forest.": "找到小迷并清理果实森林。",
+            "Find Lostelle. Clear Berry Forest.": "找到小迷并清理树果森林。",
             "Lostelle has been found. Return to the Game Corner owner on Two Island.": "小迷已经找到了，回去第２岛游戏城老板那。",
             "Deliver the meteorite to Celio on One Island.": "把陨石交给第１岛的锦辉。"
         }
@@ -163,7 +163,7 @@
             "Clear the Ice Path to give Sayo a push.": "清理冰雪小径，推樱花一把。",
             "Talk to Kimono Girl Kuni in Goldenrod City.": "前往满金市与和服女孩小桃谈谈。",
             "Clear the Radio Tower to get rid of any lingering Team Rocket activity.": "清理满金电台，以阻止火箭队的行动。",
-            "Meet the Kimono Girls at the Whirl Islands.": "前往漩涡岛与和服女孩见面。",
+            "Meet the Kimono Girls at the Whirl Islands.": "前往漩涡岛与和服女孩们见面。",
             "Catch Lugia in the Whirl Islands.": "在漩涡岛捕捉洛奇亚。"
         }
     },
@@ -173,8 +173,8 @@
             "The Kimono Girls of Ecruteak City wish to speak with you again.": "缘朱市的和服女孩们想再和你谈谈"
         },
         "descriptions": {
-            "Meet the Kimono Girls at the Ecruteak Dance Theatre.": "前往缘朱市舞蹈剧场与和服女孩见面。",
-            "Prove your abilities as a trainer to the Kimono Girls of Ecruteak City.": "向缘朱市的和服女孩证明你训练家的能力。",
+            "Meet the Kimono Girls at the Ecruteak Dance Theatre.": "前往缘朱市舞蹈剧场与和服女孩们见面。",
+            "Prove your abilities as a trainer to the Kimono Girls of Ecruteak City.": "向缘朱市的和服女孩们证明你训练家的能力。",
             "Catch Ho-Oh in the Tin Tower.": "在铃铛塔捕捉凤王。"
         }
     },
@@ -192,7 +192,7 @@
             "Talk to Professor Oak in Azalea Town.": "前往桧皮镇与大木博士谈谈。",
             "Investigate the shrine in Ilex Forest.": "调查栎树林的神殿。",
             "Defeat the strange Pichu.": "击败奇怪的皮丘。",
-            "Investigate the Time Distortion in Tohjo Falls.": "调查都城瀑布的时空歪曲。",
+            "Investigate the Time Distortion in Tohjo Falls.": "调查都城瀑布的时空扭曲。",
             "Defeat Giovanni.": "击败坂木。",
             "Play with the Celebi in Ilex Forest.": "在栎树林中与时拉比玩耍。"
         }
@@ -249,7 +249,7 @@
             "Watch a news report in Littleroot Town about a mysterious Pokémon.": "前往未白镇观看一则关于神秘宝可梦的新闻报道。",
             "Change channels to watch a different TV station in Littleroot town.": "前往未白镇，换台看不同的电视节目。",
             "Go to Hoenn Pokémon League to claim your Eon ticket.": "前往丰源宝可梦联盟领取无限船票。",
-            "Claim your Eon Ticket in the Start Menu and investigate the Southern Island.": "在开始菜单中领取您的无限船票，并调查南部岛屿。",
+            "Claim your Eon Ticket in the Start Menu and investigate the Southern Island.": "在开始菜单中领取您的无限船票，并调查南方孤岛。",
             "Catch or hatch the Eon Duo.": "捕捉或孵化无限宝可梦。",
             "Capture or hatch Latias.": "捕捉或孵化拉帝亚斯",
             "Capture or hatch Latios.": "捕捉或孵化拉帝欧斯"
@@ -262,18 +262,18 @@
         },
         "descriptions": {
             "Speak with Celio on One Island in Sevii.": "前往七之岛中的第１岛与锦辉谈谈。",
-            "Eavesdrop on the Team Rocket Grunts at Mt. Ember.": "前往灯火山窃听火箭队的情报。",
-            "Two Team Rocket Grunts are blocking the entrance to Ruby Path. Defeat them.": "两支火箭队封锁了红宝石之路的入口，请打败他们。",
+            "Eavesdrop on the Team Rocket Grunts at Mt. Ember.": "前往灯火山窃听火箭队手下。",
+            "Two Team Rocket Grunts are blocking the entrance to Ruby Path. Defeat them.": "2个火箭队手下封锁了红宝石之路的入口，请打败他们。",
             "Locate the Ruby. Clear Ruby Path in Mt. Ember.": "定位红宝石，清理灯火山的红宝石之路。",
             "Take the Ruby in Ruby Path": "前往红宝石之路带走红宝石。",
             "Return the Ruby to Celio on One Island": "把红宝石还给第１岛上的锦辉。",
-            "Help Lorelei with Team Rocket Grunts by clearing Icefall Cave on Four Island.": "协助科拿清理四岛冻瀑洞窟的火箭队。",
+            "Help Lorelei with Team Rocket Grunts by clearing Icefall Cave on Four Island.": "协助科拿清理第４岛冻瀑洞窟的火箭队手下。",
             "Talk to Lorelei in Icefall Cave": "前往冻瀑洞窟与科拿谈谈。",
             "Talk to Gideon in Dotted Hole": "前往点之穴与澄夫谈谈。",
-            "Defeat the Three Team Rocket Grunts in Rocket Warehouse.": "击败火箭队仓库的三支火箭队。",
+            "Defeat the Three Team Rocket Grunts in Rocket Warehouse.": "前往火箭队仓库击败3个火箭队手下。",
             "Defeat Team Rocket Executive Ariana in Rocket Warehouse.": "前往火箭队仓库击败火箭队干部雅典娜。",
             "Defeat Team Rocket Executive Archer in Rocket Warehouse.": "前往火箭队仓库击败火箭队干部阿波罗。",
-            "Defeat Scientist Gideon to reclaim the Sapphire.": "击败研究员澄夫夺回蓝宝石。",
+            "Defeat Scientist Gideon to reclaim the Sapphire.": "击败研究员澄夫以夺回蓝宝石。",
             "Return the Sapphire to Celio on One Island": "把蓝宝石还给第１岛上的锦辉。"
         }
     },
@@ -361,15 +361,15 @@
             "Fight Folly the Shady Guy in Phenac City": "在矽铍市打败可疑男子赫波伊。",
             "Check what is in the mysterious sack.": "检查神秘袋子里有什么。",
             "Defeat 10 trainers who are using Shadow Pokémon in Phenac City.": "在矽铍市打败10名用暗影宝可梦的训练师。",
-            "Talk to the Mayor of Phenac City about the criminals you have been fighting.": "和矽铍镇的市长讨论下关于你一直在打击的犯罪。",
+            "Talk to the Mayor of Phenac City about the criminals you have been fighting.": "和矽铍市的市长讨论下关于你一直在打击的犯罪。",
             "Meet up with Rui again in Phenac City.": "在矽铍市与米蕾再次见面",
             "Fight trainers in Pyrite Town to flush out the criminals.": "为了驱逐罪犯，打败在黄铁镇的训练师。",
-            "Talk to the distraught bodybuilder Duking in Pyrite Town.": "和黄铁镇的悲痛欲绝的健美运动员银猿对话。",
+            "Talk to the distraught bodybuilder Duking in Pyrite Town.": "和黄铁镇的悲痛欲绝的健美运动员银马对话。",
             "Fight trainers in Pyrite Colosseum to flush out the criminals.": "为了驱逐罪犯，打败在黄铁竞技场的训练师。",
-            "No sign of Shadow Pokémon so far. Fight trainers at the Pyrite Building to flush out the criminals.": "目前依旧没有暗影宝可梦的迹象。为了驱逐罪犯，打败在黄铁竞技场的训练师。",
-            "Interrogate Hunter Doken in the Pyrite Building to find out who has taken Plusle, and where to.": "审问黄铁竞技场的猎人多肯，找出谁带走了正电拍拍，以及去了哪里。",
-            "Find Miror B. and rescue Duking's Plusle in Pyrite Cave!": "找到迪斯裘，并解救黄铁洞窟中银猿的正电拍拍。",
-            "Free Duking's Plusle.": "释放银猿的正电拍拍。",
+            "No sign of Shadow Pokémon so far. Fight trainers at the Pyrite Building to flush out the criminals.": "目前依旧没有暗影宝可梦的迹象。为了驱逐罪犯，打败在黄铁大楼的训练师。",
+            "Interrogate Hunter Doken in the Pyrite Building to find out who has taken Plusle, and where to.": "审问黄铁大楼的猎人多肯，找出谁带走了正电拍拍，以及去了哪里。",
+            "Find Miror B. and rescue Duking's Plusle in Pyrite Cave!": "找到迪斯裘，并解救黄铁洞窟中银马的正电拍拍。",
+            "Free Duking's Plusle.": "释放银马的正电拍拍。",
             "Discuss your next move with Rui at Pyrite Colosseum.": "前往黄铁竞技场与米蕾讨论下一步行动。",
             "Defeat the Team Cipher Peons looting Agate Village.": "击败正在掠夺玛瑙村的暗影干部们。",
             "Rui is worried her grandpa is in trouble. Search for him by clearing Relic Cave.": "米蕾担心爷爷是不是碰上麻烦了，清理遗迹洞窟来找到他。",
@@ -414,13 +414,13 @@
             "Search for clues in Eterna Forest.": "前往百代森林寻找线索。",
             "Catch or hatch 50 Water-type Pokémon, and see if those boulders are really just boulders.": "捕捉或孵化50只水属性宝可梦，看看这些巨石是否真的只是巨石。",
             "Time to give those mysterious boulders the soaking of their life! Return to the Eterna Forest, and prepare for a battle.": "是时候浸泡这些神秘的巨石！回到百代森林，准备战斗。",
-            "Speak to the Go-Rock Commander in the Eterna Forest.": "前往百代森林与冲冲队的首领谈谈。",
+            "Speak to the Go-Rock Commander in the Eterna Forest.": "前往百代森林与冲冲队干部谈谈。",
             "Chase the fleeing Go-Rock Squad through the Eterna Forest!": "追逐逃离的冲冲队，穿过百代森林！",
             "Keep chasing the Go-Rock Squad through the Eterna Forest, but... didn't they already pass that tree?": "继续在百代森林中追赶冲冲队，但是……他们不是已经经过那棵树了吗？",
             "The Go-Rock Squad are definitely going in circles, but they're too dumb to realise it. Interrogate one on their method of navigating the Eterna Forest!": "冲冲队绝对是在兜圈子，他们太笨了，没有意识到这一点。查询一个人在百代森林的导航方法！",
             "They're using Parasect to navigate the Eterna Forest. Clear out a Parasect and they should get trapped!": "他们使用派拉斯特在百代森林中进行导航。击败一个派拉斯特，他们应该会被困住！",
             "Now you've muddied the path, continue the Eterna Forest chase!": "你把路弄脏了，继续百代森林的追逐。",
-            "You've cornered the Go-Rock Commander outside the Old Chateau! Time to finish this.": "你在森之洋馆外把冲冲队的首领逼入了绝境！是时候结束这一切了。",
+            "You've cornered the Go-Rock Commander outside the Old Chateau! Time to finish this.": "你在森之洋馆外把冲冲队干部逼入了绝境！是时候结束这一切了。",
             "Return the egg to Professor Hastings in Sandgem Town. ": "把蛋还给真砂镇的新原教授。",
             "Professor Hastings has headed off to Canalave to do more research on Manaphy. Check in on him when you can!": "新原教授前往水脉市做关于玛纳霏的研究，有空就去看看他吧。",
             "A little girl's Happiny stole the egg! Search for witnesses east of Canalave!": "一个小女孩的小福蛋偷窃了蛋！在水脉市东部寻找目击者！",
@@ -470,16 +470,16 @@
             "Prevent Team Plasma from using these dangerous Splicers.": "阻止等离子队使用这些危险的基因之楔"
         },
         "descriptions": {
-            "A Team Plasma Grunt in Virbank City would like to steal your Pokémon. Defeat the grunt.": "立涌市的一支等离子队想偷走你的宝可梦，必须将他击败。",
+            "A Team Plasma Grunt in Virbank City would like to steal your Pokémon. Defeat the grunt.": "立涌市的等离子队手下想偷走你的宝可梦，必须将他击败。",
             "Some Team Plasma Grunts were seen entering the Castelia Sewers. Clear Castelia Sewers.": "有人看到等离子队进入了飞云下水道，清理飞云下水道。",
             "Investigate the Perfectly Ordinary Frigate.": "调查完美普通的驱逐舰。",
             "Seems there's nothing suspicious going on in Castelia City. Time to continue your journey. Clear the Nimbasa Gym.": "飞云市好像没什么可疑的事，是时候继续你的旅程了，击败雷文市道馆。",
-            "Hugh thinks some Team Plasma Grunts in Nimbasa City are stealing Pokémon. Defeat the grunts.": "阿修认为一些在雷文市的等离子队正在偷窃宝可梦，击败他们。",
+            "Hugh thinks some Team Plasma Grunts in Nimbasa City are stealing Pokémon. Defeat the grunts.": "阿修认为一些在雷文市的等离子队手下们正在偷窃宝可梦，击败他们。",
             "They are definitely stealing Pokémon. Investigate the Totally Unsuspicious Frigate.": "他们绝对是在偷猎宝可梦，前往完全不可疑的驱逐舰进行调查。",
-            "Defeat the Team Plasma Grunts on the Totally Unsuspicious Frigate.": "在完全不可疑的驱逐舰上击败等离子队。",
+            "Defeat the Team Plasma Grunts on the Totally Unsuspicious Frigate.": "在完全不可疑的驱逐舰上击败等离子队手下们。",
             "Talk to Zinzolin.": "与维奥谈谈。",
             "The Frigate is gone. Nothing to do but move forward. Clear route 13.": "驱逐舰已经离开，除了向前走什么都不做。清理１３号道路。",
-            "You have stumbled upon Zinzolin and a Team Plasma Grunt in Lacunosa Town. Defeat the grunt.": "你在笼目镇偶然发现了维奥和一支等离子队，击败他们。",
+            "You have stumbled upon Zinzolin and a Team Plasma Grunt in Lacunosa Town. Defeat the grunt.": "你在笼目镇偶然发现了维奥和等离子队手下，击败他们。",
             "Defeat Zinzolin.": "击败维奥。",
             "Defeat the Opelucid City gym leader to obtain the DNA Splicers before Team Plasma does!": "击败双龙市道馆的馆主，在等离子队之前获得基因之楔！",
             "Team Plasma has stolen the DNA Splicers and is assaulting the city with an army of grunts and shadows! Defend against the Team Plasma Assault!": "等离子队偷走了基因之楔，他们正进攻城市！抵御等离子队的攻击。",
@@ -534,7 +534,7 @@
     "The Legend Awakened": {
         "name": "超梦觉醒",
         "description": {
-            "Learn about the powerful Pokémon discovered under the P2 Laboratory.": "了解 P2 实验室发现的强大神奇宝贝。"
+            "Learn about the powerful Pokémon discovered under the P2 Laboratory.": "了解Ｐ２实验室发现的强大神奇宝贝。"
         },
         "descriptions": {
             "Investigate the basement of the P2 Laboratory.": "前往Ｐ２实验室 的地下室进行调查。",
@@ -592,7 +592,7 @@
             "Talk to Dr. Cozmo in Fallarbor Town.": "与秋叶镇的索蓝斯博士交谈。",
             "Talk to the mysterious figure at the Sky Pillar.": "与天空之柱的神秘人物交谈。",
             "Travel with Zinnia to Littleroot Town and talk to May.": "与希嘉娜一起前往未白镇并与小遥交谈。",
-            "Discuss the news with Professor Birch in Littleroot Town.": "与未白镇的小田卷博士讨论这个消息。",
+            "Discuss the news with Professor Birch in Littleroot Town.": "与未白镇的小田卷博士讨论消息。",
             "Find out why May is so mad in Littleroot Town.": "找出小遥在未白镇如此疯狂的原因。",
             "Follow Zinnia to Petalburg City.": "跟随希嘉娜前往橙华市。",
             "Defeat Courtney": "击败火雁",
@@ -657,7 +657,7 @@
             "Find out what the Team Leaders are up to at Mt. Pyre.": "找出团队首领在送神山的做了什么。",
             "Talk to Archie.": "与水梧桐谈谈",
             "Talk to Maxie.": "与赤焰松谈谈",
-            "Defeat the Primal Reversions. Predict their rampage by monitoring the weather at the Weather Institute.": "击败两只原始回归宝可梦。通过在气象研究所监测天气来预测他们的行动。",
+            "Defeat the Primal Reversions. Predict their rampage by monitoring the weather at the Weather Institute.": "击败两只原始回归宝可梦。通过在天气研究所监测天气来预测他们的行动。",
             "Defeat Primal Groudon in Harsh Sunlight Weather.": "在强烈的阳光天中击败原始固拉多",
             "Defeat Primal Kyogre in Raining Weather.": "在雨天中击败原始盖欧卡"
         }
@@ -755,7 +755,7 @@
             "For someone so obsessed with beauty he seems to really care about filth... Anyway, the Poké Ball Factory sounds like a fun place, let's go check it out.": "对于一个痴迷于美的人来说，他似乎真的很在乎污秽。不管怎样，精灵球工厂听起来是个有趣的地方，让我们去看看吧。",
             "Now that Team Flare is not in the Poké Ball Factory anymore, talk with the Director that you just saved.": "现在闪焰队已经不在精灵球工厂了，与你刚刚救出的老板谈谈。",
             "Professor Sycamore is waiting for you in Dendemille Town. He has some important things to say about the legendary Pokémon of Kalos.": "布拉塔诺博士在风絮镇等你。他有一些关于卡洛斯的传说宝可梦的事情要说。",
-            "You were going to Frost Cavern for Pokémon, but what you found there is Team Flare instead! Clear it!": "你原本想去冰洁洞窟寻找宝可梦，结果却发现了闪焰队，清理洞窟！",
+            "You were going to Frost Cavern for Pokémon, but what you found there is Team Flare instead! Clear it!": "你原本想去冰结洞窟寻找宝可梦，结果却发现了闪焰队，清理洞窟！",
             "So everything is over now, right? Right? Go beat Anistar City Gym!": "所以什么事都结束了，对吧？去打败百刻道馆吧！",
             "Lysandre is giving an important speech through the TV News. Watch it in Anistar City.": "弗拉达利正在通过电视新闻发表重要讲话。前往百刻市观看。",
             "Wow! Absolutely no one could have seen this coming! You think you might find Lysandre in Lumiose City where you first met him. Look for him!": "哇！绝对没有人能预见到这一点！你会在密阿雷市第一次见到弗拉达利的地方找到他。找他！",
@@ -913,7 +913,7 @@
             "Talk to Lillie and Gladion at Aether Paradise when you're ready to go to the next island.": "准备前往下一个岛屿时，在以太乐园与莉莉艾和格拉吉欧交谈。",
             "Talk to Lillie.": "与莉莉艾交谈。",
             "Talk to Gladion.": "与格拉吉欧交谈。",
-            "There are more Z Crystals on Ula'ula. Find the Trial Site hidden in Haina Desert after clearing the Route.": "在乌拉乌拉岛上还有更多Ｚ纯晶。在清理完道路后，在哈伊纳沙漠中找到隐藏的考验场。",
+            "There are more Z Crystals on Ula'ula. Find the Trial Site hidden in Haina Desert after clearing the Route.": "在乌拉乌拉岛上还有更多Ｚ纯晶。清理完道路后，在哈伊纳沙漠中找到隐藏的考验场。",
             "Get the Steelium Z. Defeat Molayne in Hokulani Observatory.": "获得钢系Ｚ纯晶。在辉克拉尼天文台击败马睿因。"
         }
     },
@@ -923,7 +923,7 @@
             "Seek out the Pokémon of Alola's legends on Poni Island.": "在波尼岛寻找阿罗拉传说中的神奇宝贝。"
         },
         "descriptions": {
-            "Explore Poni Island for signs of its kahuna. Clear Ancient Poni Path.": "在波尼岛探索其岛屿之王的踪迹。清理波尼古道。",
+            "Explore Poni Island for signs of its kahuna. Clear Ancient Poni Path.": "在波尼岛探索岛屿之王的踪迹。清理波尼古道。",
             "Talk to Hapu at the Ruins of Hope.": "在彼岸遗迹与哈普乌交谈。",
             "Hapu has permitted you to visit sacred ground. Find the other flute by clearing Exeggutor Island Hill.": "哈普乌允许你参观圣地。通过清理椰蛋树岛山丘找到另一支笛子。",
             "Team Skull are being annoying again. Settle the score with them near Vast Poni Canyon.": "骷髅队又来捣乱了。在波尼大峡谷附近解决这个问题。",
@@ -986,7 +986,7 @@
             "Capture or hatch 100 Ground-type Pokémon.": "捕捉或孵化100只地面属性宝可梦",
             "Capture or hatch 100 Ice-type Pokémon.": "捕捉或孵化100只冰属性宝可梦",
             "Search for Silvally's Memory near pools of freshwater. Ask Gladion at Aether Foundation if you're lost.": "在淡水池边寻找银伴战兽的存储碟。如果你迷路了，可以前往以太基金会询问格拉吉欧。",
-            "Buy the Water Memory from Captain Lana with Dungeon Tokens.": "用地牢代币向队长水购买清水存储碟。",
+            "Buy the Water Memory from Captain Lana with Dungeon Tokens.": "用地牢代币向队长水莲购买清水存储碟。",
             "Search for Silvally's Memory in overgrown forests. Ask Gladion at Aether Foundation if you're lost.": "在杂草丛生的森林中寻找银伴战兽的存储碟。如果你迷路了，可以前往以太基金会询问格拉吉欧。",
             "Buy the Grass Memory from Captain Mallow with Quest Points.": "用任务点数向队长玛奥购买青草存储碟。",
             "Search for Silvally's Memory near fiery hotspots. Ask Gladion at Aether Foundation if you're lost.": "在火热的热点附近搜索银伴战兽的存储碟。如果你迷路了，可以前往以太基金会询问格拉吉欧。",
@@ -996,7 +996,7 @@
             "Search for Silvally's Memory near snow-covered peaks. Ask Gladion at Aether Foundation if you're lost.": "在白雪覆盖的山峰附近寻找银伴战兽的存储碟。如果你迷路了，可以前往以太基金会询问格拉吉欧。",
             "Buy the Ice Memory from Veteran Aristo with Diamonds.": "用钻石从资深训练家英倬那里购买冰雪存储碟。",
             "Search for Silvally's Memory in isolated ground. Ask Gladion at Aether Foundation if you're lost.": "在与世隔绝的土地上寻找银伴战兽的存储碟。如果你迷路了，可以前往以太基金会询问格拉吉欧。",
-            "Buy the Ground Memory from Kahuna Hapu with Farm Points.": "用农场点数从岛屿之王哈普乌购买大地存储碟。",
+            "Buy the Ground Memory from Kahuna Hapu with Farm Points.": "用农场点数从岛屿女王哈普乌购买大地存储碟。",
             "Go show Gladion those memories you've bought in the Aether Foundation": "前往以太基金会给格拉吉欧看看你买的那些存储碟。",
             "Get some training before looking for more of Silvally's memories. Catch or hatch 100 Bug, Flying, Poison, Ghost, Psychic, Steel and Dragon types.": "在寻找更多银伴战兽的存储碟之前，先接受一些训练。捕捉或孵化100只虫，飞行，毒，幽灵，超能，钢和龙属性宝可梦。",
             "Capture or hatch 100 Bug-type Pokémon.": "捕捉或孵化100只虫属性宝可梦",
@@ -1081,14 +1081,14 @@
             "Defeat Hop to reach the final of the Champion Cup!": "击败赫普来进入冠军杯决赛。",
             "Champion Leon was seen heading to Rose Tower. Ascend Rose Tower so you can find him.": "冠军丹帝被看到去洛兹大厦了。攀登洛兹大厦去找到他。",
             "The Championship Match is about to start, but Chairman Rose is broadcasting something to the Stadium? Listen to the broadcast.": "冠军赛就要开始了，但洛兹会长正在广播些什么东西？听听广播。",
-            "Talk to Hop in Wyndon Stadium.": "前往宫门道馆与赫普谈谈。",
+            "Talk to Hop in Wyndon Stadium.": "前往宫门竞技场与赫普谈谈。",
             "Chairman Rose has interrupted your fight with Leon and brought about the Darkest Day. Clear Slumbering Weald Shrine.": "洛兹会长带来的闇夜中断了你和丹帝的决斗。通关微寐森林神社。",
-            "Talk to Hop in Slumbering Weald Shrine.": "前往微寐森林神殿与赫普谈谈。",
+            "Talk to Hop in Slumbering Weald Shrine.": "前往微寐森林神社与赫普谈谈。",
             "Unfortunately, all you found at the Slumbering Weald was a rusty sword and shield. Go to the Energy Plant in Hammerlocke to put an end to Chairman Rose's plans!": "不幸的是，你在微寐森林只找到一把腐朽的剑和盾。前去拳关市的能源工厂终止洛兹会长的计划。",
             "Talk to Chairman Rose in Energy Plant": "前往能源工厂与洛兹会长谈谈。",
             "Leon failed to capture Eternatus. Defeat it before it can cause any more damage!": "丹帝捕捉无极汰那失败了，击败它避免造成更多影响。",
             "Eternatus has ascended to its Eternamax form! Catch it to put an end to the Darkest Day!": "无极汰那提升到极巨化形态，捉住它，结束闇夜。",
-            "After all those interruptions, it's finally time for the Championship match! Talk to Leon at Wyndon Stadium.": "在所有这些干扰之后，终于到冠军赛的时间了！和宫门道馆的丹帝谈谈。",
+            "After all those interruptions, it's finally time for the Championship match! Talk to Leon at Wyndon Stadium.": "在所有这些干扰之后，终于到冠军赛的时间了！和宫门竞技场的丹帝谈谈。",
             "Defeat Leon to become the Champion of Galar!": "击败丹帝并且成为伽勒尔冠军。"
         }
     },
@@ -1109,11 +1109,11 @@
             "Sordward and Shielbert have forced a Torkoal to rampage in Motostoke Stadium. Defeat it as well.": "索德与西尔迪强迫煤炭龟在机擎竞技场发狂，击败它。",
             "Talk to Sordward & Shielbert in Wedgehurst.": "前往木杆镇与索德与西尔迪谈谈。",
             "Sordward and Shielbert are trying to steal the Wishing Stars at Professor Magnolia's Lab in Wedgehurst. Stop them.": "索德与西尔迪想偷取木杆镇木兰博士实验室的许愿星，阻止他们。",
-            "Sordward and Shielbert have forced a Conkeldurr and a Dusknoir to rampage in Stow-on-Side Stadium. Defeat them both.": "索德与西尔迪迫使修建老匠和黑夜魔灵在溯传道馆里横冲直撞，打败他们。",
+            "Sordward and Shielbert have forced a Conkeldurr and a Dusknoir to rampage in Stow-on-Side Stadium. Defeat them both.": "索德与西尔迪迫使修建老匠和黑夜魔灵在溯传竞技场里横冲直撞，打败他们。",
             "Defeat Conkeldurr.": "击败修建老匠",
             "Defeat Dusknoir.": "击败黑夜魔灵",
             "There were rampaging Pokémon at Ballonlea Stadium, but Bede already defeated them. There are no more rampaging Pokémon for now, and he wants to battle.": "舞姿竞技场还有一些发狂的宝可梦，但彼特已经击败它们。现在已经没有发狂的宝可梦，他想与你一战。",
-            "Sordward and Shielbert have forced a Gigalith and a Froslass to rampage in Circhester Stadium. Defeat them both": "索德与西尔迪迫使庞岩怪和雪妖女在溯传道馆里横冲直撞，打败他们。",
+            "Sordward and Shielbert have forced a Gigalith and a Froslass to rampage in Circhester Stadium. Defeat them both": "索德与西尔迪迫使庞岩怪和雪妖女在战竞竞技场里横冲直撞，打败他们。",
             "Defeat Gigalith.": "击败庞岩怪",
             "Defeat Froslass.": "击败雪妖女",
             "There are no more rampaging Pokémon for now and Marnie wants to battle you in Spikemuth.": "暂时没有更多的发狂的宝可梦了。玛俐想在尖钉镇挑战你。",
@@ -1146,7 +1146,7 @@
             "Defeat Klara.": "击败克拉拉",
             "Defeat Avery.": "击败赛宝利",
             "Talk to Klara and Avery in the Master Dojo.": "去马师傅武馆找克拉拉和赛宝利谈谈。",
-            "For the final trial, you must defeat both Klara and Avery on the Master Dojo Battle Court.": "最后的测试，你必须在马师傅武馆击败克拉拉和赛宝利。",
+            "For the final trial, you must defeat both Klara and Avery on the Master Dojo Battle Court.": "最后的测试，你必须在马师傅武馆决斗场击败克拉拉和赛宝利。",
             "Defeat Avery": "击败赛宝利",
             "Capture Kubfu.": "捕捉熊徒弟",
             "Train Kubfu by defeating Dark and Water-type Pokémon.": "击败恶属性和水属性宝可梦以训练熊徒弟。",
@@ -1460,12 +1460,12 @@
             "Step 7 of Let's Go, Meltan!": "步骤7，去吧 美录坦！",
             "Catch or hatch 10 Magnemite.": "捕捉或孵化10只小磁怪",
             "Catch or hatch 10 Exeggcute.": "捕捉或孵化10只蛋蛋",
-            "Defeat Elite Acerola in Alola 10 times.": "前往阿罗拉地区击败Elite Acerola10次",
+            "Defeat Elite Acerola in Alola 10 times.": "前往阿罗拉地区击败 Elite Acerola 10次",
             "Step 8 of Let's Go, Meltan!": "步骤8，去吧 美录坦！",
             "Catch or hatch 15 Drowzee.": "捕捉或孵化15只催眠貘",
             "Catch or hatch 15 Cubone.": "捕捉或孵化15只卡拉卡拉",
             "Catch or hatch 15 Scyther.": "捕捉或孵化15只飞天螳螂",
-            "Defeat Elite Kahili in Alola 10 times.": "前往阿罗拉地区击败Elite Kahili10次",
+            "Defeat Elite Kahili in Alola 10 times.": "前往阿罗拉地区击败 Elite Kahili 10次",
             "Step 9 of Let's Go, Meltan!": "步骤9，去吧 美录坦！",
             "Catch or hatch 20 Kabuto.": "捕捉或孵化20只化石盔",
             "Catch or hatch 20 Omanyte.": "捕捉或孵化20只菊石兽",
@@ -1474,7 +1474,7 @@
             "Catch or hatch 20 Anorith.": "捕捉或孵化20只太古羽虫",
             "Catch or hatch 20 Lileep.": "捕捉或孵化20只触手百合",
             "Catch or hatch 20 Aerodactyl.": "捕捉或孵化20只化石翼龙",
-            "Defeat Champion Hau in Alola 15 times.": "前往阿罗拉地区击败 Champion Hau15次",
+            "Defeat Champion Hau in Alola 15 times.": "前往阿罗拉地区击败 Champion Hau 15次",
             "Let's Go, Meltan!": "去吧 美录坦！",
             "Catch 400 Meltan in Alola.": "前往阿罗拉地区捕捉400只美录坦",
             "Defeat Team Rainbow Rocket.": "击败彩虹火箭队"
