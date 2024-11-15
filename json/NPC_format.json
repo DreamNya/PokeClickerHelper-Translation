@@ -876,6 +876,17 @@
                 "There are 2 other ruins like this, one in Johto, and one in Sinnoh. I have heard that in each ruins, there are forms that only appear there. For example, the forms that resemble a question mark and an exclamation point have only been seen here.": "还有两个类似的遗迹，一个在城都地区，一个在神奥地区。我听说在每个遗迹中，都有只在那里出现的形态。例如，类似问号和感叹号的形态只有在这里被看到。",
                 "Speaking of peculiar Pokémon, I found this unusual variant of Dodrio on an island in this area. Hmm. If you want, you could buy it from me. I am needing some research funds.": "说到特殊的宝可梦，我在这个地区的一个岛上发现了嘟嘟利的一个不寻常变种。嗯。如果你愿意，你可以从我这里买下它。我需要一些研究资金。"
             }
+        },
+        {
+            "name": {
+                "Unown Figure": "未知图腾图形"
+            },
+            "dialog": {
+                "I am the lead scientist specializing in all things related to Unown. If you have any questions, don't hesitate to ask. Our study has revealed three key patterns regarding the appearance of Unown:": "我是专门研究未知图腾相关事物的首席科学家。如果你有任何疑问，可以随时提问。我们的研究揭示了未知图腾出现的三个关键模式",
+                "1. <b>Increased Frequency with Clears</b>: The deeper one ventures into the dungeon, the more Unown emerge. Our most daring researchers have observed up to three Unown at a time.": "1. <b>地牢清理次数</b>：越深入地牢，出现的未知图腾就越多。我们最勇敢的研究人员一次最多观察到3个未知图腾。",
+                "2. <b>Daily Variations</b>: Different types of Unown seem to appear each day, following what appears to be a specific sequence.": "2. <b>图腾每日轮换</b>：不同形态的未知图腾似乎每天都会轮换出现，并且遵循一定的顺序。",
+                "3. <b>Limited Variety in the Region</b>: Not all versions of Unown are found here. Although 28 forms exist, some have only been encountered in other regions.": "3. <b>地区种类有限</b>：并非所有形态的未知图腾都可在本地区找到。尽管存在 28 种不同形态，但有些形态仅在其他地区遇到过。"
+            }
         }
     ],
     "New Bark Town": [
@@ -1073,7 +1084,7 @@
             },
             "dialog": {
                 "You are too late to stop me! The R drug puts Pokémon in a frenzied state, and allows us to control them with the right equipment! You led me straight to Mewtwo, and now I will take control of the most powerful Pokémon in the world!": "你来阻止我已经太晚了！R药物会让宝可梦进入狂暴状态，并且我们可以通过正确的设备来控制它们！你直接把我引到了超梦面前，现在我将控制世界上最强大的宝可梦！",
-                "<i>Howard puts on a headset and pushes a button. The energy sphere containing Mewtwo comes into view, and it has a crazed look in its eyes. Howard pushes a botton on his headset and slumps back in his chair.</i>": "<i>霍华德戴上头戴式耳机并按下一个按钮。包含超梦的能量球出现在视野中，它的眼中闪烁着疯狂的光芒。霍华德在他的耳机上再按一个按钮，然后瘫倒在椅子上。</i>",
+                "<i>Howard puts on a headset and pushes a button. The energy sphere containing Mewtwo comes into view, and it has a crazed look in its eyes. Howard pushes a button on his headset and slumps back in his chair.</i>": "<i>霍华德戴上头戴式耳机并按下一个按钮。包含超梦的能量球出现在视野中，它的眼中闪烁着疯狂的光芒。霍华德在他的耳机上再按一个按钮，然后瘫倒在椅子上。</i>",
                 "<i>Mewtwo makes eye contact with you, and you hear Howard's voice in your mind, laughing maniacally. An armed man comes into the room, and warns you not to move.</i>": "<i>超梦与你对视，你在脑海中听到霍华德疯狂地笑声。一个武装的人走进房间，警告你不要动。</i>"
             }
         },
@@ -1102,7 +1113,7 @@
             "dialog": {
                 "I traveled here all the way from Goldenrod to buy a Soothe Bell for my Eevee.": "我从金黄市一路旅行到这里，就是为了给我的伊布买一个安抚之铃。",
                 "When I use a Soothe Bell on Eevee it can evolve into Espeon or Umbreon. It depends on the time. Espeon during the day, Umbreon at night.": "当我在伊布身上使用安抚之铃时，它可以进化成太阳伊布或月亮伊布。这取决于时间。白天是太阳伊布，夜晚是月亮伊布。",
-                "I only brought enough QP for one Soothe Bell. It's so hard to choose...": "我只带了够买一个安抚之铃的任务绿币。这真的很难选择……"
+                "I only brought enough Quest Points for one Soothe Bell. It's so hard to choose...": "我只带的任务币够买一个安抚之铃。这真的很难选择……"
             }
         },
         {
@@ -1148,7 +1159,7 @@
                 "S.S. Aqua Captain": "水流号船长"
             },
             "dialog": {
-                "Aye! At this here dock you can travel to far away regions! But only ones you’ve travelled to before; I’ve heard the Professor has his own vessel to take ye’ to new lands!": "啊！在这个码头你可以前往遥远的地区！但只能是你之前去过的地方；我听说博士有他自己的船来带你前往新的土地！"
+                "Aye! At this here dock you can travel to faraway regions! But only ones you’ve travelled to before; I’ve heard the Professor has his own vessel to take ye’ to new lands!": "啊！在这个码头你可以前往遥远的地区！但只能是你之前去过的地方；我听说博士有他自己的船来带你前往新的土地！"
             }
         }
     ],
@@ -1209,6 +1220,15 @@
                 "You seem to be around where Suicune would appear. Well, that's OK. My desire to search for Suicune is far beyond yours... My grandpa was...quite into myths. I've heard so many stories about Suicune from him.": "你似乎在水君可能出现的地方附近。好吧，那没关系。我寻找水君的愿望远远超过你...我的祖父...非常沉迷于神话。我从他那里听说了很多关于水君的故事。",
                 "Suicune... I won't stop following you until I've found out what you're after... You hear me!": "水君...在我找出你追求的东西之前，我不会停止跟踪你...听到没有！"
             }
+        },
+        {
+            "name": {
+                "Officer Jenny": "君莎小姐"
+            },
+            "dialog": {
+                "You made it to Mahogany without troubles? Did you see anything suspicious?": "你平安无事地到达了卡吉镇？你有看到什么可疑的东西吗？",
+                "Some adventurers reported criminal activities on route 42. Team Rocket are allegedly attempting to steal newborn Phanpy...": "一些冒险者报告了４２号道路上的犯罪活动。据称火箭队正试图偷走刚孵化的小小象"
+            }
         }
     ],
     "Blackthorn City": [
@@ -1240,6 +1260,19 @@
                 "Welcome to the National Park!": "欢迎来到自然公园！",
                 "Thanks to recent breakthroughs in the field of alloying and electroplating, we have discovered a way to coat some Pokémon in metal!": "得益于合金和电镀领域的最新突破，我们发现了一种方法可以让一些宝可梦表面涂层金属！",
                 "An experimental specimen can be bought here: A Sudowoodo that is no longer weak against Water attacks!": "这里可以购买到一个实验样本：一个不再对水属性攻击弱点的树才怪！"
+            }
+        }
+    ],
+    "Ruins of Alph": [
+        {
+            "name": {
+                "Unown Figure": "未知图腾图形"
+            },
+            "dialog": {
+                "I am the lead scientist specializing in all things related to Unown. If you have any questions, don't hesitate to ask. Our study has revealed three key patterns regarding the appearance of Unown:": "我是专门研究未知图腾相关事物的首席科学家。如果你有任何疑问，可以随时提问。我们的研究揭示了未知图腾出现的三个关键模式",
+                "1. <b>Increased Frequency with Clears</b>: The deeper one ventures into the dungeon, the more Unown emerge. Our most daring researchers have observed up to three Unown at a time.": "1. <b>地牢清理次数</b>：越深入地牢，出现的未知图腾就越多。我们最勇敢的研究人员一次最多观察到3个未知图腾。",
+                "2. <b>Daily Variations</b>: Different types of Unown seem to appear each day, following what appears to be a specific sequence.": "2. <b>图腾每日轮换</b>：不同形态的未知图腾似乎每天都会轮换出现，并且遵循一定的顺序。",
+                "3. <b>Limited Variety in the Region</b>: Not all versions of Unown are found here. Although 28 forms exist, some have only been encountered in other regions.": "3. <b>地区种类有限</b>：并非所有形态的未知图腾都可在本地区找到。尽管存在 28 种不同形态，但有些形态仅在其他地区遇到过。"
             }
         }
     ],
@@ -2036,7 +2069,7 @@
             }
         }
     ],
-    "Pokemon HQ Lab": [
+    "Pokémon HQ Lab": [
         {
             "name": {
                 "Professor Krane": "暮阴博士"
@@ -2082,7 +2115,7 @@
                 "Search the S. S. Libra": "搜索天秤座号"
             },
             "dialog": {
-                "<i>You rummage around in the wreckage of the S. S. Libra, and find evidence of a recent battle. It looks like something very strong beat up a lot of weaker Pokémon</i>": "<i>你在天秤座号的残骸中搜寻，找到了最近一场战斗的证据。看起来像是某个非常强大的东西击败了很多较弱的宝可梦</i>",
+                "<i>You rummage around in the wreckage of the S. S. Libra, and find evidence of a recent battle. It looks like something very strong beat up a lot of weaker Pokémon.</i>": "<i>你在天秤座号的残骸中搜寻，找到了最近一场战斗的证据。看起来像是某个非常强大的东西击败了很多较弱的宝可梦</i>",
                 "<i>Deep in the wreckage, you find a box that was left behind on accident.</i>": "<i>在残骸深处，你找到了一个意外遗留下的箱子。</i>"
             }
         }
@@ -2098,6 +2131,14 @@
         }
     ],
     "Petalburg Woods": [
+        {
+            "name": {
+                "Moss Rock": "苔岩"
+            },
+            "dialog": {
+                "The rock is covered in moss. It feels pleasantly cool.": "岩石上长满了青苔，感觉十分凉爽。"
+            }
+        },
         {
             "name": {
                 "Egg Hunter": "蛋猎人"
@@ -2221,6 +2262,15 @@
             "dialog": {
                 "<i>The cocoon shifts, shimmers, and hatches to reveal Jirachi!</i>": "<i>茧体变幻，闪烁，并孵化出基拉祈!</i>"
             }
+        },
+        {
+            "name": {
+                "Butler": "巴特勒"
+            },
+            "dialog": {
+                "I, the Great Butler, thank you for all of your help in fulfilling my greatest wish!": "我，伟大的巴特勒，感谢你帮助我实现了我最大的愿望！",
+                "Meta Groudon has been revived! It is safely contained in this crater. Catch it whenever you are ready!": "怪物固拉多复活了！它被安全地控制在这个陨石坑里。准备好后就去捕捉它吧！"
+            }
         }
     ],
     "Jagged Pass": [
@@ -2233,15 +2283,6 @@
                 "My wish was to resurrect Groudon for Team Magma, but it proved too difficult, and you have showed me that it would be irresponsible to put that much power in the hands of evil doers.": "我的愿望是为了熔岩队复活固拉多，但这证明太困难了，你让我看到，把这么大的力量交给坏人是不负责任的。",
                 "I can try the experiment again using what was learned from the previous failure, but I will need your help. If we are successful, I will give you the opportunity to catch the resulting Meta Groudon to you.": "我可以利用之前失败中学到的东西再次尝试实验，但我需要你的帮助。如果我们成功了，我会给你机会去捕捉由此产生的怪物固拉多。",
                 "To rebuild my machine, I will need a hundred power-generating Pokémon to run the machine, shiny pokemon to stabilize the energy matrix, and to conduct a new dig for fossilized Groudon materials. After that, I will need to calibrate the machine using DNA from Groudon itself.": "为了重建我的机器，我需要一百只发电的宝可梦来运行机器，闪光宝可梦来稳定能量矩阵，并进行新的挖掘来获取化石化的固拉多材料。之后，我将需要使用固拉多本身的DNA来校准机器。"
-            }
-        },
-        {
-            "name": {
-                "Butler": "巴特勒"
-            },
-            "dialog": {
-                "I, the Great Butler, thank you for all of your help in fulfilling my greatest wish!": "我，伟大的巴特勒，感谢你帮助我实现了我最大的愿望！",
-                "Meta Groudon has been revived! It is safely contained in this crater. Catch it whenever you are ready!": "怪物固拉多复活了！它被安全地控制在这个陨石坑里。准备好后就去捕捉它吧！"
             }
         }
     ],
@@ -2306,6 +2347,14 @@
         }
     ],
     "Shoal Cave": [
+        {
+            "name": {
+                "Ice Rock": "冻石"
+            },
+            "dialog": {
+                "The rock is encrusted in ice. It is freezing to touch.": "岩石上覆盖着一层冰，摸起来很冷。"
+            }
+        },
         {
             "name": {
                 "Shoal Fisherman": "浅滩渔夫"
@@ -2555,7 +2604,7 @@
     "Pyrite Cave": [
         {
             "name": {
-                "Free Duking's Plusle": "释放银猿的正电拍拍"
+                "Free Duking's Plusle": "释放银马的正电拍拍"
             },
             "dialog": {
                 "<i>Miror B. flees, leaving Plusle behind. Plusle runs off in the direction of Pyrite Town.</i>": "<i>镜之队长逃跑了，留下正电拍拍。正电拍拍朝着黄铁镇的方向跑去。</i>"
@@ -2944,7 +2993,7 @@
                 "Young Girl": "小女孩"
             },
             "dialog": {
-                "Someone told me that training an Eevee in Lake Acuity will make it evolve.": "有人告诉我，在睿智湖训练伊布会使它进化。",
+                "Someone told me that training an Eevee on Route 217 will make it evolve.": "有人告诉我，在２１７号道路训练伊布会使它进化。",
                 "They must be lying, how can that be true?!": "他们一定在撒谎，这怎么可能是真的？！"
             }
         },
@@ -2983,7 +3032,7 @@
                 "Ribboner Julia": "转让奖章的文子"
             },
             "dialog": {
-                "Oh! I don’t get visitors often. My husband is a sailor who visits far away lands… he always tells me these fantastic things.": "哦！我不常有访客。我的丈夫是一个航海的水手，他访问遥远的陆地……他总是告诉我这些奇妙的事情。",
+                "Oh! I don’t get visitors often. My husband is a sailor who visits faraway lands… he always tells me these fantastic things.": "哦！我很少接待访客。我的丈夫是一名水手，经常去遥远的地方……他总是告诉我这些奇妙的事情",
                 "One time he came back and his Wailmer looked funny. We took it to the Pokécenter and they said it had caught some weird virus called Pokérus!": "有一次他回来时，他的吼吼鲸看起来很奇怪。我们把它带到宝可梦中心，他们说它感染了一个叫做宝可病毒的奇怪病毒！",
                 "They said that it is a virus that can spread in the Pokémon Day Care. They said that Pokémon can only spread or catch the virus if they aren’t ready to hatch yet, and that they need to share a type with one another.": "他们说这是一种可以在宝可梦培育屋中传播的病毒。他们说，只有当宝可梦还没有准备好孵化时，它们才能传播或感染病毒，并且它们需要彼此共享一个属性。",
                 "If you have a Pokémon with Pokérus, try catching more of that type of Pokémon. When he got back from his next trip, oddly enough Wailmer seemed stronger than ever!": "如果你有一只感染了宝可病毒的宝可梦，试着捕捉更多那类型的宝可梦。当他从下一次旅行回来时，奇怪的是，吼吼鲸看起来比以往任何时候都要强壮！"
@@ -3036,6 +3085,14 @@
     "Eterna Forest": [
         {
             "name": {
+                "Moss Rock": "苔岩"
+            },
+            "dialog": {
+                "The rock is covered in moss. It feels pleasantly cool.": "岩石上长满了青苔，感觉十分凉爽。"
+            }
+        },
+        {
+            "name": {
                 "Go-Rock Grunt": "冲冲队手下"
             },
             "dialog": {
@@ -3070,6 +3127,19 @@
             }
         }
     ],
+    "Solaceon Ruins": [
+        {
+            "name": {
+                "Unown Figure": "未知图腾图形"
+            },
+            "dialog": {
+                "I am the lead scientist specializing in all things related to Unown. If you have any questions, don't hesitate to ask. Our study has revealed three key patterns regarding the appearance of Unown:": "我是专门研究未知图腾相关事物的首席科学家。如果你有任何疑问，可以随时提问。我们的研究揭示了未知图腾出现的三个关键模式",
+                "1. <b>Increased Frequency with Clears</b>: The deeper one ventures into the dungeon, the more Unown emerge. Our most daring researchers have observed up to three Unown at a time.": "1. <b>地牢清理次数</b>：越深入地牢，出现的未知图腾就越多。我们最勇敢的研究人员一次最多观察到3个未知图腾。",
+                "2. <b>Daily Variations</b>: Different types of Unown seem to appear each day, following what appears to be a specific sequence.": "2. <b>图腾每日轮换</b>：不同形态的未知图腾似乎每天都会轮换出现，并且遵循一定的顺序。",
+                "3. <b>Limited Variety in the Region</b>: Not all versions of Unown are found here. Although 28 forms exist, some have only been encountered in other regions.": "3. <b>地区种类有限</b>：并非所有形态的未知图腾都可在本地区找到。尽管存在 28 种不同形态，但有些形态仅在其他地区遇到过。"
+            }
+        }
+    ],
     "Lake Valor": [
         {
             "name": {
@@ -3095,6 +3165,14 @@
         }
     ],
     "Lake Acuity": [
+        {
+            "name": {
+                "Ice Rock": "冻石"
+            },
+            "dialog": {
+                "The rock is encrusted in ice. It is freezing to touch.": "岩石上覆盖着一层冰，摸起来很冷。"
+            }
+        },
         {
             "name": {
                 "Uxie": "由克希"
@@ -3439,6 +3517,16 @@
             }
         }
     ],
+    "Twist Mountain": [
+        {
+            "name": {
+                "Ice Rock": "冻石"
+            },
+            "dialog": {
+                "The rock is encrusted in ice. It is freezing to touch.": "岩石上覆盖着一层冰，摸起来很冷。"
+            }
+        }
+    ],
     "Moor of Icirrus": [
         {
             "name": {
@@ -3468,6 +3556,14 @@
         }
     ],
     "Pinwheel Forest": [
+        {
+            "name": {
+                "Moss Rock": "苔岩"
+            },
+            "dialog": {
+                "The rock is covered in moss. It feels pleasantly cool.": "岩石上长满了青苔，感觉十分凉爽。"
+            }
+        },
         {
             "name": {
                 "Virizion": "毕力吉翁"
@@ -3736,6 +3832,18 @@
             }
         }
     ],
+    "Cyllage City": [
+        {
+            "name": {
+                "Vivid Stone Collector": "彩粉石头收藏家"
+            },
+            "dialog": {
+                "You see these beautiful gemstones in Grant's gym? There is no mistake, these are genuine Mega Stones!": "你在查克洛的道馆里看到这些漂亮的宝石了吗？没错，这些都是真正的Mega进化石！",
+                "Oh, what I would pay to add them to my collection! But money is of no help here. I bet Grant would be willing to part with them if I challenge him enough times and prove my skills to him.": "哦，我愿意付出多大的代价来把它们添加到我的收藏中！但钱在这里毫无用处。我敢打赌，只要我向查克洛挑战足够多次以证明我的实力，他会愿意放弃它们。",
+                "Unfortunately my skills as a collector far surpass my skills as a Pokémon trainer. But anyone who can become the Champion of Kalos surely can convince Grant that these stones will be in good hands.": "不幸的是，我的收藏家实力远超我的宝可梦训练家实力。但任何能成为卡洛斯地区的冠军的人肯定都能说服查克洛，将这些石头留给有实力的人。"
+            }
+        }
+    ],
     "Disguised Shop": [
         {
             "name": {
@@ -3866,6 +3974,16 @@
                 "I don't have enough Quest Points to buy a Linking Cord, but a girl named Mindy from Snowpoint City offered to trade me her Haunter for a Medicham.": "我没有足够的任务点数来购买连接线，但是雪峰市的一个叫米娜琦的女孩提出用她的鬼斯通交换我的恰雷姆。",
                 "Hopefully I'll have a Gengar soon...": "希望我很快就能拥有一个耿鬼……"
             }
+        },
+        {
+            "name": {
+                "Black Belt": "空手道王"
+            },
+            "dialog": {
+                "My partner Medicham and I are always training to become the strongest in the world.": "我和我的伙伴恰雷姆一直在训练，希望能成为世界最强",
+                "Our favorite way to train is by doing quests. Someday my Medicham even found a Mega Stone while claiming some.": "我们最喜欢的训练方式是做任务。有一天我的恰雷姆甚至在提交任务时发现了一块Mega进化石",
+                "I can't quite remember what Quest Level we were at, but it was probably 15 or higher.": "我记不清我们当时的任务等级是多少，但可能是 15 级或者更高"
+            }
         }
     ],
     "Dendemille Town": [
@@ -3956,7 +4074,7 @@
             },
             "dialog": {
                 "Hello, $playername$! My name is Baraz, and my people have a complicated history with Hoopa.": "你好，$playername$！我的名字是巴尔札，我的人民与胡帕有着复杂的历史。",
-                "I have come to this region to search of a Prison Bottle, in which the spirit of a powerful Hoopa is bound.": "我来到这个地区是为了寻找惩戒之壶，一个强大的胡帕的灵魂被束缚在其中。",
+                "I have come to this region to search for a Prison Bottle, in which the spirit of a powerful Hoopa is bound.": "我来到这个地区是为了寻找惩戒之壶，一个强大的胡帕的灵魂被束缚在其中。",
                 "Can you help with my search? My search indicates it is nearby, maybe one of the local Psychic Pokémon has it?": "你能帮助我的搜索吗？我的搜索表明它就在附近，也许当地的某个超能力宝可梦拥有它？"
             }
         },
@@ -4061,6 +4179,16 @@
             }
         }
     ],
+    "Frost Cavern": [
+        {
+            "name": {
+                "Ice Rock": "冻石"
+            },
+            "dialog": {
+                "The rock is encrusted in ice. It is freezing to touch.": "岩石上覆盖着一层冰，摸起来很冷。"
+            }
+        }
+    ],
     "Team Flare Secret HQ": [
         {
             "name": {
@@ -4083,9 +4211,25 @@
                 "For me, victory is using the ultimate weapon. In order to do that, I need to reclaim the Legendary Pokémon's power and send that power to that weapon once again.": "对我来说，胜利就是使用终极武器。为了做到这一点，我需要夺回传说宝可梦的力量，并再次将那股力量发送到那个武器上。",
                 "I'll be taking the Legendary Pokémon back now! This time, I won't lose.": "我现在要把传说的宝可梦带回来！这次，我不会输。"
             }
+        },
+        {
+            "name": {
+                "AZ": "ＡＺ"
+            },
+            "dialog": {
+                "So, you’ve managed to calm the Aura Duo… Quite the feat. But your Xerneas… it seems to have entered a dormant state. That form you see now is but a shadow of its true power. To awaken its full potential, you must strengthen its bond through training. Only then, when its strength has grown a hundredfold, will the light of its true form shine once more.": "所以，你成功让气场宝可梦平静下来了……真是了不起。但是你的哲尔尼亚斯……它似乎进入了休眠状态。你现在看到的形态只是它真正力量的影子。要唤醒它的全部潜力，你必须通过训练来加强它的联系。只有这样，当它的力量增长了百倍时，它的真实形态的光芒才会再次闪耀。"
+            }
         }
     ],
     "Pokémon Village": [
+        {
+            "name": {
+                "Moss Rock": "苔岩"
+            },
+            "dialog": {
+                "The rock is covered in moss. It feels pleasantly cool.": "岩石上长满了青苔，感觉十分凉爽。"
+            }
+        },
         {
             "name": {
                 "Anomaly Mewtwo": "异常的超梦"
@@ -4968,6 +5112,14 @@
     "Lush Jungle": [
         {
             "name": {
+                "Moss Rock": "苔岩"
+            },
+            "dialog": {
+                "The rock is covered in moss. It feels pleasantly cool.": "岩石上长满了青苔，感觉十分凉爽。"
+            }
+        },
+        {
+            "name": {
                 "Captain Mallow": "队长玛奥"
             },
             "dialog": {
@@ -5171,6 +5323,14 @@
         }
     ],
     "Mount Lanakila": [
+        {
+            "name": {
+                "Ice Rock": "冻石"
+            },
+            "dialog": {
+                "The rock is encrusted in ice. It is freezing to touch.": "岩石上覆盖着一层冰，摸起来很冷。"
+            }
+        },
         {
             "name": {
                 "Colress": "阿克罗玛"
@@ -5642,7 +5802,7 @@
             "dialog": {
                 "Hey! I didn't expect to see you again here. Fancy a ba-. Actually, no, I'd like to ask a favour of you; a friend of mine living in Glimwood Tangle called me asking for some help.": "嘿！没想到在这里再次见到你。想来一场比赛-.实际上，不，我想请你帮个忙；我一个住在迷光森林的朋友打电话给我，说需要些帮助。",
                 "I would go myself, but I promised one of the students here a battle and I don't want to bail on them. Would you be able to go for me?": "我本人会去的，但我答应这里的一个学生要进行一场比赛，我不想食言。你能代替我去吗？",
-                "Great! My friends name is Koko, tell him I sent you. This battle shouldn't take me too long, so come ask for my help if you need it!": "太好了！我的朋友叫可可，告诉他是我让你去的。这场战斗不会花太长时间，所以如果你需要帮助，就来找我！"
+                "Great! My friend's name is Koko, tell him I sent you. This battle shouldn't take me too long, so come ask for my help if you need it!": "太好了！我的朋友叫可可，告诉他是我让你去的。这场战斗不会花太长时间，所以如果你需要帮助，就来找我！"
             }
         },
         {
@@ -5845,7 +6005,7 @@
             },
             "dialog": {
                 "Would you take a look at that! Now that's something you don't see every day... This place definitely feels like the stuff of legend. See that! The sword and the shield! The legends really were true!": "你看那个！这可不是每天都能见到的……这个地方绝对像是传说中的场景。看那个！剑和盾！传说果然是真的！",
-                "That settles it! We're taking the sword and shield. Though...wow, would you look at the state of these things? They seems like they might fall to pieces if you so much as look at 'em funny.": "就这么定了！我们要拿走剑和盾。不过……哇，你看看这些东西的状态？它们看起来如果你稍微有点儿笑话它们，它们就可能会散架。",
+                "That settles it! We're taking the sword and shield. Though...wow, would you look at the state of these things? They seem like they might fall to pieces if you so much as look at 'em funny.": "就这么定了！我们要拿走剑和盾。不过……哇，你能看看这些东西的状态吗？如果你用奇怪的眼神看着它们，它们似乎就会散架。",
                 "I don't know if these rusty old things will really be able to stop the Darkest Day, but... Well, I guess it can't hurt to have them along! Let's hope they bring us some good luck!": "我不知道这些生锈的旧东西真的能阻止黑暗之日，但……嗯，带上它们应该也无妨！希望它们能带给我们好运！",
                 "Maybe the Pokémon themselves really are still asleep somewhere. So it seems we're on our own if we want to go help Lee. This is all the help we've got!": "也许宝可梦们还在某处沉睡。所以如果我们想去帮助李似乎只能靠我们自己了。这就是我们所能得到的所有帮助了！"
             }
@@ -5943,7 +6103,7 @@
                 "Koko": "可可"
             },
             "dialog": {
-                "Wow, you actually beat Celebi! It looked like it had fun! It's ran off for now, but maybe if you find it again, itll let you catch it.": "哇，你居然打败了时拉比！它看起来玩得很开心！它现在跑掉了，但也许如果你再次找到它，它会让你抓住它。",
+                "Wow, you actually beat Celebi! It looked like it had fun! It's ran off for now, but maybe if you find it again, it'll let you catch it.": "哇，你居然打败了时拉比！它看起来玩得很开心！它现在跑掉了，但也许如果你再次找到它，它就会让你抓住它。",
                 "Oh, also, Dada said he would be interested in travelling with you. Although, he also said he needed to deal with the shortage of Quest Points the tribe is dealing with right now.": "哦，还有，阿爸说他有兴趣和你一起旅行。虽然，他也说他现在需要处理部落正在面临的任务点数短缺问题。",
                 "If you help him with that, I'm sure he'll join you!": "如果你帮助他解决那个问题，我相信他一定会加入你的！"
             }
@@ -6061,6 +6221,10 @@
         {
             "name": {
                 "Mustard": "马士德"
+            },
+            "dialog": {
+                "Behold! Before you stands Urshifu! Sure to be unyielding armor that will shatter any blade turned against it... And it has mastered the styles of darkness and water!": "看哪！你面前站着的是武道熊师！这绝对是坚不可摧的铠甲，可以击碎任何对准它的刀刃……它已经掌握了恶属性和水属性的风格！",
+                "Ha! You've certainly grown, haven't you? And to think, not long ago you would've run and hid behind me the moment you got scared! Indeed, no matter how old I get, witnessing someone grow always brings joy to my heart. Urshifu! And you as well! Thank you both, from the bottom of my heart.": "哈！你确实长大了，不是吗？想想看，不久前你一害怕就会跑到我身后躲起来！确实，无论我多大年纪，见证一个人的成长总是让我感到高兴。武道熊师！还有你！衷心感谢你们俩。"
             }
         }
     ],
@@ -6068,6 +6232,10 @@
         {
             "name": {
                 "Mustard": "马士德"
+            },
+            "dialog": {
+                "Behold! Before you stands Urshifu! Sure to be unyielding armor that will shatter any blade turned against it... And it has mastered the styles of darkness and water!": "看哪！你面前站着的是武道熊师！这绝对是坚不可摧的铠甲，可以击碎任何对准它的刀刃……它已经掌握了恶属性和水属性的风格！",
+                "Ha! You've certainly grown, haven't you? And to think, not long ago you would've run and hid behind me the moment you got scared! Indeed, no matter how old I get, witnessing someone grow always brings joy to my heart. Urshifu! And you as well! Thank you both, from the bottom of my heart.": "哈！你确实长大了，不是吗？想想看，不久前你一害怕就会跑到我身后躲起来！确实，无论我多大年纪，见证一个人的成长总是让我感到高兴。武道熊师！还有你！衷心感谢你们俩。"
             }
         }
     ],
@@ -6144,7 +6312,7 @@
             },
             "dialog": {
                 "Was it really was Eternatus again? Given that the purple glow has vanished, I guess you've already taken care of it. Congrats!": "真的是无极汰那再次出现了吗？考虑到紫色的光芒已经消失，我猜你已经处理好它了。恭喜！",
-                "Actually, I just saw some purple and red Pokémon fly into the caves. Maybe that was Eternatus? I think this place might let it return to it's Eternamax form. Maybe you can catch it!": "实际上，我刚看到一些紫色和红色的宝可梦飞进了洞穴。可能那是无极汰那？我认为这个地方可能会让它回到它的无极巨化形态。也许你可以抓住它！",
+                "Actually, I just saw some purple and red Pokémon fly into the caves. Maybe that was Eternatus? I think this place might let it return to its Eternamax form. Maybe you can catch it!": "实际上，我刚看到一些紫色和红色的宝可梦飞进了洞穴。可能那是无极汰那？我认为这个地方可能会让它回到它的无极巨化形态。也许你可以抓住它！",
                 "At any rate, I'm real thankful for all your help. There's so many more people coming here now there's more Gigantamax Pokémon to find.  It's been a lot of fun!": "无论如何，我真的非常感谢你的帮助。现在有更多的人来到这里寻找更多的超极巨宝可梦。这非常有趣！"
             }
         },
@@ -6202,6 +6370,26 @@
                 "If everything were straightforward, what meaning would there be in living as long as we do?": "如果一切都是那么简单明了，我们活这么久又有什么意义呢？",
                 "\"Once there was a god of field, and once there was a god of spring. Upon Hisui's winds it wheeled, brought life to every growing thing...\" Was that how that old verse went?": "\"曾经有一个田野之神，也有一个春天之神。它随洗翠的风旋转，为每一个生长的事物带来生命……\"那是那古老诗句的内容吗？",
                 "I have passed on to you all there is to pass. Where history goes from here...I leave to you and your companions to see through.": "我已经传递给你所有需要传递的东西。历史从这里走向何方……我留给你和你的伙伴们去洞察。"
+            }
+        }
+    ],
+    "Heartwood": [
+        {
+            "name": {
+                "Moss Rock": "苔岩"
+            },
+            "dialog": {
+                "The rock is covered in moss. It feels pleasantly cool.": "岩石上长满了青苔，感觉十分凉爽。"
+            }
+        }
+    ],
+    "Icepeak Cavern": [
+        {
+            "name": {
+                "Ice Rock": "冻石"
+            },
+            "dialog": {
+                "The rock is encrusted in ice. It is freezing to touch.": "岩石上覆盖着一层冰，摸起来很冷。"
             }
         }
     ],

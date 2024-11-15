@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         宝可梦点击（Poke Clicker）内核汉化脚本
 // @namespace    PokeClickerHelper
-// @version      0.10.22-a
+// @version      0.10.23-a
 // @description  采用内核汉化形式，目前汉化范围：所有任务线、城镇名、NPC及对话
 // @author       DreamNya, ICEYe, iktsuarpok, 我是谁？, 顶不住了, 银☆星, TerVoid
 // @match        http://localhost:3000/
@@ -178,7 +178,7 @@ $('#questsModalQuestLinesPane knockout.font-weight-bold.d-block[data-bind="text:
 Object.values(TownList)
     .flatMap((i) => i.npcs)
     .forEach((npc) => {
-        if (!npc) {
+        if (!npc || "rawDialog" in npc) {
             return;
         }
         npc.displayName = Translation.NPCName[npc.name] ?? npc.name;

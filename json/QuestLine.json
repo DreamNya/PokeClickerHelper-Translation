@@ -6,7 +6,7 @@
         },
         "descriptions": {
             "Defeat the Pokémon. Click to deal damage!": "点击造成伤害，以击败宝可梦",
-            "Capture 1 Pokémon. When you defeat a Pokémon, a Poké Ball is thrown and you have a chance to capture it.": "捕获1只宝可梦。当你打败宝可梦时，扔出一个精灵球，你将有机会抓住它",
+            "Capture 1 Pokémon. When you defeat a Pokémon, a Poké Ball is thrown and you have a chance to capture it.": "捕捉1只宝可梦。当你打败宝可梦时，扔出一个精灵球，你将有机会抓住它",
             "Defeat 10 Pokémon on Route 2. Click Route 2 on the map to move there and begin fighting.": "在２号道路击败10只宝可梦，点击地图上的２号道路，移动到那里并开始战斗",
             "Go back to Pallet Town and say bye to mom.": "回去真新镇跟妈妈说再见",
             "Buy 10 Poké Balls.": "购买10个精灵球",
@@ -127,9 +127,9 @@
             "Defeat Silver.": "击败小银",
             "Talk to Pokéfan Derek in Ecruteak City.": "前往缘朱市与发烧友俱乐部见栄晴谈谈",
             "Catch the Legendary Beasts.": "捕捉三圣兽",
-            "Capture or hatch Raikou.": "捕捉或孵化雷公",
-            "Capture or hatch Entei.": "捕捉或孵化炎帝",
-            "Capture Suicune.": "捕捉水君"
+            "Catch Raikou.": "捕捉雷公",
+            "Catch Entei.": "捕捉炎帝",
+            "Catch Suicune.": "捕捉水君"
         }
     },
     "Eusine's Chase": {
@@ -250,9 +250,9 @@
             "Change channels to watch a different TV station in Littleroot town.": "前往未白镇，换台看不同的电视节目",
             "Go to Hoenn Pokémon League to claim your Eon ticket.": "前往丰源宝可梦联盟领取无限船票",
             "Claim your Eon Ticket in the Start Menu and investigate the Southern Island.": "在开始菜单中领取您的无限船票，并调查南方孤岛",
-            "Catch or hatch the Eon Duo.": "捕捉或孵化无限宝可梦",
-            "Capture or hatch Latias.": "捕捉或孵化拉帝亚斯",
-            "Capture or hatch Latios.": "捕捉或孵化拉帝欧斯"
+            "Catch the Eon Duo.": "捕捉无限宝可梦",
+            "Catch Latias.": "捕捉拉帝亚斯",
+            "Catch Latios.": "捕捉拉帝欧斯"
         }
     },
     "Celio's Errand": {
@@ -286,12 +286,12 @@
             "Talk to Team Rocket on Pinkan Island to hear about their plans.": "与平柑岛的火箭队谈谈，听听他们的计划",
             "Mutate and harvest 1 Pinkan Berry at the farm.": "在农场变异并收获1个Pinkan树果",
             "Help Team Rocket recruit some Pinkan Pokémon": "帮助火箭队招募一些粉色宝可梦",
-            "Defeat 500 Pokémon on Pinkan Forest in Kanto.": "前往关都地区的平柑岛森林击败500只宝可梦",
-            "Defeat 500 Pokémon on Pinkan Plains in Kanto.": "前往关都地区的平柑岛平原击败500只宝可梦",
+            "Defeat 500 Pokémon on Pinkan Forest in Sevii Islands 4567.": "前往第４５６７岛的Pinkan Forest击败500只宝可梦",
+            "Defeat 500 Pokémon on Pinkan Plains in Sevii Islands 4567.": "前往第４５６７岛的Pinkan Plains击败500只宝可梦",
             "Collect Fairy Gems and Pixie Plates": "收集妖精宝石和妖精石板",
             "Gain 1,000 Fairy gems.": "获得1000个妖精宝石",
             "Gain 10 Pixie Plates": "获得10个妖精石板",
-            "Talk to Team Rocket on Pinkan Island to open the theme park!": "与平柑岛的火箭队谈谈，以打开主题公园",
+            "Talk to Team Rocket on Pinkan Island to open the theme park!": "与平柑岛的火箭队谈谈，以开放主题公园",
             "Defeat Team Rocket Jessie & James on Pinkan Island.": "前往平柑岛击败火箭队武藏和小次郎",
             "Oh no! Officer Jenny has showed up. She's not happy! No time to plead your case, it's time to battle!": "哦，不！君莎小姐出现了。她不开心！没时间为你狡辩了，是战斗的时候了"
         }
@@ -331,7 +331,7 @@
             "Butler has followed you to the Mt. Chimney Crater and is trying to kidnap Jirachi!": "巴特勒跟踪你到了烟囱山火山口并试图绑架基拉祈",
             "Butler has escaped through the Jagged Pass and hooked Jirachi up to some sort of machine. Fight him to free Jirachi.": "巴特勒从凹凸山道逃了出来，把基拉祈抓到某种机器上。请将他击败，尽快解救基拉祈",
             "Butler's attempts to resurrect Groudon have gone terribly wrong! Fight the resulting abomination!": "巴特勒复活固拉多的行动出现了差错！进入战斗对抗由此产生的可憎之物",
-            "Jirachi has escaped in the chaos and is roaming Hoenn. Catch or hatch Jirachi.": "基拉祈从混乱中逃了出来，在丰缘地区游荡，捕获或孵化基拉祈"
+            "Jirachi has escaped in the chaos and is roaming Hoenn. Catch Jirachi.": "基拉祈从混乱中逃了出来，在丰缘地区游荡，捕捉基拉祈"
         }
     },
     "A Meta Discovery": {
@@ -344,7 +344,7 @@
             "Gather the materials Butler needs to rebuild his resurrection machine.": "收集巴特勒重建复活机器所需的材料",
             "Catch or hatch 100 Electrode": "捕捉或孵化100只顽皮雷弹",
             "Mine 25 layers in the Underground.": "挖掘地下矿场25层",
-            "Catch 3 shiny Pokémon.": "捕捉3只闪光宝可梦",
+            "Capture or hatch 3 shiny Pokémon.": "捕捉3或孵化只闪光宝可梦",
             "Calibrate the machine by catching or hatching 5 Groudon": "捕捉或孵化5只固拉多来校准机器",
             "Deliver the materials to Butler in Mt. Chimney Crater and start the resurrection machine.": "前往烟囱山火山口把材料交给巴特勒，启动复活机器",
             "Butler has revived Meta Groudon at Mt. Chimney Crater. Catch Meta Groudon.": "巴特勒在烟囱山火山口复活了怪物固拉多。捕捉怪物固拉多"
@@ -526,9 +526,9 @@
             "Talk to Terrakion.": "与代拉基翁交谈",
             "Talk to Virizion.": "与毕力吉翁交谈",
             "The Swords of Justice all depart for their homes to wait for your arrival. Go catch your new friends and add them to your team!": "圣剑士全部返回各自的家中等待你的到来。去抓捕你的新朋友，并将他们加入你的队伍！",
-            "Capture the Leader of the Swords of Justice, Cobalion, in Mistralton Cave.": "前往吹寄洞穴捕获圣剑士的领袖勾帕路翁",
-            "Capture the Toughest of the Swords of Justice, Terrakion, in Victory Road.": "在冠军之路捕获圣剑士中最坚韧的代拉基翁",
-            "Capture the Cleverest of the Swords of Justice, Virizion, in Pinwheel Forest.": "在矢车森林捕获圣剑士中最聪明的毕力吉翁"
+            "Capture the Leader of the Swords of Justice, Cobalion, in Mistralton Cave.": "前往吹寄洞穴捕捉圣剑士的领袖勾帕路翁",
+            "Capture the Toughest of the Swords of Justice, Terrakion, in Victory Road.": "在冠军之路捕捉圣剑士中最坚韧的代拉基翁",
+            "Capture the Cleverest of the Swords of Justice, Virizion, in Pinwheel Forest.": "在矢车森林捕捉圣剑士中最聪明的毕力吉翁"
         }
     },
     "The Legend Awakened": {
@@ -555,7 +555,7 @@
         },
         "descriptions": {
             "Ask around Gateon Port for clues about new Team Cipher activity.": "前往堇青港询问关于新的暗影队活动的线索",
-            "Fight the Cipher Peons attacking the Pokemon HQ Lab.": "前往宝可梦综合研究所与暗影干部们对战",
+            "Fight the Cipher Peons attacking the Pokémon HQ Lab.": "前往宝可梦综合研究所与暗影干部们对战",
             "Clear Gateon Port to search for the Cipher Peons who kidnapped Professor Krane.": "清理堇青港，寻找绑架暮阴博士的暗影干部们",
             "Talk to Chobin at Kaminko's Manor, if he's willing to talk.": "前往姜荷博士的房子找乔宾谈谈，如果他愿意的话",
             "Talk to Chobin at Kaminko's Manor.": "前往姜荷博士的房子找乔宾谈谈",
@@ -695,41 +695,41 @@
         },
         "descriptions": {
             "Capture or hatch 100 Water-type Pokémon.": "捕捉或孵化100只水属性宝可梦",
-            "Find and capture the rare Vivillon!\nHint: It has been spotted at some Lakes.": "找到并捕获罕见的彩粉蝶！\n提示：在一些湖泊发现了他",
+            "Find and capture the rare Vivillon!\nHint: It has been spotted at some Lakes.": "找到并捕捉罕见的彩粉蝶！\n提示：在一些湖泊发现了他",
             "Capture or hatch 100 Psychic-type Pokémon.": "捕捉或孵化100只超能力属性宝可梦",
-            "Find and capture the rare Vivillon!\nHint: It's surrounded by strong Pokémon.": "找到并捕获罕见的彩粉蝶！\n提示：他被强大的宝可梦包围着",
+            "Find and capture the rare Vivillon!\nHint: It's surrounded by strong Pokémon.": "找到并捕捉罕见的彩粉蝶！\n提示：他被强大的宝可梦包围着",
             "Capture or hatch 100 Poison-type Pokémon.": "捕捉或孵化100只毒属性宝可梦",
-            "Find and capture the rare Vivillon!\nHint: It has been spotted in a swamp.": "找到并捕获罕见的彩粉蝶！\n提示：有人在沼泽里发现了他",
+            "Find and capture the rare Vivillon!\nHint: It has been spotted in a swamp.": "找到并捕捉罕见的彩粉蝶！\n提示：有人在沼泽里发现了他",
             "Capture or hatch 100 Dark-type Pokémon.": "捕捉或孵化100只恶属性宝可梦",
-            "Find and capture the rare Vivillon!\nHint: It's hiding at a dark place.": "找到并捕获罕见的彩粉蝶！\n提示：他藏在一个黑暗的地方",
+            "Find and capture the rare Vivillon!\nHint: It's hiding at a dark place.": "找到并捕捉罕见的彩粉蝶！\n提示：他藏在一个黑暗的地方",
             "Capture or hatch 100 Steel-type Pokémon.": "捕捉或孵化100只钢属性宝可梦",
-            "Find and capture the rare Vivillon!\nHint: It flew into a factory.": "找到并捕获罕见的彩粉蝶！\n提示：他飞进了一家工厂",
+            "Find and capture the rare Vivillon!\nHint: It flew into a factory.": "找到并捕捉罕见的彩粉蝶！\n提示：他飞进了一家工厂",
             "Capture or hatch 100 Fire-type Pokémon.": "捕捉或孵化100只火属性宝可梦",
-            "Find and capture the rare Vivillon!\nHint: It seems to like hot places.": "找到并捕获罕见的彩粉蝶！\n提示：他似乎喜欢炎热的地方",
+            "Find and capture the rare Vivillon!\nHint: It seems to like hot places.": "找到并捕捉罕见的彩粉蝶！\n提示：他似乎喜欢炎热的地方",
             "Capture or hatch 100 Fighting-type Pokémon.": "捕捉或孵化100只格斗属性宝可梦",
-            "Find and capture the rare Vivillon!\nHint: It's sitting on a swaying pillar.": "找到并捕获罕见的彩粉蝶！\n提示：他趴在一根摇摆的柱子上",
+            "Find and capture the rare Vivillon!\nHint: It's sitting on a swaying pillar.": "找到并捕捉罕见的彩粉蝶！\n提示：他趴在一根摇摆的柱子上",
             "Capture or hatch 100 Ghost-type Pokémon.": "捕捉或孵化100只幽灵属性宝可梦",
-            "Find and capture the rare Vivillon!\nHint: It's visiting an abandoned and spooky place.": "找到并捕获罕见的彩粉蝶！\n提示：他在探访一个废弃而阴森的地方",
+            "Find and capture the rare Vivillon!\nHint: It's visiting an abandoned and spooky place.": "找到并捕捉罕见的彩粉蝶！\n提示：他在探访一个废弃而阴森的地方",
             "Capture or hatch 100 Fairy-type Pokémon.": "捕捉或孵化100只妖精属性宝可梦",
-            "Find and capture the rare Vivillon!\nHint: It's flying around an overgrown place full of dreams.": "找到并捕获罕见的彩粉蝶！\n提示：他在一个充满梦想且杂草丛生的地方飞翔",
+            "Find and capture the rare Vivillon!\nHint: It's flying around an overgrown place full of dreams.": "找到并捕捉罕见的彩粉蝶！\n提示：他在一个充满梦想且杂草丛生的地方飞翔",
             "Capture or hatch 100 Electric-type Pokémon.": "捕捉或孵化100只电属性宝可梦",
-            "Find and capture the rare Vivillon!\nHint: It's currently in a City full of Electric-type Pokémon.": "找到并捕获罕见的彩粉蝶！\n提示：他在一个充满电属性宝可梦的城市",
+            "Find and capture the rare Vivillon!\nHint: It's currently in a City full of Electric-type Pokémon.": "找到并捕捉罕见的彩粉蝶！\n提示：他在一个充满电属性宝可梦的城市",
             "Capture or hatch 100 Bug-type Pokémon.": "捕捉或孵化100只虫属性宝可梦",
-            "Find and capture the rare Vivillon!\nHint: It hides in a dark Forest.": "找到并捕获罕见的彩粉蝶！\n提示：他藏在黑暗的森林里",
+            "Find and capture the rare Vivillon!\nHint: It hides in a dark Forest.": "找到并捕捉罕见的彩粉蝶！\n提示：他藏在黑暗的森林里",
             "Capture or hatch 100 Flying-type Pokémon.": "捕捉或孵化100只飞行属性宝可梦",
-            "Find and capture the rare Vivillon!\nHint: It's high up in the sky.": "找到并捕获罕见的彩粉蝶！\n提示：他在高高的天空中",
+            "Find and capture the rare Vivillon!\nHint: It's high up in the sky.": "找到并捕捉罕见的彩粉蝶！\n提示：他在高高的天空中",
             "Capture or hatch 100 Ground-type Pokémon.": "捕捉或孵化100只地面属性宝可梦",
-            "Find and capture the rare Vivillon!\nHint: It got lost in the desert sand.": "找到并捕获罕见的彩粉蝶！\n提示：他在沙漠里迷路了",
+            "Find and capture the rare Vivillon!\nHint: It got lost in the desert sand.": "找到并捕捉罕见的彩粉蝶！\n提示：他在沙漠里迷路了",
             "Capture or hatch 100 Grass-type Pokémon.": "捕捉或孵化100只草属性宝可梦",
-            "Find and capture the rare Vivillon!\nHint: It only shows up amongst the most beautiful flowers.": "找到并捕获罕见的彩粉蝶！\n提示：他只出现在最美的花中",
+            "Find and capture the rare Vivillon!\nHint: It only shows up amongst the most beautiful flowers.": "找到并捕捉罕见的彩粉蝶！\n提示：他只出现在最美的花中",
             "Capture or hatch 100 Rock-type Pokémon.": "捕捉或孵化100只岩石属性宝可梦",
-            "Find and capture the rare Vivillon!\nHint: It has been spotted dancing in the moonlight.": "找到并捕获罕见的彩粉蝶！\n提示：有人看见他在月光下跳舞",
+            "Find and capture the rare Vivillon!\nHint: It has been spotted dancing in the moonlight.": "找到并捕捉罕见的彩粉蝶！\n提示：有人看见他在月光下跳舞",
             "Capture or hatch 100 Dragon-type Pokémon.": "捕捉或孵化100只龙属性宝可梦",
-            "Find and capture the rare Vivillon!\nHint: It's surrounded by dragons.": "找到并捕获罕见的彩粉蝶！\n提示：他被龙属性宝可梦包围着",
+            "Find and capture the rare Vivillon!\nHint: It's surrounded by dragons.": "找到并捕捉罕见的彩粉蝶！\n提示：他被龙属性宝可梦包围着",
             "Capture or hatch 100 Ice-type Pokémon.": "捕捉或孵化100只冰属性宝可梦",
-            "Find and capture the rare Vivillon!\nHint: It can be found at a very cold place.": "找到并捕获罕见的彩粉蝶！\n提示：你可以在非常寒冷的地方找到他",
+            "Find and capture the rare Vivillon!\nHint: It can be found at a very cold place.": "找到并捕捉罕见的彩粉蝶！\n提示：你可以在非常寒冷的地方找到他",
             "Capture or hatch 200 Normal-type Pokémon.": "捕捉或孵化100只一般属性宝可梦",
-            "Find and capture the rare Vivillon!\nHint: Only the strongest Challengers can reach it.": "找到并捕获罕见的彩粉蝶！\n提示：只有最强的挑战者才能到达"
+            "Find and capture the rare Vivillon!\nHint: Only the strongest Challengers can reach it.": "找到并捕捉罕见的彩粉蝶！\n提示：只有最强的挑战者才能到达"
         }
     },
     "A Beautiful World": {
@@ -1446,11 +1446,11 @@
             "Gain 15,000 Farm Points.": "获得15000个农场点数",
             "Step 3 of Let's Go, Meltan!": "步骤3：去吧！美录坦",
             "Catch or hatch 5 Ditto.": "捕捉或孵化5只百变怪",
-            "Defeat Elite Molayne in Alola 10 times.": "前往阿罗拉地区击败Elite Molayne10次",
+            "Defeat Elite Molayne in Ula'ula Island 10 times.": "前往乌拉乌拉岛击败 Elite Molayne 10次",
             "Step 4 of Let's Go, Meltan!": "步骤4：去吧！美录坦",
             "Capture or hatch 50 Steel-type Pokémon.": "捕捉或孵化50只钢属性宝可梦",
             "Capture or hatch 50 Electric-type Pokémon.": "捕捉或孵化50只电属性宝可梦",
-            "Defeat Elite Olivia in Alola 10 times.": "前往阿罗拉地区击败Elite Olivia 10次",
+            "Defeat Elite Olivia in Ula'ula Island 10 times.": "前往乌拉乌拉岛击败 Elite Olivia 10次",
             "Step 5 of Let's Go, Meltan!": "步骤5：去吧！美录坦",
             "Catch or hatch 5 Alolan Grimer.": "捕捉或孵化5只阿罗拉臭泥",
             "Catch or hatch 5 Slugma.": "捕捉或孵化5只熔岩虫",
@@ -1460,12 +1460,12 @@
             "Step 7 of Let's Go, Meltan!": "步骤7：去吧！美录坦",
             "Catch or hatch 10 Magnemite.": "捕捉或孵化10只小磁怪",
             "Catch or hatch 10 Exeggcute.": "捕捉或孵化10只蛋蛋",
-            "Defeat Elite Acerola in Alola 10 times.": "前往阿罗拉地区击败 Elite Acerola 10次",
+            "Defeat Elite Acerola in Ula'ula Island 10 times.": "前往乌拉乌拉岛击败 Elite Acerola 10次",
             "Step 8 of Let's Go, Meltan!": "步骤8：去吧！美录坦",
             "Catch or hatch 15 Drowzee.": "捕捉或孵化15只催眠貘",
             "Catch or hatch 15 Cubone.": "捕捉或孵化15只卡拉卡拉",
             "Catch or hatch 15 Scyther.": "捕捉或孵化15只飞天螳螂",
-            "Defeat Elite Kahili in Alola 10 times.": "前往阿罗拉地区击败 Elite Kahili 10次",
+            "Defeat Elite Kahili in Ula'ula Island 10 times.": "前往乌拉乌拉岛击败 Elite Kahili 10次",
             "Step 9 of Let's Go, Meltan!": "步骤9：去吧！美录坦",
             "Catch or hatch 20 Kabuto.": "捕捉或孵化20只化石盔",
             "Catch or hatch 20 Omanyte.": "捕捉或孵化20只菊石兽",
@@ -1474,7 +1474,7 @@
             "Catch or hatch 20 Anorith.": "捕捉或孵化20只太古羽虫",
             "Catch or hatch 20 Lileep.": "捕捉或孵化20只触手百合",
             "Catch or hatch 20 Aerodactyl.": "捕捉或孵化20只化石翼龙",
-            "Defeat Champion Hau in Alola 15 times.": "前往阿罗拉地区击败 Champion Hau 15次",
+            "Defeat Champion Hau in Ula'ula Island 15 times.": "前往乌拉乌拉岛击败 Champion Hau 15次",
             "Let's Go, Meltan!": "去吧！美录坦",
             "Catch 400 Meltan in Alola.": "前往阿罗拉地区捕捉400只美录坦",
             "Defeat Team Rainbow Rocket.": "击败彩虹火箭队"
