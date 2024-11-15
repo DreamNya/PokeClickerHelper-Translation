@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         宝可梦点击（Poke Clicker）内核汉化脚本
 // @namespace    PokeClickerHelper
-// @version      0.10.21-a
+// @version      0.10.22-a
 // @description  采用内核汉化形式，目前汉化范围：所有任务线、城镇名、NPC及对话
 // @author       DreamNya, ICEYe, iktsuarpok, 我是谁？, 顶不住了, 银☆星, TerVoid
 // @match        http://localhost:3000/
@@ -27,7 +27,7 @@ const CoreModule = window.PokeClickerHelper ?? window.PokeClickerHelperPlus;
 (CoreModule ?? window).TranslationHelper = TranslationHelper;
 TranslationHelper.config = {
     CDN: CoreModule?.get("TranslationHelperCDN", "jsDelivr", true) ?? "jsDelivr",
-    UpdateDelay: CoreModule?.get("TranslationHelperUpdateDelay", 3, true) ?? 3,
+    UpdateDelay: CoreModule?.get("TranslationHelperUpdateDelay", 30, true) ?? 30,
     Timeout: CoreModule?.get("TranslationHelperTimeout", 10000, true) ?? 10000,
 };
 
@@ -168,14 +168,11 @@ QuestLine = new Proxy(window.realQuestLine, {
 });
 
 // 修改任务线文本显示绑定
-document.querySelector(
-    "#questDisplayContainer > div.questDisplayBlock.questLine > div.card-header > knockout[data-bind='text: $data.name']"
-).dataset.bind = "text: $data.displayName";
-document.querySelector("#bulletinBoardModal div.modal-body h5[data-bind='text: $data.name']").dataset.bind =
-    "text: $data.displayName";
-document
-    .querySelectorAll('#questsModalQuestLinesPane knockout.font-weight-bold.d-block[data-bind="text: $data.name"]')
-    .forEach((i) => (i.dataset.bind = "text: $data.displayName"));
+$("#questLineDisplayBody knockout[data-bind='text: $data.name']").attr("data-bind", "text: $data.displayName");
+$("#bulletinBoardModal div.modal-body h5[data-bind='text: $data.name']").attr("data-bind", "text: $data.displayName");
+$('#questsModalQuestLinesPane knockout.font-weight-bold.d-block[data-bind="text: $data.name"]').each(function () {
+    this.dataset.bind = "text: $data.displayName";
+});
 
 // 汉化NPC
 Object.values(TownList)
