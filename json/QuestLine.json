@@ -186,8 +186,8 @@
         "descriptions": {
             "Talk to Professor Oak in Pallet Town.": "前往真新镇与大木博士谈谈",
             "Talk to Professor Ivy in her lab in the Sevii Islands.": "前往七之岛的实验室与内木博士谈谈",
-            "Deliver the GS Ball to Professor Oak in Pallet Town.": "将ＧＳ球送到真新镇的大木博士那里",
-            "Deliver the GS Ball to Kurt in Azalea Town in Johto.": "将ＧＳ球送到*城都*桧皮镇的钢铁那里",
+            "Deliver the GS Ball to Professor Oak in Pallet Town.": "将ＧＳ球送给真新镇的大木博士处",
+            "Deliver the GS Ball to Kurt in Azalea Town in Johto.": "将ＧＳ球送给*城都*桧皮镇的钢铁",
             "Talk to Kurt again after becoming Champion of Johto.": "成为城都地区的冠军后再次与钢铁对话",
             "Talk to Professor Oak in Azalea Town.": "前往桧皮镇与大木博士谈谈",
             "Investigate the shrine in Ilex Forest.": "调查栎树林的神殿",
@@ -243,7 +243,7 @@
     "The Eon Duo": {
         "name": "无限宝可梦",
         "description": {
-            "Track down the elusive Eon Duo.": "追踪难以捉摸的无限宝可梦"
+            "Track down the elusive Eon Duo.": "追寻难以捉摸的无限宝可梦"
         },
         "descriptions": {
             "Watch a news report in Littleroot Town about a mysterious Pokémon.": "前往未白镇观看一则关于神秘宝可梦的新闻报道",
@@ -326,12 +326,12 @@
             "Defeat Team Rocket Jessie & James at the Millennium Festival near Lavaridge Town.": "前往釜炎镇附近的宝可梦游乐园击败火箭队武藏和小次郎",
             "Learn the legend of the Millennium Comet from Butler near Lavaridge Town.": "从釜炎镇附近的巴特勒那里了解千年彗星的传说",
             "Climb to the Mt. Chimney Crater to get a better view of the Millennium Comet as it passes.": "前往烟囱山火山口，当千年彗星经过时，能够更好地观察它",
-            "You are being stalked by Absol, the Disaster Pokémon. Capture it or hatch your own to befriend it.": "你被灾难宝可梦阿勃梭鲁跟踪，捕捉或孵化出来和他做朋友",
+            "You are being stalked by Absol, the Disaster Pokémon. Capture it or hatch your own to befriend it.": "你被灾难宝可梦阿勃梭鲁跟踪，捕捉或孵化他并和他做朋友",
             "Examine the crystalline cocoon Butler gave you while at the Mt. Chimney Crater.": "前往烟囱山火山口检查巴特勒给你的水晶茧",
             "Butler has followed you to the Mt. Chimney Crater and is trying to kidnap Jirachi!": "巴特勒跟踪你到了烟囱山火山口并试图绑架基拉祈",
-            "Butler has escaped through the Jagged Pass and hooked Jirachi up to some sort of machine. Fight him to free Jirachi.": "巴特勒从凹凸山道逃了出来，把基拉祈抓到某种机器上。请将他击败，尽快解救基拉祈",
-            "Butler's attempts to resurrect Groudon have gone terribly wrong! Fight the resulting abomination!": "巴特勒复活固拉多的行动出现了差错！进入战斗对抗由此产生的可憎之物",
-            "Jirachi has escaped in the chaos and is roaming Hoenn. Catch Jirachi.": "基拉祈从混乱中逃了出来，在丰缘地区游荡，捕捉基拉祈"
+            "Butler has escaped through the Jagged Pass and hooked Jirachi up to some sort of machine. Fight him to free Jirachi.": "巴特勒从凹凸山道逃了出来，把基拉祈抓到某种机器上。将他击败以解救基拉祈",
+            "Butler's attempts to resurrect Groudon have gone terribly wrong! Fight the resulting abomination!": "巴特勒复活固拉多的行动出现了差错！进入战斗以对抗由此产生的可憎之物",
+            "Jirachi has escaped in the chaos and is roaming Hoenn. Catch Jirachi.": "基拉祈从混乱中逃了出来，在丰缘地区漫游，捕捉基拉祈"
         }
     },
     "A Meta Discovery": {
@@ -472,7 +472,7 @@
         "descriptions": {
             "A Team Plasma Grunt in Virbank City would like to steal your Pokémon. Defeat the grunt.": "立涌市的等离子队手下想偷走你的宝可梦，必须将他击败",
             "Some Team Plasma Grunts were seen entering the Castelia Sewers. Clear Castelia Sewers.": "有人看到等离子队进入了飞云下水道，清理飞云下水道",
-            "Investigate the Perfectly Ordinary Frigate.": "调查完美普通的驱逐舰",
+            "Investigate the Perfectly Ordinary Frigate.": "调查非常普通的驱逐舰",
             "Seems there's nothing suspicious going on in Castelia City. Time to continue your journey. Clear the Nimbasa Gym.": "飞云市好像没什么可疑的事，是时候继续你的旅程了，击败雷文市道馆",
             "Hugh thinks some Team Plasma Grunts in Nimbasa City are stealing Pokémon. Defeat the grunts.": "阿修认为一些在雷文市的等离子队手下们正在偷窃宝可梦，击败他们",
             "They are definitely stealing Pokémon. Investigate the Totally Unsuspicious Frigate.": "他们绝对是在偷猎宝可梦，前往完全不可疑的驱逐舰进行调查",
@@ -483,12 +483,12 @@
             "Defeat Zinzolin.": "击败维奥",
             "Defeat the Opelucid City gym leader to obtain the DNA Splicers before Team Plasma does!": "击败双龙市道馆的馆主，在等离子队之前获得基因之楔！",
             "Team Plasma has stolen the DNA Splicers and is assaulting the city with an army of grunts and shadows! Defend against the Team Plasma Assault!": "等离子队偷走了基因之楔，他们正进攻城市！抵御等离子队的攻击",
-            "Defeat the Plasma Shadow.": "击败等离子暗影",
+            "Defeat the Plasma Shadow.": "击败等离子黑暗",
             "Team Plasma has fled the scene with the stolen DNA Splicers. Find and clear out the Plasma Frigate.": "等离子队带着偷来的基因之楔逃离了现场，找到并清除等离子驱逐舰",
             "Team Plasma's leader Ghetsis plans on using the DNA Splicers on Kyurem in Giant Chasm. Clear the dungeon to end his evil plans.": "等离子队队长魁奇思计划在巨人洞窟的酋雷姆身上使用基因之楔。清理地牢，结束他的邪恶计划",
             "Talk to Colress on the Plasma Frigate.": "登上等离子驱逐舰与阿克罗玛交谈",
             "Defeat Colress.": "击败阿克罗玛",
-            "Defeat the Plasma Shadows.": "击败等离子暗影们",
+            "Defeat the Plasma Shadows.": "击败等离子黑暗们",
             "Talk to the Shadow Triad.": "与黑暗铁三角谈谈",
             "Ghetsis has done something to the legendary Dragon-type Pokémon inside Giant Chasm!": "魁奇思对巨人洞窟里的传说中的龙属性宝可梦做了什么！",
             "Defeat Ghetsis one final time!": "最后一次击败魁奇思"
@@ -544,7 +544,7 @@
             "Defeat the four Genesect surrounding Castelia City.": "击败包围飞云市的四个盖诺赛克特",
             "The Red Genesect is trying to escape the Castelia Sewers, stop it!": "红色盖诺赛克特正试图逃离飞云下水道，快阻止它！",
             "Witness the battle between the Red Genesect and another powerful Pokémon in Castelia City.": "在飞云市城见证红色盖诺赛克特和另一个强大的宝可梦战斗",
-            "The Red Genesect has crashed into the P2 Lab and escaped underground. Start digging to learn more.": "红色盖诺赛克特闯进Ｐ２实验室 ，逃到了地下。请开始挖掘，并找到它",
+            "The Red Genesect has crashed into the P2 Lab and escaped underground. Start digging to learn more.": "红色盖诺赛克特闯进Ｐ２实验室 ，逃到了地下矿场。请开始挖掘，并找到它",
             "Catch Genesect in P2 Lab.": "前往Ｐ２实验室 抓捕盖诺赛克特"
         }
     },
@@ -728,7 +728,7 @@
             "Find and capture the rare Vivillon!\nHint: It's surrounded by dragons.": "找到并捕捉罕见的彩粉蝶！\n提示：他被龙属性宝可梦包围着",
             "Capture or hatch 100 Ice-type Pokémon.": "捕捉或孵化100只冰属性宝可梦",
             "Find and capture the rare Vivillon!\nHint: It can be found at a very cold place.": "找到并捕捉罕见的彩粉蝶！\n提示：你可以在非常寒冷的地方找到他",
-            "Capture or hatch 200 Normal-type Pokémon.": "捕捉或孵化100只一般属性宝可梦",
+            "Capture or hatch 200 Normal-type Pokémon.": "捕捉或孵化200只一般属性宝可梦",
             "Find and capture the rare Vivillon!\nHint: Only the strongest Challengers can reach it.": "找到并捕捉罕见的彩粉蝶！\n提示：只有最强的挑战者才能到达"
         }
     },
@@ -826,13 +826,13 @@
             "It has been said that Mewtwo can Mega Evolve. Search for clues on how to find its Mega Stones, so you can control this unrivaled power.": "据说超梦可以极巨化。寻找有关如何找到Mega宝石的线索，这样你就可以控制这种无与伦比的力量"
         },
         "descriptions": {
-            "Red might know something. Fight him at Indigo Plateau Kanto then ask him what he knows.": "赤红可能知道些什么。前往关都石英高原和他对战，然后问他知道什么",
+            "Red might know something. Fight him at Indigo Plateau Kanto then ask him what he knows.": "赤红可能知道些什么。前往关都石英高原和他对战，然后问他知道些什么",
             ".....right. Of course..... Well, you have no leads for now, so may as well defeat and catch some Psychic and Fighting-type Pokémon.": "当然……你现在还没有线索，所以不妨打败和抓住一些超能力属性和格斗属性的宝可梦",
             "Defeat 1500 Psychic-type Pokémon.": "击败1500只超能力属性宝可梦",
             "Capture or hatch 600 Psychic-type Pokémon.": "捕捉或孵化600只超能力属性宝可梦",
             "Defeat 750 Fighting-type Pokémon.": "击败750只格斗属性宝可梦",
             "Capture or hatch 300 Fighting-type Pokémon.": "捕捉或孵化300只格斗属性宝可梦",
-            "Blue has contacted you, saying he knows something but wants a fight first. He is at Viridian City.": "青绿联系过你，说他知道些什么但想进行一场对战。他在常青市等着你",
+            "Blue has contacted you, saying he knows something but wants a fight first. He is at Viridian City.": "青绿联系了你，说他知道些什么但想和你进行一场对战。他在常青市等着你",
             "Talk to Blue in Viridian City.": "前往常青市与青绿谈谈",
             "Look for Blue's old rival in Cerulean Cave": "前往华蓝洞窟寻找青绿的老对手",
             "You eventually found a trainer standing where Mewtwo once did in Cerulean Cave. Talk to Green.": "你最终在超梦曾经待过的华蓝洞窟中找到了一个训练师。和碧蓝谈谈",
@@ -928,7 +928,7 @@
             "Hapu has permitted you to visit sacred ground. Find the other flute by clearing Exeggutor Island Hill.": "哈普乌允许你参观圣地。通过清理椰蛋树岛山丘找到另一支笛子",
             "Team Skull are being annoying again. Settle the score with them near Vast Poni Canyon.": "骷髅队又来捣乱了。在波尼大峡谷附近解决这个问题",
             "Proceed to Vast Poni Canyon and prove your skills in a Grand Trial against Poni's new kahuna, Hapu!": "前往波尼大峡谷并在波尼岛新岛屿之王哈普乌的大考验中证明你的实力！",
-            "Clear the ancient Trial Site of Vast Poni Canyon.": "清理波尼大峡谷的古老考验之地",
+            "Clear the ancient Trial Site of Vast Poni Canyon.": "清理波尼大峡谷的古老考验场",
             "Choose a time of day to play a flute with Lillie at the Altar.": "选择一个时间与莉莉艾在祭坛上吹笛子",
             "Play the Sun Flute during Day or Dusk.": "在白天或黄昏吹奏太阳之笛",
             "Play the Moon Flute during Night or Dawn.": "在夜晚或黎明吹奏月亮之笛",
@@ -948,7 +948,7 @@
             "Clear Mina's Trial at Mina's Houseboat.": "在茉莉的船屋完成茉莉的考验",
             "Battle Gladion on Ula'ula one last time before ascending to the Pokémon League.": "在乌拉乌拉岛与格拉吉欧最后一次战斗，然后前往宝可梦联盟",
             "One step closer to victory: Clear Mount Lanakila!": "距离胜利更近一步：清理拉纳基拉山！",
-            "You were so distracted by Necrozma you forgot about the Z Crystal! Find the Trial Site in the Mount Lanakila dungeon.": "你被奈克洛兹玛分心忘记了Ｚ纯晶！在拉纳基拉山地牢找到考验之地"
+            "You were so distracted by Necrozma you forgot about the Z Crystal! Find the Trial Site in the Mount Lanakila dungeon.": "你被奈克洛兹玛分心忘记了Ｚ纯晶！在拉纳基拉山地牢找到考验场"
         }
     },
     "Island Challenge": {
@@ -1378,7 +1378,7 @@
             "A basket of strange eggs has been spotted, see if you can find it!": "一篮奇怪的蛋被发现了，看看你能找到它吗！"
         },
         "descriptions": {
-            "Some strange eggs have been seen around Kanto. Go look for it! Maybe Erika knows more?": "在关都附近看到了一些奇怪的鸡蛋。去找吧！也许莉佳知道的更多？",
+            "Some strange eggs have been seen around Kanto. Go look for it! Maybe Erika knows more?": "在关都地区附近看到了一些奇怪的鸡蛋。去找吧！也许莉佳知道的更多？",
             "Seems like this was just an Easter egg after all... But no time to dwell on that. Another report just came in, there have been sightings of some strange eggs in a forest in Johto!": "这似乎只是一个复活节彩蛋……但没时间细想了。刚收到另一份报告显示，有人在城都的森林里看到了一些奇怪的蛋！",
             "That looked like a Togepi!... well, maybe not. Anyway, there is a big Egg Hunt going on in the woods south of Rustboro in Hoenn; maybe you should take a look?": "那看起来像只波克比！好吧，也许不是。总之，在丰源卡那兹市南部的树林里正在进行一场大型的寻蛋活动，也许你应该去看看？",
             "The eggs ran away! Talk to the egg hunter in Petalburg Woods.": "蛋跑了！前往卡绿森林与蛋猎人谈谈"

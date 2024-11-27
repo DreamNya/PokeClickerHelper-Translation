@@ -1461,7 +1461,7 @@
             "dialog": {
                 "Whats the big idea, $playername$?!?": "怎么回事，$playername$？！？",
                 "Your new friend waited until my back was turned, stole my Key Stone, and skipped town!": "你的新朋友等到我转过身，就偷走了我的钥石，并逃离了这个镇子！",
-                "She was headed towards Petalburg City. You better help me get my Key Stone back!": "她前往橙华市。你最好帮我把我的钥石拿回来！"
+                "She was headed towards Petalburg City. You better help me get my Key Stone back!": "她向橙华市的方向去了。你最好帮我拿回我的钥石！"
             }
         }
     ],
@@ -1776,7 +1776,7 @@
             },
             "dialog": {
                 "That was.... quite the interruption.": "那真是……相当大的干扰。",
-                "But there's no need to worry. Based on our theory, we can at least guarantee that we will be sending the meteor away from our planet if the plan is successful. Not sure where it will go.": "但是没有必要担心。基于我们的理论，如果计划成功，我们至少可以保证我们会把陨石送离我们的星球。不确定它会去哪里。",
+                "But there's no need to worry. Based on our theory, we can at least guarantee that we will be sending the meteor away from our planet if the plan is successful. Not sure where it will go.": "但是没有必要担心。基于我们的理论，如果计划成功，我们至少可以保证我们会把流星送离我们的星球。不确定它会去哪里。",
                 "However, we've realized that we will need more energy than originally anticipated to control the process properly... I'm sorry to ask this of you, but we will need one more Meteorite Shard. There should be one at Meteor Falls.": "然而，我们已经意识到我们需要比最初预期的更多的能量来正确控制这个过程……很抱歉再次请求你的帮助，但我们需要再找到一块陨石碎片。流星瀑布那里应该有一块。"
             }
         },
@@ -1788,7 +1788,7 @@
                 "Thank you, dear. Now then... That is an impressive machine. Snap your fingers, the asteroid vanishes, and we all live happily ever after? It's a good thing you saved it from those Aqua and Magma thugs.": "谢谢你，亲爱的。现在……那真是一台令人印象深刻的机器。打个响指，小行星消失了，然后我们都幸福地生活在一起？你能从那些水族和熔岩帮的暴徒手中救出它，真是太好了。",
                 "This thing is the best hope we have of saving this planet and everything on it. But you know... It could also be the worst tragedy imaginable for some other world and everything on it.": "这件事是我们拯救这个星球及其上的一切的最佳希望。但你知道的... 对于另一个世界及其上的一切来说，这也可能是无法想象的最大悲剧。",
                 "My people have passed down a story of another world, much like our own. In this other world, the world took a different path. The war in Kalos 3000 years ago never happened, and Mega Evolution is not known there.": "我的人民传下了另一个世界的故事，那个世界与我们的很相似。在那个世界，世界走上了一条不同的道路。3000年前的卡洛斯战争从未发生，那里也不知道Mega进化。",
-                "If a meteor appeared in that world because of the use of this warp hole technology, they would be unable to save themselves! We can't do that to the other world! We have to solve this problem a different way!": "如果因为使用这个扭曲孔技术而在那个世界出现了一颗陨石，他们将无法自救！我们不能对另一个世界做这种事！我们必须用另一种方式解决这个问题！",
+                "If a meteor appeared in that world because of the use of this warp hole technology, they would be unable to save themselves! We can't do that to the other world! We have to solve this problem a different way!": "如果因为使用这个扭曲孔技术而在那个世界出现了一颗流星，他们将无法自救！我们不能对另一个世界做这种事！我们必须用另一种方式解决这个问题！",
                 "<i>Zinnia smashes the complex machines Dr. Cozmo has been working on and flees.</i>": "<i>希嘉娜破坏了索蓝斯博士一直在研究的复杂机器并逃离了。</i>"
             }
         },
@@ -1797,8 +1797,8 @@
                 "Dr. Cozmo": "索蓝斯博士"
             },
             "dialog": {
-                "You did it! You saved Hoenn and maybe the whole planet by destroying the meteor!": "你做到了！通过摧毁陨石，你救了丰缘地区，甚至可能是整个星球！",
-                "We have been working on repairing all the damage your... friend did when she was here last. The rocket system here at the Space Center should be able to take you up to the debris field the meteor left behind any time you want!": "我们一直在修复你的...朋友上次来这里时造成的所有损坏。这里的太空中心的火箭系统应该能随时带你去陨石留下的碎片场！"
+                "You did it! You saved Hoenn and maybe the whole planet by destroying the meteor!": "你做到了！通过摧毁流星，你救了丰缘地区，甚至可能是整个星球！",
+                "We have been working on repairing all the damage your... friend did when she was here last. The rocket system here at the Space Center should be able to take you up to the debris field the meteor left behind any time you want!": "我们一直在修复你的...朋友上次来这里时造成的所有损坏。这里的太空中心的火箭系统应该能随时带你去流星留下的碎片场！"
             }
         }
     ],
@@ -2015,7 +2015,7 @@
     "Relic Stone": [
         {
             "name": {
-                "Relic Stone Sage": "神圣深林的祠堂僧侣"
+                "Relic Stone Sage": "神圣森林的祠堂僧侣"
             },
             "dialog": {
                 "This stone has the power to cleanse and purify the spirits of Pokémon.": "这块石头有净化宝可梦精神的力量。",
@@ -2238,7 +2238,7 @@
             },
             "dialog": {
                 "Zinnia is the current Lorekeeper of our people, who has inherited the knowledge and power to summon Lord Rayquaza when disaster imperils the world.": "希嘉娜是我们现在的传说守护者，她继承了在世界面临灾难时召唤烈空坐的知识和力量。",
-                "She has long known about the meteor approaching the planet, and has been trying to draw out the power of Rayquaza. Part of this plan was working with Teams Aqua and Magma to revive the Super-Ancient Pokémon.": "她早就知道有陨石接近地球，并一直试图引出烈空坐的力量。这个计划的一部分是与水族队和熔岩队合作，复活超古代宝可梦。",
+                "She has long known about the meteor approaching the planet, and has been trying to draw out the power of Rayquaza. Part of this plan was working with Teams Aqua and Magma to revive the Super-Ancient Pokémon.": "她早就知道流星接近地球，并一直试图引出烈空坐的力量。这个计划的一部分是与水族队和熔岩队合作，复活超古代宝可梦。",
                 "She taught them the secrets needed to bring back these threats and summon the great Dragon itself. And now it seems she travels the land, scouring the world for Key Stones.": "她教给他们带回这些威胁和召唤伟大龙本身所需的秘密。现在，她似乎在陆地上旅行，搜遍世界寻找钥石。",
                 "I do not know what you plan to do, but Zinnia will continue to follow her convictions to the very end. This may cost her her life, but she is dedicated. Please, help her if you can.": "我不知道你打算做什么，但希嘉娜会坚持她的信念到最后。这可能会让她付出生命，但她是专注的。如果可以，请帮助她。",
                 "Take this Meteorite Shard, and please hurry! After you have helped Zinnia, please come back here and find me.": "拿上这块陨石碎片，请快点！在你帮助了希嘉娜之后，请回到这里找我。"
@@ -2421,9 +2421,9 @@
             },
             "dialog": {
                 "You must be $playername$, the trainer Wa... People are talking about.": "你一定是$playername$，那位训练家……人们都在谈论的。",
-                "If you're here, it means you've heard the same news that I have: a meteor is headed towards this island.": "如果你在这里，这意味着你听到了和我一样的消息：有一颗陨石正朝这个岛屿飞来。",
+                "If you're here, it means you've heard the same news that I have: a meteor is headed towards this island.": "如果你在这里，这意味着你听到了和我一样的消息：有一颗流星正朝这个岛屿飞来。",
                 "Who am I? My name is Zinnia, nice to meet you. I have a certain.... connection to the Pokémon of this region, but we can get into that later.": "我是谁？我的名字是希嘉娜，很高兴见到你。我与这个地区的宝可梦有某种……联系，但我们稍后再深入讨论。",
-                "For now, I think we can help each other out. I need you to introduce me to your rival, May. If you do that, I'll tell you my plan to stop the meteor.": "目前，我认为我们可以互相帮助。我需要你把我介绍给你的对手，小遥。如果你做到了，会告诉你我的计划来阻止这颗陨石。"
+                "For now, I think we can help each other out. I need you to introduce me to your rival, May. If you do that, I'll tell you my plan to stop the meteor.": "目前，我认为我们可以互相帮助。我需要你把我介绍给你的对手，小遥。如果你做到了，会告诉你我的计划来阻止这颗流星。"
             }
         },
         {
@@ -2596,7 +2596,7 @@
             },
             "dialog": {
                 "Your victory doesn't matter, we got what we came for!": "你的胜利无关紧要，我们得到了我们来此的东西！",
-                "<i>Exol shouts to his assembled peons:</i>": "<i>埃克索尔对他的手下喊道：</i>",
+                "<i>Exol shouts to his assembled peons:</i>": "<i>达卡查对他的手下喊道：</i>",
                 "Troops, move out! On to Phenac!": "部队，出发！前往风雪市！"
             }
         }
@@ -2677,7 +2677,7 @@
                 "Cipher Admin Snattle": "暗影干部瓦资尔"
             },
             "dialog": {
-                "How is this possible?! I've never seen a trainer so strong! But, no matter! Surely I've bought Gorigan enough time.": "这怎么可能？！我从未见过如此强大的训练家！但是，没关系！我肯定为戈利根争取到了足够的时间。",
+                "How is this possible?! I've never seen a trainer so strong! But, no matter! Surely I've bought Gorigan enough time.": "这怎么可能？！我从未见过如此强大的训练家！但是，没关系！我肯定为果力刚争取到了足够的时间。",
                 "His precious recovery operation must be finished by now. Today, we will leave quietly. But don't you forget us!": "他宝贵的恢复行动现在肯定已经完成。今天，我们会悄悄离开。但别忘了我们！"
             }
         }
@@ -3232,7 +3232,7 @@
                 "Witness the battle": "见证战斗"
             },
             "dialog": {
-                "<i>The Red Genesect and a powerful Pokémon you don't recognize exchange energy blasts. The Red Genesect flees the battle, heading east.</i>": "<i>红色的盖诺赛克特和一个你不认识的强大宝可梦交换能量爆炸。红色的盖诺赛克特逃离了战斗，向东方飞去。</i>"
+                "<i>The Red Genesect and a powerful Pokémon you don't recognize exchange energy blasts. The Red Genesect flees the battle, heading east.</i>": "<i>红色盖诺赛克特和一个你不认识的强大宝可梦交换能量爆炸。红色盖诺赛克特逃离了战斗，向东方飞去。</i>"
             }
         }
     ],
@@ -3765,7 +3765,7 @@
                 "Red Button": "红色按钮"
             },
             "dialog": {
-                "You pushed it! Oh ho ho! You pushed the little red button! Too bad...for you!": "你推了它！哦呵呵！你推了红色小按钮！对你来说太糟糕了……",
+                "You pushed it! Oh ho ho! You pushed the little red button! Too bad...for you!": "你按了它！哦呵呵！你按了红色小按钮！对你来说太糟糕了……",
                 "Pushing that button has enabled us to use the ultimate weapon! Don't feel too down, though. I would have activated it even if you had guessed correctly.": "按下那个按钮使我们能够使用终极武器！不过不要太沮丧。即使你猜对了，我也会激活它。",
                 "The ultimate weapon is reborn! The poisonous flower has bloomed! All shall perish! Except for Team Flare! Look at Geosenge! It has bloomed in Geosenge Town!": "终极武器重生了！毒花绽放！所有人都将灭亡！除了闪焰队！看吉尔尼！它在石香镇绽放！",
                 "The boss's dream of creating a beautiful world will come true! Add it all up, and it equals... a victory for our SCIENCE!": "老板创造一个美丽世界的梦想将成真！加起来，这等于……我们的科学胜利！"
