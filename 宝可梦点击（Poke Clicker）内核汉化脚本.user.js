@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         宝可梦点击（Poke Clicker）内核汉化脚本
 // @namespace    PokeClickerHelper
-// @version      0.10.23-a
+// @version      0.10.23-b
 // @description  采用内核汉化形式，目前汉化范围：所有任务线、城镇名、NPC及对话
 // @author       DreamNya, ICEYe, iktsuarpok, 我是谁？, 顶不住了, 银☆星, TerVoid
 // @match        http://localhost:3000/
@@ -18,17 +18,18 @@
 // @connect      cdn.jsdelivr.net
 // @connect      raw.githubusercontent.com
 // ==/UserScript==
-/* global TownList, QuestLine:true, Notifier, MultipleQuestsQuest, App, NPC, NPCController, GameController */
+/* global TownList, QuestLine:true, Notifier, MultipleQuestsQuest, App, NPC, NPCController, GameController, ko */
 
 //储存汉化文本
 const Translation = {};
 const TranslationHelper = { Translation, exporting: false };
 const CoreModule = window.PokeClickerHelper ?? window.PokeClickerHelperPlus;
 (CoreModule ?? window).TranslationHelper = TranslationHelper;
+window.TranslationHelper = TranslationHelper;
 TranslationHelper.config = {
     CDN: CoreModule?.get("TranslationHelperCDN", "jsDelivr", true) ?? "jsDelivr",
     UpdateDelay: CoreModule?.get("TranslationHelperUpdateDelay", 30, true) ?? 30,
-    Timeout: CoreModule?.get("TranslationHelperTimeout", 10000, true) ?? 10000,
+    Timeout: CoreModule?.get("TranslationHelperTimeout", 5000, true) ?? 5000,
 };
 
 // 引用外部资源
@@ -94,7 +95,15 @@ async function FetchResource(resource, force = false) {
 
 Translation.NPCName = Translation.NPC.NPCName ?? {};
 Translation.NPCDialog = Translation.NPC.NPCDialog ?? {};
-TranslationHelper.toggleRaw = false;
+TranslationHelper._toggleRaw = ko.observable(false).extend({ boolean: null });
+Object.defineProperty(TranslationHelper, "toggleRaw", {
+    get() {
+        return TranslationHelper._toggleRaw();
+    },
+    set(newValue) {
+        TranslationHelper._toggleRaw(newValue);
+    },
+});
 
 // 汉化城镇
 Object.values(TownList).forEach((t) => {
@@ -102,7 +111,10 @@ Object.values(TownList).forEach((t) => {
     t.displayName = name ?? t.name;
 });
 // 修改城镇文本显示绑定
-$('[data-bind="text: player.town.name"]').attr("data-bind", "text: player.town.displayName");
+$('[data-bind="text: player.town.name"]').attr(
+    "data-bind",
+    "text: player.town[TranslationHelper.toggleRaw ? 'name' : 'displayName']"
+);
 $("[data-town]").each(function () {
     const name = $(this).attr("data-town");
     $(this).attr("data-town", Translation.Town[name] || name);
@@ -110,8 +122,8 @@ $("[data-town]").each(function () {
 
 GameController.realShowMapTooltip = GameController.showMapTooltip;
 GameController.showMapTooltip = function (tooltipText) {
-    const translationTown = Translation.Town[tooltipText];
-    return this.realShowMapTooltip(translationTown ?? tooltipText);
+    const translationTown = TranslationHelper.toggleRaw ? tooltipText : Translation.Town[tooltipText] ?? tooltipText;
+    return this.realShowMapTooltip(translationTown);
 };
 
 // 汉化任务线
@@ -125,7 +137,7 @@ QuestLine.prototype.addQuest = new Proxy(QuestLine.prototype.realAddQuest, {
             const displayDescription = translation.descriptions[description];
             if (displayDescription) {
                 Object.defineProperty(quest, "description", {
-                    get: () => (TranslationHelper.exporting ? description : displayDescription),
+                    get: () => (TranslationHelper.exporting || TranslationHelper.toggleRaw ? description : displayDescription),
                 });
             }
             if (quest instanceof MultipleQuestsQuest) {
@@ -134,7 +146,8 @@ QuestLine.prototype.addQuest = new Proxy(QuestLine.prototype.realAddQuest, {
                     const displayDescription = translation.descriptions[description];
                     if (displayDescription) {
                         Object.defineProperty(q, "description", {
-                            get: () => (TranslationHelper.exporting ? description : displayDescription),
+                            get: () =>
+                                TranslationHelper.exporting || TranslationHelper.toggleRaw ? description : displayDescription,
                         });
                     }
                 });
@@ -154,12 +167,12 @@ QuestLine = new Proxy(window.realQuestLine, {
         const displayName = translation?.name;
         const displayDescription = translation?.description[description];
         Object.defineProperty(questline, "displayName", {
-            get: () => (TranslationHelper.exporting ? name : displayName ?? name),
+            get: () => (TranslationHelper.exporting || TranslationHelper.toggleRaw ? name : displayName ?? name),
         });
 
         if (displayDescription) {
             Object.defineProperty(questline, "description", {
-                get: () => (TranslationHelper.exporting ? description : displayDescription),
+                get: () => (TranslationHelper.exporting || TranslationHelper.toggleRaw ? description : displayDescription),
             });
         }
 
@@ -168,10 +181,16 @@ QuestLine = new Proxy(window.realQuestLine, {
 });
 
 // 修改任务线文本显示绑定
-$("#questLineDisplayBody knockout[data-bind='text: $data.name']").attr("data-bind", "text: $data.displayName");
-$("#bulletinBoardModal div.modal-body h5[data-bind='text: $data.name']").attr("data-bind", "text: $data.displayName");
+$("#questLineDisplayBody knockout[data-bind='text: $data.name']").attr(
+    "data-bind",
+    "text: $data[TranslationHelper.toggleRaw ? 'name' : 'displayName']"
+);
+$("#bulletinBoardModal div.modal-body h5[data-bind='text: $data.name']").attr(
+    "data-bind",
+    "text: $data[TranslationHelper.toggleRaw ? 'name' : 'displayName']"
+);
 $('#questsModalQuestLinesPane knockout.font-weight-bold.d-block[data-bind="text: $data.name"]').each(function () {
-    this.dataset.bind = "text: $data.displayName";
+    this.dataset.bind = "text: $data[TranslationHelper.toggleRaw ? 'name' : 'displayName']";
 });
 
 // 汉化NPC
@@ -193,10 +212,13 @@ Object.defineProperty(NPC.prototype, "dialog", {
 });
 
 // 修改NPC文本显示绑定
-document.querySelector(
-    "#townView button[data-bind='text: $data.name, click: () => NPCController.openDialog($data)']"
-).dataset.bind = "text: $data.displayName, click: () => NPCController.openDialog($data)";
-document.querySelector("#npc-modal h5").dataset.bind = "text: $data.displayName";
+$("#townView button[data-bind='text: $data.name, click: () => NPCController.openDialog($data)']").each(function () {
+    this.dataset.bind =
+        "text: $data[TranslationHelper.toggleRaw ? 'name' : 'displayName'], click: () => NPCController.openDialog($data)";
+});
+$("#npc-modal h5").each(function () {
+    this.dataset.bind = "text: $data[TranslationHelper.toggleRaw ? 'name' : 'displayName']";
+});
 
 // 导出完整json方法
 TranslationHelper.ExportTranslation = {};
@@ -278,6 +300,39 @@ TranslationHelper.ExportTranslation.Town = function () {
     return json;
 };
 
+TranslationHelper.ImportTranslation = async function (files) {
+    for (const file of files) {
+        const name = file.name;
+        const type = name.replace(/\.json$/, "");
+        if (!resources.includes(type)) {
+            Notifier.notify({
+                title: "宝可梦点击（Poke Clicker）内核汉化脚本",
+                message: `导入本地汉化json失败\n不支持的文件名：${name}`,
+                timeout: 6000000,
+            });
+            continue;
+        }
+
+        await new Promise((resolve) => {
+            const fr = new FileReader();
+            fr.readAsText(file);
+            fr.addEventListener("loadend", function () {
+                const result = JSON.parse(this.result);
+                localStorage.setItem(`PokeClickerHelper-Translation-${type}`, JSON.stringify(result));
+                localStorage.setItem(`PokeClickerHelper-Translation-${type}-lastModified`, now);
+                console.log("PokeClickerHelper-Translation", "本地导入json", type);
+                Notifier.notify({
+                    title: "宝可梦点击（Poke Clicker）内核汉化脚本",
+                    message: `导入本地汉化json成功\n刷新游戏后生效：${name}`,
+                    type: 1,
+                    timeout: 6000000,
+                });
+                resolve();
+            });
+        });
+    }
+};
+
 // UI (需要PokeClickerHelper)
 if (CoreModule) {
     const prefix = CoreModule.UIContainerID[0].replace("#", "").replace("Container", "") + "TranslationHelper";
@@ -289,7 +344,8 @@ if (CoreModule) {
         </div>
         <div style="flex: auto;">
             <button id="${prefix}Refresh" class="btn btn-sm btn-primary mr-1" data-save="false" title="刷新游戏后强制请求汉化json&#10;*仅清空脚本缓存，可能存在浏览器缓存需手动清理">清空缓存</button>
-            <button id="${prefix}Toggle" class="btn btn-sm btn-primary mr-1" data-save="false" value="切换原文" title="仅NPC对话支持热切换（*其他汉化暂不支持）">切换原文</button>
+            <button id="${prefix}Import" class="btn btn-sm btn-primary mr-1" data-save="false" title="导入本地汉化文件覆盖汉化缓存">导入汉化</button>
+            <button id="${prefix}Toggle" class="btn btn-sm btn-primary mr-1" data-save="false" value="切换原文" title="">切换原文</button>
         </div>
         <div class="contentContainer d-flex ml-2 mt-2" style="flex: auto;align-items: center;flex-wrap: wrap;">
             <div class="m-auto d-flex" style="align-items: baseline; width: 100%;">
@@ -345,6 +401,18 @@ if (CoreModule) {
                 if ($("#npc-modal").is(":visible")) {
                     NPCController.selectedNPC(NPCController.selectedNPC());
                 }
+            })
+            .on("click", `#${prefix}Import`, function () {
+                $(`<input type="file" accept=".json" style="display:none;" multiple />`)
+                    .appendTo(document.body)
+                    .on("change", function () {
+                        TranslationHelper.ImportTranslation(this.files);
+                        this.remove();
+                    })
+                    .on("cancel", function () {
+                        this.remove();
+                    })
+                    .trigger("click");
             })
             .on("change", "[data-save=global]", function () {
                 const id = this.id.replace(prefix, "");
