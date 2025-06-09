@@ -1,0 +1,18 @@
+{
+    "name": "pokeclickerhelper-translation",
+    "version": "1.0.0",
+    "description": "https://scriptcat.org/zh-CN/script-show-page/837/",
+    "private": "true",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/DreamNya/PokeClickerHelper-Translation.git"
+    },
+    "author": "DreamNya",
+    "license": "MIT",
+    "dependencies": {
+        "ts-morph": "^26.0.0"
+    }
+}
