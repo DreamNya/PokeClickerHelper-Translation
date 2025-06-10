@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         宝可梦点击（Poke Clicker）内核汉化脚本
 // @namespace    PokeClickerHelper
-// @version      0.10.23-b
+// @version      0.10.23-c
 // @description  采用内核汉化形式，目前汉化范围：所有任务线、城镇名、NPC及对话
 // @author       DreamNya, ICEYe, iktsuarpok, 我是谁？, 顶不住了, 银☆星, TerVoid
 // @match        http://localhost:3000/
@@ -40,7 +40,7 @@ const CDN = {
     jsDelivr: "https://cdn.jsdelivr.net/gh/DreamNya/PokeClickerHelper-Translation/json/",
     GitHub: "https://raw.githubusercontent.com/DreamNya/PokeClickerHelper-Translation/main/json/",
 };
-const resources = ["QuestLine", "Town", "NPC"];
+const resources = ["QuestLine", "Town", "NPC", "Achievement"];
 const now = Date.now();
 const failed = [];
 
@@ -218,6 +218,54 @@ $("#townView button[data-bind='text: $data.name, click: () => NPCController.open
 });
 $("#npc-modal h5").each(function () {
     this.dataset.bind = "text: $data[TranslationHelper.toggleRaw ? 'name' : 'displayName']";
+});
+
+// 汉化成就
+Translation.AchievementName = Translation.Achievement.name ?? {};
+Translation.AchievementDescription = Translation.Achievement.description ?? {};
+Translation.AchievementNameRegs = Object.entries(Translation.Achievement.nameReg ?? {}).map(([reg, value]) => [
+    new RegExp(reg),
+    value,
+]);
+Translation.AchievementDescriptionRegs = Object.entries(Translation.Achievement.descriptionReg ?? {}).map(([reg, value]) => [
+    new RegExp(reg),
+    value,
+]);
+
+function formatAchievement(text, type) {
+    const raw = Translation["Achievement" + type][text];
+    if (raw) {
+        return raw;
+    }
+    const [reg, value] = Translation["Achievement" + type + "Regs"].find(([reg]) => reg.test(text));
+    if (reg) {
+        return text.replace(reg, value);
+    }
+
+    return text;
+}
+
+window.realAchievement = Achievement;
+Achievement = new Proxy(window.realAchievement, {
+    construct(...args) {
+        const ahievement = Reflect.construct(...args);
+        const { name, description } = ahievement;
+
+        const displayName = formatAchievement(name, "Name");
+        const displayDescription = formatAchievement(description, "Description");
+
+        // Achievement几乎不会被读取 直接覆盖原始值
+        Object.defineProperties(ahievement, {
+            name: {
+                get: () => (TranslationHelper.exporting || TranslationHelper.toggleRaw ? name : displayName),
+            },
+            description: {
+                get: () => (TranslationHelper.exporting || TranslationHelper.toggleRaw ? description : displayDescription),
+            },
+        });
+
+        return ahievement;
+    },
 });
 
 // 导出完整json方法
