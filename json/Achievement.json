@@ -221,21 +221,21 @@
         "Twenty Thousands Karps Under the Seas": "海底两万条鲤鱼王"
     },
     "nameReg": {
+        "^(.*?) Shiny Trainer$": "$1闪光训练家",
         "^(.*?)(.*?) Regular$": "$1$2常客",
+        "^(.*?) Shiny Master$": "$1闪光大师",
         "^(.*?)(.*?) Ruler$": "$1$2支配者",
         "^(.*?)(.*?) Owner$": "$1$2馆主",
+        "^(.*?) Conqueror$": "$1魔王",
+        "^(.*?) Shiny Ace$": "$1闪光精英",
         "^(.*?) Traveler$": "$1旅行者",
         "^(.*?) Explorer$": "$1专家",
-        "^(.*?) Conqueror$": "$1魔王",
-        "^(.*?) Expert$": "$1专家",
-        "^(.*?) Hermit$": "$1隐士",
         "^(.*?) Dweller$": "$1栖身者",
         "^(.*?) Trainer$": "$1训练家",
-        "^(.*?) Ace$": "$1精英",
+        "^(.*?) Expert$": "$1专家",
+        "^(.*?) Hermit$": "$1隐士",
         "^(.*?) Master$": "$1大师",
-        "^(.*?) Shiny Trainer$": "$1闪光训练家",
-        "^(.*?) Shiny Ace$": "$1闪光精英",
-        "^(.*?) Shiny Master$": "$1闪光大师"
+        "^(.*?) Ace$": "$1精英"
     },
     "description": {
         "Obtain 100 Pokédollars.": "获得100宝可币",
@@ -458,20 +458,20 @@
         "Catch all unique Shiny Magikarp forms.": "捕获所有闪光鲤鱼王形态"
     },
     "descriptionReg": {
-        "^Obtain all (.*?) Mega Stones.$": "取得全部$1个Mega进化石",
-        "^Defeat (.*?) (.*?) in (.*?) 10 times.$": "在 $3 击败 $1$2 10次",
-        "^Defeat (.*?) (.*?) in (.*?) 100 times.$": "在 $3 击败 $1$2 100次",
+        "^Catch (.*?) unique Shiny Pokémon native to the (.*?) region.$": "捕捉$1种$2地区原生闪光宝可梦",
+        "^Catch (.*?) unique Pokémon native to the (.*?) region.$": "捕捉$1种$2地区原生宝可梦",
         "^Defeat (.*?) (.*?) in (.*?) 1,000 times.$": "在 $3 击败 $1$2 1000次",
-        "^Defeat 100 Pokémon on (.*?).$": "在 $1 击败宝可梦100次",
-        "^Defeat 1,000 Pokémon on (.*?).$": "在 $1 击败宝可梦1000次",
+        "^Defeat (.*?) (.*?) in (.*?) 100 times.$": "在 $3 击败 $1$2 100次",
+        "^Defeat (.*?) (.*?) in (.*?) 10 times.$": "在 $3 击败 $1$2 10次",
+        "^Complete the (.*?) Shiny Pokédex!$": "完成$1闪光图鉴！",
         "^Defeat 10,000 Pokémon on (.*?).$": "在 $1 击败宝可梦10000次",
-        "^Clear (.*?) 10 times.$": "清理 $1 10次",
+        "^Defeat 1,000 Pokémon on (.*?).$": "在 $1 击败宝可梦1000次",
+        "^Obtain all (.*?) Mega Stones.$": "取得全部$1个Mega进化石",
+        "^Defeat 100 Pokémon on (.*?).$": "在 $1 击败宝可梦100次",
+        "^Complete the (.*?) Pokédex!$": "完成$1图鉴！",
         "^Clear (.*?) 100 times.$": "清理 $1 100次",
         "^Clear (.*?) 250 times.$": "清理 $1 250次",
         "^Clear (.*?) 500 times.$": "清理 $1 500次",
-        "^Catch (.*?) unique Pokémon native to the (.*?) region.$": "捕捉$1种$2地区原生宝可梦",
-        "^Complete the (.*?) Pokédex!$": "完成$1图鉴！",
-        "^Catch (.*?) unique Shiny Pokémon native to the (.*?) region.$": "捕捉$1种$2地区原生闪光宝可梦",
-        "^Complete the (.*?) Shiny Pokédex!$": "完成$1闪光图鉴！"
+        "^Clear (.*?) 10 times.$": "清理 $1 10次"
     }
 }
