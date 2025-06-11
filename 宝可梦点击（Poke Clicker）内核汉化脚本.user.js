@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         宝可梦点击（Poke Clicker）内核汉化脚本
 // @namespace    PokeClickerHelper
-// @version      0.10.23-e
+// @version      0.10.23-f
 // @description  采用内核汉化形式，目前汉化范围：所有任务线、城镇名、NPC及对话
 // @author       DreamNya, ICEYe, iktsuarpok, 我是谁？, 顶不住了, 银☆星, TerVoid
 // @match        http://localhost:3000/
@@ -307,7 +307,15 @@ AchievementTracker.prototype.toJSON = function () {
 // 汉化地区
 Translation.Region = Translation.Regions.Region ?? {};
 Translation.RegionFull = Object.fromEntries(Object.entries(Translation.Region).map(([region, name]) => [region, name + "地区"]));
-Translation.SubRegion = Translation.Regions.SubRegion ?? {};
+Translation.SubRegion = Object.assign(Translation.Regions.SubRegion ?? {}, Translation.RegionFull);
+$("[href='#mapBody'] > span").attr(
+    "data-bind",
+    "text: `城镇地图 (${TranslationHelper.Translation.RegionFull[GameConstants.camelCaseToString(GameConstants.Region[player.region])]})`"
+);
+$("#subregion-travel-buttons > button.btn.btn-sm.btn-primary").attr(
+    "data-bind",
+    "click: () => SubRegions.openModal(), text: `副区域旅行 (${TranslationHelper.Translation.SubRegion[player.subregionObject()?.name]})`"
+);
 
 // 汉化道路
 const regionRouteReg = new RegExp(`^(${Object.keys(Translation.Region).join("|")}) Route (\\d+)$`);
