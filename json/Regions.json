@@ -1,0 +1,28 @@
+{
+    "Region": {
+        "Kanto": "关都",
+        "Johto": "城都",
+        "Hoenn": "丰缘",
+        "Sinnoh": "神奥",
+        "Unova": "合众",
+        "Kalos": "卡洛斯",
+        "Alola": "阿罗拉",
+        "Galar": "伽勒尔",
+        "Hisui": "洗翠",
+        "Paldea": "帕底亚"
+    },
+    "SubRegion": {
+        "Sevii Islands 123": "七之岛 １２３",
+        "Sevii Islands 4567": "七之岛 ４５６７",
+        "Orre": "欧雷地区",
+        "Melemele Island": "美乐美乐岛",
+        "Akala Island": "阿卡拉岛",
+        "Ula'ula Island": "乌拉乌拉岛",
+        "Poni Island": "波尼岛",
+        "Magikarp Jump": "跳跃吧！鲤鱼王",
+        "South Galar": "南伽勒尔地区",
+        "North Galar": "北伽勒尔地区",
+        "Isle of Armor": "铠岛",
+        "Crown Tundra": "王冠雪原"
+    }
+}

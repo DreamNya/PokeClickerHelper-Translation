@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         宝可梦点击（Poke Clicker）内核汉化脚本
 // @namespace    PokeClickerHelper
-// @version      0.10.23-d
+// @version      0.10.23-e
 // @description  采用内核汉化形式，目前汉化范围：所有任务线、城镇名、NPC及对话
 // @author       DreamNya, ICEYe, iktsuarpok, 我是谁？, 顶不住了, 银☆星, TerVoid
 // @match        http://localhost:3000/
@@ -40,7 +40,7 @@ const CDN = {
     jsDelivr: "https://cdn.jsdelivr.net/gh/DreamNya/PokeClickerHelper-Translation/json/",
     GitHub: "https://raw.githubusercontent.com/DreamNya/PokeClickerHelper-Translation/main/json/",
 };
-const resources = ["QuestLine", "Town", "NPC", "Achievement"];
+const resources = ["QuestLine", "Town", "NPC", "Achievement", "Regions", "Route"];
 const now = Date.now();
 const failed = [];
 
@@ -232,6 +232,30 @@ Translation.AchievementDescriptionRegs = Object.entries(Translation.Achievement.
     value,
 ]);
 
+function formatRegex(text, reg, value) {
+    const matcher = value.match(/#(.*?)\{\$1}/);
+    if (!matcher) {
+        return text.replace(reg, value);
+    }
+
+    const methods = {
+        Town: (i) => Translation.Town[i],
+        Region: (i) => Translation.Region[i],
+        RegionFull: (i) => Translation.RegionFull[i],
+        Route: (i) => formatRouteName(i, false),
+    };
+    const formatters = matcher[1].split("/").map((method) => methods[method]);
+
+    return text.replace(reg, (match, $1 /*...args*/) => {
+        // 动态数量捕获组
+        //const groups = args.slice(1, -2);
+
+        const formatter = formatters.find((formatter) => formatter($1));
+        const replacement = formatter?.($1) ?? $1;
+        return value.replace(matcher[0], replacement);
+    });
+}
+
 function formatAchievement(text, type) {
     const raw = Translation["Achievement" + type][text];
     if (raw) {
@@ -239,7 +263,7 @@ function formatAchievement(text, type) {
     }
     const [reg, value] = Translation["Achievement" + type + "Regs"].find(([reg]) => reg.test(text));
     if (reg) {
-        return text.replace(reg, value);
+        return formatRegex(text, reg, value);
     }
 
     return text;
@@ -273,6 +297,51 @@ Achievement = new Proxy(window.realAchievement, {
 
 AchievementHandler.findByName = function (name) {
     return AchievementHandler.achievementList.find((achievement) => achievement.rawName === name && achievement.achievable());
+};
+AchievementTracker.prototype.toJSON = function () {
+    return {
+        trackedAchievementName: this.hasTrackedAchievement() ? this.trackedAchievement().rawName : null,
+    };
+};
+
+// 汉化地区
+Translation.Region = Translation.Regions.Region ?? {};
+Translation.RegionFull = Object.fromEntries(Object.entries(Translation.Region).map(([region, name]) => [region, name + "地区"]));
+Translation.SubRegion = Translation.Regions.SubRegion ?? {};
+
+// 汉化道路
+const regionRouteReg = new RegExp(`^(${Object.keys(Translation.Region).join("|")}) Route (\\d+)$`);
+function formatRouteName(routeName, returnRaw = true) {
+    if (Translation.Route[routeName]) {
+        return Translation.Route[routeName];
+    }
+    if (regionRouteReg.test(routeName)) {
+        return routeName.replace(regionRouteReg, (match, region, number) => {
+            const regionName = Translation.Region[region] ?? region;
+            // 将数字转换为全角数字
+            const formatNumber = number.replace(/\d/g, (digit) => String.fromCharCode(digit.charCodeAt(0) + 0xff10 - 0x30));
+            return `${regionName}${formatNumber}号道路`;
+        });
+    }
+    return returnRaw ? routeName : undefined;
+}
+Routes.getName = function (route, region, alwaysIncludeRegionName = false, includeSubRegionName = false) {
+    const rawRegionName = GameConstants.camelCaseToString(GameConstants.Region[region]);
+    const regionName = Translation.Region[rawRegionName] ?? rawRegionName;
+    const regionFullName = Translation.RegionFull[rawRegionName] ?? rawRegionName;
+
+    const resultRoute = this.regionRoutes.find((routeData) => routeData.region === region && routeData.number === route);
+    let routeName = formatRouteName(resultRoute?.routeName) ?? "Unknown Route";
+    if (alwaysIncludeRegionName && !routeName.includes(regionName)) {
+        routeName = `${regionFullName}-${routeName}`;
+    } else if (includeSubRegionName && resultRoute) {
+        const subRegionName =
+            Translation.SubRegion[SubRegions.getSubRegionById(region, resultRoute.subRegion ?? 0).name] ?? "Unknown SubRegion";
+        if (!routeName.includes(subRegionName)) {
+            routeName = `${subRegionName}-${routeName}`;
+        }
+    }
+    return routeName;
 };
 
 // 导出完整json方法
