@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         宝可梦点击（Poke Clicker）内核汉化脚本
 // @namespace    PokeClickerHelper
-// @version      0.10.23-c
+// @version      0.10.23-d
 // @description  采用内核汉化形式，目前汉化范围：所有任务线、城镇名、NPC及对话
 // @author       DreamNya, ICEYe, iktsuarpok, 我是谁？, 顶不住了, 银☆星, TerVoid
 // @match        http://localhost:3000/
@@ -262,11 +262,18 @@ Achievement = new Proxy(window.realAchievement, {
             description: {
                 get: () => (TranslationHelper.exporting || TranslationHelper.toggleRaw ? description : displayDescription),
             },
+            rawName: {
+                get: () => name,
+            },
         });
 
         return ahievement;
     },
 });
+
+AchievementHandler.findByName = function (name) {
+    return AchievementHandler.achievementList.find((achievement) => achievement.rawName === name && achievement.achievable());
+};
 
 // 导出完整json方法
 TranslationHelper.ExportTranslation = {};
