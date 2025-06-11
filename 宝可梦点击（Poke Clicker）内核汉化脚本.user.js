@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         宝可梦点击（Poke Clicker）内核汉化脚本
 // @namespace    PokeClickerHelper
-// @version      0.10.23-f
-// @description  采用内核汉化形式，目前汉化范围：所有任务线、城镇名、NPC及对话
+// @version      0.10.23-g
+// @description  采用内核汉化形式，目前汉化范围：所有任务线、NPC、成就、地区、城镇、道路、道馆
 // @author       DreamNya, ICEYe, iktsuarpok, 我是谁？, 顶不住了, 银☆星, TerVoid
 // @match        http://localhost:3000/
 // @match        https://www.pokeclicker.com
@@ -40,7 +40,7 @@ const CDN = {
     jsDelivr: "https://cdn.jsdelivr.net/gh/DreamNya/PokeClickerHelper-Translation/json/",
     GitHub: "https://raw.githubusercontent.com/DreamNya/PokeClickerHelper-Translation/main/json/",
 };
-const resources = ["QuestLine", "Town", "NPC", "Achievement", "Regions", "Route"];
+const resources = ["QuestLine", "Town", "NPC", "Achievement", "Regions", "Route", "Gym"];
 const now = Date.now();
 const failed = [];
 
@@ -233,26 +233,35 @@ Translation.AchievementDescriptionRegs = Object.entries(Translation.Achievement.
 ]);
 
 function formatRegex(text, reg, value) {
-    const matcher = value.match(/#(.*?)\{\$1}/);
-    if (!matcher) {
-        return text.replace(reg, value);
-    }
-
     const methods = {
         Town: (i) => Translation.Town[i],
         Region: (i) => Translation.Region[i],
         RegionFull: (i) => Translation.RegionFull[i],
+        SubRegion: (i) => Translation.SubRegion[i],
         Route: (i) => formatRouteName(i, false),
+        GymFormat: (i) => i.replace(/^ /, ""),
+        GymFormatRegion: (i) => i.replace(GymRegionReg, (m) => Translation.Region[m] ?? m),
     };
-    const formatters = matcher[1].split("/").map((method) => methods[method]);
 
-    return text.replace(reg, (match, $1 /*...args*/) => {
+    return text.replace(reg, (...args) => {
         // 动态数量捕获组
-        //const groups = args.slice(1, -2);
+        const groups = args.slice(1, -2);
 
-        const formatter = formatters.find((formatter) => formatter($1));
-        const replacement = formatter?.($1) ?? $1;
-        return value.replace(matcher[0], replacement);
+        return (
+            value
+                // 替换 #Method{$n}
+                .replace(/#([\w/]+)\{\$(\d)}/g, (_, matcher, n) => {
+                    const group = groups[n - 1];
+
+                    const formatters = matcher.split("/").map((method) => methods[method]);
+                    const formatter = formatters.find((fromatter) => fromatter(group));
+                    return formatter?.(group) ?? group;
+                })
+                // 替换 原生$n
+                .replace(/\$(\d)/g, (_, n) => {
+                    return groups[n - 1] ?? "";
+                })
+        );
     });
 }
 
@@ -308,6 +317,9 @@ AchievementTracker.prototype.toJSON = function () {
 Translation.Region = Translation.Regions.Region ?? {};
 Translation.RegionFull = Object.fromEntries(Object.entries(Translation.Region).map(([region, name]) => [region, name + "地区"]));
 Translation.SubRegion = Object.assign(Translation.Regions.SubRegion ?? {}, Translation.RegionFull);
+// 特殊处理
+Object.assign(Translation.Region, { "Sevii Islands": "七之岛" });
+
 $("[href='#mapBody'] > span").attr(
     "data-bind",
     "text: `城镇地图 (${TranslationHelper.Translation.RegionFull[GameConstants.camelCaseToString(GameConstants.Region[player.region])]})`"
@@ -351,6 +363,40 @@ Routes.getName = function (route, region, alwaysIncludeRegionName = false, inclu
     }
     return routeName;
 };
+
+// 汉化道馆
+const GymRegionReg = new RegExp(`^${Object.keys(Translation.Region).join("|")}`);
+
+Object.values(GymList).forEach((gym) => {
+    const rawLeaderName = gym.leaderName;
+    const leaderName = Translation.Gym[rawLeaderName] ?? rawLeaderName;
+    const rawButtonText = gym.buttonText;
+    const buttonText =
+        gym.buttonText == rawLeaderName.replace(/\d/, "") + "'s Gym"
+            ? leaderName.replace(/\d/, "") + "的道馆"
+            : Translation.Gym[rawButtonText] ?? rawButtonText;
+
+    Object.defineProperties(gym, {
+        leaderName: {
+            get: () => (TranslationHelper.exporting || TranslationHelper.toggleRaw ? rawLeaderName : leaderName),
+        },
+        buttonText: {
+            get: () => (TranslationHelper.exporting || TranslationHelper.toggleRaw ? rawButtonText : buttonText),
+        },
+        displayName: {
+            get: () => buttonText,
+        },
+        rawLeaderName: {
+            get: () => rawLeaderName,
+        },
+    });
+});
+
+Object.defineProperty(Gym.prototype, "imagePath", {
+    get() {
+        return `assets/images/npcs/${this.imageName ?? this.rawLeaderName}.png`;
+    },
+});
 
 // 导出完整json方法
 TranslationHelper.ExportTranslation = {};
@@ -429,6 +475,17 @@ TranslationHelper.ExportTranslation.Town = function () {
             return [townName, Translation.Town[townName] ?? ""];
         })
     );
+    return json;
+};
+
+TranslationHelper.ExportTranslation.Gym = function () {
+    const json = {};
+    Object.values(GymList).forEach((gym) => {
+        json[gym.rawLeaderName] = Translation.Gym[gym.rawLeaderName] ?? "";
+        if (!gym.rawButtonText.endsWith("'s Gym")) {
+            json[gym.rawButtonText] = Translation.Gym[gym.rawButtonText] ?? "";
+        }
+    });
     return json;
 };
 

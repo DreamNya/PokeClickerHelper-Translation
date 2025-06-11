@@ -34,7 +34,10 @@ function formatString(template) {
                 .getTemplateSpans()
                 .reduce((text, span) => text + "(.*?)" + span.getLiteral().getLiteralText(), head);
 
-            return `^${text}$`;
+            // 正则无法区分连续的捕获
+            const formattedText = text.replace(/(\(\.\*\?\) )+/, "(.*?) ").replace(/(\(\.\*\?\))+/, "(.*?)");
+
+            return `^${formattedText}$`;
         default:
             throw new Error(`Unsupported SyntaxKind: ${template.getKindName()}`);
     }
