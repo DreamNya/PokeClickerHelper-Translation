@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         宝可梦点击（Poke Clicker）内核汉化脚本
 // @namespace    PokeClickerHelper
-// @version      0.10.23-g
+// @version      0.10.24-a
 // @description  采用内核汉化形式，目前汉化范围：所有任务线、NPC、成就、地区、城镇、道路、道馆
 // @author       DreamNya, ICEYe, iktsuarpok, 我是谁？, 顶不住了, 银☆星, TerVoid
 // @match        http://localhost:3000/
@@ -270,7 +270,7 @@ function formatAchievement(text, type) {
     if (raw) {
         return raw;
     }
-    const [reg, value] = Translation["Achievement" + type + "Regs"].find(([reg]) => reg.test(text));
+    const [reg, value] = Translation["Achievement" + type + "Regs"].find(([reg]) => reg.test(text)) ?? [];
     if (reg) {
         return formatRegex(text, reg, value);
     }
@@ -525,6 +525,22 @@ TranslationHelper.ImportTranslation = async function (files) {
 // UI (需要PokeClickerHelper)
 if (CoreModule) {
     const prefix = CoreModule.UIContainerID[0].replace("#", "").replace("Container", "") + "TranslationHelper";
+
+    // 挂载汉化api供其他脚本使用
+    CoreModule.TranslationAPI = {
+        Route: formatRouteName,
+        Town: (townName) => Translation.Town[townName] ?? townName,
+        Region: (region) => {
+            if (typeof region == "string") {
+                return Translation.SubRegion[region] ?? region;
+            } else if (typeof region == "number") {
+                const regionName = GameConstants.camelCaseToString(GameConstants.Region[region]);
+                return Translation.SubRegion[regionName] ?? regionName;
+            }
+        },
+        NPC: (npcName) => Translation.NPCName[npcName] ?? npcName,
+        QuestLine: (questLineName) => Translation.QuestLine[questLineName].name ?? questLineName,
+    };
 
     CoreModule.UIDOM.push(`
     <div id="${prefix}" class="custom-row">
