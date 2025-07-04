@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         宝可梦点击（Poke Clicker）内核汉化脚本
 // @namespace    PokeClickerHelper
-// @version      0.10.24-b
+// @version      0.10.24-c
 // @description  采用内核汉化形式，目前汉化范围：所有任务线、NPC、成就、地区、城镇、道路、道馆
 // @author       DreamNya, ICEYe, iktsuarpok, 我是谁？, 顶不住了, 银☆星, TerVoid
 // @match        http://localhost:3000/
@@ -37,7 +37,7 @@ TranslationHelper.config = {
 // CDN-GitHub: https://raw.githubusercontent.com
 // GIT: https://github.com/DreamNya/PokeClickerHelper-Translation
 const CDN = {
-    jsDelivr: "https://cdn.jsdelivr.net/gh/DreamNya/PokeClickerHelper-Translation/json/",
+    jsDelivr: "https://cdn.jsdelivr.net/gh/DreamNya/PokeClickerHelper-Translation@main/json/",
     GitHub: "https://raw.githubusercontent.com/DreamNya/PokeClickerHelper-Translation/main/json/",
 };
 const resources = ["QuestLine", "Town", "NPC", "Achievement", "Regions", "Route", "Gym"];
@@ -659,7 +659,7 @@ if (CoreModule) {
         $(`#${prefix}`)
             .on("click", `#${prefix}Refresh`, function () {
                 this.disabled = true;
-                window.PCH_ForceRefreshTranslation(false);
+                window.PCHForceRefreshTranslation(false);
             })
             .on("click", `#${prefix}Toggle`, function () {
                 if (this.value == "切换原文") {
@@ -674,16 +674,7 @@ if (CoreModule) {
                 }
             })
             .on("click", `#${prefix}Import`, function () {
-                $(`<input type="file" accept=".json" style="display:none;" multiple />`)
-                    .appendTo(document.body)
-                    .on("change", function () {
-                        TranslationHelper.ImportTranslation(this.files);
-                        this.remove();
-                    })
-                    .on("cancel", function () {
-                        this.remove();
-                    })
-                    .trigger("click");
+                window.PCHImportAction();
             })
             .on("change", "[data-save=global]", function () {
                 const id = this.id.replace(prefix, "");
@@ -708,22 +699,41 @@ if (CoreModule) {
     });
 }
 
+window.PCHImportAction = () => {
+    $(`<input type="file" accept=".json" style="display:none;" multiple />`)
+        .appendTo(document.body)
+        .on("change", function () {
+            TranslationHelper.ImportTranslation(this.files);
+            this.remove();
+        })
+        .on("cancel", function () {
+            this.remove();
+        })
+        .trigger("click");
+};
+
+window.PCHForceRefreshTranslation = (refresh = true) => {
+    resources.forEach((resource) => {
+        localStorage.removeItem(`PokeClickerHelper-Translation-${resource}`);
+        localStorage.removeItem(`PokeClickerHelper-Translation-${resource}-lastModified`);
+    });
+    refresh && location.reload();
+};
+
 if (failed.length == 0) {
-    window.PCH_ForceRefreshTranslation = (refresh = true) => {
-        resources.forEach((resource) => localStorage.removeItem(`PokeClickerHelper-Translation-${resource}-lastModified`));
-        refresh && location.reload();
-    };
     Notifier.notify({
         title: "宝可梦点击（Poke Clicker）内核汉化脚本",
-        message: `汉化加载完毕\n可以正常加载存档\n\n<button class="btn btn-block btn-success" onclick="window.PCH_ForceRefreshTranslation()" data-dismiss="toast">清空脚本汉化缓存并刷新</button>`,
+        message: `汉化加载完毕\n可以正常加载存档\n\n<div class="d-flex" style="justify-content: space-around;"><button class="btn btn-block btn-info m-0 col-5" onclick="window.PCHForceRefreshTranslation()">清空汉化缓存</button><button class="btn btn-block btn-info m-0 col-5" onclick="window.PCHImportAction()">本地导入汉化</button></div>`,
         timeout: 15000,
     });
 } else {
     Notifier.notify({
         title: "宝可梦点击（Poke Clicker）内核汉化脚本",
-        message: `请求汉化json失败，请检查网络链接或更新脚本\n无法完成汉化：${failed.join(" / ")}`,
+        message: `请求汉化json失败，请检查网络链接或更新脚本\n无法完成汉化：${failed.join(
+            " / "
+        )}\n\n<div class="d-flex" style="justify-content: space-around;"><button class="btn btn-block btn-info m-0 col-5" onclick="window.PCHForceRefreshTranslation()">清空汉化缓存</button><button class="btn btn-block btn-info m-0 col-5" onclick="window.PCHImportAction()">本地导入汉化</button></div>`,
         timeout: 6000000,
     });
 }
 
-setTimeout(() => $('.toast:contains("汉化正在加载中") [data-dismiss="toast"]').click(), 1000);
+setTimeout(() => $('.toast:contains("汉化正在加载中") [data-dismiss="toast"]').trigger("click"), 1000);
