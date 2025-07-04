@@ -19,7 +19,7 @@ const sourceFile = project.addSourceFileAtPath("./pokeclicker/src/scripts/achiev
 const calls = sourceFile.getDescendantsOfKind(SyntaxKind.CallExpression).filter((call) => {
     const expression = call.getExpression();
     const expressionName = expression.getText();
-    return expressionName == "AchievementHandler.addAchievement";
+    return expressionName == "AchievementHandler.addAchievement" || expressionName == "AchievementHandler.addSecretAchievement";
 });
 
 function formatString(template) {
@@ -45,25 +45,38 @@ function formatString(template) {
 
 const results = calls.reduce(
     (obj, call) => {
-        const [nameTemplate, descriptionTemplate] = call.getArguments();
+        const expressionName = call.getExpression().getText();
+        if (expressionName == "AchievementHandler.addAchievement") {
+            const [nameTemplate, descriptionTemplate] = call.getArguments();
 
-        const name = formatString(nameTemplate);
-        if (name.startsWith("^")) {
-            obj.nameReg.push([name, Translation.nameReg[name] || ""]);
-        } else {
+            const name = formatString(nameTemplate);
+            if (name.startsWith("^")) {
+                obj.nameReg.push([name, Translation.nameReg[name] || ""]);
+            } else {
+                obj.name[name] = Translation.name[name] || "";
+            }
+
+            const description = formatString(descriptionTemplate);
+            if (description.startsWith("^")) {
+                obj.descriptionReg.push([description, Translation.descriptionReg[description] || ""]);
+            } else {
+                obj.description[description] = Translation.description[description] || "";
+            }
+        } else if (expressionName == "AchievementHandler.addSecretAchievement") {
+            const [nameTemplate, descriptionTemplate, , hintTemplate] = call.getArguments();
+
+            const name = formatString(nameTemplate);
             obj.name[name] = Translation.name[name] || "";
-        }
 
-        const description = formatString(descriptionTemplate);
-        if (description.startsWith("^")) {
-            obj.descriptionReg.push([description, Translation.descriptionReg[description] || ""]);
-        } else {
+            const description = formatString(descriptionTemplate);
             obj.description[description] = Translation.description[description] || "";
-        }
 
+            const hint = formatString(hintTemplate);
+            obj.hint[hint] = Translation.hint?.[hint] || "";
+        }
         return obj;
     },
-    { name: {}, nameReg: [], description: {}, descriptionReg: [] }
+    { name: {}, nameReg: [], description: {}, descriptionReg: [], hint: {} }
 );
 
 // 更精准的正则优先匹配 简单量化为正则长度

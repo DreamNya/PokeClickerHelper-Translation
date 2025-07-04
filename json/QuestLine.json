@@ -64,7 +64,7 @@
         },
         "descriptions": {
             "Buy the Explorer Kit from Cinnabar Island Shop.": "从红莲镇商店购买探险套装",
-            "Mine 5 layers in the Underground.": "开采5层地下矿场"
+            "Collect all buried treasure 5 times in the Underground mines.": "在地下矿场挖掘全部矿藏5次"
         }
     },
     "Bill's Errand": {
@@ -343,7 +343,7 @@
             "Talk to Butler in the Jagged Pass to learn about his new plan.": "前往凹凸山道了解巴特勒的新计划",
             "Gather the materials Butler needs to rebuild his resurrection machine.": "收集巴特勒重建复活机器所需的材料",
             "Catch or hatch 100 Electrode": "捕捉或孵化100只顽皮雷弹",
-            "Mine 25 layers in the Underground.": "挖掘地下矿场25层",
+            "Collect all buried treasure 25 times in the Underground mines.": "在地下矿场挖掘全部矿藏25次",
             "Capture or hatch 3 shiny Pokémon.": "捕捉3或孵化只闪光宝可梦",
             "Calibrate the machine by catching or hatching 5 Groudon": "捕捉或孵化5只固拉多来校准机器",
             "Deliver the materials to Butler in Mt. Chimney Crater and start the resurrection machine.": "前往烟囱山火山口把材料交给巴特勒，启动复活机器",
@@ -360,13 +360,13 @@
             "Fight Willie": "打败威利",
             "Fight Folly the Shady Guy in Phenac City": "在矽铍市打败可疑男子赫波伊",
             "Check what is in the mysterious sack.": "检查神秘袋子里有什么",
-            "Defeat 10 trainers who are using Shadow Pokémon in Phenac City.": "在矽铍市打败10名用暗影宝可梦的训练师",
+            "Defeat 10 trainers who are using Shadow Pokémon in Phenac City.": "在矽铍市打败10名用暗影宝可梦的训练家",
             "Talk to the Mayor of Phenac City about the criminals you have been fighting.": "和矽铍市的市长讨论下关于你一直在打击的犯罪",
             "Meet up with Rui again in Phenac City.": "在矽铍市与米蕾再次见面",
-            "Fight trainers in Pyrite Town to flush out the criminals.": "为了驱逐罪犯，打败在黄铁镇的训练师",
+            "Fight trainers in Pyrite Town to flush out the criminals.": "为了驱逐罪犯，打败在黄铁镇的训练家",
             "Talk to the distraught bodybuilder Duking in Pyrite Town.": "和黄铁镇的悲痛欲绝的健美运动员银马对话",
-            "Fight trainers in Pyrite Colosseum to flush out the criminals.": "为了驱逐罪犯，打败在黄铁竞技场的训练师",
-            "No sign of Shadow Pokémon so far. Fight trainers at the Pyrite Building to flush out the criminals.": "目前依旧没有暗影宝可梦的迹象。为了驱逐罪犯，打败在黄铁大楼的训练师",
+            "Fight trainers in Pyrite Colosseum to flush out the criminals.": "为了驱逐罪犯，打败在黄铁竞技场的训练家",
+            "No sign of Shadow Pokémon so far. Fight trainers at the Pyrite Building to flush out the criminals.": "目前依旧没有暗影宝可梦的迹象。为了驱逐罪犯，打败在黄铁大楼的训练家",
             "Interrogate Hunter Doken in the Pyrite Building to find out who has taken Plusle, and where to.": "审问黄铁大楼的猎人多肯，找出谁带走了正电拍拍，以及去了哪里",
             "Find Miror B. and rescue Duking's Plusle in Pyrite Cave!": "找到迪斯裘，并解救黄铁洞窟中银马的正电拍拍",
             "Free Duking's Plusle.": "释放银马的正电拍拍",
@@ -777,7 +777,7 @@
             "Lysandre appears menacingly in front of you in Team Flare Secret HQ. He doesn't seem fazed about you subsiding both legendary Pokémon.": "弗拉达利出现在闪焰队秘密基地中，他似乎并不担心你平息两个传说中的宝可梦",
             "Stop Team Flare Boss Lysandre in Team Flare Secret HQ once and for all!!": "在闪焰队秘密基地彻底击败闪焰队老大弗拉达利",
             "You did it! You saved Kalos! There is nothing else to do except to continue your journey to beat the Kalos Pokémon League!": "你做到了！你拯救了卡洛斯！你只需要继续你的旅程并击败卡洛斯联盟！",
-            "What an amazing trainer! You became Kalos Champion! There is a parade in your honor in Lumiose City. But wait, AZ is there asking you for a battle. Show him what being a Pokémon Trainer is like!": "多么厉害的训练师啊！你成为卡洛斯冠军！在密阿雷市举行这为你庆祝的游行。但是，ＡＺ想要和你进行一场战斗，向他展示什么叫做宝可梦训练师！"
+            "What an amazing trainer! You became Kalos Champion! There is a parade in your honor in Lumiose City. But wait, AZ is there asking you for a battle. Show him what being a Pokémon Trainer is like!": "多么厉害的训练家啊！你成为卡洛斯冠军！在密阿雷市举行这为你庆祝的游行。但是，ＡＺ想要和你进行一场战斗，向他展示什么叫做宝可梦训练家！"
         }
     },
     "Princess Diancie": {
@@ -835,7 +835,7 @@
             "Blue has contacted you, saying he knows something but wants a fight first. He is at Viridian City.": "青绿联系了你，说他知道些什么但想和你进行一场对战。他在常青市等着你",
             "Talk to Blue in Viridian City.": "前往常青市与青绿谈谈",
             "Look for Blue's old rival in Cerulean Cave": "前往华蓝洞窟寻找青绿的老对手",
-            "You eventually found a trainer standing where Mewtwo once did in Cerulean Cave. Talk to Green.": "你最终在超梦曾经待过的华蓝洞窟中找到了一个训练师。和碧蓝谈谈",
+            "You eventually found a trainer standing where Mewtwo once did in Cerulean Cave. Talk to Green.": "你最终在超梦曾经待过的华蓝洞窟中找到了一个训练家。和碧蓝谈谈",
             "It seems Green is irritated that you caught Mewtwo before she could. Defeat her in Cerulean Cave.": "碧蓝似乎很生气，因为你在他之前抓住了超梦。前往华蓝洞窟击败他",
             "Talk to Green in Cerulean Cave.": "前往华蓝洞窟与碧蓝谈谈",
             "Talk to Anomaly Mewtwo in Cerulean Cave.": "前往华蓝洞窟与异常的超梦谈谈",
@@ -1155,9 +1155,9 @@
             "Train Kubfu more by catching or hatching Dark and Water-type Pokémon.": "捕捉或孵化恶属性和水属性宝可梦以训练熊徒弟",
             "Capture or hatch 250 Dark-type Pokémon.": "捕捉或孵化250只恶属性宝可梦",
             "Capture or hatch 250 Water-type Pokémon.": "捕捉或孵化250只水属性宝可梦",
-            "Complete Kubfu's training in the Tower of Darkness and the Tower of Waters so it can evolve!": "在恶之塔和水之塔完成熊徒弟的训练，这样它就可以进化了",
-            "Defeat Tower of Darkness.": "通过恶之塔",
-            "Defeat Tower of Waters": "通过水之塔",
+            "Level up Kubfu in both of the Towers of Two Fists to obtain Urshifu!": "在恶之塔和水之塔分别进化熊徒弟，以获得武道熊师！",
+            "Capture Urshifu (Single Strike).": "捕捉武道熊师 (一击流)",
+            "Capture Urshifu (Rapid Strike).": "捕捉武道熊师 (连击流)",
             "Talk to Mustard at one of the Towers of Two Fists.": "在任一双拳塔中与马士德谈谈"
         }
     },
@@ -1303,15 +1303,6 @@
             "Go back to the Max Lair to tell Peonia what happened.": "返回极巨巢穴巢告诉夏科娅发生了什么"
         }
     },
-    "A Mystery Gift": {
-        "name": "一份神秘礼物",
-        "description": {
-            "You have received a Mystery Gift.": "你收到了一个神秘礼物"
-        },
-        "descriptions": {
-            "Go home and open your Mystery Gift": "回家并打开你的神秘礼物"
-        }
-    },
     "Incarnate Forces of Hisui": {
         "name": "具现洗翠之力",
         "description": {
@@ -1439,7 +1430,7 @@
         },
         "descriptions": {
             "Step 1 of Let's Go, Meltan!": "步骤1：去吧！美录坦",
-            "Mine 10 items in the Underground.": "前往地下矿场挖掘10个矿藏",
+            "Collect 10 items from the Underground mines.": "在地下矿场挖掘矿藏10次",
             "Capture or hatch 50 Pokémon.": "捕捉或孵化50只宝可梦",
             "Step 2 of Let's Go, Meltan!": "步骤2：去吧！美录坦",
             "Hatch 50 Eggs.": "孵化50个宝可梦蛋",
@@ -1469,7 +1460,7 @@
             "Step 9 of Let's Go, Meltan!": "步骤9：去吧！美录坦",
             "Catch or hatch 20 Kabuto.": "捕捉或孵化20只化石盔",
             "Catch or hatch 20 Omanyte.": "捕捉或孵化20只菊石兽",
-            "Mine 30 layers in the Underground.": "前往地下矿场开采30层",
+            "Collect all buried treasure 30 times in the Underground mines.": "在地下矿场挖掘全部矿藏30次",
             "Step 10 of Let's Go, Meltan!": "步骤10：去吧！美录坦",
             "Catch or hatch 20 Anorith.": "捕捉或孵化20只太古羽虫",
             "Catch or hatch 20 Lileep.": "捕捉或孵化20只触手百合",

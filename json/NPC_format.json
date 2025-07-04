@@ -130,6 +130,15 @@
         },
         {
             "name": {
+                "Farm Apprentice": "农场学徒"
+            },
+            "dialog": {
+                "One day I was tending to my Passho berries and a Squirtle suddenly appeared! If only I knew about this before spending all of my Quest Points on Water Eggs..": "有一天，我正在照料我的Passho果，突然出现了一只杰尼龟！要是我能在把所有任务代币都花在水属性蛋上之前知道这件事就好了……",
+                "If I try mutating different berries maybe I can catch new Pokémon while saving my Quest Points!": "如果我尝试变异不同的树果，也许我可以在积攒我的任务代币的同时捕捉新的宝可梦！"
+            }
+        },
+        {
+            "name": {
                 "Super Nerd Jovan": "理科男公孝"
             },
             "dialog": {
@@ -432,7 +441,7 @@
             "dialog": {
                 "That Explorer Kit is a must-have for any Fossil Fanatic! Why, it's how I found my very first Old Amber.": "那个探险套装是任何化石狂热者必备的！为什么，这就是我如何找到我的第一个秘密琥珀的。",
                 "Hrm, yes! I see that gleam in your eye! It may look expensive now, but the treasures you'll find in the Underground are priceless! And what's more- with each new region you travel to, the more adept you will become at identifying new curios!": "嗯，是的！我看到你眼中的光芒！现在看起来可能很贵，但你在地下矿场找到的宝藏是无价的！更重要的是-随着你旅行到每一个新区域，你将变得更擅长于识别新的珍品！",
-                "Speaking of, our very own Kanto is home to three: the Helix Fossil, Dome Fossil, and Old Amber! You can revive them via that Hatchery of yours!": "说到这，我们自己的关都地区就有三个：贝壳化石、甲壳化石和秘密琥珀！你可以通过你的培育屋复活它们！"
+                "Speaking of, our very own Kanto is home to three: the Helix Fossil, Dome Fossil, and Old Amber! You can revive them into living Pokémon using techniques developed by the Devon Corporation and a research laboratory on Cinnabar Island! There are also other scientists around the Pokémon world who can revive Fossils using these techniques.": "说起来，我们关都地区就拥有三种特产：贝壳化石、甲壳化石和秘密琥珀！你可以使用由得文公司和红莲镇研究所开发的技术，将它们复活成活宝可梦！宝可梦世界里还有其他科学家可以使用这些技术复活化石。"
             }
         },
         {
@@ -574,7 +583,7 @@
             },
             "dialog": {
                 "You know what sucks? The other islands are off limits for some arbitrary reason. There is no explanation. Just can't go there.": "你知道什么最糟糕吗？其他岛屿因为一些武断的理由而禁止前往。没有解释。就是不能去那里。",
-                "Alright, you want the real truth? Some weird old dude told me this: \"The other islands are locked behind part of a \"Quest Line\" You have to progress to unlock it.\"": "好吧，你想要真相吗？一个古怪的老头告诉我这个：“其他岛屿被锁在了一个‘任务线’的后面。你必须前进来解锁它。”",
+                "Alright, you want the real truth? Some weird old dude told me this: \"The other islands are locked behind part of a \"Quest Line\" You have to progress to unlock it.\"": "好吧，你想要真相吗？一个古怪的老头告诉我这个：“其他岛屿被锁在了一个‘任务线’的后面。你必须继续旅行来解锁它。”",
                 "I don't know what half those words mean. All I know is I can't go back to Kanto with the rest of the gang. This sucks.": "我不知道那些话的一半意味着什么。我所知道的就是我不能和其他人一起回到关都地区。这太糟糕了。"
             }
         },
@@ -584,7 +593,7 @@
             },
             "dialog": {
                 "You know what sucks? The other islands are off limits for some arbitrary reason. There is no explanation. Just can't go there.": "你知道什么最糟糕吗？其他岛屿因为一些武断的理由而禁止前往。没有解释。就是不能去那里。",
-                "Alright, you want the real truth? Some weird old dude told me this: \"The other islands are locked behind part of a Questline. You can unlock it at a Bulletin Board.\"": "好吧，你想要真相吗？一个古怪的老头告诉我这个：“其他岛屿被锁在了一部分任务线的后面。你可以在布告栏解锁它。”",
+                "Alright, you want the real truth? Some weird old dude told me this: \"The other islands are locked behind part of a Questline. You can unlock it at a Bulletin Board.\"": "好吧，你想要真相吗？一个古怪的老头告诉我这个：“其他岛屿被锁在了一部分任务线的后面。你可以在通告栏解锁它。”",
                 "I don't know what half those words mean. All I know is I can't go back to Kanto with the rest of the gang. This sucks.": "我不知道那些话的一半意味着什么。我所知道的就是我不能和其他人一起回到关都地区。这太糟糕了。"
             }
         },
@@ -872,7 +881,7 @@
             },
             "dialog": {
                 "Hello again! I see you too found your way to these ancient ruins!": "你好，又见面了！我看你也找到了通往这些古老遗迹的路！",
-                "A peculiar Pokémon known as Unown lives here. There are 28 different forms of Unown, but only one shows up at a time, but the form that appears changes every time the clock strikes midnight.": "一种名为未知图腾的特殊宝可梦生活在这里。未知图腾有28种不同的形态，但每次只出现一种，每当午夜钟声响起时，出现的形态就会改变。",
+                "A peculiar Pokémon known as Unown lives here. There are 28 different forms of Unown, but not all appear at the same time.": "一种名为未知图腾的特殊宝可梦生活在这里。未知图腾有28种不同的形态，但不会同时全部出现。",
                 "There are 2 other ruins like this, one in Johto, and one in Sinnoh. I have heard that in each ruins, there are forms that only appear there. For example, the forms that resemble a question mark and an exclamation point have only been seen here.": "还有两个类似的遗迹，一个在城都地区，一个在神奥地区。我听说在每个遗迹中，都有只在那里出现的形态。例如，类似问号和感叹号的形态只有在这里被看到。",
                 "Speaking of peculiar Pokémon, I found this unusual variant of Dodrio on an island in this area. Hmm. If you want, you could buy it from me. I am needing some research funds.": "说到特殊的宝可梦，我在这个地区的一个岛上发现了嘟嘟利的一个不寻常变种。嗯。如果你愿意，你可以从我这里买下它。我需要一些研究资金。"
             }
@@ -893,6 +902,14 @@
         {
             "name": {
                 "Prof. Elm": "空木博士"
+            }
+        },
+        {
+            "name": {
+                "Elm's Assistant": "空木博士的助手"
+            },
+            "dialog": {
+                "Prof. Elm's research is focused on eggs. Pokémon eggs hatch faster when the trainer is battling strong trainers like Gym leaders.": "空木博士的研究重点是宝可梦蛋。与道馆馆主等实力强大的训练家对战时，宝可梦蛋孵化得更快。"
             }
         }
     ],
@@ -1113,7 +1130,7 @@
             "dialog": {
                 "I traveled here all the way from Goldenrod to buy a Soothe Bell for my Eevee.": "我从金黄市一路旅行到这里，就是为了给我的伊布买一个安抚之铃。",
                 "When I use a Soothe Bell on Eevee it can evolve into Espeon or Umbreon. It depends on the time. Espeon during the day, Umbreon at night.": "当我在伊布身上使用安抚之铃时，它可以进化成太阳伊布或月亮伊布。这取决于时间。白天是太阳伊布，夜晚是月亮伊布。",
-                "I only brought enough Quest Points for one Soothe Bell. It's so hard to choose...": "我只带的任务币够买一个安抚之铃。这真的很难选择……"
+                "I only brought enough Quest Points for one Soothe Bell. It's so hard to choose...": "我只带的任务代币够买一个安抚之铃。这真的很难选择……"
             }
         },
         {
@@ -1863,7 +1880,7 @@
             },
             "dialog": {
                 "Thank you for reserving your Eon Ticket!": "感谢你预订你的无限船票！",
-                "To claim the ticket, all you have to do is go to your Start Menu, select \"Save\", and enter the following code in the \"Enter Code...\" box:": "要领取这张票，你所要做的就是打开开始菜单，选择“保存”，并在“Enter Code...”框中输入以下代码：",
+                "To claim the ticket, all you have to do is go to your Start Menu, select \"Save / Enter Code\", and enter the following code in the \"Enter Code...\" box:": "要领取门票，您只需转到“开始菜单”，选择“Save/Enter Code”，然后在“Enter Code...”框中输入以下代码：",
                 "EON-TICKET": "EON-TICKET"
             }
         },
@@ -2145,7 +2162,7 @@
             },
             "dialog": {
                 "My eggs! They ran away!": "我的蛋蛋！它们跑掉了！",
-                "Can you help me get them back? They have most likely fleed to a dungeon in Kanto, Hoenn or Johto.": "你能帮我把它们找回来吗？它们很可能逃到了关都地区、丰缘地区或城都地区的某个地牢。",
+                "Can you help me get them back? They have most likely fled to a dungeon in Kanto, Hoenn or Johto.": "你能帮我把它们找回来吗？它们很可能逃到了关都地区、丰缘地区或城都地区的某个地牢。",
                 "But be careful! If you defeat them, they will run away again!": "但要小心！如果你打败它们，它们会再次逃跑！"
             }
         }
@@ -2700,6 +2717,14 @@
         },
         {
             "name": {
+                "Prof. Rowan's Assistant": "山梨博士的助手"
+            },
+            "dialog": {
+                "Hey, $playername$! According to Prof. Rowan's research, 90% of all Pokémon are somehow tied to evolution! Yup, you can also see a Pokémon's evolution line in your Pokédex.": "嘿，$playername$！根据山梨博士的研究，90% 的宝可梦都与进化有关！没错，你也可以在宝可梦图鉴里看到宝可梦的进化路线。"
+            }
+        },
+        {
+            "name": {
                 "Beachcomber": "比奇科默"
             },
             "dialog": {
@@ -2849,6 +2874,15 @@
                 "My favourite contestant had a big reveal for us this week!": "我最喜欢的参赛者这周为我们揭示了一个重大消息！",
                 "Their prized Magneton had evolved into a Magnezone!": "他们珍贵的三合一磁怪进化成了自爆磁怪！",
                 "I'm so happy for them, all of that training in Mt. Coronet must have paid off!": "我为他们感到高兴，所有在天冠山的训练一定都有了回报！"
+            }
+        },
+        {
+            "name": {
+                "Berry Master Assistant": "树果大师的助手"
+            },
+            "dialog": {
+                "I have so many Gracidea right now, so i'll sell you one.": "我现在有很多葛拉西蒂亚花，所以我会卖给你一个。",
+                "If you give it to your Shaymin, it can change form!": "如果你把它给你的谢米，它就能改变形态！"
             }
         },
         {
@@ -3773,6 +3807,16 @@
         },
         {
             "name": {
+                "AZ": "ＡＺ"
+            },
+            "dialog": {
+                "Floette... It's been 3,000 years...": "花叶蒂……已经过去 3000 年了……",
+                "And with you... another of your kind?": "和你一起的还有...你的同类？",
+                "Ah... it seems to be interested in you, $playername$. Would you like to take it with you?": "啊……它好像对你很感兴趣，$playername$。你想把它带走吗？"
+            }
+        },
+        {
+            "name": {
                 "Stone Salesman": "石头销售员"
             },
             "dialog": {
@@ -3838,9 +3882,9 @@
                 "Vivid Stone Collector": "彩粉石头收藏家"
             },
             "dialog": {
-                "You see these beautiful gemstones in Grant's gym? There is no mistake, these are genuine Mega Stones!": "你在查克洛的道馆里看到这些漂亮的宝石了吗？没错，这些都是真正的Mega进化石！",
-                "Oh, what I would pay to add them to my collection! But money is of no help here. I bet Grant would be willing to part with them if I challenge him enough times and prove my skills to him.": "哦，我愿意付出多大的代价来把它们添加到我的收藏中！但钱在这里毫无用处。我敢打赌，只要我向查克洛挑战足够多次以证明我的实力，他会愿意放弃它们。",
-                "Unfortunately my skills as a collector far surpass my skills as a Pokémon trainer. But anyone who can become the Champion of Kalos surely can convince Grant that these stones will be in good hands.": "不幸的是，我的收藏家实力远超我的宝可梦训练家实力。但任何能成为卡洛斯地区的冠军的人肯定都能说服查克洛，将这些石头留给有实力的人。"
+                "You see that beautiful gemstone in Grant's gym? There is no mistake, that is a genuine Mega Stone!": "你在查克洛的道馆里看到那些漂亮的宝石了吗？没错，这些都是真正的Mega进化石！",
+                "Oh, what I would pay to add it to my collection! But money is of no help here. I bet Grant would be willing to part with it if I challenge him enough times and prove my skills to him.": "哦，我愿意付出多大的代价来把它添加到我的收藏中！但钱在这里毫无用处。我敢打赌，只要我向查克洛挑战足够多次以证明我的实力，他会愿意放弃它。",
+                "Unfortunately my skills as a collector far surpass my skills as a Pokémon trainer. But anyone who can become the Champion of Kalos surely can convince Grant that this stone will be in good hands.": "不幸的是，我的收藏家实力远超我的宝可梦训练家实力。但任何能成为卡洛斯地区的冠军的人肯定都能说服查克洛，将这石头留给有实力的人。"
             }
         }
     ],
@@ -3850,7 +3894,7 @@
                 "Not Ash": "不是小智"
             },
             "dialog": {
-                "Hey uh.... twerp. Would you happen to have any Dungeon Tokens? We've, uh, run out.": "嘿呃……笨蛋。你有没有地牢币？呃，我们已经用完了。",
+                "Hey uh.... twerp. Would you happen to have any Dungeon Tokens? We've, uh, run out.": "嘿呃……笨蛋。你有没有地牢代币？呃，我们已经用完了。",
                 "I'll give you that Pikachu costume my Inkay was wearing for some?": "我可以给你我好啦鱿穿的那件皮卡丘服装吗？",
                 "...Give me a break. I know that you knew that the Pikachu was a costume. You could see right through us, as if you could just see its name over its head or something.": "...饶了我吧。我知道你知道皮卡丘是一种服装。你可以看穿我们，就好像你能看到它头上的名字或别的什么东西一样。"
             }
@@ -3982,7 +4026,7 @@
             "dialog": {
                 "My partner Medicham and I are always training to become the strongest in the world.": "我和我的伙伴恰雷姆一直在训练，希望能成为世界最强",
                 "Our favorite way to train is by doing quests. Someday my Medicham even found a Mega Stone while claiming some.": "我们最喜欢的训练方式是做任务。有一天我的恰雷姆甚至在提交任务时发现了一块Mega进化石",
-                "I can't quite remember what Quest Level we were at, but it was probably 15 or higher.": "我记不清我们当时的任务等级是多少，但可能是 15 级或者更高"
+                "I can't quite remember what Quest Level we were at, but it was probably 16 or higher.": "我记不清我们当时的任务等级是多少，但可能是 16 级或者更高"
             }
         }
     ],
@@ -4162,7 +4206,7 @@
             },
             "dialog": {
                 "I've heard that a hidden realm lies beneath this cave, ruled by a Pokémon Princess. She might come out for a powerful and helpful trainer.": "我听说这个洞穴下面隐藏着一个由宝可梦公主统治的领域。她可能会为了一个强大且有帮助的训练家而出现。",
-                "That would be big news, sure to be reported on local bulletin boards!": "那将是一个大新闻，肯定会在当地公告板上报道！"
+                "That would be big news, sure to be reported on local bulletin boards!": "那将是一个大新闻，肯定会在当地通告栏上报道！"
             }
         }
     ],
@@ -4830,7 +4874,7 @@
                 "Ultra Recon Squad": "究极调查队"
             },
             "dialog": {
-                "Care for a Poipole? It only costs a few thousand Quest Points!": "喜欢毒贝比吗？只需花费几千个任务币！"
+                "Care for a Poipole? It only costs a few thousand Quest Points!": "喜欢毒贝比吗？只需花费几千个任务代币！"
             }
         },
         {
@@ -5209,7 +5253,7 @@
                 "Gladion": "格拉吉欧"
             },
             "dialog": {
-                "Oh, it's you. I thought the professor would help when I put my request up at the Bulletin Board, but the Champion's even better.": "哦，是你啊。我以为当我在布告板上发布我的请求时博士会来帮忙，但冠军更好。",
+                "Oh, it's you. I thought the professor would help when I put my request up at the Bulletin Board, but the Champion's even better.": "哦，是你啊。我以为当我在通告栏上发布我的请求时博士会来帮忙，但冠军更好。",
                 "See, my Silvally has been acting strange lately, almost as if it's back to being haunted by its traumatizing past, the poor thing. Silvally are unique Pokémon who can download memories from artificial disks to change their type, but my Silvally's own memories somehow got mixed in with them. I need to get the disks back and recover its memories. That's where you come in.": "你看，我的银伴战兽最近行为怪异，几乎就像它又回到了被它的创伤过去所困扰的日子一样，可怜的东西。银伴战兽是独特的宝可梦，它们可以从人工磁盘中下载存储碟来改变它们的类型，但我的银伴战兽自己的记忆不知何故与它们混合在一起了。我需要把磁盘找回来并恢复它的记忆。这就是你的用武之地。",
                 "Silvally has its memories divided in 17 parts and I lost all of them after traveling with it around Alola. Try talking with citizens of all four islands to find out if they know anything about them. If you help me restore its memories I'll maybe give you a reward, but don't expect any charity. The memories look like this:": "银伴战兽存储碟分为17个部分，我在绕着阿罗拉地区旅行后把它们全部丢了。试着和四个岛的居民交谈，看看他们是否知道这些存储碟。如果你帮我恢复它的存储碟，也许我会给你一些奖励，但不要期待慈善。这些存储碟看起来像这样：",
                 "<img src=\"assets/images/items/quest/Dark_Memory_Silvally.png\">": "<img src=\"assets/images/items/quest/Dark_Memory_Silvally.png\">",
@@ -5353,7 +5397,7 @@
             },
             "dialog": {
                 "Hey, $playername$. Looking for a battle? Hm, ok. Can I say something to you anyway? It will be quick. I want to propose to my girlfriend, but I can't afford the ring she really wants. It's so expensive, and I feel guilty not being able to give her what she deserves. I don't know what to do! Maybe I could pick up some extra work to hire more Miners for some Diamonds.": "嘿，$playername$。寻找战斗吗？嗯，好吧。我能对你说点什么吗？这会很快。我想向我的女朋友求婚，但我买不起她真正想要的戒指。它太贵了，我觉得对不起她，不能给她应得的东西。我不知道该怎么办！也许我可以做一些额外的工作，雇佣更多的矿工来挖一些钻石。",
-                "Anyway what did you want to ask me? Hmm, if I've seen a Silvally Memory anywhere near? Sure, it's in my pocket right here. It even is coloured like a diamond! I wish I could trade it for some... hm? You're asking if we could do a trade? Sure, I'll sell it to you for 1k Diamonds, so I can buy my lovely fiancée-to-be an engagement ring. I'll always be here in the same place at all times, we can trade anytime you want.": "无论如何，你想问我什么？嗯，我附近有没有看到过银伴战兽的存储碟？当然，就在我的口袋里。它甚至像钻石一样有颜色！我希望我可以用它交换一些……嗯？你问我们能做交易吗？当然，我会以 1k 钻石卖给你，这样我就可以给我可爱的未婚妻买一个订婚戒指。我会一直呆在同一个地方，我们可以随时交易。"
+                "Anyway what did you want to ask me? Hmm, if I've seen a Silvally Memory anywhere near? Sure, it's in my pocket right here. It even is coloured like a diamond! I wish I could trade it for some... hm? You're asking if we could do a trade? Sure, I'll sell it to you for 100,000 Diamonds, so I can buy my lovely fiancée-to-be an engagement ring. I'll always be here in the same place at all times, we can trade anytime you want.": "无论如何，你想问我什么？嗯，我附近有没有看到过银伴战兽的存储碟？当然，就在我的口袋里。它甚至像钻石一样有颜色！我希望我可以用它交换一些……嗯？你问我们能做交易吗？当然，我会以 100,000 钻石卖给你，这样我就可以给我可爱的未婚妻买一个订婚戒指。我会一直呆在同一个地方，我们可以随时交易。"
             }
         }
     ],
@@ -6311,7 +6355,7 @@
                 "Peonia": "夏科娅"
             },
             "dialog": {
-                "Was it really was Eternatus again? Given that the purple glow has vanished, I guess you've already taken care of it. Congrats!": "真的是无极汰那再次出现了吗？考虑到紫色的光芒已经消失，我猜你已经处理好它了。恭喜！",
+                "So it really was Eternatus again? Given that the purple glow has vanished, I guess you've already taken care of it. Congrats!": "所以真的是无极汰那再次出现了吗？考虑到紫色的光芒已经消失，我猜你已经处理好它了。恭喜！",
                 "Actually, I just saw some purple and red Pokémon fly into the caves. Maybe that was Eternatus? I think this place might let it return to its Eternamax form. Maybe you can catch it!": "实际上，我刚看到一些紫色和红色的宝可梦飞进了洞穴。可能那是无极汰那？我认为这个地方可能会让它回到它的无极巨化形态。也许你可以抓住它！",
                 "At any rate, I'm real thankful for all your help. There's so many more people coming here now there's more Gigantamax Pokémon to find.  It's been a lot of fun!": "无论如何，我真的非常感谢你的帮助。现在有更多的人来到这里寻找更多的超极巨宝可梦。这非常有趣！"
             }

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         宝可梦点击（Poke Clicker）内核汉化脚本
 // @namespace    PokeClickerHelper
-// @version      0.10.24-a
+// @version      0.10.24-b
 // @description  采用内核汉化形式，目前汉化范围：所有任务线、NPC、成就、地区、城镇、道路、道馆
 // @author       DreamNya, ICEYe, iktsuarpok, 我是谁？, 顶不住了, 银☆星, TerVoid
 // @match        http://localhost:3000/
@@ -223,6 +223,7 @@ $("#npc-modal h5").each(function () {
 // 汉化成就
 Translation.AchievementName = Translation.Achievement.name ?? {};
 Translation.AchievementDescription = Translation.Achievement.description ?? {};
+Translation.AchievementHint = Translation.Achievement.hint ?? {};
 Translation.AchievementNameRegs = Object.entries(Translation.Achievement.nameReg ?? {}).map(([reg, value]) => [
     new RegExp(reg),
     value,
@@ -282,18 +283,48 @@ window.realAchievement = Achievement;
 Achievement = new Proxy(window.realAchievement, {
     construct(...args) {
         const ahievement = Reflect.construct(...args);
-        const { name, description } = ahievement;
+        const { name, _description } = ahievement;
 
         const displayName = formatAchievement(name, "Name");
-        const displayDescription = formatAchievement(description, "Description");
+        const displayDescription = formatAchievement(_description, "Description");
 
         // Achievement几乎不会被读取 直接覆盖原始值
         Object.defineProperties(ahievement, {
             name: {
                 get: () => (TranslationHelper.exporting || TranslationHelper.toggleRaw ? name : displayName),
             },
-            description: {
-                get: () => (TranslationHelper.exporting || TranslationHelper.toggleRaw ? description : displayDescription),
+            _description: {
+                get: () => (TranslationHelper.exporting || TranslationHelper.toggleRaw ? _description : displayDescription),
+            },
+            rawName: {
+                get: () => name,
+            },
+        });
+
+        return ahievement;
+    },
+});
+
+window.realSecretAchievement = SecretAchievement;
+SecretAchievement = new Proxy(window.realSecretAchievement, {
+    construct(...args) {
+        const ahievement = Reflect.construct(...args);
+        const { name, _description, _hint } = ahievement;
+
+        const displayName = formatAchievement(name, "Name");
+        const displayDescription = formatAchievement(_description, "Description");
+        const displayHint = formatAchievement(_hint, "Hint");
+
+        // Achievement几乎不会被读取 直接覆盖原始值
+        Object.defineProperties(ahievement, {
+            name: {
+                get: () => (TranslationHelper.exporting || TranslationHelper.toggleRaw ? name : displayName),
+            },
+            _description: {
+                get: () => (TranslationHelper.exporting || TranslationHelper.toggleRaw ? _description : displayDescription),
+            },
+            _hint: {
+                get: () => (TranslationHelper.exporting || TranslationHelper.toggleRaw ? _hint : displayHint),
             },
             rawName: {
                 get: () => name,
@@ -331,6 +362,15 @@ $("#subregion-travel-buttons > button.btn.btn-sm.btn-primary").attr(
 
 // 汉化道路
 const regionRouteReg = new RegExp(`^(${Object.keys(Translation.Region).join("|")}) Route (\\d+)$`);
+// 水路范围
+const waterRoute = {
+    Kanto: [19, 20, 21],
+    Johto: [40, 41],
+    Hoenn: [105, 106, 107, 109, 109, 122, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134],
+    Sinnoh: [220, 223, 226, 230],
+    Unova: [17, 21],
+    Alola: [15],
+};
 function formatRouteName(routeName, returnRaw = true) {
     if (Translation.Route[routeName]) {
         return Translation.Route[routeName];
@@ -340,12 +380,18 @@ function formatRouteName(routeName, returnRaw = true) {
             const regionName = Translation.Region[region] ?? region;
             // 将数字转换为全角数字
             const formatNumber = number.replace(/\d/g, (digit) => String.fromCharCode(digit.charCodeAt(0) + 0xff10 - 0x30));
-            return `${regionName}${formatNumber}号道路`;
+            const routeType = waterRoute[region]?.includes(+number) ? "水路" : "道路";
+            return `${regionName}${formatNumber}号${routeType}`;
         });
     }
     return returnRaw ? routeName : undefined;
 }
+
+Routes.real_getName = Routes.getName;
 Routes.getName = function (route, region, alwaysIncludeRegionName = false, includeSubRegionName = false) {
+    if (TranslationHelper.exporting) {
+        return this.real_getName(route, region, alwaysIncludeRegionName, includeSubRegionName);
+    }
     const rawRegionName = GameConstants.camelCaseToString(GameConstants.Region[region]);
     const regionName = Translation.Region[rawRegionName] ?? rawRegionName;
     const regionFullName = Translation.RegionFull[rawRegionName] ?? rawRegionName;
@@ -384,7 +430,10 @@ Object.values(GymList).forEach((gym) => {
             get: () => (TranslationHelper.exporting || TranslationHelper.toggleRaw ? rawButtonText : buttonText),
         },
         displayName: {
-            get: () => buttonText,
+            get: () => (TranslationHelper.exporting || TranslationHelper.toggleRaw ? rawButtonText : buttonText),
+        },
+        rawButtonText: {
+            get: () => rawButtonText,
         },
         rawLeaderName: {
             get: () => rawLeaderName,
@@ -470,15 +519,18 @@ TranslationHelper.ExportTranslation.NPC = function (override) {
 };
 
 TranslationHelper.ExportTranslation.Town = function () {
+    TranslationHelper.exporting = true;
     const json = Object.fromEntries(
         Object.keys(TownList).map((townName) => {
             return [townName, Translation.Town[townName] ?? ""];
         })
     );
+    TranslationHelper.exporting = false;
     return json;
 };
 
 TranslationHelper.ExportTranslation.Gym = function () {
+    TranslationHelper.exporting = true;
     const json = {};
     Object.values(GymList).forEach((gym) => {
         json[gym.rawLeaderName] = Translation.Gym[gym.rawLeaderName] ?? "";
@@ -486,6 +538,20 @@ TranslationHelper.ExportTranslation.Gym = function () {
             json[gym.rawButtonText] = Translation.Gym[gym.rawButtonText] ?? "";
         }
     });
+    TranslationHelper.exporting = false;
+    return json;
+};
+
+TranslationHelper.ExportTranslation.Route = function () {
+    TranslationHelper.exporting = true;
+    const json = Routes.regionRoutes.reduce((obj, { routeName }) => {
+        if (regionRouteReg.test(routeName)) {
+            return obj;
+        }
+        obj[routeName] = formatRouteName(routeName, false) ?? "";
+        return obj;
+    }, {});
+    TranslationHelper.exporting = false;
     return json;
 };
 
