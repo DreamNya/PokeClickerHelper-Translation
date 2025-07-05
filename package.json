@@ -4,7 +4,8 @@
     "description": "https://scriptcat.org/zh-CN/script-show-page/837/",
     "private": "true",
     "scripts": {
-        "achievement": "node ast/Achievement.cjs"
+        "export-achievement": "node ast/Achievement.cjs",
+        "purge-jsdelivr": "node script/purge-jsdelivr.mjs"
     },
     "repository": {
         "type": "git",
