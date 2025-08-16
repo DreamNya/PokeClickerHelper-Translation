@@ -3,6 +3,11 @@ const resources = ["QuestLine", "Town", "NPC", "Achievement", "Regions", "Route"
 
 const urls = resources.map((name) => `${cdn}${name}.json`);
 
+// 刷新 jsDelivr 全球缓存
+for (const url of urls) {
+    await purgeUrl(url);
+}
+
 async function purgeUrl(url) {
     try {
         const res = await fetch(url);
@@ -16,9 +21,4 @@ async function purgeUrl(url) {
     } catch (err) {
         console.error(`❌ Error purging ${url}:`, err.message);
     }
-}
-
-// 刷新 jsDelivr 全球缓存
-for (const url of urls) {
-    await purgeUrl(url);
 }

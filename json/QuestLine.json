@@ -494,6 +494,26 @@
             "Defeat Ghetsis one final time!": "最后一次击败魁奇思"
         }
     },
+    "Destiny Deoxys": {
+        "name": "裂空的访问者 代欧奇希斯",
+        "description": {
+            "Discover the mystery of the crashed meteor.": "调查坠落陨石之谜"
+        },
+        "descriptions": {
+            "There seems to be a big fuss about a new discovery in the Giant Chasm. Try finding it.": "巨人洞窟似乎因某项新发现而闹得沸沸扬扬。去找找看",
+            "You found a pulsating Green Gemstone. Take a closer look.": "你发现了一枚会脉动的绿水晶。仔细查看",
+            "Rayquaza and Deoxys are rampaging in the area. Try to calm them down.": "烈空坐和代欧奇希斯正在附近肆虐。想办法让它们冷静下来",
+            "Now that the situation has calmed down talk to the local scientists about the Green Gemstone.": "现在事态已平息，与当地的研究员谈谈那枚绿水晶",
+            "Check out the Battle Frontier while the scientist analyzes the gemstone.": "研究员正在分析那枚水晶时，去逛逛对战开拓区",
+            "While you were in the Battle Frontier an army of Deoxys attacked. Fight your way out!": "你在对战开拓区时，一支代欧奇希斯军队发动了袭击。一路战斗突围！",
+            "The scientist you met at Giant Chasm is looking for you at the Battle Frontier.": "在巨人洞窟遇到的那位研究员正在对战开拓区找你",
+            "The generator isn't working. Look around for scraps to repair it.": "发电机无法运作。四处寻找材料进行修理",
+            "Gain 15,000 Electric gems.": "获得15,000个电之宝石",
+            "Gain 5,000 Steel gems.": "获得5,000个钢之宝石",
+            "Rayquaza attacks again. Calm it down for the last time.": "烈空坐再次发动攻击。最后一次让它冷静下来",
+            "Rayquaza realized that the Deoxys are no threat. Reunite the Purple and Green Gemmed Deoxys.": "烈空坐意识到代欧奇希斯并非威胁。让紫水晶与绿水晶代欧奇希斯重聚"
+        }
+    },
     "Swords of Justice": {
         "name": "圣剑士",
         "description": {
@@ -741,8 +761,8 @@
             "Talk to Lysandre inside Professor Sycamore's lab in Lumiose City.": "前往密阿雷市的布拉塔诺宝可梦研究所与弗拉达利谈谈",
             "Well, that was definitely a weird guy... Seems like Calem wants to meet you somewhere in Lumiose City, go talk with him.": "嗯，那绝对是个奇怪的家伙。卡鲁穆在密阿雷市等你，去找他谈谈",
             "Meet Calem in Ambrette Town.": "前往古香镇与卡鲁穆见面",
-            "Clear Glittering Cave and find the scientist.": "清理闪耀洞窟并找到科学家",
-            "It seems that Team Flare Grunt is holding the scientist captive, free him!": "应该是闪焰队手下囚禁了科学家，解救他！",
+            "Clear Glittering Cave and find the scientist.": "清理闪耀洞窟并找到研究员",
+            "It seems that Team Flare Grunt is holding the scientist captive, free him!": "应该是闪焰队手下囚禁了研究员，解救他！",
             "From what you gathered, Team Flare wanted to sell fossils for money. Talk with the fossil scientist you just rescued in Glittering Cave.": "从你收集到的信息来看，闪焰队想要卖化石赚钱。与你刚刚从闪耀洞窟中救出的化石研究员交谈",
             "With interesting thoughts about Team Flare in your head, you decide to challenge the Cyllage City Gym to become stronger.": "对于闪焰队你有了些有趣的想法，所以你打算挑战遥香道馆去变得更强",
             "You can see in Geosenge Town the Team Flare Grunt you battled earlier. Approach him once more.": "在石香镇你可以看到之前战斗过的闪焰队手下，再次接近他",
@@ -1387,7 +1407,7 @@
     "Dr. Splash's Research Project": {
         "name": "苏普拉研究员的研究项目",
         "description": {
-            "Help Dr. Splash unlock the full potential of your Magikarps.": "帮助苏普拉研究员释放鲤鱼王的全部潜力"
+            "Help Dr. Splash unlock the full potential of your Magikarp.": "帮助苏普拉研究员释放鲤鱼王的全部潜力"
         },
         "descriptions": {
             "Talk to Dr. Splash in Hoppy Town.": "与跳跃镇的苏普拉研究员谈谈",

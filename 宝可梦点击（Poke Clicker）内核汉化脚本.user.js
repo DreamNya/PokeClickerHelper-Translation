@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         宝可梦点击（Poke Clicker）内核汉化脚本
 // @namespace    PokeClickerHelper
-// @version      0.10.24-d
+// @version      0.10.25-a
 // @description  采用内核汉化形式，目前汉化范围：所有任务线、NPC、成就、地区、城镇、道路、道馆
 // @author       DreamNya, ICEYe, iktsuarpok, 我是谁？, 顶不住了, 银☆星, TerVoid
 // @match        http://localhost:3000/
@@ -452,16 +452,18 @@ TranslationHelper.ExportTranslation = {};
 TranslationHelper.ExportTranslation.QuestLine = function () {
     TranslationHelper.exporting = true;
     const json = App.game.quests.questLines().reduce((obj, questline) => {
-        const { name, description } = questline;
+        const { name, _description } = questline;
         const translation = Translation.QuestLine[name];
         const subObj = {};
-        subObj.name = translation?.name ?? name;
-        subObj.description = { [description]: translation?.description[description] ?? "" };
+        subObj.name = translation?.name ?? "";
+        subObj.description = { [_description]: translation?.description[_description] ?? "" };
         subObj.descriptions = questline.quests().reduce((d, q) => {
-            d[q.description] = translation?.descriptions[q.description] ?? "";
+            const description = q.customDescription ?? q.description;
+            d[description] = translation?.descriptions[description] ?? "";
             if (q instanceof MultipleQuestsQuest) {
                 q.quests.forEach((qq) => {
-                    d[qq.description] = translation?.descriptions[qq.description] ?? "";
+                    const description = qq.customDescription ?? qq.description;
+                    d[description] = translation?.descriptions[description] ?? "";
                 });
             }
             return d;

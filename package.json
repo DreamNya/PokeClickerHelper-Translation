@@ -5,6 +5,7 @@
     "private": "true",
     "scripts": {
         "export-achievement": "node ast/Achievement.cjs",
+        "update-submodule": "git submodule update --remote --rebase",
         "purge-jsdelivr": "node script/purge-jsdelivr.mjs"
     },
     "repository": {
