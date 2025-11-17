@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         宝可梦点击（Poke Clicker）内核汉化脚本
 // @namespace    PokeClickerHelper
-// @version      0.10.25-a
+// @version      0.10.25-b
 // @description  采用内核汉化形式，目前汉化范围：所有任务线、NPC、成就、地区、城镇、道路、道馆
 // @author       DreamNya, ICEYe, iktsuarpok, 我是谁？, 顶不住了, 银☆星, TerVoid
 // @match        http://localhost:3000/
@@ -607,7 +607,7 @@ if (CoreModule) {
             }
         },
         NPC: (npcName) => Translation.NPCName[npcName] ?? npcName,
-        QuestLine: (questLineName) => Translation.QuestLine[questLineName].name ?? questLineName,
+        QuestLine: (questLineName) => Translation.QuestLine[questLineName]?.name ?? questLineName,
         Gym: (leaderName) => Translation.Gym[leaderName] ?? leaderName,
         Achievement: (achievementName) => Translation.AchievementName[achievementName] ?? achievementName,
     };

@@ -504,7 +504,7 @@
             "You found a pulsating Green Gemstone. Take a closer look.": "你发现了一枚会脉动的绿水晶。仔细查看",
             "Rayquaza and Deoxys are rampaging in the area. Try to calm them down.": "烈空坐和代欧奇希斯正在附近肆虐。想办法让它们冷静下来",
             "Now that the situation has calmed down talk to the local scientists about the Green Gemstone.": "现在事态已平息，与当地的研究员谈谈那枚绿水晶",
-            "Check out the Battle Frontier while the scientist analyzes the gemstone.": "研究员正在分析那枚水晶时，去逛逛对战开拓区",
+            "Check out the Battle Frontier while the scientist analyzes the gemstone.": "研究员正在分析那枚水晶，去逛逛对战开拓区",
             "While you were in the Battle Frontier an army of Deoxys attacked. Fight your way out!": "你在对战开拓区时，一支代欧奇希斯军队发动了袭击。一路战斗突围！",
             "The scientist you met at Giant Chasm is looking for you at the Battle Frontier.": "在巨人洞窟遇到的那位研究员正在对战开拓区找你",
             "The generator isn't working. Look around for scraps to repair it.": "发电机无法运作。四处寻找材料进行修理",
@@ -843,7 +843,7 @@
     "An Unrivaled Power": {
         "name": "无与伦比的力量",
         "description": {
-            "It has been said that Mewtwo can Mega Evolve. Search for clues on how to find its Mega Stones, so you can control this unrivaled power.": "据说超梦可以极巨化。寻找有关如何找到Mega宝石的线索，这样你就可以控制这种无与伦比的力量"
+            "It has been said that Mewtwo can Mega Evolve. Search for clues on how to find its Mega Stones, so you can control this unrivaled power.": "据说超梦可以进行Mega进化。寻找线索，找到它的Mega进化石，这样你就能掌控这无与伦比的力量"
         },
         "descriptions": {
             "Red might know something. Fight him at Indigo Plateau Kanto then ask him what he knows.": "赤红可能知道些什么。前往关都石英高原和他对战，然后问他知道些什么",
