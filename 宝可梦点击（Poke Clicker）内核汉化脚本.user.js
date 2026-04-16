@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         宝可梦点击（Poke Clicker）内核汉化脚本
 // @namespace    PokeClickerHelper
-// @version      0.10.25-b
+// @version      0.10.25-c
 // @description  采用内核汉化形式，目前汉化范围：所有任务线、NPC、成就、地区、城镇、道路、道馆
 // @author       DreamNya, ICEYe, iktsuarpok, 我是谁？, 顶不住了, 银☆星, TerVoid
 // @match        http://localhost:3000/
@@ -122,7 +122,7 @@ $("[data-town]").each(function () {
 
 GameController.realShowMapTooltip = GameController.showMapTooltip;
 GameController.showMapTooltip = function (tooltipText) {
-    const translationTown = TranslationHelper.toggleRaw ? tooltipText : Translation.Town[tooltipText] ?? tooltipText;
+    const translationTown = TranslationHelper.toggleRaw ? tooltipText : (Translation.Town[tooltipText] ?? tooltipText);
     return this.realShowMapTooltip(translationTown);
 };
 
@@ -167,7 +167,7 @@ QuestLine = new Proxy(window.realQuestLine, {
         const displayName = translation?.name;
         const displayDescription = translation?.description[description];
         Object.defineProperty(questline, "displayName", {
-            get: () => (TranslationHelper.exporting || TranslationHelper.toggleRaw ? name : displayName ?? name),
+            get: () => (TranslationHelper.exporting || TranslationHelper.toggleRaw ? name : (displayName ?? name)),
         });
 
         if (displayDescription) {
@@ -343,6 +343,13 @@ AchievementTracker.prototype.toJSON = function () {
         trackedAchievementName: this.hasTrackedAchievement() ? this.trackedAchievement().rawName : null,
     };
 };
+AchievementHandler.toJSON = function () {
+    // Saves only achievements which have already been completed but currently don't have their requirements met, or that have the persist flag set
+    const storage = AchievementHandler.achievementList
+        .filter((a) => a.unlocked() && (a.persist || !a.property.isCompleted()))
+        .map((a) => a.rawName || a.name);
+    return storage;
+};
 
 // 汉化地区
 Translation.Region = Translation.Regions.Region ?? {};
@@ -420,7 +427,7 @@ Object.values(GymList).forEach((gym) => {
     const buttonText =
         gym.buttonText == rawLeaderName.replace(/\d/, "") + "'s Gym"
             ? leaderName.replace(/\d/, "") + "的道馆"
-            : Translation.Gym[rawButtonText] ?? rawButtonText;
+            : (Translation.Gym[rawButtonText] ?? rawButtonText);
 
     Object.defineProperties(gym, {
         leaderName: {
