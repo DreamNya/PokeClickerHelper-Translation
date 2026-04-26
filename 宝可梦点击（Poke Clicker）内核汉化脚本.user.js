@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         宝可梦点击（Poke Clicker）内核汉化脚本
 // @namespace    PokeClickerHelper
-// @version      0.10.25-d
+// @version      0.10.25-e
 // @description  采用内核汉化形式，目前汉化范围：所有任务线、NPC、成就、地区、城镇、道路、道馆
 // @author       DreamNya, ICEYe, iktsuarpok, 我是谁？, 顶不住了, 银☆星, TerVoid
 // @match        http://localhost:3000/
@@ -477,8 +477,9 @@ class NPCModule extends BaseModule {
                 if (!npc || Object.hasOwn(npc, "rawDialog")) {
                     return;
                 }
-
-                npc.displayName = this.core.Translation.NPCName[npc.name] ?? npc.name;
+                Object.defineProperty(npc, "displayName", {
+                    get: () => this.core.Translation.NPCName[npc.name] ?? npc.name,
+                });
                 npc.rawDialog = npc.dialog;
                 npc.translatedDialog = npc.rawDialog?.map((d) => this.core.Translation.NPCDialog[d] ?? d);
                 delete npc.dialog;
@@ -832,8 +833,8 @@ class GymModule extends BaseModule {
             const leaderName = this.core.Translation.Gym[rawLeaderName] ?? rawLeaderName;
             const rawButtonText = gym.buttonText;
 
-            const buttonText =
-                gym.buttonText === rawLeaderName.replace(/\d/, "") + "'s Gym"
+            const buttonText = () =>
+                rawButtonText === rawLeaderName.replace(/\d/, "") + "'s Gym"
                     ? leaderName.replace(/\d/, "") + "的道馆"
                     : (this.core.Translation.Gym[rawButtonText] ?? rawButtonText);
 
@@ -848,13 +849,13 @@ class GymModule extends BaseModule {
                     get: () =>
                         this.core.TranslationHelper.exporting || this.core.TranslationHelper.toggleRaw
                             ? rawButtonText
-                            : buttonText,
+                            : buttonText(),
                 },
                 displayName: {
                     get: () =>
                         this.core.TranslationHelper.exporting || this.core.TranslationHelper.toggleRaw
                             ? rawButtonText
-                            : buttonText,
+                            : buttonText(),
                 },
                 rawButtonText: { get: () => rawButtonText },
                 rawLeaderName: { get: () => rawLeaderName },
@@ -973,7 +974,7 @@ class UIModule extends BaseModule {
                         <select type="number" class="form-select"
                             id="${prefix}SwitchSeparator" data-save="global" 
                             style="text-align: center;height: 45px; font-size: 12px; width: 80%; opacity: 0.7; padding-left: 5px; padding-top: 1.2rem; padding-bottom: 0;"
-                            title="适用于部分宝可梦/NPC/道馆联盟名称分隔符号"
+                            title="适用于部分宝可梦/NPC/道馆联盟名称分隔符号&#10;(NPC/道馆联盟需要切换地图才会显示生效)"
                             >
                             <option value="·" selected >
                                 圆点
