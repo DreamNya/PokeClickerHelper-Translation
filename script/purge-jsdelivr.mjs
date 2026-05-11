@@ -1,7 +1,8 @@
+import fs from "fs";
 const cdn = "https://purge.jsdelivr.net/gh/DreamNya/PokeClickerHelper-Translation@main/json/";
-const resources = ["QuestLine", "Town", "NPC", "Achievement", "Regions", "Route", "Gym"];
+const resources = fs.readdirSync("json");
 
-const urls = resources.map((name) => `${cdn}${name}.json`);
+const urls = resources.map((name) => `${cdn}${name}`);
 
 // 刷新 jsDelivr 全球缓存
 for (const url of urls) {
