@@ -1,0 +1,5625 @@
+{
+    "BattleItem": [
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 49,
+            "arguments": [
+                "BattleItemType.xAttack",
+                "'+50% Bonus to Pokémon attack for 30 seconds'",
+                "600",
+                "undefined",
+                "'X Attack'",
+                "'pokemonAttack'",
+                "1.5"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 50,
+            "arguments": [
+                "BattleItemType.xClick",
+                "'+50% Bonus to click attack for 30 seconds'",
+                "400",
+                "undefined",
+                "'X Click'",
+                "'clickAttack'",
+                "1.5"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 51,
+            "arguments": [
+                "BattleItemType.Lucky_egg",
+                "'+50% Bonus to experience gained for 30 seconds'",
+                "800",
+                "undefined",
+                "'Lucky Egg'",
+                "'exp'",
+                "1.5"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 52,
+            "arguments": [
+                "BattleItemType.Token_collector",
+                "'+50% Bonus to Dungeon Tokens gained for 30 seconds'",
+                "1000",
+                "undefined",
+                "'Token Collector'",
+                "'dungeonToken'",
+                "1.5"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 53,
+            "arguments": [
+                "BattleItemType.Dowsing_machine",
+                "'Increases chance for Pokémon to drop rare hold items and chance to multiply loot from dungeon chests, for 30 seconds.'",
+                "1500",
+                "undefined",
+                "'Dowsing Machine'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 54,
+            "arguments": [
+                "BattleItemType.Lucky_incense",
+                "'+50% Bonus to Pokédollars gained for 30 seconds'",
+                "2000",
+                "undefined",
+                "'Lucky Incense'",
+                "'money'",
+                "1.5"
+            ]
+        }
+    ],
+    "BerryItem": [
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 56,
+            "arguments": [
+                "BerryType.Chople",
+                "10000",
+                "Currency.farmPoint",
+                "BerryType.Spelon"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 57,
+            "arguments": [
+                "BerryType.Kebia",
+                "10000",
+                "Currency.farmPoint",
+                "BerryType.Pamtre"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 58,
+            "arguments": [
+                "BerryType.Shuca",
+                "10000",
+                "Currency.farmPoint",
+                "BerryType.Watmel"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 59,
+            "arguments": [
+                "BerryType.Charti",
+                "10000",
+                "Currency.farmPoint",
+                "BerryType.Cornn"
+            ]
+        }
+    ],
+    "EnergyRestore": [
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 61,
+            "arguments": [
+                "EnergyRestoreSize.SmallRestore",
+                "30000",
+                "undefined",
+                "'Small Restore'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 62,
+            "arguments": [
+                "EnergyRestoreSize.MediumRestore",
+                "75000",
+                "undefined",
+                "'Medium Restore'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 63,
+            "arguments": [
+                "EnergyRestoreSize.LargeRestore",
+                "200000",
+                "undefined",
+                "'Large Restore'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/TownList.ts",
+            "line": 2311,
+            "arguments": [
+                "GameConstants.EnergyRestoreSize.SmallRestore",
+                "10",
+                "GameConstants.Currency.battlePoint",
+                "'Small Restore'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/TownList.ts",
+            "line": 2312,
+            "arguments": [
+                "GameConstants.EnergyRestoreSize.MediumRestore",
+                "20",
+                "GameConstants.Currency.battlePoint",
+                "'Medium Restore'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/TownList.ts",
+            "line": 2313,
+            "arguments": [
+                "GameConstants.EnergyRestoreSize.LargeRestore",
+                "40",
+                "GameConstants.Currency.battlePoint",
+                "'Large Restore'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/TownList.ts",
+            "line": 2377,
+            "arguments": [
+                "GameConstants.EnergyRestoreSize.SmallRestore",
+                "5",
+                "GameConstants.Currency.contestToken",
+                "'Small Restore'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/TownList.ts",
+            "line": 2378,
+            "arguments": [
+                "GameConstants.EnergyRestoreSize.MediumRestore",
+                "10",
+                "GameConstants.Currency.contestToken",
+                "'Medium Restore'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/TownList.ts",
+            "line": 2379,
+            "arguments": [
+                "GameConstants.EnergyRestoreSize.LargeRestore",
+                "30",
+                "GameConstants.Currency.contestToken",
+                "'Large Restore'"
+            ]
+        }
+    ],
+    "BuyKeyItem": [
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 65,
+            "arguments": [
+                "KeyItemType.Dungeon_ticket",
+                "100",
+                "undefined",
+                "undefined",
+                "'Dungeon Ticket'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 66,
+            "arguments": [
+                "KeyItemType.Explorer_kit",
+                "5000",
+                "undefined",
+                "undefined",
+                "'Explorer Kit'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 67,
+            "arguments": [
+                "KeyItemType.Event_calendar",
+                "100000",
+                "undefined",
+                "undefined",
+                "'Event Calendar'"
+            ]
+        }
+    ],
+    "BuyOakItem": [
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 69,
+            "arguments": [
+                "OakItemType.Squirtbottle",
+                "5000",
+                "Currency.farmPoint"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 70,
+            "arguments": [
+                "OakItemType.Sprinklotad",
+                "10000",
+                "Currency.farmPoint"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 71,
+            "arguments": [
+                "OakItemType.Explosive_Charge",
+                "5000",
+                "Currency.questPoint"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 72,
+            "arguments": [
+                "OakItemType.Treasure_Scanner",
+                "10000",
+                "Currency.questPoint"
+            ]
+        }
+    ],
+    "FluteItem": [
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 74,
+            "arguments": [
+                "FluteItemType.Yellow_Flute",
+                "'Pokémon Attack'",
+                "['Grass', 'Flying', 'Electric']",
+                "'pokemonAttack'",
+                "1.02"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 75,
+            "arguments": [
+                "FluteItemType.Black_Flute",
+                "'Click Attack'",
+                "['Dark', 'Psychic', 'Fighting']",
+                "'clickAttack'",
+                "1.02"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 76,
+            "arguments": [
+                "FluteItemType.Time_Flute",
+                "'Gym and Dungeon Timers'",
+                "['Ground', 'Poison', 'Steel']",
+                "undefined",
+                "1.02"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 77,
+            "arguments": [
+                "FluteItemType.Red_Flute",
+                "'Egg Steps'",
+                "['Fire', 'Rock', 'Dragon']",
+                "'eggStep'",
+                "1.02"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 78,
+            "arguments": [
+                "FluteItemType.White_Flute",
+                "'Shiny Chance'",
+                "['Normal', 'Fairy', 'Ice']",
+                "'shiny'",
+                "1.02"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 79,
+            "arguments": [
+                "FluteItemType.Blue_Flute",
+                "'EV Yield'",
+                "['Water', 'Bug', 'Ghost']",
+                "'ev'",
+                "1.02"
+            ]
+        }
+    ],
+    "MulchItem": [
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 81,
+            "arguments": [
+                "MulchType.Boost_Mulch",
+                "50",
+                "'Boost Mulch'",
+                "'Increases Berry growth rate.'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 82,
+            "arguments": [
+                "MulchType.Rich_Mulch",
+                "100",
+                "'Rich Mulch'",
+                "'Increases Berry harvest rate and replant chances.'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 83,
+            "arguments": [
+                "MulchType.Surprise_Mulch",
+                "150",
+                "'Surprise Mulch'",
+                "'Increases Berry mutation rate.'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 84,
+            "arguments": [
+                "MulchType.Amaze_Mulch",
+                "200",
+                "'Amaze Mulch'",
+                "'A weaker combination of Boost, Rich and Surprise mulch.'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 85,
+            "arguments": [
+                "MulchType.Freeze_Mulch",
+                "350",
+                "'Freeze Mulch'",
+                "'Stops Berry growth and auras. Mutations will still occur while berries are frozen.'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 86,
+            "arguments": [
+                "MulchType.Gooey_Mulch",
+                "100",
+                "'Gooey Mulch'",
+                "'Helps attract rarer species. Gooed Pokémon are more likely to be caught.'"
+            ]
+        }
+    ],
+    "PokeballItem": [
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 88,
+            "arguments": [
+                "Pokeball.Pokeball",
+                "100",
+                "undefined",
+                "{ multiplier: 1 }",
+                "'Poké Ball'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 89,
+            "arguments": [
+                "Pokeball.Greatball",
+                "500",
+                "undefined",
+                "undefined",
+                "'Great Ball'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 90,
+            "arguments": [
+                "Pokeball.Ultraball",
+                "2000",
+                "undefined",
+                "undefined",
+                "'Ultra Ball'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 91,
+            "arguments": [
+                "Pokeball.Masterball",
+                "2500",
+                "Currency.questPoint",
+                "undefined",
+                "'Master Ball'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 93,
+            "arguments": [
+                "Pokeball.Fastball",
+                "Infinity",
+                "Currency.farmPoint",
+                "undefined",
+                "'Fast Ball'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 94,
+            "arguments": [
+                "Pokeball.Quickball",
+                "Infinity",
+                "Currency.farmPoint",
+                "undefined",
+                "'Quick Ball'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 95,
+            "arguments": [
+                "Pokeball.Timerball",
+                "Infinity",
+                "Currency.farmPoint",
+                "undefined",
+                "'Timer Ball'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 96,
+            "arguments": [
+                "Pokeball.Duskball",
+                "Infinity",
+                "Currency.farmPoint",
+                "undefined",
+                "'Dusk Ball'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 97,
+            "arguments": [
+                "Pokeball.Luxuryball",
+                "Infinity",
+                "Currency.farmPoint",
+                "undefined",
+                "'Luxury Ball'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 98,
+            "arguments": [
+                "Pokeball.Diveball",
+                "Infinity",
+                "Currency.battlePoint",
+                "undefined",
+                "'Dive Ball'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 99,
+            "arguments": [
+                "Pokeball.Lureball",
+                "Infinity",
+                "Currency.battlePoint",
+                "undefined",
+                "'Lure Ball'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 100,
+            "arguments": [
+                "Pokeball.Nestball",
+                "Infinity",
+                "Currency.battlePoint",
+                "undefined",
+                "'Nest Ball'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 101,
+            "arguments": [
+                "Pokeball.Repeatball",
+                "Infinity",
+                "Currency.battlePoint",
+                "undefined",
+                "'Repeat Ball'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 102,
+            "arguments": [
+                "Pokeball.Beastball",
+                "500",
+                "Currency.questPoint",
+                "undefined",
+                "'Beast Ball'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 103,
+            "arguments": [
+                "Pokeball.Moonball",
+                "Infinity",
+                "Currency.farmPoint",
+                "undefined",
+                "'Moon Ball'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/TownList.ts",
+            "line": 46,
+            "arguments": [
+                "GameConstants.Pokeball.Masterball",
+                "10000000",
+                "GameConstants.Currency.money",
+                "{ multiplier: 1.35, multiplierDecrease: false, saveName: `${GameConstants.Pokeball[GameConstants.Pokeball.Masterball]}|${GameConstants.Currency[GameConstants.Currency.money]}` }",
+                "'Master Ball'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/TownList.ts",
+            "line": 47,
+            "arguments": [
+                "GameConstants.Pokeball.Masterball",
+                "75000",
+                "GameConstants.Currency.dungeonToken",
+                "{ multiplier: 1.35, multiplierDecrease: false, saveName: `${GameConstants.Pokeball[GameConstants.Pokeball.Masterball]}|${GameConstants.Currency[GameConstants.Currency.dungeonToken]}` }",
+                "'Master Ball'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/TownList.ts",
+            "line": 48,
+            "arguments": [
+                "GameConstants.Pokeball.Masterball",
+                "3000",
+                "GameConstants.Currency.questPoint",
+                "{ multiplier: 1.35, multiplierDecrease: false, saveName: `${GameConstants.Pokeball[GameConstants.Pokeball.Masterball]}|${GameConstants.Currency[GameConstants.Currency.questPoint]}` }",
+                "'Master Ball'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/TownList.ts",
+            "line": 49,
+            "arguments": [
+                "GameConstants.Pokeball.Masterball",
+                "3000",
+                "GameConstants.Currency.farmPoint",
+                "{ multiplier: 1.35, multiplierDecrease: false, saveName: `${GameConstants.Pokeball[GameConstants.Pokeball.Masterball]}|${GameConstants.Currency[GameConstants.Currency.farmPoint]}` }",
+                "'Master Ball'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/TownList.ts",
+            "line": 50,
+            "arguments": [
+                "GameConstants.Pokeball.Masterball",
+                "250",
+                "GameConstants.Currency.diamond",
+                "{ multiplier: 1.35, multiplierDecrease: false, saveName: `${GameConstants.Pokeball[GameConstants.Pokeball.Masterball]}|${GameConstants.Currency[GameConstants.Currency.diamond]}` }",
+                "'Master Ball'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/TownList.ts",
+            "line": 2309,
+            "arguments": [
+                "GameConstants.Pokeball.Ultraball",
+                "1",
+                "GameConstants.Currency.battlePoint",
+                "undefined",
+                "'Ultra Ball'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/TownList.ts",
+            "line": 2310,
+            "arguments": [
+                "GameConstants.Pokeball.Masterball",
+                "500",
+                "GameConstants.Currency.battlePoint",
+                "{ multiplier: 1.35, multiplierDecrease: false, saveName: `${GameConstants.Pokeball[GameConstants.Pokeball.Masterball]}|${GameConstants.Currency[GameConstants.Currency.battlePoint]}` }",
+                "'Master Ball'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/TownList.ts",
+            "line": 2376,
+            "arguments": [
+                "GameConstants.Pokeball.Ultraball",
+                "20",
+                "GameConstants.Currency.contestToken",
+                "undefined",
+                "'Ultra Ball'"
+            ]
+        }
+    ],
+    "ShovelItem": [
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 105,
+            "arguments": [
+                "300",
+                "'Berry Shovel'",
+                "'Removes Berry Plants in the Farm.'"
+            ]
+        }
+    ],
+    "MulchShovelItem": [
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 106,
+            "arguments": [
+                "300",
+                "'Mulch Shovel'",
+                "'Removes Mulch from a plot in the Farm.'"
+            ]
+        }
+    ],
+    "PokeBlock": [
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 108,
+            "arguments": [
+                "PokeBlockColor.Black",
+                "Infinity"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 109,
+            "arguments": [
+                "PokeBlockColor.Red",
+                "Infinity"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 110,
+            "arguments": [
+                "PokeBlockColor.Blue",
+                "Infinity"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 111,
+            "arguments": [
+                "PokeBlockColor.Pink",
+                "Infinity"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 112,
+            "arguments": [
+                "PokeBlockColor.Green",
+                "Infinity"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 113,
+            "arguments": [
+                "PokeBlockColor.Yellow",
+                "Infinity"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 114,
+            "arguments": [
+                "PokeBlockColor.Gold",
+                "Infinity"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 115,
+            "arguments": [
+                "PokeBlockColor.Purple",
+                "Infinity"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 116,
+            "arguments": [
+                "PokeBlockColor.Indigo",
+                "Infinity"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 117,
+            "arguments": [
+                "PokeBlockColor.Brown",
+                "Infinity"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 118,
+            "arguments": [
+                "PokeBlockColor.Light_Blue",
+                "Infinity"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 119,
+            "arguments": [
+                "PokeBlockColor.Olive",
+                "Infinity"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 120,
+            "arguments": [
+                "PokeBlockColor.Beige",
+                "Infinity"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 121,
+            "arguments": [
+                "PokeBlockColor.Gray",
+                "Infinity"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 122,
+            "arguments": [
+                "PokeBlockColor.White",
+                "Infinity"
+            ]
+        }
+    ],
+    "MegaStoneItem": [
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 125,
+            "arguments": [
+                "MegaStoneType.Abomasite",
+                "'Abomasnow'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 126,
+            "arguments": [
+                "MegaStoneType.Absolite",
+                "'Absol'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 127,
+            "arguments": [
+                "MegaStoneType.Aerodactylite",
+                "'Aerodactyl'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 128,
+            "arguments": [
+                "MegaStoneType.Aggronite",
+                "'Aggron'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 129,
+            "arguments": [
+                "MegaStoneType.Alakazite",
+                "'Alakazam'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 131,
+            "arguments": [
+                "MegaStoneType.Ampharosite",
+                "'Ampharos'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 132,
+            "arguments": [
+                "MegaStoneType.Audinite",
+                "'Audino'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 133,
+            "arguments": [
+                "MegaStoneType.Banettite",
+                "'Banette'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 134,
+            "arguments": [
+                "MegaStoneType.Beedrillite",
+                "'Beedrill'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 135,
+            "arguments": [
+                "MegaStoneType.Blastoisinite",
+                "'Blastoise'",
+                "10000",
+                "Currency.questPoint",
+                "{ visible: new ObtainedPokemonRequirement('Blastoise') }",
+                "'Blastoisinite'",
+                "'A Mega Stone for Blastoise.'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 137,
+            "arguments": [
+                "MegaStoneType.Blazikenite",
+                "'Blaziken'",
+                "10000",
+                "Currency.questPoint",
+                "{ visible: new ObtainedPokemonRequirement('Blaziken') }",
+                "'Blazikenite'",
+                "'A Mega Stone for Blaziken.'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 139,
+            "arguments": [
+                "MegaStoneType.Blue_Orb",
+                "'Kyogre'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 140,
+            "arguments": [
+                "MegaStoneType.Cameruptite",
+                "'Camerupt'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 141,
+            "arguments": [
+                "MegaStoneType.Charizardite_X",
+                "'Charizard'",
+                "10000",
+                "Currency.questPoint",
+                "{ visible: new ObtainedPokemonRequirement('Charizard') }",
+                "'Charizardite X'",
+                "'A Mega Stone for Charizard.'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 143,
+            "arguments": [
+                "MegaStoneType.Charizardite_Y",
+                "'Charizard'",
+                "10000",
+                "Currency.questPoint",
+                "{ visible: new ObtainedPokemonRequirement('Charizard') }",
+                "'Charizardite Y'",
+                "'A Mega Stone for Charizard.'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 145,
+            "arguments": [
+                "MegaStoneType.Diancite",
+                "'Diancie'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 146,
+            "arguments": [
+                "MegaStoneType.Galladite",
+                "'Gallade'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 147,
+            "arguments": [
+                "MegaStoneType.Garchompite",
+                "'Garchomp'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 148,
+            "arguments": [
+                "MegaStoneType.Gardevoirite",
+                "'Gardevoir'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 149,
+            "arguments": [
+                "MegaStoneType.Gengarite",
+                "'Gengar'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 150,
+            "arguments": [
+                "MegaStoneType.Glalitite",
+                "'Glalie'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 151,
+            "arguments": [
+                "MegaStoneType.Gyaradosite",
+                "'Gyarados'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 152,
+            "arguments": [
+                "MegaStoneType.Heracronite",
+                "'Heracross'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 153,
+            "arguments": [
+                "MegaStoneType.Houndoominite",
+                "'Houndoom'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 154,
+            "arguments": [
+                "MegaStoneType.Kangaskhanite",
+                "'Kangaskhan'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 155,
+            "arguments": [
+                "MegaStoneType.Latiasite",
+                "'Latias'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 156,
+            "arguments": [
+                "MegaStoneType.Latiosite",
+                "'Latios'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 157,
+            "arguments": [
+                "MegaStoneType.Lopunnite",
+                "'Lopunny'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 158,
+            "arguments": [
+                "MegaStoneType.Lucarionite",
+                "'Lucario'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 159,
+            "arguments": [
+                "MegaStoneType.Manectite",
+                "'Manectric'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 160,
+            "arguments": [
+                "MegaStoneType.Mawilite",
+                "'Mawile'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 161,
+            "arguments": [
+                "MegaStoneType.Medichamite",
+                "'Medicham'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 162,
+            "arguments": [
+                "MegaStoneType.Metagrossite",
+                "'Metagross'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 163,
+            "arguments": [
+                "MegaStoneType.Meteorite",
+                "'Rayquaza'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 164,
+            "arguments": [
+                "MegaStoneType.Mewtwonite_X",
+                "'Mewtwo'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 165,
+            "arguments": [
+                "MegaStoneType.Mewtwonite_Y",
+                "'Mewtwo'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 166,
+            "arguments": [
+                "MegaStoneType.Pidgeotite",
+                "'Pidgeot'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 167,
+            "arguments": [
+                "MegaStoneType.Pinsirite",
+                "'Pinsir'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 168,
+            "arguments": [
+                "MegaStoneType.Red_Orb",
+                "'Groudon'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 169,
+            "arguments": [
+                "MegaStoneType.Sablenite",
+                "'Sableye'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 170,
+            "arguments": [
+                "MegaStoneType.Salamencite",
+                "'Salamence'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 171,
+            "arguments": [
+                "MegaStoneType.Sceptilite",
+                "'Sceptile'",
+                "10000",
+                "Currency.questPoint",
+                "{ visible: new ObtainedPokemonRequirement('Sceptile') }",
+                "'Sceptilite'",
+                "'A Mega Stone for Sceptile.'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 173,
+            "arguments": [
+                "MegaStoneType.Scizorite",
+                "'Scizor'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 174,
+            "arguments": [
+                "MegaStoneType.Sharpedonite",
+                "'Sharpedo'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 175,
+            "arguments": [
+                "MegaStoneType.Slowbronite",
+                "'Slowbro'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 176,
+            "arguments": [
+                "MegaStoneType.Steelixite",
+                "'Steelix'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 177,
+            "arguments": [
+                "MegaStoneType.Swampertite",
+                "'Swampert'",
+                "10000",
+                "Currency.questPoint",
+                "{ visible: new ObtainedPokemonRequirement('Swampert') }",
+                "'Swampertite'",
+                "'A Mega Stone for Swampert.'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 179,
+            "arguments": [
+                "MegaStoneType.Tyranitarite",
+                "'Tyranitar'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 180,
+            "arguments": [
+                "MegaStoneType.Venusaurite",
+                "'Venusaur'",
+                "10000",
+                "Currency.questPoint",
+                "{ visible: new ObtainedPokemonRequirement('Venusaur') }",
+                "'Venusaurite'",
+                "'A Mega Stone for Venusaur.'"
+            ]
+        }
+    ],
+    "EggItem": [
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 184,
+            "arguments": [
+                "EggItemType.Fire_egg",
+                "1000",
+                "undefined",
+                "'Fire Egg'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 185,
+            "arguments": [
+                "EggItemType.Water_egg",
+                "1000",
+                "undefined",
+                "'Water Egg'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 186,
+            "arguments": [
+                "EggItemType.Grass_egg",
+                "1000",
+                "undefined",
+                "'Grass Egg'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 187,
+            "arguments": [
+                "EggItemType.Fighting_egg",
+                "1000",
+                "undefined",
+                "'Fighting Egg'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 188,
+            "arguments": [
+                "EggItemType.Electric_egg",
+                "1000",
+                "undefined",
+                "'Electric Egg'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 189,
+            "arguments": [
+                "EggItemType.Dragon_egg",
+                "1000",
+                "undefined",
+                "'Dragon Egg'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 190,
+            "arguments": [
+                "EggItemType.Mystery_egg",
+                "700",
+                "undefined",
+                "'Mystery Egg'"
+            ]
+        }
+    ],
+    "QuestItem": [
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 193,
+            "arguments": [
+                "'Meteorite_Bills_Errand'",
+                "'Meteorite for Celio'",
+                "'A Meteorite the Game Corner owner gave you for find his daughter'",
+                "'Bill\\'s Errand'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 194,
+            "arguments": [
+                "'Tidal_Bell_Lugia'",
+                "'Tidal Bell'",
+                "'A Bell that can summon the Legendary Pokémon Lugia'",
+                "'Whirl Guardian'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 195,
+            "arguments": [
+                "'Clear_Bell_Hooh'",
+                "'Clear Bell'",
+                "'A Bell that can summon the Legendary Pokémon Ho-oh'",
+                "'Rainbow Guardian'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 196,
+            "arguments": [
+                "'GS_Ball_Celebi'",
+                "'GS Ball'",
+                "'A Strange Pokéball that Professor Ivy gave you'",
+                "'Unfinished Business'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 197,
+            "arguments": [
+                "'Eon_Ticket_Latis'",
+                "'Eon Ticket'",
+                "'A limited edition ticket for a cruise to the Southern Island.'",
+                "'The Eon Duo'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 198,
+            "arguments": [
+                "'Celios_Errand_Ruby'",
+                "'Ruby'",
+                "'A Ruby found in Ruby Path'",
+                "'Celio\\'s Errand'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 199,
+            "arguments": [
+                "'Celios_Errand_Sapphire'",
+                "'Sapphire'",
+                "'A Sapphire you\\'ve recovered from Scientist Gideon'",
+                "'Celio\\'s Errand'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 200,
+            "arguments": [
+                "'Crystalline_Cocoon_Jirachi'",
+                "'Crystalline Cocoon'",
+                "'A Purple Crystal that Butler gave you at Mt. Chimney Crater'",
+                "'Wish Maker'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 201,
+            "arguments": [
+                "'Meteorite_Shard_Delta'",
+                "'Meteorite Shard'",
+                "'A Shard of a Meteorite'",
+                "'The Delta Episode'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 202,
+            "arguments": [
+                "'Mysterious_Vial_Detective_Pikachu'",
+                "'Mysterious Vial'",
+                "'An Aipom dropped this while running away, I wonder what it is?'",
+                "'Detective Pikachu'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 203,
+            "arguments": [
+                "'Heart_Diamond_Diancie'",
+                "'Heart Diamond'",
+                "'The energy core of the Diamond domain'",
+                "'Princess Diancie'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 204,
+            "arguments": [
+                "'Red_Petal_Mina'",
+                "'Red Petal'",
+                "'One of the Petals you need for Mina\\'s trial given by Captain Kiawe'",
+                "'Island Challenge'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 205,
+            "arguments": [
+                "'Orange_Petal_Mina'",
+                "'Orange Petal'",
+                "'One of the Petals you need for Mina\\'s trial given by Captain Ilima'",
+                "'Island Challenge'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 206,
+            "arguments": [
+                "'Yellow_Petal_Mina'",
+                "'Yellow Petal'",
+                "'One of the Petals you need for Mina\\'s trial given by Captain Sophocles'",
+                "'Island Challenge'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 207,
+            "arguments": [
+                "'Green_Petal_Mina'",
+                "'Green Petal'",
+                "'One of the Petals you need for Mina\\'s trial given by Captain Mallow'",
+                "'Island Challenge'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 208,
+            "arguments": [
+                "'Blue_Petal_Mina'",
+                "'Blue Petal'",
+                "'One of the Petals you need for Mina\\'s trial given by Captain Lana'",
+                "'Island Challenge'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 209,
+            "arguments": [
+                "'Purple_Petal_Mina'",
+                "'Purple Petal'",
+                "'One of the Petals you need for Mina\\'s trial given by Kahuna Nanu'",
+                "'Island Challenge'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 210,
+            "arguments": [
+                "'Pink_Petal_Mina'",
+                "'Pink Petal'",
+                "'One of the Petals you need for Mina\\'s trial given by Captain Mina'",
+                "'Island Challenge'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 211,
+            "arguments": [
+                "'Sand_Bag_Magikarp_Jump'",
+                "'Sand Bag'",
+                "'One of the materials Dr. Splash asked you for his laboratory'",
+                "'Dr. Splash\\'s Research Project'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 212,
+            "arguments": [
+                "'Jump_Counter_Magikarp_Jump'",
+                "'Jump Counter'",
+                "'One of the materials Dr. Splash asked you for his laboratory'",
+                "'Dr. Splash\\'s Research Project'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 213,
+            "arguments": [
+                "'Timber_Magikarp_Jump'",
+                "'Timber'",
+                "'One of the materials Dr. Splash asked you for his laboratory'",
+                "'Dr. Splash\\'s Research Project'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 214,
+            "arguments": [
+                "'Rock_Cruncher_Magikarp_Jump'",
+                "'Rock Cruncher'",
+                "'One of the materials Dr. Splash asked you for his laboratory'",
+                "'Dr. Splash\\'s Research Project'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 215,
+            "arguments": [
+                "'Power_Generator_Magikarp_Jump'",
+                "'Power Generator'",
+                "'One of the materials Dr. Splash asked you for his laboratory'",
+                "'Dr. Splash\\'s Research Project'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 216,
+            "arguments": [
+                "'Pokeball_Smash_Magikarp_Jump'",
+                "'Pokéball Smash'",
+                "'One of the materials Dr. Splash asked you for his laboratory'",
+                "'Dr. Splash\\'s Research Project'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 217,
+            "arguments": [
+                "'Push_Dwebble_Magikarp_Jump'",
+                "'Push Dwebble'",
+                "'One of the pushing Pokémons Dr. Splash asked you for his laboratory'",
+                "'Dr. Splash\\'s Research Project'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 218,
+            "arguments": [
+                "'Push_Boldore_Magikarp_Jump'",
+                "'Push Boldore'",
+                "'One of the pushing Pokémons Dr. Splash asked you for his laboratory'",
+                "'Dr. Splash\\'s Research Project'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 219,
+            "arguments": [
+                "'Push_Forretress_Magikarp_Jump'",
+                "'Push Forretress'",
+                "'One of the pushing Pokémons Dr. Splash asked you for his laboratory'",
+                "'Dr. Splash\\'s Research Project'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 220,
+            "arguments": [
+                "'Push_Golem_Magikarp_Jump'",
+                "'Push Golem'",
+                "'One of the pushing Pokémons Dr. Splash asked you for his laboratory'",
+                "'Dr. Splash\\'s Research Project'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 221,
+            "arguments": [
+                "'Push_Steelix_Magikarp_Jump'",
+                "'Push Steelix'",
+                "'One of the pushing Pokémons Dr. Splash asked you for his laboratory'",
+                "'Dr. Splash\\'s Research Project'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 222,
+            "arguments": [
+                "'Prison_Bottle'",
+                "'Prison Bottle'",
+                "'A magical bottle used to bind Hoopa'",
+                "'Clash of Ages'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 223,
+            "arguments": [
+                "'Island_Challenge_Amulet'",
+                "'Island Challenge Amulet'",
+                "'A symbol that denotes your pilgramige on the Island Challenge of Alola. Stronger Trials await you with this in your bag!'",
+                "'Island Challenge'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 224,
+            "arguments": [
+                "'Fighting_Memory_Silvally'",
+                "'Fighting Memory'",
+                "'One of Silvally\\'s memories, obtained from Kahuna Hala in Iki Town'",
+                "'Typing some Memories'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 225,
+            "arguments": [
+                "'Rock_Memory_Silvally'",
+                "'Rock Memory'",
+                "'One of Silvally\\'s memories, obtained from Kahuna Olivia in Konikoni City'",
+                "'Typing some Memories'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 226,
+            "arguments": [
+                "'Dark_Memory_Silvally'",
+                "'Dark Memory'",
+                "'One of Silvally\\'s memories, obtained from Kahuna Nanu in Malie City'",
+                "'Typing some Memories'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 227,
+            "arguments": [
+                "'Fairy_Memory_Silvally'",
+                "'Fairy Memory'",
+                "'One of Silvally\\'s memories, obtained from Captain Mina in Seafolk Village'",
+                "'Typing some Memories'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 228,
+            "arguments": [
+                "'Water_Memory_Silvally'",
+                "'Water Memory'",
+                "'One of Silvally\\'s memories, obtained from Captain Lana in Brooklet Hill'",
+                "'Typing some Memories'",
+                "'Typing some Memories'",
+                "125000000",
+                "Currency.dungeonToken"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 229,
+            "arguments": [
+                "'Grass_Memory_Silvally'",
+                "'Grass Memory'",
+                "'One of Silvally\\'s memories, obtained from Captain Mallow in Lush Jungle'",
+                "'Typing some Memories'",
+                "'Typing some Memories'",
+                "125000",
+                "Currency.questPoint"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 230,
+            "arguments": [
+                "'Fire_Memory_Silvally'",
+                "'Fire Memory'",
+                "'One of Silvally\\'s memories, obtained from Captain Kiawe in Wela Volcano Park'",
+                "'Typing some Memories'",
+                "'Typing some Memories'",
+                "75000",
+                "Currency.battlePoint"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 231,
+            "arguments": [
+                "'Electric_Memory_Silvally'",
+                "'Electric Memory'",
+                "'One of Silvally\\'s memories, obtained from Captain Sophocles in Hokulani Observatory'",
+                "'Typing some Memories'",
+                "'Typing some Memories'",
+                "500000000",
+                "Currency.money"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 232,
+            "arguments": [
+                "'Ice_Memory_Silvally'",
+                "'Ice Memory'",
+                "'One of Silvally\\'s memories, obtained from Veteran Aristo in Mt. Lanakila'",
+                "'Typing some Memories'",
+                "'Typing some Memories'",
+                "100000",
+                "Currency.diamond"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 233,
+            "arguments": [
+                "'Ground_Memory_Silvally'",
+                "'Ground Memory'",
+                "'One of Silvally\\'s memories, obtained from Kahuna Hapu on Exeggutor Island Hill'",
+                "'Typing some Memories'",
+                "'Typing some Memories'",
+                "200000",
+                "Currency.farmPoint"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 234,
+            "arguments": [
+                "'Bug_Memory_Silvally'",
+                "'Bug Memory'",
+                "'One of Silvally\\'s memories, obtained from Guzma in Po Town'",
+                "'Typing some Memories'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 235,
+            "arguments": [
+                "'Flying_Memory_Silvally'",
+                "'Flying Memory'",
+                "'One of Silvally\\'s memories, obtained from Kahili on Ten Carat Hill'",
+                "'Typing some Memories'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 236,
+            "arguments": [
+                "'Poison_Memory_Silvally'",
+                "'Poison Memory'",
+                "'One of Silvally\\'s memories, obtained from Plumeria in Vast Poni Canyon'",
+                "'Typing some Memories'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 237,
+            "arguments": [
+                "'Ghost_Memory_Silvally'",
+                "'Ghost Memory'",
+                "'One of Silvally\\'s memories, obtained from Captain Acerola in Thrifty Megamart'",
+                "'Typing some Memories'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 238,
+            "arguments": [
+                "'Psychic_Memory_Silvally'",
+                "'Psychic Memory'",
+                "'One of Silvally\\'s memories, obtained from Aether Branch Chief Faba in Aether Paradise'",
+                "'Typing some Memories'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 239,
+            "arguments": [
+                "'Steel_Memory_Silvally'",
+                "'Steel Memory'",
+                "'One of Silvally\\'s memories, obtained from Molayne in Royal Avenue'",
+                "'Typing some Memories'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 240,
+            "arguments": [
+                "'Dragon_Memory_Silvally'",
+                "'Dragon Memory'",
+                "'One of Silvally\\'s memories, obtained from Ryuki in A Tree Maybe'",
+                "'Typing some Memories'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 241,
+            "arguments": [
+                "'Max_Mushroom_IoA'",
+                "'Max Mushroom'",
+                "'A Mushroom that contains the power of Dynamax forms'",
+                "'The Dojo\\'s Armor'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 242,
+            "arguments": [
+                "'Shaderoot_Carrot_Calyrex'",
+                "'Shaderoot Carrot'",
+                "'Carrot that the King of Bountiful Harvest\\'s beloved steed likes to eat. It grew in a gloomy field.'",
+                "'The Crown of Galar'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 243,
+            "arguments": [
+                "'Iceroot_Carrot_Calyrex'",
+                "'Iceroot Carrot'",
+                "'Carrot that the King of Bountiful Harvest\\'s beloved steed likes to eat. It grew in a field covered in snow.'",
+                "'The Crown of Galar'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 244,
+            "arguments": [
+                "'Wishing_Piece'",
+                "'Wishing Piece'",
+                "'Attracts Gigantamax Pokémon to the Max Lair'",
+                "'The Lair of Giants'"
+            ]
+        }
+    ],
+    "Vitamin": [
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 247,
+            "arguments": [
+                "VitaminType.Protein",
+                "1e4",
+                "Currency.money",
+                "{\n    multiplier: 1.1,\n    multiplierDecrease: false,\n    saveName: `${VitaminType[VitaminType.Protein]}|${Currency[Currency.money]}`,\n}",
+                "undefined",
+                "'Increases Pokémon attack bonus.<br/><i>(attack gained per breeding cycle)</i><br/>Increases steps required when hatching by 20'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 252,
+            "arguments": [
+                "VitaminType.Calcium",
+                "5e4",
+                "Currency.money",
+                "{\n    multiplier: 1.1,\n    multiplierDecrease: false,\n    saveName: `${VitaminType[VitaminType.Calcium]}|${Currency[Currency.money]}`,\n    visible: new MaxRegionRequirement(Region.hoenn),\n}",
+                "undefined",
+                "'Increases Pokémon attack bonus %.<br/><i>(attack gained per breeding cycle)</i><br/>Increases steps required when hatching by 20'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 258,
+            "arguments": [
+                "VitaminType.Carbos",
+                "1e5",
+                "Currency.money",
+                "{\n    multiplier: 1.1,\n    multiplierDecrease: false,\n    saveName: `${VitaminType[VitaminType.Carbos]}|${Currency[Currency.money]}`,\n    visible: new MaxRegionRequirement(Region.unova),\n}",
+                "undefined",
+                "'Reduces steps required when hatching'"
+            ]
+        }
+    ],
+    "AttackGainConsumable": [
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 266,
+            "arguments": [
+                "ConsumableType.Rare_Candy",
+                "Infinity",
+                "undefined",
+                "undefined",
+                "'Rare Candy'",
+                "'Raises the level of a Pokémon and permanently increases its attack'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 267,
+            "arguments": [
+                "ConsumableType.Magikarp_Biscuit",
+                "Infinity",
+                "undefined",
+                "undefined",
+                "undefined",
+                "'Strengthen your Magikarp'",
+                "6",
+                "(pokemon) => Math.floor(pokemon.id) === pokemonMap.Magikarp.id"
+            ]
+        }
+    ],
+    "ChristmasPresent": [
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 270,
+            "arguments": []
+        },
+        {
+            "file": "pokeclicker/src/scripts/temporaryBattle/TemporaryBattleList.ts",
+            "line": 337,
+            "arguments": [
+                "3"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/temporaryBattle/TemporaryBattleList.ts",
+            "line": 367,
+            "arguments": [
+                "6"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/temporaryBattle/TemporaryBattleList.ts",
+            "line": 395,
+            "arguments": [
+                "10"
+            ]
+        }
+    ],
+    "TreasureItem": [
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 274,
+            "arguments": [
+                "'Rare_bone'",
+                "UndergroundItemValueType.Diamond",
+                "'Rare Bone'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 275,
+            "arguments": [
+                "'Star_piece'",
+                "UndergroundItemValueType.Diamond",
+                "'Star Piece'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 276,
+            "arguments": [
+                "'Revive'",
+                "UndergroundItemValueType.Diamond",
+                "'Revive'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 277,
+            "arguments": [
+                "'Max_revive'",
+                "UndergroundItemValueType.Diamond",
+                "'Max Revive'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 278,
+            "arguments": [
+                "'Iron_ball'",
+                "UndergroundItemValueType.Diamond",
+                "'Iron Ball'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 279,
+            "arguments": [
+                "'Heart_scale'",
+                "UndergroundItemValueType.Diamond",
+                "'Heart Scale'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 280,
+            "arguments": [
+                "'Light_clay'",
+                "UndergroundItemValueType.Diamond",
+                "'Light Clay'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 281,
+            "arguments": [
+                "'Odd_keystone'",
+                "UndergroundItemValueType.Diamond",
+                "'Odd Keystone'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 282,
+            "arguments": [
+                "'Hard_stone'",
+                "UndergroundItemValueType.Diamond",
+                "'Hard Stone'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 283,
+            "arguments": [
+                "'Oval_stone'",
+                "UndergroundItemValueType.Diamond",
+                "'Oval Stone'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 284,
+            "arguments": [
+                "'Smooth_rock'",
+                "UndergroundItemValueType.Diamond",
+                "'Smooth Rock'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 285,
+            "arguments": [
+                "'Heat_rock'",
+                "UndergroundItemValueType.Diamond",
+                "'Heat Rock'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 286,
+            "arguments": [
+                "'Icy_rock'",
+                "UndergroundItemValueType.Diamond",
+                "'Icy Rock'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 287,
+            "arguments": [
+                "'Damp_rock'",
+                "UndergroundItemValueType.Diamond",
+                "'Damp Rock'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 289,
+            "arguments": [
+                "'Draco_plate'",
+                "UndergroundItemValueType.Gem",
+                "'Draco Plate'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 290,
+            "arguments": [
+                "'Dread_plate'",
+                "UndergroundItemValueType.Gem",
+                "'Dread Plate'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 291,
+            "arguments": [
+                "'Earth_plate'",
+                "UndergroundItemValueType.Gem",
+                "'Earth Plate'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 292,
+            "arguments": [
+                "'Fist_plate'",
+                "UndergroundItemValueType.Gem",
+                "'Fist Plate'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 293,
+            "arguments": [
+                "'Flame_plate'",
+                "UndergroundItemValueType.Gem",
+                "'Flame Plate'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 294,
+            "arguments": [
+                "'Icicle_plate'",
+                "UndergroundItemValueType.Gem",
+                "'Icicle Plate'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 295,
+            "arguments": [
+                "'Insect_plate'",
+                "UndergroundItemValueType.Gem",
+                "'Insect Plate'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 296,
+            "arguments": [
+                "'Iron_plate'",
+                "UndergroundItemValueType.Gem",
+                "'Iron Plate'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 297,
+            "arguments": [
+                "'Meadow_plate'",
+                "UndergroundItemValueType.Gem",
+                "'Meadow Plate'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 298,
+            "arguments": [
+                "'Mind_plate'",
+                "UndergroundItemValueType.Gem",
+                "'Mind Plate'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 299,
+            "arguments": [
+                "'Sky_plate'",
+                "UndergroundItemValueType.Gem",
+                "'Sky Plate'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 300,
+            "arguments": [
+                "'Splash_plate'",
+                "UndergroundItemValueType.Gem",
+                "'Splash Plate'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 301,
+            "arguments": [
+                "'Spooky_plate'",
+                "UndergroundItemValueType.Gem",
+                "'Spooky Plate'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 302,
+            "arguments": [
+                "'Stone_plate'",
+                "UndergroundItemValueType.Gem",
+                "'Stone Plate'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 303,
+            "arguments": [
+                "'Toxic_plate'",
+                "UndergroundItemValueType.Gem",
+                "'Toxic Plate'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 304,
+            "arguments": [
+                "'Zap_plate'",
+                "UndergroundItemValueType.Gem",
+                "'Zap Plate'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 305,
+            "arguments": [
+                "'Pixie_plate'",
+                "UndergroundItemValueType.Gem",
+                "'Pixie Plate'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 306,
+            "arguments": [
+                "'Blank_plate'",
+                "UndergroundItemValueType.Gem",
+                "'Blank Plate'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 308,
+            "arguments": [
+                "'Helix_fossil'",
+                "UndergroundItemValueType.Fossil",
+                "'Helix Fossil'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 309,
+            "arguments": [
+                "'Dome_fossil'",
+                "UndergroundItemValueType.Fossil",
+                "'Dome Fossil'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 310,
+            "arguments": [
+                "'Old_amber'",
+                "UndergroundItemValueType.Fossil",
+                "'Old Amber'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 311,
+            "arguments": [
+                "'Root_fossil'",
+                "UndergroundItemValueType.Fossil",
+                "'Root Fossil'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 312,
+            "arguments": [
+                "'Claw_fossil'",
+                "UndergroundItemValueType.Fossil",
+                "'Claw Fossil'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 313,
+            "arguments": [
+                "'Armor_fossil'",
+                "UndergroundItemValueType.Fossil",
+                "'Armor Fossil'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 314,
+            "arguments": [
+                "'Skull_fossil'",
+                "UndergroundItemValueType.Fossil",
+                "'Skull Fossil'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 315,
+            "arguments": [
+                "'Cover_fossil'",
+                "UndergroundItemValueType.Fossil",
+                "'Cover Fossil'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 316,
+            "arguments": [
+                "'Plume_fossil'",
+                "UndergroundItemValueType.Fossil",
+                "'Plume Fossil'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 317,
+            "arguments": [
+                "'Jaw_fossil'",
+                "UndergroundItemValueType.Fossil",
+                "'Jaw Fossil'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 318,
+            "arguments": [
+                "'Sail_fossil'",
+                "UndergroundItemValueType.Fossil",
+                "'Sail Fossil'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 319,
+            "arguments": [
+                "'Fossilized_bird'",
+                "UndergroundItemValueType.FossilPiece",
+                "'Fossilized Bird'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 320,
+            "arguments": [
+                "'Fossilized_fish'",
+                "UndergroundItemValueType.FossilPiece",
+                "'Fossilized Fish'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 321,
+            "arguments": [
+                "'Fossilized_drake'",
+                "UndergroundItemValueType.FossilPiece",
+                "'Fossilized Drake'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 322,
+            "arguments": [
+                "'Fossilized_dino'",
+                "UndergroundItemValueType.FossilPiece",
+                "'Fossilized Dino'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 324,
+            "arguments": [
+                "'Red_shard'",
+                "UndergroundItemValueType.Shard",
+                "'Red Shard'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 325,
+            "arguments": [
+                "'Yellow_shard'",
+                "UndergroundItemValueType.Shard",
+                "'Yellow Shard'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 326,
+            "arguments": [
+                "'Green_shard'",
+                "UndergroundItemValueType.Shard",
+                "'Green Shard'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 327,
+            "arguments": [
+                "'Blue_shard'",
+                "UndergroundItemValueType.Shard",
+                "'Blue Shard'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 328,
+            "arguments": [
+                "'Grey_shard'",
+                "UndergroundItemValueType.Shard",
+                "'Grey Shard'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 329,
+            "arguments": [
+                "'Purple_shard'",
+                "UndergroundItemValueType.Shard",
+                "'Purple Shard'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 330,
+            "arguments": [
+                "'Ochre_shard'",
+                "UndergroundItemValueType.Shard",
+                "'Ochre Shard'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 331,
+            "arguments": [
+                "'Black_shard'",
+                "UndergroundItemValueType.Shard",
+                "'Black Shard'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 332,
+            "arguments": [
+                "'Crimson_shard'",
+                "UndergroundItemValueType.Shard",
+                "'Crimson Shard'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 333,
+            "arguments": [
+                "'Lime_shard'",
+                "UndergroundItemValueType.Shard",
+                "'Lime Shard'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 334,
+            "arguments": [
+                "'White_shard'",
+                "UndergroundItemValueType.Shard",
+                "'White Shard'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 335,
+            "arguments": [
+                "'Pink_shard'",
+                "UndergroundItemValueType.Shard",
+                "'Pink Shard'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 336,
+            "arguments": [
+                "'Cyan_shard'",
+                "UndergroundItemValueType.Shard",
+                "'Cyan Shard'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 337,
+            "arguments": [
+                "'Rose_shard'",
+                "UndergroundItemValueType.Shard",
+                "'Rose Shard'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 338,
+            "arguments": [
+                "'Brown_shard'",
+                "UndergroundItemValueType.Shard",
+                "'Brown Shard'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 339,
+            "arguments": [
+                "'Beige_shard'",
+                "UndergroundItemValueType.Shard",
+                "'Beige Shard'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 340,
+            "arguments": [
+                "'Slate_shard'",
+                "UndergroundItemValueType.Shard",
+                "'Slate Shard'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 342,
+            "arguments": [
+                "'Palaeontologist_token'",
+                "UndergroundItemValueType.Special",
+                "'Palaeontologist Token'"
+            ]
+        }
+    ],
+    "PokemonItem": [
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 347,
+            "arguments": [
+                "'Pinkan Arbok'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 348,
+            "arguments": [
+                "'Pinkan Oddish'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 349,
+            "arguments": [
+                "'Pinkan Poliwhirl'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 350,
+            "arguments": [
+                "'Pinkan Geodude'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 351,
+            "arguments": [
+                "'Pinkan Dodrio'",
+                "50000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 352,
+            "arguments": [
+                "'Charity Chansey'",
+                "5000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 353,
+            "arguments": [
+                "'Exeggcute (Single)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 354,
+            "arguments": [
+                "'Lickitung'",
+                "1000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 355,
+            "arguments": [
+                "'Pinkan Weezing'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 356,
+            "arguments": [
+                "'Pinkan Scyther'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 357,
+            "arguments": [
+                "'Mr. Mime'",
+                "1000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 358,
+            "arguments": [
+                "'Pinkan Electabuzz'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 359,
+            "arguments": [
+                "'Jynx'",
+                "2000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 360,
+            "arguments": [
+                "'Magikarp'",
+                "50000",
+                "Currency.money",
+                "true"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 361,
+            "arguments": [
+                "'Magikarp Brown Stripes'",
+                "100"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 362,
+            "arguments": [
+                "'Magikarp Blue Raindrops'",
+                "200000",
+                "Currency.diamond"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 363,
+            "arguments": [
+                "'Magikarp Saucy Violet'",
+                "7500000000",
+                "Currency.money"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 364,
+            "arguments": [
+                "'Magikarp (Feebas)'",
+                "5999",
+                "Currency.battlePoint",
+                "false",
+                "'Probably Feebas'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 365,
+            "arguments": [
+                "'Eevee'",
+                "4000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 366,
+            "arguments": [
+                "'Porygon'",
+                "2000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 367,
+            "arguments": [
+                "'Togepi'",
+                "15000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 368,
+            "arguments": [
+                "'Pikachu (Palaeontologist)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 371,
+            "arguments": [
+                "'Hoppip (Chimecho)'",
+                "35800",
+                "Currency.diamond",
+                "false",
+                "'Probably Chimecho'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 372,
+            "arguments": [
+                "'Beldum'",
+                "22500"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 373,
+            "arguments": [
+                "'Deoxys (Clone)'",
+                "100"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 375,
+            "arguments": [
+                "'Grotle (Acorn)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 376,
+            "arguments": [
+                "'Combee'",
+                "6750"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 377,
+            "arguments": [
+                "'Burmy (Plant)'",
+                "6750"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 378,
+            "arguments": [
+                "'Cherubi'",
+                "6750"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 379,
+            "arguments": [
+                "'Spiritomb'",
+                "20000",
+                "Currency.diamond"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 381,
+            "arguments": [
+                "'Zorua'",
+                "50625"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 382,
+            "arguments": [
+                "'Meloetta (Pirouette)'",
+                "200000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 384,
+            "arguments": [
+                "'Furfrou (Debutante)'",
+                "5000000000",
+                "Currency.money"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 385,
+            "arguments": [
+                "'Furfrou (Diamond)'",
+                "300000",
+                "Currency.diamond"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 386,
+            "arguments": [
+                "'Furfrou (Matron)'",
+                "1500000",
+                "Currency.farmPoint"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 387,
+            "arguments": [
+                "'Furfrou (Dandy)'",
+                "250000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 388,
+            "arguments": [
+                "'Furfrou (Kabuki)'",
+                "75000",
+                "Currency.battlePoint"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 389,
+            "arguments": [
+                "'Furfrou (Pharaoh)'",
+                "300000000",
+                "Currency.dungeonToken"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 390,
+            "arguments": [
+                "'Furfrou (Star)'",
+                "10000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 391,
+            "arguments": [
+                "'Furfrou (La Reine)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 392,
+            "arguments": [
+                "'Furfrou (Heart)'",
+                "15000",
+                "Currency.contestToken"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 393,
+            "arguments": [
+                "'Inkay (Pikachu)'",
+                "100000000",
+                "Currency.dungeonToken",
+                "false",
+                "'Probably Not Pikachu'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 395,
+            "arguments": [
+                "'Type: Null'",
+                "114000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 396,
+            "arguments": [
+                "'Poipole'",
+                "90000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 398,
+            "arguments": [
+                "'Silvally (Fighting)'",
+                "undefined",
+                "undefined",
+                "false",
+                "'Silvally (Fighting)'",
+                "{ maxAmount: 1, visible: new MultiRequirement([new QuestLineStepCompletedRequirement('Typing some Memories', 3, AchievementOption.more), new ObtainedPokemonRequirement('Silvally (Fighting)', true)]) }",
+                "'Silvally (Fighting) 1'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 400,
+            "arguments": [
+                "'Silvally (Fighting)'",
+                "undefined",
+                "undefined",
+                "false",
+                "'Silvally (Fighting)'",
+                "{ visible: new ObtainedPokemonRequirement('Silvally (Fighting)') }",
+                "'Silvally (Fighting) 2'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 402,
+            "arguments": [
+                "'Silvally (Rock)'",
+                "undefined",
+                "undefined",
+                "false",
+                "'Silvally (Rock)'",
+                "{ maxAmount: 1, visible: new MultiRequirement([new QuestLineStepCompletedRequirement('Typing some Memories', 3, AchievementOption.more), new ObtainedPokemonRequirement('Silvally (Rock)', true)]) }",
+                "'Silvally (Rock) 1'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 404,
+            "arguments": [
+                "'Silvally (Rock)'",
+                "undefined",
+                "undefined",
+                "false",
+                "'Silvally (Rock)'",
+                "{ visible: new ObtainedPokemonRequirement('Silvally (Rock)') }",
+                "'Silvally (Rock) 2'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 406,
+            "arguments": [
+                "'Silvally (Dark)'",
+                "undefined",
+                "undefined",
+                "false",
+                "'Silvally (Dark)'",
+                "{ maxAmount: 1, visible: new MultiRequirement([new QuestLineStepCompletedRequirement('Typing some Memories', 3, AchievementOption.more), new ObtainedPokemonRequirement('Silvally (Dark)', true)]) }",
+                "'Silvally (Dark) 1'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 408,
+            "arguments": [
+                "'Silvally (Dark)'",
+                "undefined",
+                "undefined",
+                "false",
+                "'Silvally (Dark)'",
+                "{ visible: new ObtainedPokemonRequirement('Silvally (Dark)') }",
+                "'Silvally (Dark) 2'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 410,
+            "arguments": [
+                "'Silvally (Fairy)'",
+                "undefined",
+                "undefined",
+                "false",
+                "'Silvally (Fairy)'",
+                "{ maxAmount: 1, visible: new MultiRequirement([new QuestLineStepCompletedRequirement('Typing some Memories', 3, AchievementOption.more), new ObtainedPokemonRequirement('Silvally (Fairy)', true)]) }",
+                "'Silvally (Fairy) 1'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 412,
+            "arguments": [
+                "'Silvally (Fairy)'",
+                "undefined",
+                "undefined",
+                "false",
+                "'Silvally (Fairy)'",
+                "{ visible: new ObtainedPokemonRequirement('Silvally (Fairy)') }",
+                "'Silvally (Fairy) 2'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 414,
+            "arguments": [
+                "'Silvally (Water)'",
+                "undefined",
+                "undefined",
+                "false",
+                "'Silvally (Water)'",
+                "{ maxAmount: 1, visible: new MultiRequirement([new QuestLineStepCompletedRequirement('Typing some Memories', 17, AchievementOption.more), new ObtainedPokemonRequirement('Silvally (Water)', true)]) }",
+                "'Silvally (Water) 1'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 416,
+            "arguments": [
+                "'Silvally (Water)'",
+                "undefined",
+                "undefined",
+                "false",
+                "'Silvally (Water)'",
+                "{ visible: new ObtainedPokemonRequirement('Silvally (Water)') }",
+                "'Silvally (Water) 2'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 418,
+            "arguments": [
+                "'Silvally (Grass)'",
+                "undefined",
+                "undefined",
+                "false",
+                "'Silvally (Grass)'",
+                "{ maxAmount: 1, visible: new MultiRequirement([new QuestLineStepCompletedRequirement('Typing some Memories', 17, AchievementOption.more), new ObtainedPokemonRequirement('Silvally (Grass)', true)]) }",
+                "'Silvally (Grass) 1'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 420,
+            "arguments": [
+                "'Silvally (Grass)'",
+                "undefined",
+                "undefined",
+                "false",
+                "'Silvally (Grass)'",
+                "{ visible: new ObtainedPokemonRequirement('Silvally (Grass)') }",
+                "'Silvally (Grass) 2'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 422,
+            "arguments": [
+                "'Silvally (Fire)'",
+                "undefined",
+                "undefined",
+                "false",
+                "'Silvally (Fire)'",
+                "{ maxAmount: 1, visible: new MultiRequirement([new QuestLineStepCompletedRequirement('Typing some Memories', 17, AchievementOption.more), new ObtainedPokemonRequirement('Silvally (Fire)', true)]) }",
+                "'Silvally (Fire) 1'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 424,
+            "arguments": [
+                "'Silvally (Fire)'",
+                "undefined",
+                "undefined",
+                "false",
+                "'Silvally (Fire)'",
+                "{ visible: new ObtainedPokemonRequirement('Silvally (Fire)') }",
+                "'Silvally (Fire) 2'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 426,
+            "arguments": [
+                "'Silvally (Electric)'",
+                "undefined",
+                "undefined",
+                "false",
+                "'Silvally (Electric)'",
+                "{ maxAmount: 1, visible: new MultiRequirement([new QuestLineStepCompletedRequirement('Typing some Memories', 17, AchievementOption.more), new ObtainedPokemonRequirement('Silvally (Electric)', true)]) }",
+                "'Silvally (Electric) 1'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 428,
+            "arguments": [
+                "'Silvally (Electric)'",
+                "undefined",
+                "undefined",
+                "false",
+                "'Silvally (Electric)'",
+                "{ visible: new ObtainedPokemonRequirement('Silvally (Electric)') }",
+                "'Silvally (Electric) 2'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 430,
+            "arguments": [
+                "'Silvally (Ice)'",
+                "undefined",
+                "undefined",
+                "false",
+                "'Silvally (Ice)'",
+                "{ maxAmount: 1, visible: new MultiRequirement([new QuestLineStepCompletedRequirement('Typing some Memories', 17, AchievementOption.more), new ObtainedPokemonRequirement('Silvally (Ice)', true)]) }",
+                "'Silvally (Ice) 1'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 432,
+            "arguments": [
+                "'Silvally (Ice)'",
+                "undefined",
+                "undefined",
+                "false",
+                "'Silvally (Ice)'",
+                "{ visible: new ObtainedPokemonRequirement('Silvally (Ice)') }",
+                "'Silvally (Ice) 2'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 434,
+            "arguments": [
+                "'Silvally (Ground)'",
+                "undefined",
+                "undefined",
+                "false",
+                "'Silvally (Ground)'",
+                "{ maxAmount: 1, visible: new MultiRequirement([new QuestLineStepCompletedRequirement('Typing some Memories', 17, AchievementOption.more), new ObtainedPokemonRequirement('Silvally (Ground)', true)]) }",
+                "'Silvally (Ground) 1'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 436,
+            "arguments": [
+                "'Silvally (Ground)'",
+                "undefined",
+                "undefined",
+                "false",
+                "'Silvally (Ground)'",
+                "{ visible: new ObtainedPokemonRequirement('Silvally (Ground)') }",
+                "'Silvally (Ground) 2'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 438,
+            "arguments": [
+                "'Silvally (Bug)'",
+                "undefined",
+                "undefined",
+                "false",
+                "'Silvally (Bug)'",
+                "{ maxAmount: 1, visible: new MultiRequirement([new QuestLineStepCompletedRequirement('Typing some Memories', 33, AchievementOption.more), new ObtainedPokemonRequirement('Silvally (Bug)', true)]) }",
+                "'Silvally (Bug) 1'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 440,
+            "arguments": [
+                "'Silvally (Bug)'",
+                "undefined",
+                "undefined",
+                "false",
+                "'Silvally (Bug)'",
+                "{ visible: new ObtainedPokemonRequirement('Silvally (Bug)') }",
+                "'Silvally (Bug) 2'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 442,
+            "arguments": [
+                "'Silvally (Flying)'",
+                "undefined",
+                "undefined",
+                "false",
+                "'Silvally (Flying)'",
+                "{ maxAmount: 1, visible: new MultiRequirement([new QuestLineStepCompletedRequirement('Typing some Memories', 33, AchievementOption.more), new ObtainedPokemonRequirement('Silvally (Flying)', true)]) }",
+                "'Silvally (Flying) 1'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 444,
+            "arguments": [
+                "'Silvally (Flying)'",
+                "undefined",
+                "undefined",
+                "false",
+                "'Silvally (Flying)'",
+                "{ visible: new ObtainedPokemonRequirement('Silvally (Flying)') }",
+                "'Silvally (Flying) 2'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 446,
+            "arguments": [
+                "'Silvally (Poison)'",
+                "undefined",
+                "undefined",
+                "false",
+                "'Silvally (Poison)'",
+                "{ maxAmount: 1, visible: new MultiRequirement([new QuestLineStepCompletedRequirement('Typing some Memories', 33, AchievementOption.more), new ObtainedPokemonRequirement('Silvally (Poison)', true)]) }",
+                "'Silvally (Poison) 1'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 448,
+            "arguments": [
+                "'Silvally (Poison)'",
+                "undefined",
+                "undefined",
+                "false",
+                "'Silvally (Poison)'",
+                "{ visible: new ObtainedPokemonRequirement('Silvally (Poison)') }",
+                "'Silvally (Poison) 2'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 450,
+            "arguments": [
+                "'Silvally (Ghost)'",
+                "undefined",
+                "undefined",
+                "false",
+                "'Silvally (Ghost)'",
+                "{ maxAmount: 1, visible: new MultiRequirement([new QuestLineStepCompletedRequirement('Typing some Memories', 33, AchievementOption.more), new ObtainedPokemonRequirement('Silvally (Ghost)', true)]) }",
+                "'Silvally (Ghost) 1'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 452,
+            "arguments": [
+                "'Silvally (Ghost)'",
+                "undefined",
+                "undefined",
+                "false",
+                "'Silvally (Ghost)'",
+                "{ visible: new ObtainedPokemonRequirement('Silvally (Ghost)') }",
+                "'Silvally (Ghost) 2'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 454,
+            "arguments": [
+                "'Silvally (Psychic)'",
+                "undefined",
+                "undefined",
+                "false",
+                "'Silvally (Psychic)'",
+                "{ maxAmount: 1, visible: new MultiRequirement([new QuestLineStepCompletedRequirement('Typing some Memories', 33, AchievementOption.more), new ObtainedPokemonRequirement('Silvally (Psychic)', true)]) }",
+                "'Silvally (Psychic) 1'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 456,
+            "arguments": [
+                "'Silvally (Psychic)'",
+                "undefined",
+                "undefined",
+                "false",
+                "'Silvally (Psychic)'",
+                "{ visible: new ObtainedPokemonRequirement('Silvally (Psychic)') }",
+                "'Silvally (Psychic) 2'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 458,
+            "arguments": [
+                "'Silvally (Steel)'",
+                "undefined",
+                "undefined",
+                "false",
+                "'Silvally (Steel)'",
+                "{ maxAmount: 1, visible: new MultiRequirement([new QuestLineStepCompletedRequirement('Typing some Memories', 33, AchievementOption.more), new ObtainedPokemonRequirement('Silvally (Steel)', true)]) }",
+                "'Silvally (Steel) 1'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 460,
+            "arguments": [
+                "'Silvally (Steel)'",
+                "undefined",
+                "undefined",
+                "false",
+                "'Silvally (Steel)'",
+                "{ visible: new ObtainedPokemonRequirement('Silvally (Steel)') }",
+                "'Silvally (Steel) 2'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 462,
+            "arguments": [
+                "'Silvally (Dragon)'",
+                "undefined",
+                "undefined",
+                "false",
+                "'Silvally (Dragon)'",
+                "{ maxAmount: 1, visible: new MultiRequirement([new QuestLineStepCompletedRequirement('Typing some Memories', 33, AchievementOption.more), new ObtainedPokemonRequirement('Silvally (Dragon)', true)]) }",
+                "'Silvally (Dragon) 1'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 464,
+            "arguments": [
+                "'Silvally (Dragon)'",
+                "undefined",
+                "undefined",
+                "false",
+                "'Silvally (Dragon)'",
+                "{ visible: new ObtainedPokemonRequirement('Silvally (Dragon)') }",
+                "'Silvally (Dragon) 2'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 467,
+            "arguments": [
+                "'Dracozolt'",
+                "100000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 468,
+            "arguments": [
+                "'Arctozolt'",
+                "100000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 469,
+            "arguments": [
+                "'Dracovish'",
+                "100000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 470,
+            "arguments": [
+                "'Arctovish'",
+                "100000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 471,
+            "arguments": [
+                "'Zarude (Dada)'",
+                "500000"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 473,
+            "arguments": [
+                "'Staryu'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 474,
+            "arguments": [
+                "'Igglybuff'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 475,
+            "arguments": [
+                "'Shuckle'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 476,
+            "arguments": [
+                "'Smoochum'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 477,
+            "arguments": [
+                "'Ralts'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 478,
+            "arguments": [
+                "'Swablu'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 479,
+            "arguments": [
+                "'Drifloon'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 480,
+            "arguments": [
+                "'Bronzor'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 481,
+            "arguments": [
+                "'Riolu'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 482,
+            "arguments": [
+                "'Rotom'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 483,
+            "arguments": [
+                "'Munna'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 484,
+            "arguments": [
+                "'Sigilyph'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 485,
+            "arguments": [
+                "'Tornadus (Therian)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 486,
+            "arguments": [
+                "'Thundurus (Therian)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 487,
+            "arguments": [
+                "'Landorus (Therian)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 489,
+            "arguments": [
+                "'Dugtrio (Punk)'",
+                "1500",
+                "Currency.contestToken"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 490,
+            "arguments": [
+                "'Gengar (Punk)'",
+                "3000",
+                "Currency.contestToken"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 491,
+            "arguments": [
+                "'Goldeen (Diva)'",
+                "500",
+                "Currency.contestToken"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 492,
+            "arguments": [
+                "'Onix (Rocker)'",
+                "1000",
+                "Currency.contestToken"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 493,
+            "arguments": [
+                "'Tangela (Pom-pom)'",
+                "400",
+                "Currency.contestToken"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 494,
+            "arguments": [
+                "'Weepinbell (Fancy)'",
+                "700",
+                "Currency.contestToken"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 495,
+            "arguments": [
+                "'Sudowoodo (Golden)'",
+                "2000",
+                "Currency.contestToken"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 496,
+            "arguments": [
+                "'Pikachu (Rock Star)'",
+                "1000",
+                "Currency.contestToken"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 497,
+            "arguments": [
+                "'Pikachu (Belle)'",
+                "1000",
+                "Currency.contestToken"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 498,
+            "arguments": [
+                "'Pikachu (Pop Star)'",
+                "1000",
+                "Currency.contestToken"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 499,
+            "arguments": [
+                "'Pikachu (Ph. D.)'",
+                "1000",
+                "Currency.contestToken"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 500,
+            "arguments": [
+                "'Pikachu (Libre)'",
+                "1000",
+                "Currency.contestToken"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 502,
+            "arguments": [
+                "'Elf Munchlax'",
+                "3108",
+                "Currency.questPoint",
+                "undefined",
+                "undefined",
+                "{ visible: new MultiRequirement([new SpecialEventRequirement('Merry Christmas!'), new ObtainedPokemonRequirement('Santa Snorlax')]) }"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 505,
+            "arguments": [
+                "'Omanyte'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 506,
+            "arguments": [
+                "'Omastar'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 507,
+            "arguments": [
+                "'Kabuto'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 508,
+            "arguments": [
+                "'Kabutops'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 509,
+            "arguments": [
+                "'Aerodactyl'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 510,
+            "arguments": [
+                "'Lileep'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 511,
+            "arguments": [
+                "'Cradily'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 512,
+            "arguments": [
+                "'Anorith'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 513,
+            "arguments": [
+                "'Armaldo'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 514,
+            "arguments": [
+                "'Cranidos'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 515,
+            "arguments": [
+                "'Rampardos'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 516,
+            "arguments": [
+                "'Shieldon'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 517,
+            "arguments": [
+                "'Bastiodon'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 518,
+            "arguments": [
+                "'Tirtouga'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 519,
+            "arguments": [
+                "'Carracosta'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 520,
+            "arguments": [
+                "'Archen'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 521,
+            "arguments": [
+                "'Archeops'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 522,
+            "arguments": [
+                "'Tyrunt'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 523,
+            "arguments": [
+                "'Tyrantrum'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 524,
+            "arguments": [
+                "'Amaura'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/modules/items/ItemList.ts",
+            "line": 525,
+            "arguments": [
+                "'Aurorus'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 93,
+            "arguments": [
+                "'Milcery (Cheesy)'",
+                "0"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 255,
+            "arguments": [
+                "'Alcremie (Strawberry Vanilla)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 256,
+            "arguments": [
+                "'Alcremie (Strawberry Ruby Cream)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 257,
+            "arguments": [
+                "'Alcremie (Strawberry Matcha)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 258,
+            "arguments": [
+                "'Alcremie (Strawberry Mint)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 259,
+            "arguments": [
+                "'Alcremie (Strawberry Lemon)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 260,
+            "arguments": [
+                "'Alcremie (Strawberry Salted)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 261,
+            "arguments": [
+                "'Alcremie (Strawberry Ruby Swirl)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 262,
+            "arguments": [
+                "'Alcremie (Strawberry Caramel)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 263,
+            "arguments": [
+                "'Alcremie (Strawberry Rainbow)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 267,
+            "arguments": [
+                "'Alcremie (Love Vanilla)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 268,
+            "arguments": [
+                "'Alcremie (Love Ruby Cream)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 269,
+            "arguments": [
+                "'Alcremie (Love Matcha)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 270,
+            "arguments": [
+                "'Alcremie (Love Mint)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 271,
+            "arguments": [
+                "'Alcremie (Love Lemon)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 272,
+            "arguments": [
+                "'Alcremie (Love Salted)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 273,
+            "arguments": [
+                "'Alcremie (Love Ruby Swirl)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 274,
+            "arguments": [
+                "'Alcremie (Love Caramel)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 275,
+            "arguments": [
+                "'Alcremie (Love Rainbow)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 279,
+            "arguments": [
+                "'Alcremie (Berry Vanilla)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 280,
+            "arguments": [
+                "'Alcremie (Berry Ruby Cream)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 281,
+            "arguments": [
+                "'Alcremie (Berry Matcha)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 282,
+            "arguments": [
+                "'Alcremie (Berry Mint)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 283,
+            "arguments": [
+                "'Alcremie (Berry Lemon)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 284,
+            "arguments": [
+                "'Alcremie (Berry Salted)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 285,
+            "arguments": [
+                "'Alcremie (Berry Ruby Swirl)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 286,
+            "arguments": [
+                "'Alcremie (Berry Caramel)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 287,
+            "arguments": [
+                "'Alcremie (Berry Rainbow)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 291,
+            "arguments": [
+                "'Alcremie (Clover Vanilla)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 292,
+            "arguments": [
+                "'Alcremie (Clover Ruby Cream)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 293,
+            "arguments": [
+                "'Alcremie (Clover Matcha)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 294,
+            "arguments": [
+                "'Alcremie (Clover Mint)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 295,
+            "arguments": [
+                "'Alcremie (Clover Lemon)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 296,
+            "arguments": [
+                "'Alcremie (Clover Salted)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 297,
+            "arguments": [
+                "'Alcremie (Clover Ruby Swirl)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 298,
+            "arguments": [
+                "'Alcremie (Clover Caramel)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 299,
+            "arguments": [
+                "'Alcremie (Clover Rainbow)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 303,
+            "arguments": [
+                "'Alcremie (Flower Vanilla)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 304,
+            "arguments": [
+                "'Alcremie (Flower Ruby Cream)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 305,
+            "arguments": [
+                "'Alcremie (Flower Matcha)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 306,
+            "arguments": [
+                "'Alcremie (Flower Mint)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 307,
+            "arguments": [
+                "'Alcremie (Flower Lemon)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 308,
+            "arguments": [
+                "'Alcremie (Flower Salted)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 309,
+            "arguments": [
+                "'Alcremie (Flower Ruby Swirl)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 310,
+            "arguments": [
+                "'Alcremie (Flower Caramel)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 311,
+            "arguments": [
+                "'Alcremie (Flower Rainbow)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 315,
+            "arguments": [
+                "'Alcremie (Star Vanilla)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 316,
+            "arguments": [
+                "'Alcremie (Star Ruby Cream)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 317,
+            "arguments": [
+                "'Alcremie (Star Matcha)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 318,
+            "arguments": [
+                "'Alcremie (Star Mint)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 319,
+            "arguments": [
+                "'Alcremie (Star Lemon)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 320,
+            "arguments": [
+                "'Alcremie (Star Salted)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 321,
+            "arguments": [
+                "'Alcremie (Star Ruby Swirl)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 322,
+            "arguments": [
+                "'Alcremie (Star Caramel)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 323,
+            "arguments": [
+                "'Alcremie (Star Rainbow)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 327,
+            "arguments": [
+                "'Alcremie (Ribbon Vanilla)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 328,
+            "arguments": [
+                "'Alcremie (Ribbon Ruby Cream)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 329,
+            "arguments": [
+                "'Alcremie (Ribbon Matcha)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 330,
+            "arguments": [
+                "'Alcremie (Ribbon Mint)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 331,
+            "arguments": [
+                "'Alcremie (Ribbon Lemon)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 332,
+            "arguments": [
+                "'Alcremie (Ribbon Salted)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 333,
+            "arguments": [
+                "'Alcremie (Ribbon Ruby Swirl)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 334,
+            "arguments": [
+                "'Alcremie (Ribbon Caramel)'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/towns/BattleCafe.ts",
+            "line": 335,
+            "arguments": [
+                "'Alcremie (Ribbon Rainbow)'"
+            ]
+        }
+    ],
+    "EvolutionStone": [
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 78,
+            "arguments": [
+                "GameConstants.StoneType.Leaf_stone",
+                "2500",
+                "undefined",
+                "'Leaf Stone'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 79,
+            "arguments": [
+                "GameConstants.StoneType.Fire_stone",
+                "2500",
+                "undefined",
+                "'Fire Stone'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 80,
+            "arguments": [
+                "GameConstants.StoneType.Water_stone",
+                "2500",
+                "undefined",
+                "'Water Stone'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 81,
+            "arguments": [
+                "GameConstants.StoneType.Thunder_stone",
+                "2500",
+                "undefined",
+                "'Thunder Stone'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 82,
+            "arguments": [
+                "GameConstants.StoneType.Moon_stone",
+                "2500",
+                "undefined",
+                "'Moon Stone'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 83,
+            "arguments": [
+                "GameConstants.StoneType.Linking_cord",
+                "2500",
+                "undefined",
+                "'Linking Cord'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 84,
+            "arguments": [
+                "GameConstants.StoneType.Sun_stone",
+                "2500",
+                "undefined",
+                "'Sun Stone'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 85,
+            "arguments": [
+                "GameConstants.StoneType.Soothe_bell",
+                "2500",
+                "undefined",
+                "'Soothe Bell'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 86,
+            "arguments": [
+                "GameConstants.StoneType.Metal_coat",
+                "2500",
+                "undefined",
+                "'Metal Coat'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 87,
+            "arguments": [
+                "GameConstants.StoneType.Kings_rock",
+                "2500",
+                "undefined",
+                "'King\\'s Rock'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 88,
+            "arguments": [
+                "GameConstants.StoneType.Upgrade",
+                "2500",
+                "undefined",
+                "'Upgrade'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 89,
+            "arguments": [
+                "GameConstants.StoneType.Dragon_scale",
+                "2500",
+                "undefined",
+                "'Dragon Scale'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 90,
+            "arguments": [
+                "GameConstants.StoneType.Prism_scale",
+                "2500",
+                "undefined",
+                "'Prism Scale'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 91,
+            "arguments": [
+                "GameConstants.StoneType.Deepsea_tooth",
+                "2500",
+                "undefined",
+                "'Deep Sea Tooth'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 92,
+            "arguments": [
+                "GameConstants.StoneType.Deepsea_scale",
+                "2500",
+                "undefined",
+                "'Deep Sea Scale'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 93,
+            "arguments": [
+                "GameConstants.StoneType.Shiny_stone",
+                "2500",
+                "undefined",
+                "'Shiny Stone'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 94,
+            "arguments": [
+                "GameConstants.StoneType.Dusk_stone",
+                "2500",
+                "undefined",
+                "'Dusk Stone'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 95,
+            "arguments": [
+                "GameConstants.StoneType.Dawn_stone",
+                "2500",
+                "undefined",
+                "'Dawn Stone'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 96,
+            "arguments": [
+                "GameConstants.StoneType.Razor_claw",
+                "2500",
+                "undefined",
+                "'Razor Claw'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 97,
+            "arguments": [
+                "GameConstants.StoneType.Razor_fang",
+                "2500",
+                "undefined",
+                "'Razor Fang'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 98,
+            "arguments": [
+                "GameConstants.StoneType.Electirizer",
+                "2500",
+                "undefined",
+                "'Electirizer'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 99,
+            "arguments": [
+                "GameConstants.StoneType.Magmarizer",
+                "2500",
+                "undefined",
+                "'Magmarizer'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 100,
+            "arguments": [
+                "GameConstants.StoneType.Protector",
+                "2500",
+                "undefined",
+                "'Protector'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 101,
+            "arguments": [
+                "GameConstants.StoneType.Dubious_disc",
+                "2500",
+                "undefined",
+                "'Dubious Disc'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 102,
+            "arguments": [
+                "GameConstants.StoneType.Reaper_cloth",
+                "2500",
+                "undefined",
+                "'Reaper Cloth'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 103,
+            "arguments": [
+                "GameConstants.StoneType.Black_DNA",
+                "2500",
+                "undefined",
+                "'Black DNA'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 104,
+            "arguments": [
+                "GameConstants.StoneType.White_DNA",
+                "2500",
+                "undefined",
+                "'White DNA'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 105,
+            "arguments": [
+                "GameConstants.StoneType.Sachet",
+                "2500",
+                "undefined",
+                "'Sachet'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 106,
+            "arguments": [
+                "GameConstants.StoneType.Whipped_dream",
+                "2500",
+                "undefined",
+                "'Whipped Dream'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 107,
+            "arguments": [
+                "GameConstants.StoneType.Key_stone",
+                "250",
+                "GameConstants.Currency.battlePoint",
+                "'Key Stone'",
+                "GameConstants.Region.kalos",
+                "{multiplier: 1.1, multiplierDecrease: false}"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 108,
+            "arguments": [
+                "GameConstants.StoneType.Ice_stone",
+                "2500",
+                "undefined",
+                "'Ice Stone'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 109,
+            "arguments": [
+                "GameConstants.StoneType.Solar_light",
+                "2500",
+                "undefined",
+                "'Solar Light'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 110,
+            "arguments": [
+                "GameConstants.StoneType.Lunar_light",
+                "2500",
+                "undefined",
+                "'Lunar Light'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 111,
+            "arguments": [
+                "GameConstants.StoneType.Pure_light",
+                "2500",
+                "undefined",
+                "'Pure Light'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 112,
+            "arguments": [
+                "GameConstants.StoneType.Crystallized_shadow",
+                "2500",
+                "undefined",
+                "'Crystallized Shadow'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 113,
+            "arguments": [
+                "GameConstants.StoneType.Sweet_apple",
+                "5000",
+                "undefined",
+                "'Sweet Apple'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 114,
+            "arguments": [
+                "GameConstants.StoneType.Tart_apple",
+                "5000",
+                "undefined",
+                "'Tart Apple'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 115,
+            "arguments": [
+                "GameConstants.StoneType.Cracked_pot",
+                "5000",
+                "undefined",
+                "'Cracked Pot'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 116,
+            "arguments": [
+                "GameConstants.StoneType.Galarica_cuff",
+                "5000",
+                "undefined",
+                "'Galarica Cuff'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 117,
+            "arguments": [
+                "GameConstants.StoneType.Galarica_wreath",
+                "5000",
+                "undefined",
+                "'Galarica Wreath'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 118,
+            "arguments": [
+                "GameConstants.StoneType.Black_mane_hair",
+                "2500",
+                "undefined",
+                "'Black Mane Hair'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 119,
+            "arguments": [
+                "GameConstants.StoneType.White_mane_hair",
+                "2500",
+                "undefined",
+                "'White Mane Hair'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 120,
+            "arguments": [
+                "GameConstants.StoneType.Black_augurite",
+                "500",
+                "undefined",
+                "'Black Augurite'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 121,
+            "arguments": [
+                "GameConstants.StoneType.Peat_block",
+                "5000",
+                "GameConstants.Currency.diamond",
+                "'Peat Block'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 122,
+            "arguments": [
+                "GameConstants.StoneType.Auspicious_armor",
+                "5000",
+                "undefined",
+                "'Auspicious Armor'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 123,
+            "arguments": [
+                "GameConstants.StoneType.Malicious_armor",
+                "5000",
+                "undefined",
+                "'Malicious Armor'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 124,
+            "arguments": [
+                "GameConstants.StoneType.Leaders_crest",
+                "5000",
+                "undefined",
+                "'Leader\\'s Crest'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 125,
+            "arguments": [
+                "GameConstants.StoneType.Gimmighoul_coin",
+                "5000",
+                "undefined",
+                "'Gimmighoul Coin'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 126,
+            "arguments": [
+                "GameConstants.StoneType.Syrupy_apple",
+                "5000",
+                "undefined",
+                "'Syrupy Apple'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 127,
+            "arguments": [
+                "GameConstants.StoneType.Unremarkable_teacup",
+                "5000",
+                "undefined",
+                "'Unremarkable Teacup'"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/EvolutionStone.ts",
+            "line": 128,
+            "arguments": [
+                "GameConstants.StoneType.Metal_alloy",
+                "5000",
+                "undefined",
+                "'Metal Alloy'"
+            ]
+        }
+    ],
+    "FarmHandItem": [
+        {
+            "file": "pokeclicker/src/scripts/items/FarmHandItem.ts",
+            "line": 33,
+            "arguments": [
+                "'Bailey'",
+                "50000",
+                "GameConstants.Currency.farmPoint"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/FarmHandItem.ts",
+            "line": 34,
+            "arguments": [
+                "'Kerry'",
+                "100000",
+                "GameConstants.Currency.farmPoint"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/FarmHandItem.ts",
+            "line": 35,
+            "arguments": [
+                "'Riley'",
+                "200000",
+                "GameConstants.Currency.farmPoint"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/FarmHandItem.ts",
+            "line": 38,
+            "arguments": [
+                "'Jamie'",
+                "20000",
+                "GameConstants.Currency.battlePoint"
+            ]
+        }
+    ],
+    "HatcheryHelperItem": [
+        {
+            "file": "pokeclicker/src/scripts/items/HatcheryHelperItem.ts",
+            "line": 32,
+            "arguments": [
+                "'Jasmine'",
+                "10000000",
+                "GameConstants.Currency.money"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HatcheryHelperItem.ts",
+            "line": 33,
+            "arguments": [
+                "'Dakota'",
+                "100000",
+                "GameConstants.Currency.dungeonToken"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HatcheryHelperItem.ts",
+            "line": 34,
+            "arguments": [
+                "'Cameron'",
+                "100000",
+                "GameConstants.Currency.farmPoint"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HatcheryHelperItem.ts",
+            "line": 35,
+            "arguments": [
+                "'Carey'",
+                "10000",
+                "GameConstants.Currency.questPoint"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HatcheryHelperItem.ts",
+            "line": 36,
+            "arguments": [
+                "'Kris'",
+                "8000",
+                "GameConstants.Currency.diamond"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HatcheryHelperItem.ts",
+            "line": 37,
+            "arguments": [
+                "'Noel'",
+                "20000",
+                "GameConstants.Currency.battlePoint"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HatcheryHelperItem.ts",
+            "line": 38,
+            "arguments": [
+                "'Leslie'",
+                "10000",
+                "GameConstants.Currency.money"
+            ]
+        }
+    ],
+    "ExpGainedBonusHeldItem": [
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 179,
+            "arguments": [
+                "'Wonder_Chest'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Wonder Chest'",
+                "1.25",
+                "GameConstants.Region.johto"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 180,
+            "arguments": [
+                "'Miracle_Chest'",
+                "30000",
+                "GameConstants.Currency.money",
+                "{ visible: new MaxRegionRequirement(GameConstants.Region.sinnoh) }",
+                "'Miracle Chest'",
+                "1.5",
+                "GameConstants.Region.sinnoh"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 181,
+            "arguments": [
+                "'Joy_Scent'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Joy Scent'",
+                "1.75",
+                "GameConstants.Region.hoenn",
+                "' the holding Shadow Pokémon'",
+                "(p) => p.shadow >= GameConstants.ShadowStatus.Shadow"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 183,
+            "arguments": [
+                "'Excite_Scent'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Excite Scent'",
+                "2",
+                "GameConstants.Region.hoenn",
+                "'the holding Shadow Pokémon'",
+                "(p) => p.shadow >= GameConstants.ShadowStatus.Shadow"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 185,
+            "arguments": [
+                "'Vivid_Scent'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Vivid Scent'",
+                "2.5",
+                "GameConstants.Region.hoenn",
+                "'the holding Shadow Pokémon'",
+                "(p) => p.shadow >= GameConstants.ShadowStatus.Shadow"
+            ]
+        }
+    ],
+    "AttackBonusHeldItem": [
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 187,
+            "arguments": [
+                "'Muscle_Band'",
+                "1000",
+                "GameConstants.Currency.battlePoint",
+                "undefined",
+                "'Muscle Band'",
+                "1.05",
+                "GameConstants.Region.hoenn"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 256,
+            "arguments": [
+                "'Power_Herb'",
+                "undefined",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Power Herb'",
+                "1.5",
+                "GameConstants.Region.alola",
+                "undefined",
+                "(pokemon) => true",
+                "() => App.game.gameState == GameConstants.GameState.dungeon && DungeonRunner.fightingBoss()",
+                "' against Dungeon Bosses'"
+            ]
+        }
+    ],
+    "PokemonRestrictedAttackBonusHeldItem": [
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 189,
+            "arguments": [
+                "'Light_Ball'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Light Ball'",
+                "1.3",
+                "GameConstants.Region.johto",
+                "'Pikachu'",
+                "(pokemon) => Math.floor(pokemon.id) == 25"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 191,
+            "arguments": [
+                "'Lucky_Punch'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Lucky Punch'",
+                "1.3",
+                "GameConstants.Region.sinnoh",
+                "'Happiny, Chansey or Blissey'",
+                "(pokemon) => Math.floor(pokemon.id) == 440 ||  Math.floor(pokemon.id) == 113 || Math.floor(pokemon.id) == 242"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 193,
+            "arguments": [
+                "'Quick_Powder'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Quick Powder'",
+                "1.3",
+                "GameConstants.Region.kalos",
+                "'Ditto'",
+                "(pokemon) => Math.floor(pokemon.id) == 132"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 195,
+            "arguments": [
+                "'Thick_Club'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Thick Club'",
+                "1.3",
+                "GameConstants.Region.alola",
+                "'Cubone or Marowak'",
+                "(pokemon) => Math.floor(pokemon.id) == 104 ||  Math.floor(pokemon.id) == 105"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 197,
+            "arguments": [
+                "'Soul_Dew'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Soul Dew'",
+                "1.5",
+                "GameConstants.Region.hoenn",
+                "'Latias or Latios'",
+                "(pokemon) => Math.floor(pokemon.id) == 380 ||  Math.floor(pokemon.id) == 381"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 199,
+            "arguments": [
+                "'Adamant_Orb'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Adamant Orb'",
+                "1.5",
+                "GameConstants.Region.sinnoh",
+                "'Dialga'",
+                "(pokemon) => Math.floor(pokemon.id) == 483"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 201,
+            "arguments": [
+                "'Lustrous_Orb'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Lustrous Orb'",
+                "1.5",
+                "GameConstants.Region.sinnoh",
+                "'Palkia'",
+                "(pokemon) => Math.floor(pokemon.id) == 484"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 203,
+            "arguments": [
+                "'Griseous_Orb'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Griseous Orb'",
+                "1.5",
+                "GameConstants.Region.sinnoh",
+                "'Giratina'",
+                "(pokemon) => Math.floor(pokemon.id) == 487"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 205,
+            "arguments": [
+                "'Gracidea'",
+                "200000",
+                "GameConstants.Currency.farmPoint",
+                "undefined",
+                "'Gracidea'",
+                "1.5",
+                "GameConstants.Region.sinnoh",
+                "'Shaymin'",
+                "(pokemon) => Math.floor(pokemon.id) == 492"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 207,
+            "arguments": [
+                "'Burn_Drive'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Burn Drive'",
+                "1.5",
+                "GameConstants.Region.unova",
+                "'Genesect'",
+                "(pokemon) => pokemon.id == 649 || pokemon.id == 649.01 || pokemon.id == 649.05 || pokemon.id == 649.06"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 209,
+            "arguments": [
+                "'Chill_Drive'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Chill Drive'",
+                "1.5",
+                "GameConstants.Region.unova",
+                "'Genesect'",
+                "(pokemon) => pokemon.id == 649 || pokemon.id == 649.02 || pokemon.id == 649.05 || pokemon.id == 649.07"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 211,
+            "arguments": [
+                "'Douse_Drive'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Douse Drive'",
+                "1.5",
+                "GameConstants.Region.unova",
+                "'Genesect'",
+                "(pokemon) => pokemon.id == 649 || pokemon.id == 649.03 || pokemon.id == 649.05 || pokemon.id == 649.08"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 213,
+            "arguments": [
+                "'Shock_Drive'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Shock Drive'",
+                "1.5",
+                "GameConstants.Region.unova",
+                "'Genesect'",
+                "(pokemon) => pokemon.id == 649 || pokemon.id == 649.04 || pokemon.id == 649.05 || pokemon.id == 649.09"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 215,
+            "arguments": [
+                "'Great_Twisted_Spoon'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Great Twisted Spoon'",
+                "1.5",
+                "GameConstants.Region.kalos",
+                "'Mewtwo'",
+                "(pokemon) => Math.floor(pokemon.id) == 150"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 217,
+            "arguments": [
+                "'Leek'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Leek'",
+                "1.3",
+                "GameConstants.Region.galar",
+                "'Farfetch\\'d or Sirfetch\\'d'",
+                "(pokemon) => Math.floor(pokemon.id) == 83 || Math.floor(pokemon.id) == 865"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 219,
+            "arguments": [
+                "'Rusted_Sword'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Rusted Sword'",
+                "1.5",
+                "GameConstants.Region.galar",
+                "'Zacian'",
+                "(pokemon) => Math.floor(pokemon.id) == 888"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 221,
+            "arguments": [
+                "'Rusted_Shield'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Rusted Shield'",
+                "1.5",
+                "GameConstants.Region.galar",
+                "'Zamazenta'",
+                "(pokemon) => Math.floor(pokemon.id) == 889"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 223,
+            "arguments": [
+                "'Wellspring_Mask'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Wellspring Mask'",
+                "1.5",
+                "GameConstants.Region.paldea",
+                "'Ogerpon'",
+                "(pokemon) => pokemon.id == 1017 || pokemon.id == 1017.01 || pokemon.id == 1017.04 || pokemon.id == 1017.05"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 225,
+            "arguments": [
+                "'Hearthflame_Mask'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Hearthflame Mask'",
+                "1.5",
+                "GameConstants.Region.paldea",
+                "'Ogerpon'",
+                "(pokemon) => pokemon.id == 1017 || pokemon.id == 1017.02 || pokemon.id == 1017.04 || pokemon.id == 1017.06"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 227,
+            "arguments": [
+                "'Cornerstone_Mask'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Cornerstone Mask'",
+                "1.5",
+                "GameConstants.Region.paldea",
+                "'Ogerpon'",
+                "(pokemon) => pokemon.id == 1017 || pokemon.id == 1017.03 || pokemon.id == 1017.04 || pokemon.id == 1017.07"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 229,
+            "arguments": [
+                "'Booster_Energy'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Booster Energy'",
+                "1.33",
+                "GameConstants.Region.paldea",
+                "'Paradox Pokémon'",
+                "(pokemon) => [984, 985, 986, 987, 988, 989, 990, 991, 992, 993, 994, 995, 1005, 1006, 1009, 1010, 1020, 1021, 1022, 1023].includes(Math.floor(pokemon.id))"
+            ]
+        }
+    ],
+    "TypeRestrictedAttackBonusHeldItem": [
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 233,
+            "arguments": [
+                "'Black_Belt'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Black Belt'",
+                "1.2",
+                "PokemonType.Fighting",
+                "GameConstants.Region.johto"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 236,
+            "arguments": [
+                "'Charcoal'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Charcoal'",
+                "1.2",
+                "PokemonType.Fire",
+                "GameConstants.Region.johto"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 237,
+            "arguments": [
+                "'Dragon_Fang'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Dragon Fang'",
+                "1.2",
+                "PokemonType.Dragon",
+                "GameConstants.Region.johto"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 238,
+            "arguments": [
+                "'Magnet'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Magnet'",
+                "1.2",
+                "PokemonType.Electric",
+                "GameConstants.Region.johto"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 239,
+            "arguments": [
+                "'Metal_Powder'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Metal Powder'",
+                "1.2",
+                "PokemonType.Steel",
+                "GameConstants.Region.johto"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 240,
+            "arguments": [
+                "'Miracle_Seed'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Miracle Seed'",
+                "1.2",
+                "PokemonType.Grass",
+                "GameConstants.Region.johto"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 241,
+            "arguments": [
+                "'Mystic_Water'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Mystic Water'",
+                "1.2",
+                "PokemonType.Water",
+                "GameConstants.Region.johto"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 242,
+            "arguments": [
+                "'Never_Melt_Ice'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Never-Melt Ice'",
+                "1.2",
+                "PokemonType.Ice",
+                "GameConstants.Region.johto"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 243,
+            "arguments": [
+                "'Fairy_Feather'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Fairy Feather'",
+                "1.2",
+                "PokemonType.Fairy",
+                "GameConstants.Region.johto"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 244,
+            "arguments": [
+                "'Poison_Barb'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Poison Barb'",
+                "1.2",
+                "PokemonType.Poison",
+                "GameConstants.Region.johto"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 245,
+            "arguments": [
+                "'Rock_Incense'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Rock Incense'",
+                "1.2",
+                "PokemonType.Rock",
+                "GameConstants.Region.johto"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 246,
+            "arguments": [
+                "'Sharp_Beak'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Sharp Beak'",
+                "1.2",
+                "PokemonType.Flying",
+                "GameConstants.Region.johto"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 247,
+            "arguments": [
+                "'Silk_Scarf'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Silk Scarf'",
+                "1.2",
+                "PokemonType.Normal",
+                "GameConstants.Region.johto"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 248,
+            "arguments": [
+                "'Silver_Powder'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Silver Powder'",
+                "1.2",
+                "PokemonType.Bug",
+                "GameConstants.Region.johto"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 249,
+            "arguments": [
+                "'Soft_Sand'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Soft Sand'",
+                "1.2",
+                "PokemonType.Ground",
+                "GameConstants.Region.johto"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 250,
+            "arguments": [
+                "'Spell_Tag'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Spell Tag'",
+                "1.2",
+                "PokemonType.Ghost",
+                "GameConstants.Region.johto"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 251,
+            "arguments": [
+                "'Twisted_Spoon'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Twisted Spoon'",
+                "1.2",
+                "PokemonType.Psychic",
+                "GameConstants.Region.johto"
+            ]
+        }
+    ],
+    "TypeRestrictedExceptionAttackBonusHeldItem": [
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 235,
+            "arguments": [
+                "'Black_Glasses'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Black Glasses'",
+                "1.2",
+                "PokemonType.Dark",
+                "GameConstants.Region.johto",
+                "{ Squirtle: true, 'Squad Leader Squirtle': false }"
+            ]
+        }
+    ],
+    "HybridAttackBonusHeldItem": [
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 253,
+            "arguments": [
+                "'Agile_Scroll'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Agile Scroll'",
+                "0.5",
+                "2.0",
+                "GameConstants.Region.hisui"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 254,
+            "arguments": [
+                "'Strong_Scroll'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Strong Scroll'",
+                "2.0",
+                "0.5",
+                "GameConstants.Region.hisui"
+            ]
+        }
+    ],
+    "EVsGainedBonusHeldItem": [
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 259,
+            "arguments": [
+                "'Macho_Brace'",
+                "1500",
+                "GameConstants.Currency.questPoint",
+                "undefined",
+                "'Macho Brace'",
+                "1.5",
+                "GameConstants.Region.sinnoh"
+            ]
+        },
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 260,
+            "arguments": [
+                "'Power_Bracer'",
+                "2000",
+                "GameConstants.Currency.questPoint",
+                "undefined",
+                "'Power Bracer'",
+                "2",
+                "GameConstants.Region.alola"
+            ]
+        }
+    ],
+    "HeldItem": [
+        {
+            "file": "pokeclicker/src/scripts/items/HeldItem.ts",
+            "line": 262,
+            "arguments": [
+                "'Everstone'",
+                "10000",
+                "GameConstants.Currency.money",
+                "undefined",
+                "'Everstone'",
+                "'Stops the holder from evolving due to level or a stone being used. Also prevents new baby Pokémon from hatching.'",
+                "GameConstants.Region.kanto",
+                "(pokemon) => {\n        // level or stone evo\n        if (pokemon.evolutions?.length) {\n            for (const evo of pokemon.evolutions) {\n                if (evo.trigger === EvoTrigger.LEVEL || evo.trigger === EvoTrigger.STONE) {\n                    return true;\n                }\n            }\n        }\n        // babies\n        const baby = pokemonBabyPrevolutionMap[pokemon.name];\n        return baby !== undefined && pokemon.name != baby;\n    }"
+            ]
+        }
+    ],
+    "ZCrystalItem": [
+        {
+            "file": "pokeclicker/src/scripts/items/ZCrystalItem.ts",
+            "line": 47,
+            "arguments": [
+                "type"
+            ]
+        }
+    ]
+}

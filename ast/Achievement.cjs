@@ -28,7 +28,7 @@ function formatString(template) {
         case SyntaxKind.StringLiteral:
             return template.getLiteralValue();
         // 模板字符串
-        case SyntaxKind.TemplateExpression:
+        case SyntaxKind.TemplateExpression: {
             const head = template.getHead().getLiteralText(); // .replace(/\./g,'\\.');
             const text = template
                 .getTemplateSpans()
@@ -38,6 +38,7 @@ function formatString(template) {
             const formattedText = text.replace(/(\(\.\*\?\) )+/, "(.*?) ").replace(/(\(\.\*\?\))+/, "(.*?)");
 
             return `^${formattedText}$`;
+        }
         default:
             throw new Error(`Unsupported SyntaxKind: ${template.getKindName()}`);
     }

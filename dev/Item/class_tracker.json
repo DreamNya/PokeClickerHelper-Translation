@@ -1,0 +1,157 @@
+{
+    "BattleItem": {
+        "filePath": "src/modules/items/BattleItem.ts",
+        "superArg6": "description",
+        "descriptionGetter": null
+    },
+    "BerryItem": {
+        "filePath": "src/modules/items/BerryItem.ts",
+        "superArg6": null,
+        "descriptionGetter": "get description(): string {\n        return `Obtain a ${this.berryName}<br/><i>(No Oak Item challenge runs only)</i>`;\n    }"
+    },
+    "EnergyRestore": {
+        "filePath": "src/modules/items/EnergyRestore.ts",
+        "superArg6": "'Restores Expert Energy in the Underground.'",
+        "descriptionGetter": null
+    },
+    "BuyKeyItem": {
+        "filePath": "src/modules/items/buyKeyItem.ts",
+        "superArg6": null,
+        "descriptionGetter": "get description() {\n        return App.game.keyItems.itemList[this.item].description;\n    }"
+    },
+    "BuyOakItem": {
+        "filePath": "src/modules/items/buyOakItem.ts",
+        "superArg6": "'Purchase to unlock this Oak Item'",
+        "descriptionGetter": null
+    },
+    "FluteItem": {
+        "filePath": "src/modules/items/FluteItem.ts",
+        "superArg6": "description",
+        "descriptionGetter": null
+    },
+    "MulchItem": {
+        "filePath": "src/modules/items/MulchItem.ts",
+        "superArg6": "description",
+        "descriptionGetter": null
+    },
+    "PokeballItem": {
+        "filePath": "src/modules/items/PokeballItem.ts",
+        "superArg6": "'A ball for catching Pokémon.'",
+        "descriptionGetter": null
+    },
+    "ShovelItem": {
+        "filePath": "src/modules/items/ShovelItem.ts",
+        "superArg6": "description",
+        "descriptionGetter": null
+    },
+    "MulchShovelItem": {
+        "filePath": "src/modules/items/ShovelItem.ts",
+        "superArg6": "description",
+        "descriptionGetter": null
+    },
+    "PokeBlock": {
+        "filePath": "src/modules/items/PokeBlock.ts",
+        "superArg6": null,
+        "descriptionGetter": "get description(): string {\n        return this._description || 'Unobtainable item for future uses';\n    }"
+    },
+    "MegaStoneItem": {
+        "filePath": "src/modules/items/MegaStoneItem.ts",
+        "superArg6": "description",
+        "descriptionGetter": "get description(): string {\n        return this._description || `A Mega Stone for ${this.basePokemon}.`;\n    }"
+    },
+    "EggItem": {
+        "filePath": "src/modules/items/EggItem.ts",
+        "superArg6": "'An egg. Can be hatched in the Day Care.'",
+        "descriptionGetter": null
+    },
+    "QuestItem": {
+        "filePath": "src/modules/items/QuestItem.ts",
+        "superArg6": "description",
+        "descriptionGetter": null
+    },
+    "Vitamin": {
+        "filePath": "src/modules/items/Vitamin.ts",
+        "superArg6": "description",
+        "descriptionGetter": null
+    },
+    "AttackGainConsumable": {
+        "filePath": "src/modules/items/AttackGainConsumable.ts",
+        "superArg6": "description",
+        "descriptionGetter": null
+    },
+    "ChristmasPresent": {
+        "filePath": "src/modules/items/ChristmasPresent.ts",
+        "superArg6": null,
+        "descriptionGetter": "get description(): string {\n        return 'A lovely Christmas Present.';\n    }"
+    },
+    "TreasureItem": {
+        "filePath": "src/modules/items/TreasureItem.ts",
+        "superArg6": "`${displayName || id} dug out from the Underground.`",
+        "descriptionGetter": null
+    },
+    "PokemonItem": {
+        "filePath": "src/modules/items/PokemonItem.ts",
+        "superArg6": "`Add ${pokemon} to your party.`",
+        "descriptionGetter": null
+    },
+    "EvolutionStone": {
+        "filePath": "/src/scripts/items/EvolutionStone.ts",
+        "superArg6": "'An evolution item. See your Item Bag for more information.'",
+        "descriptionGetter": null
+    },
+    "FarmHandItem": {
+        "filePath": "src/scripts/items/FarmHandItem.ts",
+        "superArg6": null,
+        "descriptionGetter": "get description(): string {\n        const farmHand = this.farmHand;\n        return `Cost: <img alt=\"Farm Points\" src=\"assets/images/currency/farmPoint.svg\" width=\"20px\">&nbsp;${(farmHand?.cost?.amount ?? 0).toLocaleString('en-US')}/hour<br/>\n        Work Speed: ${GameConstants.formatTimeFullLetters((farmHand?.workTick ?? GameConstants.MINUTE) / 1000)}<br/>\n        Efficiency: ${(farmHand?.efficiency ?? 0).toLocaleString('en-US')}<br/>\n        Max Energy: ${(farmHand?.maxEnergy ?? 0).toLocaleString('en-US')}`;\n    }"
+    },
+    "HatcheryHelperItem": {
+        "filePath": "src/scripts/items/HatcheryHelperItem.ts",
+        "superArg6": null,
+        "descriptionGetter": "get description(): string {\n        const hatcheryHelper = this.hatcheryHelper;\n        return `Cost: <img src=\"assets/images/currency/${GameConstants.Currency[hatcheryHelper?.cost?.currency]}.svg\" width=\"20px\">&nbsp;${(hatcheryHelper?.cost?.amount ?? 0).toLocaleString('en-US')}/hatch<br/>\n        Step Efficiency: ${(hatcheryHelper?.stepEfficiencyBase ?? 0).toLocaleString('en-US')}%<br/>\n        Attack Efficiency: ${(hatcheryHelper?.attackEfficiencyBase ?? 0).toLocaleString('en-US')}%`;\n    }"
+    },
+    "ExpGainedBonusHeldItem": {
+        "filePath": "src/scripts/items/HeldItem.ts",
+        "superArg6": "`A held item that earns ${pokemonDescription} ${(gainedBonus - 1).toLocaleString('en-US', { style: 'percent', minimumFractionDigits: 0, maximumFractionDigits: 0 })} bonus Experience Points.`",
+        "descriptionGetter": null
+    },
+    "AttackBonusHeldItem": {
+        "filePath": "src/scripts/items/HeldItem.ts",
+        "superArg6": "`A held item that ${_attackBonus > 1 ? 'raises' : 'lowers'} the attack of ${pokemonDescription} by ${(Math.abs(_attackBonus - 1)).toLocaleString('en-US', { style: 'percent', minimumFractionDigits: 0, maximumFractionDigits: 0 })}${additionDescription}.`",
+        "descriptionGetter": null
+    },
+    "PokemonRestrictedAttackBonusHeldItem": {
+        "filePath": "src/scripts/items/HeldItem.ts",
+        "superArg6": "_attackBonus",
+        "descriptionGetter": null
+    },
+    "TypeRestrictedAttackBonusHeldItem": {
+        "filePath": "src/scripts/items/HeldItem.ts",
+        "superArg6": "_attackBonus",
+        "descriptionGetter": null
+    },
+    "TypeRestrictedExceptionAttackBonusHeldItem": {
+        "filePath": "src/scripts/items/HeldItem.ts",
+        "superArg6": "_attackBonus",
+        "descriptionGetter": null
+    },
+    "HybridAttackBonusHeldItem": {
+        "filePath": "src/scripts/items/HeldItem.ts",
+        "superArg6": "attackBonus",
+        "descriptionGetter": null
+    },
+    "EVsGainedBonusHeldItem": {
+        "filePath": "src/scripts/items/HeldItem.ts",
+        "superArg6": "`A held item that increases EV gains for the holding Pokémon by ${(gainedBonus - 1).toLocaleString('en-US', { style: 'percent', minimumFractionDigits: 0, maximumFractionDigits: 0 })}.`",
+        "descriptionGetter": null
+    },
+    "HeldItem": {
+        "filePath": "src/scripts/items/HeldItem.ts",
+        "superArg6": "description",
+        "descriptionGetter": null
+    },
+    "ZCrystalItem": {
+        "filePath": "src/scripts/items/ZCrystalItem.ts",
+        "superArg6": "description",
+        "descriptionGetter": null
+    }
+}

@@ -1,10 +1,9 @@
 // ==UserScript==
 // @name         宝可梦点击（Poke Clicker）内核汉化脚本
 // @namespace    PokeClickerHelper
-// @version      0.10.25-e
-// @description  采用内核汉化形式，目前汉化范围：所有任务线、NPC、成就、地区、城镇、道路、道馆
+// @version      0.10.25-f
+// @description  采用内核汉化形式，目前汉化范围：所有任务线、NPC、成就、地区、城镇、道路、道馆、宝可梦、道具
 // @author       DreamNya, ICEYe, iktsuarpok, 我是谁？, 顶不住了, 银☆星, TerVoid
-// @match        http://localhost:3000/
 // @match        https://www.pokeclicker.com
 // @match        https://g8hh.github.io/pokeclicker/
 // @match        https://pokeclicker.g8hh.com
@@ -20,12 +19,24 @@
 // ==/UserScript==
 /* global TownList, QuestLine:true, Notifier, MultipleQuestsQuest, App, NPC, NPCController, GameController, ko,
    GameConstants, SubRegions, Routes, GymList, Gym, Achievement, SecretAchievement, AchievementHandler, AchievementTracker,
-   PokemonHelper, pokemonMap, GameHelper
+   PokemonHelper, pokemonMap, PokeballItem, PokemonType, ItemList, UndergroundItemValueType, UndergroundItem, KeyItem
 */
 
 class TranslationCore {
     Translation = {};
     TranslationCache = {};
+    TranslationAPI = {
+        // 循环嵌套汉化 // TODO 暂未使用
+        format: (rawText) => {
+            return rawText.replace(/\{\{(.*?)\}\}/g, (_, matcher) => {
+                const [api, raw] = matcher.split("#");
+                if (!(api in this.TranslationAPI)) {
+                    throw new Error(`[TranslationAPI Error] 未知api ${api}`);
+                }
+                return this.TranslationAPI[api](raw);
+            });
+        },
+    };
     parserSubcribers = new Set();
     modules = {};
     #failed = [];
@@ -54,9 +65,6 @@ class TranslationCore {
             this.defaultConfig.Formatter,
     };
 
-    _toggleRaw = ko.observable(false).extend({ boolean: null });
-    _exporting = ko.observable(false).extend({ boolean: null });
-
     ExportTranslation = {};
 
     constructor() {
@@ -64,19 +72,6 @@ class TranslationCore {
     }
 
     #init() {
-        Object.defineProperty(this.TranslationHelper, "toggleRaw", {
-            get: () => this._toggleRaw(),
-            set: (newValue) => {
-                this._toggleRaw(newValue);
-            },
-        });
-        Object.defineProperty(this.TranslationHelper, "exporting", {
-            get: () => this._exporting(),
-            set: (newValue) => {
-                this._exporting(newValue);
-            },
-        });
-
         window.TranslationHelper = this.TranslationHelper;
         if (this.CoreModule) {
             this.CoreModule.TranslationHelper = this.TranslationHelper;
@@ -94,7 +89,7 @@ class TranslationCore {
 
     async start() {
         Notifier.notify({
-            title: "宝可梦点击（Poke Clicker）内核汉化脚本",
+            title: "宝可梦点击内核汉化脚本",
             message: `汉化正在加载中\n此时加载存档可能导致游戏错误\n若超过1分钟此提示仍未消失，则脚本可能运行出错`,
             timeout: 600000,
         });
@@ -163,7 +158,9 @@ class TranslationCore {
         if (response.ok) {
             const text = await response.text();
             console.log("PokeClickerHelper-Translation", "从CDN获取json", resource);
-            localStorage.setItem(`PokeClickerHelper-Translation-${resource}`, text);
+            // 对json进行简单压缩
+            const minifiedText = JSON.stringify(JSON.parse(text));
+            localStorage.setItem(`PokeClickerHelper-Translation-${resource}`, minifiedText);
             localStorage.setItem(`PokeClickerHelper-Translation-${resource}-lastModified`, this.#now);
             return text;
         } else {
@@ -178,7 +175,7 @@ class TranslationCore {
 
             if (!Object.keys(this.modules).includes(type)) {
                 Notifier.notify({
-                    title: "宝可梦点击（Poke Clicker）内核汉化脚本",
+                    title: "宝可梦点击内核汉化脚本",
                     message: `导入本地汉化json失败\n不支持的文件名：${name}`,
                     timeout: 6000000,
                 });
@@ -189,16 +186,25 @@ class TranslationCore {
                 const fr = new FileReader();
                 fr.readAsText(file);
                 fr.addEventListener("loadend", () => {
-                    const result = JSON.parse(fr.result);
-                    localStorage.setItem(`PokeClickerHelper-Translation-${type}`, JSON.stringify(result));
-                    localStorage.setItem(`PokeClickerHelper-Translation-${type}-lastModified`, Date.now().toString());
-                    console.log("PokeClickerHelper-Translation", "本地导入json", type);
-                    Notifier.notify({
-                        title: "宝可梦点击（Poke Clicker）内核汉化脚本",
-                        message: `导入本地汉化json成功\n刷新游戏后生效：${name}`,
-                        type: 1,
-                        timeout: 6000000,
-                    });
+                    try {
+                        const result = JSON.parse(fr.result);
+                        localStorage.setItem(`PokeClickerHelper-Translation-${type}`, JSON.stringify(result));
+                        localStorage.setItem(`PokeClickerHelper-Translation-${type}-lastModified`, Date.now().toString());
+                        console.log("PokeClickerHelper-Translation", "本地导入json", type);
+                        Notifier.notify({
+                            title: "宝可梦点击内核汉化脚本",
+                            message: `导入本地汉化json成功\n刷新游戏后生效：${name}`,
+                            type: 1,
+                            timeout: 6000000,
+                        });
+                    } catch (err) {
+                        Notifier.notify({
+                            title: "宝可梦点击内核汉化脚本",
+                            message: `导入本地汉化json失败\n${err.message}`,
+                            type: 0,
+                            timeout: 6000000,
+                        });
+                    }
                     resolve();
                 });
             });
@@ -210,13 +216,13 @@ class TranslationCore {
 
         if (this.#failed.length === 0) {
             Notifier.notify({
-                title: "宝可梦点击（Poke Clicker）内核汉化脚本",
+                title: "宝可梦点击内核汉化脚本",
                 message: `汉化加载完毕\n可以正常加载存档\n\n<div class="d-flex" style="justify-content: space-around;"><button class="btn btn-block btn-info m-0 col-5" onclick="window.TranslationHelper.ForceRefreshTranslation()">清空汉化缓存</button><button class="btn btn-block btn-info m-0 col-5" onclick="window.TranslationHelper.ImportAction()">本地导入汉化</button></div>`,
                 timeout: 15000,
             });
         } else {
             Notifier.notify({
-                title: "宝可梦点击（Poke Clicker）内核汉化脚本",
+                title: "宝可梦点击内核汉化脚本",
                 message: `请求汉化json失败，请检查网络链接或更新脚本\n无法完成汉化：${this.#failed.join(" / ")}\n\n<div class="d-flex" style="justify-content: space-around;"><button class="btn btn-block btn-info m-0 col-5" onclick="window.TranslationHelper.ForceRefreshTranslation()">清空汉化缓存</button><button class="btn btn-block btn-info m-0 col-5" onclick="window.TranslationHelper.ImportAction()">本地导入汉化</button></div>`,
                 timeout: 6000000,
             });
@@ -247,6 +253,15 @@ class TranslationCore {
     };
 
     TranslationHelper = {
+        exporting: false,
+        _toggleRaw: ko.observable(false).extend({ boolean: null }),
+        get toggleRaw() {
+            return this._toggleRaw();
+        },
+        set toggleRaw(newValue) {
+            this._toggleRaw(newValue);
+        },
+
         config: this.config,
         Translation: this.Translation,
         ExportTranslation: this.ExportTranslation,
@@ -263,10 +278,12 @@ class BaseModule {
     name = "";
     displayName = "";
     translation = [];
+    translationAPI = {};
 
     injectCore(core) {
         this.core = core;
         this.translation.forEach((translation) => (this.core.Translation[translation] = {}));
+        Object.assign(this.core.TranslationAPI, this.translationAPI);
     }
 
     init() {
@@ -283,9 +300,19 @@ class TownModule extends BaseModule {
         this.#parser();
         this.#hook();
     }
-    #parser = () => {
+    #parser() {
         this.core.Translation.Town = JSON.parse(this.core.TranslationCache.Town);
+    }
+
+    translationAPI = {
+        Town: (townName) => {
+            if (this.disabled) {
+                return townName;
+            }
+            return this.core.Translation.Town[townName] ?? townName;
+        },
     };
+
     #hook() {
         Object.values(TownList).forEach((t) => {
             t.displayName = this.core.Translation.Town[t.name] ?? t.name;
@@ -338,6 +365,16 @@ class QuestLineModule extends BaseModule {
                 : this.core.TranslationCache.QuestLine.replace(new RegExp(defaultFormatter, "g"), formatter);
         this.core.Translation.QuestLine = JSON.parse(string);
     };
+
+    translationAPI = {
+        QuestLine: (questLineName) => {
+            if (this.disabled) {
+                return questLineName;
+            }
+            return this.core.Translation.QuestLine[questLineName]?.name ?? questLineName;
+        },
+    };
+
     #hook() {
         QuestLine.prototype.realAddQuest = QuestLine.prototype.addQuest;
 
@@ -377,8 +414,7 @@ class QuestLineModule extends BaseModule {
             },
         });
 
-        window.realQuestLine = QuestLine;
-        window.QuestLine = new Proxy(window.realQuestLine, {
+        QuestLine = new Proxy(QuestLine, {
             construct: (target, args) => {
                 const questline = Reflect.construct(target, args);
                 const { name, description } = questline;
@@ -405,18 +441,6 @@ class QuestLineModule extends BaseModule {
 
                 return questline;
             },
-        });
-
-        $("#questLineDisplayBody knockout[data-bind='text: $data.name']").attr(
-            "data-bind",
-            "text: $data[TranslationHelper.toggleRaw ? 'name' : 'displayName']"
-        );
-        $("#bulletinBoardModal div.modal-body h5[data-bind='text: $data.name']").attr(
-            "data-bind",
-            "text: $data[TranslationHelper.toggleRaw ? 'name' : 'displayName']"
-        );
-        $('#questsModalQuestLinesPane knockout.font-weight-bold.d-block[data-bind="text: $data.name"]').each(function () {
-            this.dataset.bind = "text: $data[TranslationHelper.toggleRaw ? 'name' : 'displayName']";
         });
     }
 
@@ -470,6 +494,16 @@ class NPCModule extends BaseModule {
         this.core.Translation.NPCName = this.core.Translation.NPC.NPCName ?? {};
         this.core.Translation.NPCDialog = this.core.Translation.NPC.NPCDialog ?? {};
     };
+
+    translationAPI = {
+        NPC: (npcName) => {
+            if (this.disabled) {
+                return npcName;
+            }
+            return this.core.Translation.NPCName[npcName] ?? npcName;
+        },
+    };
+
     #hook() {
         Object.values(TownList)
             .flatMap((i) => i.npcs)
@@ -488,7 +522,9 @@ class NPCModule extends BaseModule {
         const that = this;
         Object.defineProperty(NPC.prototype, "dialog", {
             get() {
-                return that.core.TranslationHelper.toggleRaw ? this.rawDialog : this.translatedDialog;
+                return that.core.TranslationHelper.exporting || that.core.TranslationHelper.toggleRaw
+                    ? this.rawDialog
+                    : this.translatedDialog;
             },
         });
 
@@ -504,9 +540,7 @@ class NPCModule extends BaseModule {
     }
 
     NPC_format = () => {
-        const toggleRaw = this.core.TranslationHelper.toggleRaw;
-        this.core.TranslationHelper.toggleRaw = true;
-
+        this.core.TranslationHelper.exporting = true;
         const json = Object.values(TownList).reduce((obj, town) => {
             const npcs = town.npcs;
             if (npcs?.length > 0) {
@@ -521,7 +555,7 @@ class NPCModule extends BaseModule {
             return obj;
         }, {});
 
-        this.core.TranslationHelper.toggleRaw = toggleRaw;
+        this.core.TranslationHelper.exporting = false;
         return json;
     };
 
@@ -550,11 +584,19 @@ class AchievementModule extends BaseModule {
     displayName = "成就";
     translation = ["Achievement", "AchievementName", "AchievementDescription", "AchievementHint"];
 
+    // 增加结果缓存避免大量正则开销
+    #cache = new Map();
+
     init() {
         this.#parser();
         this.#hook();
     }
-    #parser = () => {
+
+    parser = () => {
+        // Achievement.json中不存在分隔符，不需要热重载整个json
+        this.#cache.clear();
+    };
+    #parser() {
         this.core.Translation.Achievement = JSON.parse(this.core.TranslationCache.Achievement);
         this.core.Translation.AchievementName = this.core.Translation.Achievement.name ?? {};
         this.core.Translation.AchievementDescription = this.core.Translation.Achievement.description ?? {};
@@ -566,27 +608,38 @@ class AchievementModule extends BaseModule {
         this.core.Translation.AchievementDescriptionRegs = Object.entries(
             this.core.Translation.Achievement.descriptionReg ?? {}
         ).map(([reg, value]) => [new RegExp(reg), value]);
+    }
+
+    translationAPI = {
+        /* Achievement: (achievementName) => {
+            if (this.disabled) {
+                return achievementName;
+            }
+            return this.core.Translation.AchievementName[achievementName] ?? achievementName;
+        }, */
     };
+
     #hook() {
+        // TODO 目前成在游戏加载后动态生成，因此会读取到汉化道馆/联盟文本，导致生成的成就原文包含部分汉化内容、分隔符
+
         window.realAchievement = Achievement;
         window.Achievement = new Proxy(window.realAchievement, {
             construct: (target, args) => {
                 const achievement = Reflect.construct(target, args);
                 const { name, _description } = achievement;
 
-                const displayName = this.formatAchievement(name, "Name");
-                const displayDescription = this.formatAchievement(_description, "Description");
-
                 Object.defineProperties(achievement, {
                     name: {
                         get: () =>
-                            this.core.TranslationHelper.exporting || this.core.TranslationHelper.toggleRaw ? name : displayName,
+                            this.core.TranslationHelper.exporting || this.core.TranslationHelper.toggleRaw
+                                ? name
+                                : this.formatAchievement(name, "Name"),
                     },
                     _description: {
                         get: () =>
                             this.core.TranslationHelper.exporting || this.core.TranslationHelper.toggleRaw
                                 ? _description
-                                : displayDescription,
+                                : this.formatAchievement(_description, "Description"),
                     },
                     rawName: { get: () => name },
                 });
@@ -600,24 +653,24 @@ class AchievementModule extends BaseModule {
                 const achievement = Reflect.construct(target, args);
                 const { name, _description, _hint } = achievement;
 
-                const displayName = this.formatAchievement(name, "Name");
-                const displayDescription = this.formatAchievement(_description, "Description");
-                const displayHint = this.formatAchievement(_hint, "Hint");
-
                 Object.defineProperties(achievement, {
                     name: {
                         get: () =>
-                            this.core.TranslationHelper.exporting || this.core.TranslationHelper.toggleRaw ? name : displayName,
+                            this.core.TranslationHelper.exporting || this.core.TranslationHelper.toggleRaw
+                                ? name
+                                : this.formatAchievement(name, "Name"),
                     },
                     _description: {
                         get: () =>
                             this.core.TranslationHelper.exporting || this.core.TranslationHelper.toggleRaw
                                 ? _description
-                                : displayDescription,
+                                : this.formatAchievement(_description, "Description"),
                     },
                     _hint: {
                         get: () =>
-                            this.core.TranslationHelper.exporting || this.core.TranslationHelper.toggleRaw ? _hint : displayHint,
+                            this.core.TranslationHelper.exporting || this.core.TranslationHelper.toggleRaw
+                                ? _hint
+                                : this.formatAchievement(_hint, "Hint"),
                     },
                     rawName: { get: () => name },
                 });
@@ -644,38 +697,41 @@ class AchievementModule extends BaseModule {
         };
     }
 
-    formatAchievement = (text, type) => {
+    formatAchievement(text, type) {
         const raw = this.core.Translation[`Achievement${type}`][text];
         if (raw) {
             return raw;
         }
-
-        const [reg, value] = this.core.Translation[`Achievement${type}Regs`].find(([reg]) => reg.test(text)) ?? [];
-        if (reg) {
-            return this.formatRegex(text, reg, value);
+        if (this.#cache.has(text)) {
+            return this.#cache.get(text);
         }
 
-        return text;
-    };
+        const [reg, value] = this.core.Translation[`Achievement${type}Regs`].find(([reg]) => reg.test(text)) ?? [];
+        const result = reg ? this.formatRegex(text, reg, value) : text;
+        this.#cache.set(text, result);
+        return result;
+    }
 
     formatRegex(text, reg, value) {
+        // TODO 解耦 目前游戏内含有2000多个成就，默认只读取10个，不会一次性读取全部成就 性能损失在可接受范围内
         const methods = {
-            Town: (i) => this.core.Translation.Town[i],
-            Region: (i) => this.core.Translation.Region[i],
-            RegionFull: (i) => this.core.Translation.RegionFull[i],
-            SubRegion: (i) => this.core.Translation.SubRegion[i],
-            Route: (i) => this.core.modules.Route.formatRouteName?.(i, false),
+            Town: (i) => this.core.TranslationAPI.Town(i),
+            Region: (i) => this.core.TranslationAPI.Region(i),
+            RegionFull: (i) => this.core.TranslationAPI.RegionFull(i),
+            SubRegion: (i) => this.core.TranslationAPI.SubRegion(i),
+            RegionAll: (i) => this.core.TranslationAPI.RegionAll(i),
+            Route: (i) => this.core.TranslationAPI.Route(i, false),
             GymFormat: (i) => i.replace(/^ /, ""),
             GymFormatRegion: (i) => {
-                if (Object.keys(this.core.Translation.Region).length == 0) {
+                if (this.core.modules.Regions.disabled) {
                     return i;
                 }
-                const GymRegionReg = new RegExp(`^${Object.keys(this.core.Translation.Region).join("|")}`);
-                return i.replace(GymRegionReg, (m) => this.core.Translation.Region[m] ?? m);
+                const GymRegionReg = new RegExp(`^${Object.keys(this.core.Translation.RegionAll).join("|")}`);
+                return i.replace(GymRegionReg, (m) => this.core.TranslationAPI.RegionAll(m));
             },
         };
 
-        return text.replace(reg, (...args) => {
+        const result = text.replace(reg, (...args) => {
             const groups = args.slice(1, -2);
             return value
                 .replace(/#([\w/]+)\{\$(\d)}/g, (_, matcher, n) => {
@@ -686,6 +742,11 @@ class AchievementModule extends BaseModule {
                 })
                 .replace(/\$(\d)/g, (_, n) => groups[n - 1] ?? "");
         });
+
+        // TODO 参考#hook中注释，实际分隔符在text中传入，因此需要在结果完成后动态替换分隔符
+        const formatter = this.core.config.Formatter;
+        const defaultFormatter = this.core.defaultConfig.Formatter;
+        return formatter == defaultFormatter ? result : result.replace(new RegExp(defaultFormatter, "g"), formatter);
     }
 }
 
@@ -698,19 +759,55 @@ class RegionModule extends BaseModule {
         this.#parser();
         this.#hook();
     }
-    #parser = () => {
+    #parser() {
         this.core.Translation.Regions = JSON.parse(this.core.TranslationCache.Regions);
         this.core.Translation.Region = this.core.Translation.Regions.Region ?? {};
         this.core.Translation.RegionFull = Object.fromEntries(
             Object.entries(this.core.Translation.Region).map(([region, name]) => [region, `${name}地区`])
         );
-        this.core.Translation.SubRegion = Object.assign(
-            this.core.Translation.Regions.SubRegion ?? {},
-            this.core.Translation.RegionFull
-        );
+        this.core.Translation.SubRegion = this.core.Translation.Regions.SubRegion;
+        this.core.Translation.RegionAll = Object.assign({}, this.core.Translation.RegionFull, this.core.Translation.SubRegion);
+    }
 
-        Object.assign(this.core.Translation.Region, { "Sevii Islands": "七之岛" });
+    translationAPI = {
+        Region: (region) => {
+            if (this.disabled) {
+                return region;
+            }
+            if (typeof region === "string") {
+                return this.core.Translation.Region[region] ?? region;
+            }
+            if (typeof region === "number") {
+                const regionName = GameConstants.camelCaseToString(GameConstants.Region[region]);
+                return this.core.Translation.Region[regionName] ?? regionName;
+            }
+        },
+        RegionFull: (region) => {
+            if (this.disabled) {
+                return region;
+            }
+            if (typeof region === "string") {
+                return this.core.Translation.RegionFull[region] ?? region;
+            }
+            if (typeof region === "number") {
+                const regionName = GameConstants.camelCaseToString(GameConstants.Region[region]);
+                return this.core.Translation.RegionFull[regionName] ?? regionName;
+            }
+        },
+        SubRegion: (subregion) => {
+            if (this.disabled) {
+                return subregion;
+            }
+            return this.core.Translation.SubRegion[subregion] ?? subregion;
+        },
+        RegionAll: (regionName) => {
+            if (this.disabled) {
+                return regionName;
+            }
+            return this.core.Translation.RegionAll[regionName] ?? regionName;
+        },
     };
+
     #hook() {
         $("[href='#mapBody'] > span").attr(
             "data-bind",
@@ -718,7 +815,7 @@ class RegionModule extends BaseModule {
         );
         $("#subregion-travel-buttons > button.btn.btn-sm.btn-primary").attr(
             "data-bind",
-            "click: () => SubRegions.openModal(), text: `副区域旅行 (${TranslationHelper.Translation.SubRegion[player.subregionObject()?.name]})`"
+            "click: () => SubRegions.openModal(), text: `副区域旅行 (${TranslationHelper.Translation.RegionAll[player.subregionObject()?.name]})`"
         );
     }
 }
@@ -742,17 +839,22 @@ class RouteModule extends BaseModule {
         this.#parser();
         this.#hook();
     }
-    #parser = () => {
+    #parser() {
         this.core.Translation.Route = JSON.parse(this.core.TranslationCache.Route);
+    }
+
+    translationAPI = {
+        Route: (...args) => this.formatRouteName(...args),
     };
+
     #hook() {
         if (Object.keys(this.core.Translation.Region).length > 0) {
-            this.#regionRouteReg = new RegExp(`^(${Object.keys(this.core.Translation.Region).join("|")}) Route (\\d+)$`);
+            this.#regionRouteReg = new RegExp(`^(${Object.keys(this.core.Translation.Region).join("|")})? ?Route (\\d+)$`);
         }
 
         Routes.real_getName = Routes.getName;
         Routes.getName = (route, region, alwaysIncludeRegionName = false, includeSubRegionName = false) => {
-            if (this.core.TranslationHelper.exporting) {
+            if (this.core.TranslationHelper.exporting || this.core.TranslationHelper.toggleRaw) {
                 return Routes.real_getName.call(Routes, route, region, alwaysIncludeRegionName, includeSubRegionName);
             }
 
@@ -780,13 +882,16 @@ class RouteModule extends BaseModule {
     }
 
     formatRouteName = (routeName, returnRaw = true) => {
+        if (this.disabled) {
+            return routeName;
+        }
         if (this.core.Translation.Route[routeName]) {
             return this.core.Translation.Route[routeName];
         }
 
         if (this.#regionRouteReg.test(routeName)) {
             return routeName.replace(this.#regionRouteReg, (match, region, number) => {
-                const regionName = this.core.Translation.Region[region] ?? region;
+                const regionName = this.core.Translation.Region[region] ?? region ?? "";
                 const formatNumber = number.replace(/\d/g, (digit) => String.fromCharCode(digit.charCodeAt(0) + 0xff10 - 0x30));
                 const routeType = this.#waterRoute[region]?.includes(+number) ? "水路" : "道路";
                 return `${regionName}${formatNumber}号${routeType}`;
@@ -827,6 +932,16 @@ class GymModule extends BaseModule {
                 : this.core.TranslationCache.Gym.replace(new RegExp(defaultFormatter, "g"), formatter);
         this.core.Translation.Gym = JSON.parse(string);
     };
+
+    translationAPI = {
+        Gym: (leaderName) => {
+            if (this.disabled) {
+                return leaderName;
+            }
+            return this.core.Translation.Gym[leaderName] ?? leaderName;
+        },
+    };
+
     #hook() {
         Object.values(GymList).forEach((gym) => {
             const rawLeaderName = gym.leaderName;
@@ -897,23 +1012,7 @@ class UIModule extends BaseModule {
 
         const prefix = CoreModule.UIContainerID[0].replace("#", "").replace("Container", "") + "TranslationHelper";
 
-        CoreModule.TranslationAPI = {
-            Route: this.core.modules.Route.formatRouteName ?? ((i) => i),
-            Town: (townName) => this.core.Translation.Town[townName] ?? townName,
-            Region: (region) => {
-                if (typeof region === "string") {
-                    return this.core.Translation.SubRegion[region] ?? region;
-                }
-                if (typeof region === "number") {
-                    const regionName = GameConstants.camelCaseToString(GameConstants.Region[region]);
-                    return this.core.Translation.SubRegion[regionName] ?? regionName;
-                }
-            },
-            NPC: (npcName) => this.core.Translation.NPCName[npcName] ?? npcName,
-            QuestLine: (questLineName) => this.core.Translation.QuestLine[questLineName]?.name ?? questLineName,
-            Gym: (leaderName) => this.core.Translation.Gym[leaderName] ?? leaderName,
-            Achievement: (achievementName) => this.core.Translation.AchievementName[achievementName] ?? achievementName,
-        };
+        CoreModule.TranslationAPI = this.core.TranslationAPI;
 
         const switchHTML = Object.values(this.core.modules).reduce((str, module) => {
             if (!module.displayName) {
@@ -974,7 +1073,7 @@ class UIModule extends BaseModule {
                         <select type="number" class="form-select"
                             id="${prefix}SwitchSeparator" data-save="global" 
                             style="text-align: center;height: 45px; font-size: 12px; width: 80%; opacity: 0.7; padding-left: 5px; padding-top: 1.2rem; padding-bottom: 0;"
-                            title="适用于部分宝可梦/NPC/道馆联盟名称分隔符号&#10;(NPC/道馆联盟需要切换地图才会显示生效)"
+                            title="适用于部分宝可梦/NPC/道馆联盟名称分隔符号"
                             >
                             <option value="·" selected >
                                 圆点
@@ -1058,6 +1157,10 @@ class UIModule extends BaseModule {
                     if (id == "SwitchSeparator") {
                         that.core.config.Formatter = this.value;
                         that.core.parserSubcribers.forEach((parser) => parser());
+                        if (!that.core.TranslationHelper.toggleRaw) {
+                            that.core.TranslationHelper.toggleRaw = true;
+                            that.core.TranslationHelper.toggleRaw = false;
+                        }
                     } else if (this.value !== "") {
                         that.core.TranslationHelper.config[id] = this.value;
                     }
@@ -1090,7 +1193,6 @@ class PokemonModule extends BaseModule {
     displayName = "宝可梦";
     translation = ["Pokemon"];
     #cache = new Map();
-    #update = ko.observable(0);
 
     init = () => {
         this.parser();
@@ -1105,7 +1207,15 @@ class PokemonModule extends BaseModule {
                 ? this.core.TranslationCache.Pokemon
                 : this.core.TranslationCache.Pokemon.replace(new RegExp(defaultFormatter, "g"), formatter);
         this.core.Translation.Pokemon = JSON.parse(string);
-        GameHelper.incrementObservable(this.#update);
+    };
+
+    translationAPI = {
+        Pokemon: (pokemon) => {
+            if (this.disabled) {
+                return pokemon;
+            }
+            return this.core.Translation.Pokemon[pokemon] ?? pokemon;
+        },
     };
 
     #hook() {
@@ -1118,7 +1228,6 @@ class PokemonModule extends BaseModule {
                 return this.#cache.get(englishName);
             }
             const pureComputed‌ = ko.pureComputed(() => {
-                this.#update();
                 return this.core.TranslationHelper.exporting || this.core.TranslationHelper.toggleRaw
                     ? englishName
                     : (this.core.Translation.Pokemon[englishName] ?? englishName);
@@ -1137,9 +1246,233 @@ class PokemonModule extends BaseModule {
     };
 }
 
+class ItemModule extends BaseModule {
+    name = "Item";
+    displayName = "道具";
+    translation = ["Item", "ItemName", "ItemDescription", "KeyItem"];
+    #desMapper = {
+        // TODO
+        BerryItem: (item) => `获取一个 ${item.berryName}<br/><i>(仅限无高级道具挑战模式)</i>`,
+        BuyKeyItem: () => "",
+        FluteItem: (item) => {
+            item.getDescription = function () {
+                // TODO
+                return `+${(this.getMultiplier() - 1).toLocaleString("en-US", { style: "percent", minimumFractionDigits: 2, maximumFractionDigits: 2 })} ${this.description} 加成`;
+            };
+            return "";
+        },
+        // TODO
+        PokeBlock: (item) => item._description || "Unobtainable item for future uses",
+        MegaStoneItem: (item) => {
+            const description = item._description || `一块${this.core.TranslationAPI.Pokemon(item.basePokemon)}的Mega进化石`;
+            item.getDescription = () => {
+                return this.core.Translation.ItemDescription[description] ?? description;
+            };
+            return () => description;
+        },
+        TreasureItem: (item) => {
+            Object.defineProperty(item, "image", {
+                get() {
+                    return `assets/images/${this.valueType === UndergroundItemValueType.Fossil ? "breeding" : "items/underground"}/${this.rawDisplayName}.png`;
+                },
+            });
+
+            return `从地下矿场挖掘而出的${this.translationAPI.Item(item.displayName || item.name)}`;
+        },
+        PokemonItem: (item) => () => `获得宝可梦 ${this.core.TranslationAPI.Pokemon(item.type)}`,
+        ZCrystalItem: (item) => {
+            const type = GameConstants.zCrystalItemType.indexOf(item.name);
+            // TODO
+            return `允许 ${PokemonType[type]}属性宝可梦在下场战斗中使用Ｚ招式。接着，他们需要稍微休息一下`;
+        },
+    };
+
+    init = () => {
+        this.parser();
+        this.#hook();
+    };
+
+    parser = () => {
+        const formatter = this.core.config.Formatter;
+        const defaultFormatter = this.core.defaultConfig.Formatter;
+        const string =
+            formatter == defaultFormatter
+                ? this.core.TranslationCache.Item
+                : this.core.TranslationCache.Item.replace(new RegExp(defaultFormatter, "g"), formatter);
+        this.core.Translation.Item = JSON.parse(string);
+        this.core.Translation.ItemName = this.core.Translation.Item.ItemName ?? {};
+        this.core.Translation.ItemDescription = this.core.Translation.Item.ItemDescription ?? {};
+        this.core.Translation.KeyItem = this.core.Translation.Item.KeyItem ?? {};
+    };
+
+    translationAPI = {
+        get Item() {
+            return this.ItemName;
+        },
+        ItemName: (itemName) => {
+            if (this.disabled) {
+                return itemName;
+            }
+            return this.core.Translation.ItemName[itemName] ?? itemName;
+        },
+        ItemDescription: (itemDescription) => {
+            if (this.disabled) {
+                return itemDescription;
+            }
+            return this.core.Translation.ItemDescription[itemDescription] ?? itemDescription;
+        },
+        KeyItem: (keyItemString) => {
+            if (this.disabled) {
+                return keyItemString;
+            }
+            return this.core.Translation.KeyItem[keyItemString] ?? keyItemString;
+        },
+    };
+
+    #hook() {
+        const that = this;
+        // KeyItem
+        Object.defineProperties(KeyItem.prototype, {
+            displayName: {
+                get() {
+                    return that.core.TranslationHelper.exporting || that.core.TranslationHelper.toggleRaw
+                        ? this.rawDisplayName
+                        : that.translationAPI.KeyItem(this.rawDisplayName);
+                },
+                set(rawDisplayName) {
+                    this.rawDisplayName = rawDisplayName;
+                },
+            },
+            description: {
+                get() {
+                    return that.core.TranslationHelper.exporting || that.core.TranslationHelper.toggleRaw
+                        ? this.rawDescription
+                        : that.translationAPI.KeyItem(this.rawDescription);
+                },
+                set(rawDescription) {
+                    this.rawDescription = rawDescription;
+                },
+            },
+        });
+
+        // PokeballItem 兼容大师球
+        Object.defineProperties(PokeballItem.prototype, {
+            displayName: {
+                get() {
+                    return that.core.TranslationHelper.exporting || that.core.TranslationHelper.toggleRaw
+                        ? this._displayName
+                        : that.translationAPI.Item(this._displayName);
+                },
+            },
+            description: {
+                get() {
+                    return that.core.TranslationHelper.exporting || that.core.TranslationHelper.toggleRaw
+                        ? this._description
+                        : that.translationAPI.ItemDescription(this._description);
+                },
+            },
+        });
+
+        // TreasureItem
+        //delete UndergroundItem.prototype.name;
+        Object.defineProperty(UndergroundItem.prototype, "name", {
+            get() {
+                return (
+                    ItemList[this.itemName]?.rawDisplayName ||
+                    GameConstants.camelCaseToString(GameConstants.humanifyString(this.itemName))
+                );
+            },
+        });
+
+        // MegaStoneItem
+        $('#itemBag-megaStones div[data-bind="text: GameConstants.humanifyString($data.name)"]').attr(
+            "data-bind",
+            "text: $data.displayName"
+        );
+
+        // 农场UI
+        $("#mulchList span[data-bind=\"text: MulchType[$data].replace('_', ' ')\"]").attr(
+            "data-bind",
+            "text: ItemList[MulchType[$data]].displayName"
+        );
+        $("#shovelList > li > span:nth-child(2)").text(this.translationAPI.Item("Berry Shovel"));
+        $("#shovelMulch > li > span:nth-child(2)").text(this.translationAPI.Item("Mulch Shovel"));
+
+        // Item
+        Object.values(ItemList).forEach((item) => {
+            const type = item.constructor.name;
+            const rawDisplayName = item.displayName;
+            const rawDescription = type == "BuyKeyItem" ? "" : item.description;
+            // proxyDescription包含副作用 //TODO 解耦
+            const proxyDescription = type in this.#desMapper ? this.#desMapper[type](item) : "";
+            const specialDescription = proxyDescription
+                ? typeof proxyDescription == "function"
+                    ? proxyDescription
+                    : () => proxyDescription
+                : null;
+
+            Object.defineProperties(item, {
+                rawDisplayName: {
+                    get: () => rawDisplayName,
+                },
+                displayName: {
+                    get: () => {
+                        return this.core.TranslationHelper.exporting || this.core.TranslationHelper.toggleRaw
+                            ? rawDisplayName
+                            : this.translationAPI.Item(rawDisplayName);
+                    },
+                },
+                ...(type != "BuyKeyItem" && {
+                    description: {
+                        get: () => {
+                            return this.core.TranslationHelper.exporting || this.core.TranslationHelper.toggleRaw
+                                ? rawDescription
+                                : specialDescription?.() || this.translationAPI.ItemDescription(rawDescription);
+                        },
+                    },
+                }),
+            });
+        });
+    }
+
+    exportData = () => {
+        this.core.TranslationHelper.exporting = true;
+        const displayName = Object.values(ItemList).reduce((obj, i) => {
+            const filters = ["PokemonItem"];
+            const type = i.constructor.name;
+            if (!filters.includes(type)) {
+                obj[i.displayName] = this.core.Translation.ItemName[i.displayName] ?? "";
+            }
+            return obj;
+        }, {});
+
+        const description = Object.values(ItemList).reduce((obj, i) => {
+            const type = i.constructor.name;
+            if (!(type in this.#desMapper)) {
+                obj[i.description] = this.core.Translation.ItemDescription[i.description] ?? "";
+            }
+            return obj;
+        }, {});
+
+        const keyItem = App.game.keyItems.itemList.reduce((obj, i) => {
+            obj[i.displayName] = this.core.Translation.KeyItem[i.displayName] ?? "";
+            obj[i.description] = this.core.Translation.KeyItem[i.description] ?? "";
+            return obj;
+        }, {});
+        const json = {
+            ItemName: displayName,
+            ItemDescription: description,
+            KeyItem: keyItem,
+        };
+        this.core.TranslationHelper.exporting = false;
+        return json;
+    };
+}
+
 const Core = new TranslationCore();
 
 Core.registerModule(new PokemonModule());
+Core.registerModule(new ItemModule());
 Core.registerModule(new RegionModule());
 Core.registerModule(new RouteModule());
 Core.registerModule(new TownModule());
