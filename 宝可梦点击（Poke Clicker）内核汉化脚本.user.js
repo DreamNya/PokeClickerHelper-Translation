@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         宝可梦点击（Poke Clicker）内核汉化脚本
 // @namespace    PokeClickerHelper
-// @version      0.10.25-f
+// @version      0.10.25-g
 // @description  采用内核汉化形式，目前汉化范围：所有任务线、NPC、成就、地区、城镇、道路、道馆、宝可梦、道具
 // @author       DreamNya, ICEYe, iktsuarpok, 我是谁？, 顶不住了, 银☆星, TerVoid
 // @match        https://www.pokeclicker.com
@@ -1219,8 +1219,7 @@ class PokemonModule extends BaseModule {
     };
 
     #hook() {
-        const descriptors = Object.getOwnPropertyDescriptors(PokemonHelper);
-        descriptors.displayName.get = () => (englishName) => {
+        App.translation.get = (englishName) => {
             if (!englishName) {
                 return englishName;
             }
@@ -1235,7 +1234,6 @@ class PokemonModule extends BaseModule {
             this.#cache.set(englishName, pureComputed‌);
             return pureComputed‌;
         };
-        window.PokemonHelper = Object.defineProperties({}, descriptors);
     }
 
     exportData = () => {
