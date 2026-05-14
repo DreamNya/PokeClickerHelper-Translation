@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         宝可梦点击（Poke Clicker）内核汉化脚本
 // @namespace    PokeClickerHelper
-// @version      0.10.25-g
+// @version      0.10.25-h
 // @description  采用内核汉化形式，目前汉化范围：所有任务线、NPC、成就、地区、城镇、道路、道馆、宝可梦、道具
 // @author       DreamNya, ICEYe, iktsuarpok, 我是谁？, 顶不住了, 银☆星, TerVoid
 // @match        https://www.pokeclicker.com
@@ -417,11 +417,11 @@ class QuestLineModule extends BaseModule {
         QuestLine = new Proxy(QuestLine, {
             construct: (target, args) => {
                 const questline = Reflect.construct(target, args);
-                const { name, description } = questline;
+                const { name, _description } = questline;
                 const translation = this.core.Translation.QuestLine[name];
 
                 const displayName = translation?.name;
-                const displayDescription = translation?.description[description];
+                const displayDescription = translation?.description[_description];
 
                 Object.defineProperty(questline, "displayName", {
                     get: () =>
@@ -434,7 +434,7 @@ class QuestLineModule extends BaseModule {
                     Object.defineProperty(questline, "description", {
                         get: () =>
                             this.core.TranslationHelper.exporting || this.core.TranslationHelper.toggleRaw
-                                ? description
+                                ? _description
                                 : displayDescription,
                     });
                 }
@@ -1216,10 +1216,7 @@ class PokemonModule extends BaseModule {
             }
             return this.core.Translation.Pokemon[pokemon] ?? pokemon;
         },
-    };
-
-    #hook() {
-        App.translation.get = (englishName) => {
+        PokemonDisplayName: (englishName) => {
             if (!englishName) {
                 return englishName;
             }
@@ -1233,6 +1230,18 @@ class PokemonModule extends BaseModule {
             });
             this.#cache.set(englishName, pureComputed‌);
             return pureComputed‌;
+        },
+    };
+
+    #hook() {
+        App.translation.realGet = App.translation.get;
+        App.translation.get = (...args) => {
+            if (args[1] == "pokemon") {
+                const [englishName] = args;
+                return this.translationAPI.PokemonDisplayName(englishName);
+            } else {
+                return App.translation.realGet(...args);
+            }
         };
     }
 
