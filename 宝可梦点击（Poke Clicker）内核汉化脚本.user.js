@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         宝可梦点击（Poke Clicker）内核汉化脚本
 // @namespace    PokeClickerHelper
-// @version      0.10.25-h
+// @version      0.10.25-i
 // @description  采用内核汉化形式，目前汉化范围：所有任务线、NPC、成就、地区、城镇、道路、道馆、宝可梦、道具
 // @author       DreamNya, ICEYe, iktsuarpok, 我是谁？, 顶不住了, 银☆星, TerVoid
 // @match        https://www.pokeclicker.com
@@ -19,12 +19,22 @@
 // ==/UserScript==
 /* global TownList, QuestLine:true, Notifier, MultipleQuestsQuest, App, NPC, NPCController, GameController, ko,
    GameConstants, SubRegions, Routes, GymList, Gym, Achievement, SecretAchievement, AchievementHandler, AchievementTracker,
-   PokemonHelper, pokemonMap, PokeballItem, PokemonType, ItemList, UndergroundItemValueType, UndergroundItem, KeyItem
+   pokemonMap, PokeballItem, PokemonType, ItemList, UndergroundItemValueType, UndergroundItem, KeyItem
 */
 
+/**
+ * * 汉化核心控制器
+ * * * 负责生命周期管理、JSON资源拉取缓存、以及模块调度
+ */
 class TranslationCore {
-    Translation = {};
+    /** @type {Record<string, string>} 存储从 CDN 或 localStorage 获取的 JSON 文本 */
     TranslationCache = {};
+
+    /**
+     * * 所有汉化 API 集合
+     * * * BaseModule 实例化时，将内部的 translationAPI 注册到此处，并暴露给全局调用
+     * @type {Record<string, Function>}
+     */
     TranslationAPI = {
         // 循环嵌套汉化 // TODO 暂未使用
         format: (rawText) => {
@@ -37,23 +47,45 @@ class TranslationCore {
             });
         },
     };
+
+    /** @type {Set<Function>} 存储需要响应 分隔符热重载的模块方法 */
     parserSubcribers = new Set();
+
+    /** @type {Record<string, BaseModule>} 所有子模块集合 */
     modules = {};
+
+    /** @type {string[]} 记录获取失败的资源名称 */
     #failed = [];
+
+    /** @type {number} 脚本启动时间戳 */
     #now = Date.now();
 
+    /** @type {Object} PokeClickerHelper核心模块对象 */
     CoreModule = window.PokeClickerHelper ?? window.PokeClickerHelperPlus;
 
+    /** @type {Object} CDN 地址配置 */
     CDN = {
         jsDelivr: "https://cdn.jsdelivr.net/gh/DreamNya/PokeClickerHelper-Translation@main/json/",
         GitHub: "https://raw.githubusercontent.com/DreamNya/PokeClickerHelper-Translation/main/json/",
     };
+
+    /**
+     * @typedef {Object} TranslationConfig
+     * @property {("jsDelivr"|"GitHub")} CDN - 当前使用的 CDN 线路
+     * @property {number} UpdateDelay - 资源更新周期（天），负数表示强制更新
+     * @property {number} Timeout - 请求超时时间（毫秒）
+     * @property {string} Formatter - 词缀分隔符，如 "·", " ", ""
+     */
+
+    /** @type {TranslationConfig} 默认配置 */
     defaultConfig = {
         CDN: "jsDelivr",
         UpdateDelay: 30, // days
         Timeout: 10000, // ms
         Formatter: "·",
     };
+
+    /** @type {TranslationConfig} 用户配置 */
     config = {
         CDN: this.CoreModule?.get("TranslationHelperCDN", this.defaultConfig.CDN, true) ?? this.defaultConfig.CDN,
         UpdateDelay:
@@ -65,12 +97,14 @@ class TranslationCore {
             this.defaultConfig.Formatter,
     };
 
+    /** @type {Record<string, Function>} 所有模块的导出方法 */
     ExportTranslation = {};
 
     constructor() {
         this.#init();
     }
 
+    /** @private 初始化全局入口 */
     #init() {
         window.TranslationHelper = this.TranslationHelper;
         if (this.CoreModule) {
@@ -78,6 +112,10 @@ class TranslationCore {
         }
     }
 
+    /**
+     * 注册子模块
+     * @param {BaseModule} module 继承自 BaseModule 的子模块实例
+     */
     registerModule(module) {
         module.injectCore(this);
         this.modules[module.name] = module;
@@ -87,6 +125,7 @@ class TranslationCore {
         }
     }
 
+    /** 正式初始化所有子模块，并尝试获取 JSON 资源 */
     async start() {
         Notifier.notify({
             title: "宝可梦点击内核汉化脚本",
@@ -98,7 +137,7 @@ class TranslationCore {
             if (module.disabled) {
                 continue;
             }
-            if (module.translation.length > 0) {
+            if (module.resourceKeys.length > 0) {
                 await this.#pullResource(module.name);
             }
             if (module.disabled) {
@@ -120,6 +159,11 @@ class TranslationCore {
         this.#finish();
     }
 
+    /**
+     * 获取 JSON 资源，失败时尝试从 localStorage 恢复
+     * @private
+     * @param {string} resource 资源名（与模块名相同） // TODO
+     */
     async #pullResource(resource) {
         this.TranslationCache[resource] = await this.#fetchResource(resource).catch(() => {
             const cache = localStorage.getItem(`PokeClickerHelper-Translation-${resource}`);
@@ -135,6 +179,13 @@ class TranslationCore {
         });
     }
 
+    /**
+     * 包含手动缓存策略的 JSON 请求方法
+     * @private
+     * @param {string} resource
+     * @param {boolean} [force=false] 是否强制忽略缓存
+     * @returns {Promise<string>}
+     */
     async #fetchResource(resource, force = false) {
         const past = +(localStorage.getItem(`PokeClickerHelper-Translation-${resource}-lastModified`) ?? 0);
         if (
@@ -168,6 +219,16 @@ class TranslationCore {
         }
     }
 
+    /**
+     * * 公开的 CDN 测试方法
+     * * * 从远程拉取一个文件大小最大的 JSON 文件以获得准确的测试结果
+     * @public
+     */
+    fetchTest() {
+        return this.#fetchResource("NPC", true);
+    }
+
+    /** 从本地文件导入翻译 JSON */
     importTranslation = async (files) => {
         for (const file of files) {
             const name = file.name;
@@ -211,6 +272,7 @@ class TranslationCore {
         }
     };
 
+    /** @private 完成所有模块加载后的通知逻辑 */
     #finish() {
         setTimeout(() => $('.toast:contains("汉化正在加载中") [data-dismiss="toast"]').trigger("click"), 1000);
 
@@ -229,6 +291,7 @@ class TranslationCore {
         }
     }
 
+    /** 从文件选择框导入翻译 */
     ImportAction = () => {
         const that = this;
         $(`<input type="file" accept=".json" style="display:none;" multiple />`)
@@ -243,6 +306,10 @@ class TranslationCore {
             .trigger("click");
     };
 
+    /**
+     * 清空所有汉化缓存
+     * @param {boolean} [refresh=true] 清空完成后是否刷新页面
+     */
     ForceRefreshTranslation = (refresh = true) => {
         Object.values(this.modules).forEach((module) => {
             const resource = module.name;
@@ -252,6 +319,10 @@ class TranslationCore {
         refresh && location.reload();
     };
 
+    /**
+     * 暴露给全局的 TranslationHelper 对象，包含 UI 交互方法和配置
+     * @type {Object}
+     */
     TranslationHelper = {
         exporting: false,
         _toggleRaw: ko.observable(false).extend({ boolean: null }),
@@ -263,7 +334,7 @@ class TranslationCore {
         },
 
         config: this.config,
-        Translation: this.Translation,
+        TranslationAPI: this.TranslationAPI,
         ExportTranslation: this.ExportTranslation,
         ImportTranslation: this.importTranslation,
         ImportAction: this.ImportAction,
@@ -271,21 +342,70 @@ class TranslationCore {
     };
 }
 
+/**
+ * * 汉化模块基类
+ * * * 定义模块生命周期和公共工具方法
+ * @abstract
+ */
 class BaseModule {
+    /** @type {TranslationCore} 核心控制器引用 */
     core = null;
+
+    /** @type {boolean} 模块是否被用户禁用 */
     disabled = false;
 
+    /** @type {string} 模块标识名称，用于注册和存储标识 （需与 CDN 上的 JSON 文件名一致 //TODO）*/
     name = "";
+
+    /** @type {string} 模块展示名称，用于 UI 面板显示 */
     displayName = "";
-    translation = [];
+
+    /** @type {string[]} 模块最终生成的 JSON 资源键名集合 */
+    resourceKeys = [];
+
+    /**
+     * 暴露给全局 TranslationAPI 的方法集合
+     * @type {Record<string, Function>}
+     */
     translationAPI = {};
 
+    /**
+     * 框架生命周期钩子：注入核心实例，并将当前模块 API 注册到全局。
+     * @param {TranslationCore} core
+     */
     injectCore(core) {
         this.core = core;
-        this.translation.forEach((translation) => (this.core.Translation[translation] = {}));
         Object.assign(this.core.TranslationAPI, this.translationAPI);
     }
 
+    /**
+     * * 核心工具方法：从缓存中解析 JSON，可选替换分隔符
+     * * * 子类应在 `#parser / parser` 阶段调用此方法初始化 `#dict`。
+     * @param {string} resourceKey 资源键名
+     * @param {boolean} [applyFormatter=false] 是否热重载分隔符
+     * @returns {Object} 解析后的 JSON 对象
+     */
+    parseResource(resourceKey, applyFormatter = false) {
+        let string = this.core.TranslationCache[resourceKey];
+        if (!string) {
+            return {};
+        }
+
+        if (applyFormatter) {
+            const formatter = this.core.config.Formatter;
+            const defaultFormatter = this.core.defaultConfig.Formatter;
+            if (formatter !== defaultFormatter) {
+                string = string.replace(new RegExp(defaultFormatter, "g"), formatter);
+            }
+        }
+        return JSON.parse(string);
+    }
+
+    /**
+     * * 框架生命周期钩子：模块初始化入口。
+     * * * 子类必须实现此方法，通常在此处调用 `#parser()` 和 `#hook()`。
+     * @abstract
+     */
     init() {
         throw new Error(`[${this.name}] 模块未实现 init() 方法`);
     }
@@ -294,28 +414,31 @@ class BaseModule {
 class TownModule extends BaseModule {
     name = "Town";
     displayName = "城镇";
-    translation = ["Town"];
+    resourceKeys = ["Town"];
+    #dict = { Town: {} };
 
     init() {
         this.#parser();
         this.#hook();
     }
     #parser() {
-        this.core.Translation.Town = JSON.parse(this.core.TranslationCache.Town);
+        this.#dict.Town = this.parseResource("Town", false);
     }
 
     translationAPI = {
-        Town: (townName) => {
+        Town: (townName, fallback = townName) => {
             if (this.disabled) {
                 return townName;
             }
-            return this.core.Translation.Town[townName] ?? townName;
+            return this.#dict.Town[townName] ?? fallback;
         },
     };
 
     #hook() {
         Object.values(TownList).forEach((t) => {
-            t.displayName = this.core.Translation.Town[t.name] ?? t.name;
+            Object.defineProperty(t, "displayName", {
+                get: () => this.translationAPI.Town(t.name),
+            });
         });
 
         $('[data-bind="text: player.town.name"]').attr(
@@ -325,14 +448,12 @@ class TownModule extends BaseModule {
 
         $("[data-town]").each((_, element) => {
             const name = $(element).attr("data-town");
-            $(element).attr("data-town", this.core.Translation.Town[name] ?? name);
+            $(element).attr("data-town", this.translationAPI.Town(name));
         });
 
         GameController.realShowMapTooltip = GameController.showMapTooltip;
         GameController.showMapTooltip = (tooltipText) => {
-            const translationTown = this.core.TranslationHelper.toggleRaw
-                ? tooltipText
-                : (this.core.Translation.Town[tooltipText] ?? tooltipText);
+            const translationTown = this.core.TranslationHelper.toggleRaw ? tooltipText : this.translationAPI.Town(tooltipText);
             return GameController.realShowMapTooltip(translationTown);
         };
     }
@@ -340,7 +461,7 @@ class TownModule extends BaseModule {
     exportData = () => {
         this.core.TranslationHelper.exporting = true;
         const json = Object.fromEntries(
-            Object.keys(TownList).map((townName) => [townName, this.core.Translation.Town[townName] ?? ""])
+            Object.keys(TownList).map((townName) => [townName, this.translationAPI.Town(townName, "")])
         );
         this.core.TranslationHelper.exporting = false;
         return json;
@@ -350,28 +471,41 @@ class TownModule extends BaseModule {
 class QuestLineModule extends BaseModule {
     name = "QuestLine";
     displayName = "任务线";
-    translation = ["QuestLine"];
+    resourceKeys = ["QuestLine"];
+    #dict = { QuestLine: {} };
 
     init() {
         this.parser();
         this.#hook();
     }
     parser = () => {
-        const formatter = this.core.config.Formatter;
-        const defaultFormatter = this.core.defaultConfig.Formatter;
-        const string =
-            formatter == defaultFormatter
-                ? this.core.TranslationCache.QuestLine
-                : this.core.TranslationCache.QuestLine.replace(new RegExp(defaultFormatter, "g"), formatter);
-        this.core.Translation.QuestLine = JSON.parse(string);
+        this.#dict.QuestLine = this.parseResource("QuestLine", true);
     };
 
     translationAPI = {
         QuestLine: (questLineName) => {
             if (this.disabled) {
+                return undefined;
+            }
+            return this.#dict.QuestLine[questLineName];
+        },
+        QuestLineName: (questLineName, fallback = questLineName) => {
+            if (this.disabled) {
                 return questLineName;
             }
-            return this.core.Translation.QuestLine[questLineName]?.name ?? questLineName;
+            return this.#dict.QuestLine[questLineName]?.name ?? fallback;
+        },
+        QuestLineDescription: (questlineName, description, fallback = description) => {
+            if (this.disabled) {
+                return description;
+            }
+            return this.#dict.QuestLine[questlineName]?.description?.[description] ?? fallback;
+        },
+        QuestDescription: (questlineName, questDescription, fallback = questDescription) => {
+            if (this.disabled) {
+                return questDescription;
+            }
+            return this.#dict.QuestLine[questlineName]?.descriptions?.[questDescription] ?? fallback;
         },
     };
 
@@ -380,31 +514,31 @@ class QuestLineModule extends BaseModule {
 
         QuestLine.prototype.addQuest = new Proxy(QuestLine.prototype.realAddQuest, {
             apply: (target, questline, [quest]) => {
-                const name = questline.name;
-                const translation = this.core.Translation.QuestLine[name];
+                const questlineName = questline.name;
+                const translation = this.translationAPI.QuestLine(questlineName);
 
                 if (translation) {
                     const description = quest.description;
-                    const displayDescription = translation.descriptions[description];
+                    const displayDescription = () => this.translationAPI.QuestDescription(questlineName, description);
 
-                    if (displayDescription) {
+                    if (displayDescription()) {
                         Object.defineProperty(quest, "description", {
                             get: () =>
                                 this.core.TranslationHelper.exporting || this.core.TranslationHelper.toggleRaw
                                     ? description
-                                    : displayDescription,
+                                    : displayDescription(),
                         });
                     }
                     if (quest instanceof MultipleQuestsQuest) {
                         quest.quests.forEach((q) => {
                             const qDesc = q.description;
-                            const qDisplayDesc = translation.descriptions[qDesc];
-                            if (qDisplayDesc) {
+                            const qDisplayDesc = () => this.translationAPI.QuestDescription(questlineName, qDesc);
+                            if (qDisplayDesc()) {
                                 Object.defineProperty(q, "description", {
                                     get: () =>
                                         this.core.TranslationHelper.exporting || this.core.TranslationHelper.toggleRaw
                                             ? qDesc
-                                            : qDisplayDesc,
+                                            : qDisplayDesc(),
                                 });
                             }
                         });
@@ -417,24 +551,25 @@ class QuestLineModule extends BaseModule {
         QuestLine = new Proxy(QuestLine, {
             construct: (target, args) => {
                 const questline = Reflect.construct(target, args);
-                const { name, _description } = questline;
-                const translation = this.core.Translation.QuestLine[name];
+                const { name: questlineName, _description: description } = questline;
+                // const translation = this.translationAPI.QuestLine(questlineName);
+                const displayName = this.translationAPI.QuestLineName(questlineName);
+                const displayDescription = this.translationAPI.QuestLineDescription(questlineName, description);
 
-                const displayName = translation?.name;
-                const displayDescription = translation?.description[_description];
-
-                Object.defineProperty(questline, "displayName", {
-                    get: () =>
-                        this.core.TranslationHelper.exporting || this.core.TranslationHelper.toggleRaw
-                            ? name
-                            : (displayName ?? name),
-                });
+                if (displayName) {
+                    Object.defineProperty(questline, "displayName", {
+                        get: () =>
+                            this.core.TranslationHelper.exporting || this.core.TranslationHelper.toggleRaw
+                                ? questlineName
+                                : displayName,
+                    });
+                }
 
                 if (displayDescription) {
                     Object.defineProperty(questline, "description", {
                         get: () =>
                             this.core.TranslationHelper.exporting || this.core.TranslationHelper.toggleRaw
-                                ? _description
+                                ? description
                                 : displayDescription,
                     });
                 }
@@ -448,7 +583,7 @@ class QuestLineModule extends BaseModule {
         this.core.TranslationHelper.exporting = true;
         const json = App.game.quests.questLines().reduce((obj, questline) => {
             const { name, _description } = questline;
-            const translation = this.core.Translation.QuestLine[name];
+            const translation = this.translationAPI.QuestLine(name);
 
             const subObj = {
                 name: translation?.name ?? "",
@@ -477,30 +612,34 @@ class QuestLineModule extends BaseModule {
 class NPCModule extends BaseModule {
     name = "NPC";
     displayName = "NPC";
-    translation = ["NPC", "NPCName", "NPCDialog"];
+    resourceKeys = ["NPC", "NPCName", "NPCDialog"];
+    #dict = { NPC: {}, NPCName: {}, NPCDialog: {} };
 
     init() {
         this.parser();
         this.#hook();
     }
     parser = () => {
-        const formatter = this.core.config.Formatter;
-        const defaultFormatter = this.core.defaultConfig.Formatter;
-        const string =
-            formatter == defaultFormatter
-                ? this.core.TranslationCache.NPC
-                : this.core.TranslationCache.NPC.replace(new RegExp(defaultFormatter, "g"), formatter);
-        this.core.Translation.NPC = JSON.parse(string);
-        this.core.Translation.NPCName = this.core.Translation.NPC.NPCName ?? {};
-        this.core.Translation.NPCDialog = this.core.Translation.NPC.NPCDialog ?? {};
+        this.#dict.NPC = this.parseResource("NPC", true);
+        this.#dict.NPCName = this.#dict.NPC.NPCName ?? {};
+        this.#dict.NPCDialog = this.#dict.NPC.NPCDialog ?? {};
     };
 
     translationAPI = {
-        NPC: (npcName) => {
+        get NPC() {
+            return this.NPCName;
+        },
+        NPCName: (npcName, fallback = npcName) => {
             if (this.disabled) {
                 return npcName;
             }
-            return this.core.Translation.NPCName[npcName] ?? npcName;
+            return this.#dict.NPCName[npcName] ?? fallback;
+        },
+        NPCDialog: (npcDialog, fallback = npcDialog) => {
+            if (this.disabled) {
+                return npcDialog;
+            }
+            return this.#dict.NPCDialog[npcDialog] ?? fallback;
         },
     };
 
@@ -512,10 +651,14 @@ class NPCModule extends BaseModule {
                     return;
                 }
                 Object.defineProperty(npc, "displayName", {
-                    get: () => this.core.Translation.NPCName[npc.name] ?? npc.name,
+                    get: () => {
+                        return this.core.TranslationHelper.exporting || this.core.TranslationHelper.toggleRaw
+                            ? npc.name
+                            : this.translationAPI.NPCName(npc.name);
+                    },
                 });
                 npc.rawDialog = npc.dialog;
-                npc.translatedDialog = npc.rawDialog?.map((d) => this.core.Translation.NPCDialog[d] ?? d);
+                npc.translatedDialog = npc.rawDialog?.map((d) => this.translationAPI.NPCDialog(d));
                 delete npc.dialog;
             });
 
@@ -529,11 +672,10 @@ class NPCModule extends BaseModule {
         });
 
         $("#townView button[data-bind='text: $data.name, click: () => NPCController.openDialog($data)']").each(function () {
-            this.dataset.bind =
-                "text: $data[TranslationHelper.toggleRaw ? 'name' : 'displayName'], click: () => NPCController.openDialog($data)";
+            this.dataset.bind = "text: $data.displayName, click: () => NPCController.openDialog($data)";
         });
         $("#npc-modal h5").each(function () {
-            this.dataset.bind = "text: $data[TranslationHelper.toggleRaw ? 'name' : 'displayName']";
+            this.dataset.bind = "text: $data.displayName";
         });
 
         this.core.TranslationHelper.ExportTranslation.NPC_format = this.NPC_format;
@@ -545,9 +687,9 @@ class NPCModule extends BaseModule {
             const npcs = town.npcs;
             if (npcs?.length > 0) {
                 obj[town.name] = npcs.map((npc) => {
-                    const subObj = { name: { [npc.name]: this.core.Translation.NPCName[npc.name] ?? "" } };
+                    const subObj = { name: { [npc.name]: this.translationAPI.NPCName(npc.name, "") } };
                     if (npc.dialog?.length > 0) {
-                        subObj.dialog = Object.fromEntries(npc.dialog.map((d) => [d, this.core.Translation.NPCDialog[d] ?? ""]));
+                        subObj.dialog = Object.fromEntries(npc.dialog.map((d) => [d, this.translationAPI.NPCDialog(d, "")]));
                     }
                     return subObj;
                 });
@@ -582,7 +724,8 @@ class NPCModule extends BaseModule {
 class AchievementModule extends BaseModule {
     name = "Achievement";
     displayName = "成就";
-    translation = ["Achievement", "AchievementName", "AchievementDescription", "AchievementHint"];
+    resourceKeys = ["Achievement", "AchievementName", "AchievementDescription", "AchievementHint"];
+    #dict = { Achievement: {}, AchievementName: {}, AchievementDescription: {}, AchievementHint: {} };
 
     // 增加结果缓存避免大量正则开销
     #cache = new Map();
@@ -597,31 +740,58 @@ class AchievementModule extends BaseModule {
         this.#cache.clear();
     };
     #parser() {
-        this.core.Translation.Achievement = JSON.parse(this.core.TranslationCache.Achievement);
-        this.core.Translation.AchievementName = this.core.Translation.Achievement.name ?? {};
-        this.core.Translation.AchievementDescription = this.core.Translation.Achievement.description ?? {};
-        this.core.Translation.AchievementHint = this.core.Translation.Achievement.hint ?? {};
+        this.#dict.Achievement = this.parseResource("Achievement", false);
+        this.#dict.AchievementName = this.#dict.Achievement.name ?? {};
+        this.#dict.AchievementDescription = this.#dict.Achievement.description ?? {};
+        this.#dict.AchievementHint = this.#dict.Achievement.hint ?? {};
 
-        this.core.Translation.AchievementNameRegs = Object.entries(this.core.Translation.Achievement.nameReg ?? {}).map(
+        this.#dict.AchievementNameRegs = Object.entries(this.#dict.Achievement.nameReg ?? {}).map(([reg, value]) => [
+            new RegExp(reg),
+            value,
+        ]);
+        this.#dict.AchievementDescriptionRegs = Object.entries(this.#dict.Achievement.descriptionReg ?? {}).map(
             ([reg, value]) => [new RegExp(reg), value]
         );
-        this.core.Translation.AchievementDescriptionRegs = Object.entries(
-            this.core.Translation.Achievement.descriptionReg ?? {}
-        ).map(([reg, value]) => [new RegExp(reg), value]);
     }
 
     translationAPI = {
-        /* Achievement: (achievementName) => {
+        get Achievement() {
+            return this.AchievementName;
+        },
+        AchievementName: (name, fallback = name) => {
             if (this.disabled) {
-                return achievementName;
+                return name;
             }
-            return this.core.Translation.AchievementName[achievementName] ?? achievementName;
-        }, */
+            return this.#dict.AchievementName[name] ?? fallback;
+        },
+        AchievementDescription: (description, fallback = description) => {
+            if (this.disabled) {
+                return description;
+            }
+            return this.#dict.AchievementDescription[description] ?? fallback;
+        },
+        AchievementHint: (hint, fallback = hint) => {
+            if (this.disabled) {
+                return hint;
+            }
+            return this.#dict.AchievementHint[hint] ?? fallback;
+        },
+        AchievementNameRegs: () => {
+            if (this.disabled) {
+                return [];
+            }
+            return this.#dict.AchievementNameRegs ?? [];
+        },
+        AchievementDescriptionRegs: () => {
+            if (this.disabled) {
+                return [];
+            }
+            return this.#dict.AchievementDescriptionRegs ?? [];
+        },
     };
 
     #hook() {
-        // TODO 目前成在游戏加载后动态生成，因此会读取到汉化道馆/联盟文本，导致生成的成就原文包含部分汉化内容、分隔符
-
+        // TODO 目前成就在游戏加载后动态生成，因此会读取到汉化道馆/联盟文本，导致生成的成就原文包含部分汉化内容、分隔符
         window.realAchievement = Achievement;
         window.Achievement = new Proxy(window.realAchievement, {
             construct: (target, args) => {
@@ -698,7 +868,7 @@ class AchievementModule extends BaseModule {
     }
 
     formatAchievement(text, type) {
-        const raw = this.core.Translation[`Achievement${type}`][text];
+        const raw = this.translationAPI[`Achievement${type}`](text, null);
         if (raw) {
             return raw;
         }
@@ -706,13 +876,13 @@ class AchievementModule extends BaseModule {
             return this.#cache.get(text);
         }
 
-        const [reg, value] = this.core.Translation[`Achievement${type}Regs`].find(([reg]) => reg.test(text)) ?? [];
-        const result = reg ? this.formatRegex(text, reg, value) : text;
+        const [reg, value] = this.translationAPI[`Achievement${type}Regs`]().find(([reg]) => reg.test(text)) ?? [];
+        const result = reg ? this.#formatRegex(text, reg, value) : text;
         this.#cache.set(text, result);
         return result;
     }
 
-    formatRegex(text, reg, value) {
+    #formatRegex(text, reg, value) {
         // TODO 解耦 目前游戏内含有2000多个成就，默认只读取10个，不会一次性读取全部成就 性能损失在可接受范围内
         const methods = {
             Town: (i) => this.core.TranslationAPI.Town(i),
@@ -723,10 +893,11 @@ class AchievementModule extends BaseModule {
             Route: (i) => this.core.TranslationAPI.Route(i, false),
             GymFormat: (i) => i.replace(/^ /, ""),
             GymFormatRegion: (i) => {
-                if (this.core.modules.Regions.disabled) {
+                const regionAllKeys = this.core.modules.Regions.translationAPI.GetRegionAllKeys();
+                if (regionAllKeys.length == 0) {
                     return i;
                 }
-                const GymRegionReg = new RegExp(`^${Object.keys(this.core.Translation.RegionAll).join("|")}`);
+                const GymRegionReg = new RegExp(`^${regionAllKeys.join("|")}`);
                 return i.replace(GymRegionReg, (m) => this.core.TranslationAPI.RegionAll(m));
             },
         };
@@ -753,69 +924,82 @@ class AchievementModule extends BaseModule {
 class RegionModule extends BaseModule {
     name = "Regions";
     displayName = "地区";
-    translation = ["Regions", "Region", "RegionFull", "SubRegion"];
+    resourceKeys = ["Regions", "Region", "RegionFull", "SubRegion"];
+    #dict = { Regions: {}, Region: {}, RegionFull: {}, SubRegion: {}, RegionAll: {} };
 
     init() {
         this.#parser();
         this.#hook();
     }
     #parser() {
-        this.core.Translation.Regions = JSON.parse(this.core.TranslationCache.Regions);
-        this.core.Translation.Region = this.core.Translation.Regions.Region ?? {};
-        this.core.Translation.RegionFull = Object.fromEntries(
-            Object.entries(this.core.Translation.Region).map(([region, name]) => [region, `${name}地区`])
+        this.#dict.Regions = this.parseResource("Regions", false);
+        this.#dict.Region = this.#dict.Regions.Region ?? {};
+        this.#dict.RegionFull = Object.fromEntries(
+            Object.entries(this.#dict.Region).map(([region, name]) => [region, `${name}地区`])
         );
-        this.core.Translation.SubRegion = this.core.Translation.Regions.SubRegion;
-        this.core.Translation.RegionAll = Object.assign({}, this.core.Translation.RegionFull, this.core.Translation.SubRegion);
+        this.#dict.SubRegion = this.#dict.Regions.SubRegion;
+        this.#dict.RegionAll = Object.assign({}, this.#dict.RegionFull, this.#dict.SubRegion);
     }
 
     translationAPI = {
-        Region: (region) => {
+        Region: (region, fallback = region) => {
             if (this.disabled) {
                 return region;
             }
             if (typeof region === "string") {
-                return this.core.Translation.Region[region] ?? region;
+                return this.#dict.Region[region] ?? fallback;
             }
             if (typeof region === "number") {
                 const regionName = GameConstants.camelCaseToString(GameConstants.Region[region]);
-                return this.core.Translation.Region[regionName] ?? regionName;
+                return this.#dict.Region[regionName] ?? (fallback == region ? regionName : fallback);
             }
         },
-        RegionFull: (region) => {
+        RegionFull: (region, fallback = region) => {
             if (this.disabled) {
                 return region;
             }
             if (typeof region === "string") {
-                return this.core.Translation.RegionFull[region] ?? region;
+                return this.#dict.RegionFull[region] ?? fallback;
             }
             if (typeof region === "number") {
                 const regionName = GameConstants.camelCaseToString(GameConstants.Region[region]);
-                return this.core.Translation.RegionFull[regionName] ?? regionName;
+                return this.#dict.RegionFull[regionName] ?? (fallback == region ? regionName : fallback);
             }
         },
-        SubRegion: (subregion) => {
+        SubRegion: (subregion, fallback = subregion) => {
             if (this.disabled) {
                 return subregion;
             }
-            return this.core.Translation.SubRegion[subregion] ?? subregion;
+            return this.#dict.SubRegion[subregion] ?? fallback;
         },
-        RegionAll: (regionName) => {
+        RegionAll: (regionName, fallback = regionName) => {
             if (this.disabled) {
                 return regionName;
             }
-            return this.core.Translation.RegionAll[regionName] ?? regionName;
+            return this.#dict.RegionAll[regionName] ?? fallback;
+        },
+        GetRegionAllKeys: () => {
+            if (this.disabled) {
+                return [];
+            }
+            return Object.keys(this.#dict.RegionAll ?? {});
+        },
+        GetRegionKeys: () => {
+            if (this.disabled) {
+                return [];
+            }
+            return Object.keys(this.#dict.Region ?? {});
         },
     };
 
     #hook() {
         $("[href='#mapBody'] > span").attr(
             "data-bind",
-            "text: `城镇地图 (${TranslationHelper.Translation.RegionFull[GameConstants.camelCaseToString(GameConstants.Region[player.region])]})`"
+            "text: `城镇地图 (${TranslationHelper.TranslationAPI.RegionFull(GameConstants.camelCaseToString(GameConstants.Region[player.region]))})`"
         );
         $("#subregion-travel-buttons > button.btn.btn-sm.btn-primary").attr(
             "data-bind",
-            "click: () => SubRegions.openModal(), text: `副区域旅行 (${TranslationHelper.Translation.RegionAll[player.subregionObject()?.name]})`"
+            "click: () => SubRegions.openModal(), text: `副区域旅行 (${TranslationHelper.TranslationAPI.RegionAll(player.subregionObject()?.name)})`"
         );
     }
 }
@@ -823,7 +1007,8 @@ class RegionModule extends BaseModule {
 class RouteModule extends BaseModule {
     name = "Route";
     displayName = "道路";
-    translation = ["Route"];
+    resourceKeys = ["Route"];
+    #dict = { Route: {} };
 
     #regionRouteReg = new RegExp(`^MISSING_REGION$`);
     #waterRoute = {
@@ -840,16 +1025,36 @@ class RouteModule extends BaseModule {
         this.#hook();
     }
     #parser() {
-        this.core.Translation.Route = JSON.parse(this.core.TranslationCache.Route);
+        this.#dict.Route = this.parseResource("Route", false);
     }
 
     translationAPI = {
-        Route: (...args) => this.formatRouteName(...args),
+        Route: (routeName, fallback = routeName) => {
+            if (this.disabled) {
+                return routeName;
+            }
+            if (this.#dict.Route[routeName]) {
+                return this.#dict.Route[routeName];
+            }
+
+            if (this.#regionRouteReg.test(routeName)) {
+                return routeName.replace(this.#regionRouteReg, (match, region, number) => {
+                    const regionName = this.core.TranslationAPI.Region(region ?? "");
+                    const formatNumber = number.replace(/\d/g, (digit) =>
+                        String.fromCharCode(digit.charCodeAt(0) + 0xff10 - 0x30)
+                    );
+                    const routeType = this.#waterRoute[region]?.includes(+number) ? "水路" : "道路";
+                    return `${regionName}${formatNumber}号${routeType}`;
+                });
+            }
+            return fallback;
+        },
     };
 
     #hook() {
-        if (Object.keys(this.core.Translation.Region).length > 0) {
-            this.#regionRouteReg = new RegExp(`^(${Object.keys(this.core.Translation.Region).join("|")})? ?Route (\\d+)$`);
+        const regionKeys = this.core.modules.Regions.translationAPI.GetRegionKeys();
+        if (regionKeys.length > 0) {
+            this.#regionRouteReg = new RegExp(`^(${regionKeys.join("|")})? ?Route (\\d+)$`);
         }
 
         Routes.real_getName = Routes.getName;
@@ -859,20 +1064,20 @@ class RouteModule extends BaseModule {
             }
 
             const rawRegionName = GameConstants.camelCaseToString(GameConstants.Region[region]);
-            const regionName = this.core.Translation.Region[rawRegionName] ?? rawRegionName;
-            const regionFullName = this.core.Translation.RegionFull[rawRegionName] ?? rawRegionName;
+            const regionName = this.core.modules.Regions.translationAPI.Region(rawRegionName);
+            const regionFullName = this.core.modules.Regions.translationAPI.RegionFull(rawRegionName);
 
             const resultRoute = Routes.regionRoutes.find(
                 (routeData) => routeData.region === region && routeData.number === route
             );
-            let routeName = this.formatRouteName(resultRoute?.routeName) ?? "Unknown Route";
+            let routeName = this.translationAPI.Route(resultRoute?.routeName);
 
             if (alwaysIncludeRegionName && !routeName.includes(regionName)) {
                 routeName = `${regionFullName}-${routeName}`;
             } else if (includeSubRegionName && resultRoute) {
-                const subRegionName =
-                    this.core.Translation.SubRegion[SubRegions.getSubRegionById(region, resultRoute.subRegion ?? 0).name] ??
-                    "Unknown SubRegion";
+                const subRegionName = this.core.modules.Regions.translationAPI.SubRegion(
+                    SubRegions.getSubRegionById(region, resultRoute.subRegion ?? 0).name
+                );
                 if (!routeName.includes(subRegionName)) {
                     routeName = `${subRegionName}-${routeName}`;
                 }
@@ -881,32 +1086,12 @@ class RouteModule extends BaseModule {
         };
     }
 
-    formatRouteName = (routeName, returnRaw = true) => {
-        if (this.disabled) {
-            return routeName;
-        }
-        if (this.core.Translation.Route[routeName]) {
-            return this.core.Translation.Route[routeName];
-        }
-
-        if (this.#regionRouteReg.test(routeName)) {
-            return routeName.replace(this.#regionRouteReg, (match, region, number) => {
-                const regionName = this.core.Translation.Region[region] ?? region ?? "";
-                const formatNumber = number.replace(/\d/g, (digit) => String.fromCharCode(digit.charCodeAt(0) + 0xff10 - 0x30));
-                const routeType = this.#waterRoute[region]?.includes(+number) ? "水路" : "道路";
-                return `${regionName}${formatNumber}号${routeType}`;
-            });
-        }
-        return returnRaw ? routeName : undefined;
-    };
-
     exportData = () => {
         this.core.TranslationHelper.exporting = true;
         const json = Routes.regionRoutes.reduce((obj, { routeName }) => {
-            if (this.#regionRouteReg.test(routeName)) {
-                return obj;
+            if (!this.#regionRouteReg.test(routeName)) {
+                obj[routeName] = this.translationAPI.Route(routeName, "");
             }
-            obj[routeName] = this.formatRouteName(routeName, false) ?? "";
             return obj;
         }, {});
         this.core.TranslationHelper.exporting = false;
@@ -917,41 +1102,36 @@ class RouteModule extends BaseModule {
 class GymModule extends BaseModule {
     name = "Gym";
     displayName = "道馆";
-    translation = ["Gym"];
+    resourceKeys = ["Gym"];
+    #dict = { Gym: {} };
 
     init() {
         this.parser();
         this.#hook();
     }
     parser = () => {
-        const formatter = this.core.config.Formatter;
-        const defaultFormatter = this.core.defaultConfig.Formatter;
-        const string =
-            formatter == defaultFormatter
-                ? this.core.TranslationCache.Gym
-                : this.core.TranslationCache.Gym.replace(new RegExp(defaultFormatter, "g"), formatter);
-        this.core.Translation.Gym = JSON.parse(string);
+        this.#dict.Gym = this.parseResource("Gym", true);
     };
 
     translationAPI = {
-        Gym: (leaderName) => {
+        Gym: (leaderName, fallback = leaderName) => {
             if (this.disabled) {
                 return leaderName;
             }
-            return this.core.Translation.Gym[leaderName] ?? leaderName;
+            return this.#dict.Gym[leaderName] ?? fallback;
         },
     };
 
     #hook() {
         Object.values(GymList).forEach((gym) => {
             const rawLeaderName = gym.leaderName;
-            const leaderName = this.core.Translation.Gym[rawLeaderName] ?? rawLeaderName;
+            const leaderName = this.translationAPI.Gym(rawLeaderName);
             const rawButtonText = gym.buttonText;
 
             const buttonText = () =>
                 rawButtonText === rawLeaderName.replace(/\d/, "") + "'s Gym"
                     ? leaderName.replace(/\d/, "") + "的道馆"
-                    : (this.core.Translation.Gym[rawButtonText] ?? rawButtonText);
+                    : this.translationAPI.Gym(rawButtonText);
 
             Object.defineProperties(gym, {
                 leaderName: {
@@ -988,9 +1168,9 @@ class GymModule extends BaseModule {
         this.core.TranslationHelper.exporting = true;
         const json = {};
         Object.values(GymList).forEach((gym) => {
-            json[gym.rawLeaderName] = this.core.Translation.Gym[gym.rawLeaderName] ?? "";
+            json[gym.rawLeaderName] = this.translationAPI.Gym(gym.rawLeaderName, "");
             if (!gym.rawButtonText.endsWith("'s Gym")) {
-                json[gym.rawButtonText] = this.core.Translation.Gym[gym.rawButtonText] ?? "";
+                json[gym.rawButtonText] = this.translationAPI.Gym(gym.rawButtonText, "");
             }
         });
         this.core.TranslationHelper.exporting = false;
@@ -1171,7 +1351,7 @@ class UIModule extends BaseModule {
                     const start = Date.now();
 
                     const result = await that.core
-                        .fetchResource("Town", true)
+                        .fetchTest()
                         .then(() => `测试结果：成功<br>${Date.now() - start}ms`)
                         .catch(() => `测试结果：超时<br>不够科学`);
 
@@ -1191,8 +1371,9 @@ class UIModule extends BaseModule {
 class PokemonModule extends BaseModule {
     name = "Pokemon";
     displayName = "宝可梦";
-    translation = ["Pokemon"];
+    resourceKeys = ["Pokemon"];
     #cache = new Map();
+    #dict = { Pokemon: {} };
 
     init = () => {
         this.parser();
@@ -1200,21 +1381,15 @@ class PokemonModule extends BaseModule {
     };
 
     parser = () => {
-        const formatter = this.core.config.Formatter;
-        const defaultFormatter = this.core.defaultConfig.Formatter;
-        const string =
-            formatter == defaultFormatter
-                ? this.core.TranslationCache.Pokemon
-                : this.core.TranslationCache.Pokemon.replace(new RegExp(defaultFormatter, "g"), formatter);
-        this.core.Translation.Pokemon = JSON.parse(string);
+        this.#dict.Pokemon = this.parseResource("Pokemon", true);
     };
 
     translationAPI = {
-        Pokemon: (pokemon) => {
+        Pokemon: (pokemon, fallback = pokemon) => {
             if (this.disabled) {
                 return pokemon;
             }
-            return this.core.Translation.Pokemon[pokemon] ?? pokemon;
+            return this.#dict.Pokemon[pokemon] ?? fallback;
         },
         PokemonDisplayName: (englishName) => {
             if (!englishName) {
@@ -1226,7 +1401,7 @@ class PokemonModule extends BaseModule {
             const pureComputed‌ = ko.pureComputed(() => {
                 return this.core.TranslationHelper.exporting || this.core.TranslationHelper.toggleRaw
                     ? englishName
-                    : (this.core.Translation.Pokemon[englishName] ?? englishName);
+                    : this.translationAPI.Pokemon(englishName);
             });
             this.#cache.set(englishName, pureComputed‌);
             return pureComputed‌;
@@ -1247,7 +1422,7 @@ class PokemonModule extends BaseModule {
 
     exportData = () => {
         this.core.TranslationHelper.exporting = true;
-        const json = Object.fromEntries(pokemonMap.map((p) => [p.name, this.core.Translation.Pokemon[p.name] ?? ""]));
+        const json = Object.fromEntries(pokemonMap.map((p) => [p.name, this.translationAPI.Pokemon(p.name, "")]));
         this.core.TranslationHelper.exporting = false;
         return json;
     };
@@ -1256,10 +1431,12 @@ class PokemonModule extends BaseModule {
 class ItemModule extends BaseModule {
     name = "Item";
     displayName = "道具";
-    translation = ["Item", "ItemName", "ItemDescription", "KeyItem"];
+    resourceKeys = ["Item", "ItemName", "ItemDescription", "KeyItem"];
+    #dict = { Item: {}, ItemName: {}, ItemDescription: {}, KeyItem: {} };
+
     #desMapper = {
         // TODO
-        BerryItem: (item) => `获取一个 ${item.berryName}<br/><i>(仅限无高级道具挑战模式)</i>`,
+        BerryItem: (item) => `获取1个 ${item.berryName}<br/><i>(仅限无高级道具挑战模式)</i>`,
         BuyKeyItem: () => "",
         FluteItem: (item) => {
             item.getDescription = function () {
@@ -1273,7 +1450,7 @@ class ItemModule extends BaseModule {
         MegaStoneItem: (item) => {
             const description = item._description || `一块${this.core.TranslationAPI.Pokemon(item.basePokemon)}的Mega进化石`;
             item.getDescription = () => {
-                return this.core.Translation.ItemDescription[description] ?? description;
+                return this.translationAPI.ItemDescription(description);
             };
             return () => description;
         },
@@ -1300,39 +1477,33 @@ class ItemModule extends BaseModule {
     };
 
     parser = () => {
-        const formatter = this.core.config.Formatter;
-        const defaultFormatter = this.core.defaultConfig.Formatter;
-        const string =
-            formatter == defaultFormatter
-                ? this.core.TranslationCache.Item
-                : this.core.TranslationCache.Item.replace(new RegExp(defaultFormatter, "g"), formatter);
-        this.core.Translation.Item = JSON.parse(string);
-        this.core.Translation.ItemName = this.core.Translation.Item.ItemName ?? {};
-        this.core.Translation.ItemDescription = this.core.Translation.Item.ItemDescription ?? {};
-        this.core.Translation.KeyItem = this.core.Translation.Item.KeyItem ?? {};
+        this.#dict.Item = this.parseResource("Item", true);
+        this.#dict.ItemName = this.#dict.Item.ItemName ?? {};
+        this.#dict.ItemDescription = this.#dict.Item.ItemDescription ?? {};
+        this.#dict.KeyItem = this.#dict.Item.KeyItem ?? {};
     };
 
     translationAPI = {
         get Item() {
             return this.ItemName;
         },
-        ItemName: (itemName) => {
+        ItemName: (itemName, fallback = itemName) => {
             if (this.disabled) {
                 return itemName;
             }
-            return this.core.Translation.ItemName[itemName] ?? itemName;
+            return this.#dict.ItemName[itemName] ?? fallback;
         },
-        ItemDescription: (itemDescription) => {
+        ItemDescription: (itemDescription, fallback = itemDescription) => {
             if (this.disabled) {
                 return itemDescription;
             }
-            return this.core.Translation.ItemDescription[itemDescription] ?? itemDescription;
+            return this.#dict.ItemDescription[itemDescription] ?? fallback;
         },
-        KeyItem: (keyItemString) => {
+        KeyItem: (keyItemString, fallback = keyItemString) => {
             if (this.disabled) {
                 return keyItemString;
             }
-            return this.core.Translation.KeyItem[keyItemString] ?? keyItemString;
+            return this.#dict.KeyItem[keyItemString] ?? fallback;
         },
     };
 
@@ -1448,7 +1619,7 @@ class ItemModule extends BaseModule {
             const filters = ["PokemonItem"];
             const type = i.constructor.name;
             if (!filters.includes(type)) {
-                obj[i.displayName] = this.core.Translation.ItemName[i.displayName] ?? "";
+                obj[i.displayName] = this.translationAPI.ItemName(i.displayName, "");
             }
             return obj;
         }, {});
@@ -1456,14 +1627,14 @@ class ItemModule extends BaseModule {
         const description = Object.values(ItemList).reduce((obj, i) => {
             const type = i.constructor.name;
             if (!(type in this.#desMapper)) {
-                obj[i.description] = this.core.Translation.ItemDescription[i.description] ?? "";
+                obj[i.description] = this.translationAPI.ItemDescription(i.description, "");
             }
             return obj;
         }, {});
 
         const keyItem = App.game.keyItems.itemList.reduce((obj, i) => {
-            obj[i.displayName] = this.core.Translation.KeyItem[i.displayName] ?? "";
-            obj[i.description] = this.core.Translation.KeyItem[i.description] ?? "";
+            obj[i.displayName] = this.translationAPI.KeyItem(i.displayName, "");
+            obj[i.description] = this.translationAPI.KeyItem(i.description, "");
             return obj;
         }, {});
         const json = {
