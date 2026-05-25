@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         宝可梦点击（Poke Clicker）内核汉化脚本
 // @namespace    PokeClickerHelper
-// @version      0.10.25-i
+// @version      0.10.25-j
 // @description  采用内核汉化形式，目前汉化范围：所有任务线、NPC、成就、地区、城镇、道路、道馆、宝可梦、道具
 // @author       DreamNya, ICEYe, iktsuarpok, 我是谁？, 顶不住了, 银☆星, TerVoid
 // @match        https://www.pokeclicker.com
@@ -19,7 +19,7 @@
 // ==/UserScript==
 /* global TownList, QuestLine:true, Notifier, MultipleQuestsQuest, App, NPC, NPCController, GameController, ko,
    GameConstants, SubRegions, Routes, GymList, Gym, Achievement, SecretAchievement, AchievementHandler, AchievementTracker,
-   pokemonMap, PokeballItem, PokemonType, ItemList, UndergroundItemValueType, UndergroundItem, KeyItem
+   pokemonMap, PokeballItem, PokemonType, ItemList, UndergroundItemValueType, UndergroundItem, KeyItem, TemporaryBattleList, TemporaryBattle
 */
 
 /**
@@ -453,7 +453,12 @@ class TownModule extends BaseModule {
 
         GameController.realShowMapTooltip = GameController.showMapTooltip;
         GameController.showMapTooltip = (tooltipText) => {
-            const translationTown = this.core.TranslationHelper.toggleRaw ? tooltipText : this.translationAPI.Town(tooltipText);
+            const translationTown = this.core.TranslationHelper.toggleRaw
+                ? tooltipText
+                : (this.translationAPI.Town(tooltipText, null) ??
+                  // 兼容临时对战的tooltip
+                  // TODO 解耦
+                  this.core.modules.TemporaryBattle.translationAPI.TemporaryBattleName(tooltipText));
             return GameController.realShowMapTooltip(translationTown);
         };
     }
@@ -1646,6 +1651,105 @@ class ItemModule extends BaseModule {
         return json;
     };
 }
+class TemporaryBattleModule extends BaseModule {
+    name = "TemporaryBattle";
+    displayName = "临时对战";
+    resourceKeys = ["TemporaryBattle", "TemporaryBattleName", "TemporaryBattleDefeatMessage"];
+    #dict = { TemporaryBattle: {}, TemporaryBattleName: {}, TemporaryBattleDefeatMessage: {} };
+
+    init() {
+        this.parser();
+        this.#hook();
+    }
+    parser = () => {
+        this.#dict.TemporaryBattle = this.parseResource("TemporaryBattle", true);
+        this.#dict.TemporaryBattleName = this.#dict.TemporaryBattle.TemporaryBattleName ?? {};
+        this.#dict.TemporaryBattleDefeatMessage = this.#dict.TemporaryBattle.TemporaryBattleDefeatMessage ?? {};
+    };
+
+    translationAPI = {
+        get TemporaryBattle() {
+            return this.TemporaryBattleName;
+        },
+        TemporaryBattleName: (battleName, fallback = battleName) => {
+            if (this.disabled) {
+                return battleName;
+            }
+            return this.#dict.TemporaryBattleName[battleName] ?? fallback;
+        },
+        TemporaryBattleDefeatMessage: (defeatMessage, fallback = defeatMessage) => {
+            if (this.disabled) {
+                return defeatMessage;
+            }
+            return this.#dict.TemporaryBattleDefeatMessage[defeatMessage] ?? fallback;
+        },
+    };
+
+    #hook() {
+        Object.values(TemporaryBattleList).forEach((battle) => {
+            if (battle.defeatMessage) {
+                battle._defeatMessage = battle.defeatMessage;
+                delete battle.defeatMessage;
+            }
+        });
+
+        const that = this;
+
+        TemporaryBattle.prototype.real_getDisplayName = TemporaryBattle.prototype.getDisplayName;
+        TemporaryBattle.prototype.getDisplayName = function () {
+            const rawDisplayName = this.real_getDisplayName();
+            if (that.core.TranslationHelper.exporting || that.core.TranslationHelper.toggleRaw) {
+                return rawDisplayName;
+            } else {
+                return that.translationAPI.TemporaryBattleName(rawDisplayName);
+            }
+        };
+
+        TemporaryBattle.prototype.text = function () {
+            const displayName = this.getDisplayName();
+            if (that.core.TranslationHelper.exporting || that.core.TranslationHelper.toggleRaw) {
+                return `Fight ${displayName}`;
+            } else {
+                return `对战 ${displayName}`;
+            }
+        };
+
+        Object.defineProperty(TemporaryBattle.prototype, "defeatMessage", {
+            get() {
+                return that.core.TranslationHelper.exporting || that.core.TranslationHelper.toggleRaw
+                    ? this._defeatMessage
+                    : that.translationAPI.TemporaryBattleDefeatMessage(this._defeatMessage);
+            },
+        });
+    }
+
+    exportData = () => {
+        // this.core.TranslationHelper.exporting = true;
+        const { TemporaryBattleName, TemporaryBattleDefeatMessage } = Object.values(TemporaryBattleList).reduce(
+            (obj, battle) => {
+                const battleName = battle.real_getDisplayName();
+                const defeatMessage = battle._defeatMessage;
+                obj.TemporaryBattleName[battleName] = this.translationAPI.TemporaryBattleName(battleName, "");
+                if (defeatMessage) {
+                    obj.TemporaryBattleDefeatMessage[defeatMessage] = this.translationAPI.TemporaryBattleDefeatMessage(
+                        defeatMessage,
+                        ""
+                    );
+                }
+                return obj;
+            },
+            { TemporaryBattleName: {}, TemporaryBattleDefeatMessage: {} }
+        );
+        [...document.querySelectorAll('rect[data-bind*="TemporaryBattleList"]')].forEach((rect) => {
+            const tooltip = rect.getAttribute("data-bind").match(/GameController\.showMapTooltip\('(.*?)'\)/)?.[1];
+            if (tooltip) {
+                TemporaryBattleName[tooltip] = this.translationAPI.TemporaryBattleName(tooltip, "");
+            }
+        });
+        // this.core.TranslationHelper.exporting = false
+        return { TemporaryBattleName, TemporaryBattleDefeatMessage };
+    };
+}
 
 const Core = new TranslationCore();
 
@@ -1656,6 +1760,7 @@ Core.registerModule(new RouteModule());
 Core.registerModule(new TownModule());
 Core.registerModule(new NPCModule());
 Core.registerModule(new GymModule());
+Core.registerModule(new TemporaryBattleModule());
 Core.registerModule(new QuestLineModule());
 Core.registerModule(new AchievementModule());
 

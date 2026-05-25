@@ -7,6 +7,7 @@ const QuestLine_Item = [];
 const QuestLine_Regions = [];
 const QuestLine_Route = [];
 const QuestLine_Town = [];
+const QuestLine_TemporatyBattle = [];
 
 Object.entries(Object.assign(...Object.values(t.QuestLine).map((i) => ({ ...i.description, ...i.descriptions })))).forEach(
     ([rawEN, rawCN]) => {
@@ -46,5 +47,12 @@ Object.entries(Object.assign(...Object.values(t.QuestLine).map((i) => ({ ...i.de
                 QuestLine_Town.push([en, cn, rawEN, rawCN]);
             }
         });
+        Object.entries({ ...t.TemporaryBattle.TemporaryBattleName, ...t.TemporaryBattle.TemporaryBattleDefeatMessage }).forEach(
+            ([en, cn]) => {
+                if (rawEN.includes(en) && !rawCN.includes(cn)) {
+                    QuestLine_TemporatyBattle.push([en, cn, rawEN, rawCN]);
+                }
+            }
+        );
     }
 );

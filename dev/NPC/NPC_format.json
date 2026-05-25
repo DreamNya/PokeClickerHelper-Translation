@@ -139,7 +139,7 @@
         },
         {
             "name": {
-                "Super Nerd Jovan": "理科男公孝"
+                "Super Nerd Jovan": "理科男·公孝"
             },
             "dialog": {
                 "In my spare time I like to play this kickass browser game. It takes ages to get all the best stuff.": "我闲暇时喜欢玩这个超棒的浏览器游戏。要花很长时间才能得到所有最好的东西。",
@@ -152,7 +152,7 @@
                 "Mewtwo": "超梦"
             },
             "dialog": {
-                "You were wise to seek me out. Howard Clifford has been deceiving you. He is the one making the R drug, and....": "你很明智找到我。霍华德克利福德一直在欺骗你。他就是制造R药剂的那个人，还有……",
+                "You were wise to seek me out. Howard Clifford has been deceiving you. He is the one making the R drug, and....": "你很明智找到我。霍华德·克利福德一直在欺骗你。他就是制造R药剂的那个人，还有……",
                 "<i>A sphere of energy envelops Mewtwo, and he is dragged away by some sort of helicopter. The helicopter has a logo on it: Clifford Industries!</i>": "<i>一个能量球包围了超梦，它被一种直升机拖走了。直升机上有一个标志：克利福德工业！</i>"
             }
         },
@@ -162,7 +162,7 @@
             },
             "dialog": {
                 "Thank you for your help. I have little to offer you in return, but perhaps this will help.": "谢谢你的帮助。我没有什么可以回报你的，但这或许会有所帮助。",
-                "I found Detective Pikachu's partner some days ago injured on the side of the road, and have nursed him back to health. I hope this reunion will suffice.": "几天前我发现名侦探皮卡丘的搭档在路边受伤了，我把他照顾好了。我希望这次团聚能够足够。"
+                "I found Detective Pikachu's partner some days ago injured on the side of the road, and have nursed him back to health. I hope this reunion will suffice.": "几天前我发现名侦探·皮卡丘的搭档在路边受伤了，我把他照顾好了。我希望这次团聚能够足够。"
             }
         },
         {
@@ -271,7 +271,7 @@
                 "Bill's Grandpa": "正辉的爷爷"
             },
             "dialog": {
-                "Did you find all of the Santa Jynx?": "你找到所有的圣诞老人迷唇姐吗？",
+                "Did you find all of the Santa Jynx?": "你找到所有的圣诞老人·迷唇姐吗？",
                 "I hope they don't come back!": "我希望它们不要再回来了！"
             }
         }
@@ -326,7 +326,7 @@
         },
         {
             "name": {
-                "Channeler Karina": "祈祷师佳代子"
+                "Channeler Karina": "祈祷师·佳代子"
             },
             "dialog": {
                 "I know a lot of useful stuff. Like the odds of finding a shiny Pokémon or how to increase Click Attack.": "我知道很多有用的东西。比如找到闪光宝可梦的几率或者如何增加点击攻击。",
@@ -407,14 +407,14 @@
                 "Informant": "告密者"
             },
             "dialog": {
-                "<i>The Mr. Mime signals to you that this is an illicit drug called R. It is frequently used in the underground fighting rings near the Battle Frontier.</i>": "<i>魔墙人偶向你示意，这是一种叫做R的非法药物。它经常在对战开拓区附近的地下战斗圈中使用。</i>"
+                "<i>The Mr. Mime signals to you that this is an illicit drug called R. It is frequently used in the underground fighting rings near the Battle Frontier.</i>": "<i>魔墙人偶向你示意，这是一种叫做Ｒ的非法药物。它经常在对战开拓区附近的地下对战场中使用。</i>"
             }
         }
     ],
     "Fuchsia City": [
         {
             "name": {
-                "Youngster Wendy": "少年壬媞"
+                "Youngster Wendy": "少年·壬媞"
             },
             "dialog": {
                 "There's been some recent sightings of roaming Pokémon on {ROUTE_NAME}!": "最近在{ROUTE_NAME}上发现了一些漫游宝可梦的目击情况！"
@@ -434,7 +434,7 @@
     "Safari Zone": [
         {
             "name": {
-                "Bug Catcher Michel": "捕虫少年米歇尔"
+                "Bug Catcher Michel": "捕虫少年·米歇尔"
             },
             "dialog": {
                 "I heard there was a stone hidden in the Safari Zone that makes Pinsir stronger!": "我听说在狩猎地带隐藏着一块可以使凯罗斯变得更强的石头！",
@@ -554,7 +554,7 @@
     "Mt. Ember": [
         {
             "name": {
-                "Team Rocket Grunts": "火箭队手下"
+                "Team Rocket Grunts": "火箭队手下们"
             },
             "dialog": {
                 "Whew, punched through at last. Let's go treasure hunting! Any treasure we find, we haul back to the Warehouse, understood?": "呼，终于打通了。我们去寻宝吧！我们找到的任何宝物，都要运回仓库，明白了吗？",
@@ -636,25 +636,25 @@
             "dialog": {
                 "<i>Welcome to Client Island!</i>": "<i>欢迎来到客户端专属岛！</i>",
                 "<i>This island is exclusive to those dedicated to reducing server load by downloading the client.</i>": "<i>这个岛屿专门为那些通过下载客户端来减轻服务器负载的人而设。</i>",
-                "<i>Without your support, Red Spearow here wouldn't have any time to relax!</i>": "<i>没有你的支持，这里的赤色烈雀就没有时间放松！</i>",
+                "<i>Without your support, Red Spearow here wouldn't have any time to relax!</i>": "<i>没有你的支持，这里的赤色·烈雀就没有时间放松！</i>",
                 "<i>Please drop by the Gift Shop on your way out to make a whole new line of friends.</i>": "<i>在你离开的时候，请顺便来礼品店，结交一整排新朋友。</i>"
             }
         },
         {
             "name": {
-                "Red Spearow": "赤色烈雀"
+                "Red Spearow": "赤色·烈雀"
             },
             "dialog": {
                 "<b><i>SQUAWK! SQUAWK!</i></b>": "<b><i>喳喳！喳喳！</i></b>",
                 "...": "...",
-                "<i>The Red Spearow seems to appreciate your visit.</i>": "<i>赤色烈雀似乎对你的来访表示感激。</i>"
+                "<i>The Red Spearow seems to appreciate your visit.</i>": "<i>赤色·烈雀似乎对你的来访表示感激。</i>"
             }
         }
     ],
     "Six Island": [
         {
             "name": {
-                "Bug Catcher John": "捕虫少年约翰"
+                "Bug Catcher John": "捕虫少年·约翰"
             },
             "dialog": {
                 "Apparently some kid released one of his Pokémon around here. That Pokémon, its partner, and for whatever reason, the Legendary Beasts from Johto have been seen roaming on {ROUTE_NAME}.": "显然有个小孩在这附近释放了他的一个宝可梦。那个宝可梦、它的伙伴，以及不知何故，来自城都地区的传说兽被看到在{ROUTE_NAME}徘徊。"
@@ -783,7 +783,7 @@
                 "Ash Ketchum": "小智"
             },
             "dialog": {
-                "Mewtwo has created an army of Clones. Please help me fight them, I have to save Pikachu!": "超梦制造了一个克隆宝可梦的军队。请帮助我对抗它们，我必须拯救皮卡丘！"
+                "Mewtwo has created an army of Clones. Please help me fight them, I have to save Pikachu!": "超梦制造了一个克隆宝可梦军团。请帮助我对抗它们，我必须拯救皮卡丘！"
             }
         },
         {
@@ -791,7 +791,7 @@
                 "Ash Ketchum": "小智"
             },
             "dialog": {
-                "There are still Clones left in Mewtwos army! Help me fight them!": "超梦的军队中还有剩下的克隆宝可梦！帮我战斗吧！"
+                "There are still Clones left in Mewtwos army! Help me fight them!": "超梦军团中还有剩下的克隆宝可梦！帮我战斗吧！"
             }
         },
         {
@@ -959,7 +959,7 @@
         },
         {
             "name": {
-                "Kimono Girl Zuki": "和服女孩小玉"
+                "Kimono Girl Zuki": "和服女孩·小玉"
             },
             "dialog": {
                 "Professor Elm tells me you are a master trainer. Please, show me your skills by training your Pokémon.": "空木博士告诉我你是一个大师训练家。请通过训练你的宝可梦展示你的技巧。"
@@ -980,7 +980,7 @@
         },
         {
             "name": {
-                "Hiker Daniel": "登山男勇吾"
+                "Hiker Daniel": "登山男·勇吾"
             },
             "dialog": {
                 "The PokéManiacs in Union Cave are restless. They have been ranting and raving about a weekly visitor.": "互连洞中的怪兽狂们很不安。他们一直在大肆声讨关于一个每周的访客。",
@@ -1096,27 +1096,27 @@
         },
         {
             "name": {
-                "Howard Clifford": "霍华德克利福德"
+                "Howard Clifford": "霍华德·克利福德"
             },
             "dialog": {
-                "I am Howard Clifford, CEO of Clifford Industries. I hear you have been investigating both my company, and a mysterious drug called R.": "我是霍华德克利福德，克利福德工业的首席执行官。我听说你在调查我的公司，以及一种叫做R的神秘药物。",
+                "I am Howard Clifford, CEO of Clifford Industries. I hear you have been investigating both my company, and a mysterious drug called R.": "我是霍华德·克利福德，克利福德工业的首席执行官。我听说你在调查我的公司，以及一种叫做R的神秘药物。",
                 "I have reason to believe that a high ranking official in the company is manufacturing this drug, but have been unable to get to the bottom of it myself.": "我有理由相信公司里的一个高级官员在制造这种药物，但我自己一直无法查清楚。",
                 "There is a journalist in Hearthome City who may be able to help us both. Please make contact with her and report anything you find back to me.": "在家缘市有一位记者可能能帮助我们俩。请与她联系，并向我报告你发现的任何信息。"
             }
         },
         {
             "name": {
-                "Howard Clifford": "霍华德克利福德"
+                "Howard Clifford": "霍华德·克利福德"
             },
             "dialog": {
-                "You are too late to stop me! The R drug puts Pokémon in a frenzied state, and allows us to control them with the right equipment! You led me straight to Mewtwo, and now I will take control of the most powerful Pokémon in the world!": "你来阻止我已经太晚了！R药物会让宝可梦进入狂暴状态，并且我们可以通过正确的设备来控制它们！你直接把我引到了超梦面前，现在我将控制世界上最强大的宝可梦！",
+                "You are too late to stop me! The R drug puts Pokémon in a frenzied state, and allows us to control them with the right equipment! You led me straight to Mewtwo, and now I will take control of the most powerful Pokémon in the world!": "你来阻止我已经太晚了！R药物会让宝可梦进入暴走状态，并且我们可以通过正确的设备来控制它们！你直接把我引到了超梦面前，现在我将控制世界上最强大的宝可梦！",
                 "<i>Howard puts on a headset and pushes a button. The energy sphere containing Mewtwo comes into view, and it has a crazed look in its eyes. Howard pushes a button on his headset and slumps back in his chair.</i>": "<i>霍华德戴上头戴式耳机并按下一个按钮。包含超梦的能量球出现在视野中，它的眼中闪烁着疯狂的光芒。霍华德在他的耳机上再按一个按钮，然后瘫倒在椅子上。</i>",
                 "<i>Mewtwo makes eye contact with you, and you hear Howard's voice in your mind, laughing maniacally. An armed man comes into the room, and warns you not to move.</i>": "<i>超梦与你对视，你在脑海中听到霍华德疯狂地笑声。一个武装的人走进房间，警告你不要动。</i>"
             }
         },
         {
             "name": {
-                "Howard Clifford": "霍华德克利福德"
+                "Howard Clifford": "霍华德·克利福德"
             },
             "dialog": {
                 "UNLIMITED POWER! YOU'LL NEVER STOP ME!": "【无限的力量！你永远也阻止不了我！】"
@@ -1124,7 +1124,7 @@
         },
         {
             "name": {
-                "Kimono Girl Kuni": "和服女孩小桃"
+                "Kimono Girl Kuni": "和服女孩·小桃"
             },
             "dialog": {
                 "I'm supposed to meet my sisters, but the streets here just aren't safe! Can you protect me from Team Rocket?": "我本应该去见我的姐妹们，但这里的街道实在不安全！你能保护我免受火箭队的伤害吗？"
@@ -1154,7 +1154,7 @@
         },
         {
             "name": {
-                "Pokéfan Derek": "发烧友俱乐部见栄晴"
+                "Pokéfan Derek": "发烧友俱乐部·见栄晴"
             },
             "dialog": {
                 "I saw it! Did you see it?! I saw you go in there! I don't know what you did in the Burned Tower, but three great Beasts came running out of there!": "我看到了！你看到了吗？！我看到你进去了！我不知道你在烧焦塔里做了什么，但有三只伟大的兽从那里跑了出来！",
@@ -1164,7 +1164,7 @@
         },
         {
             "name": {
-                "Kimono Girl Miki": "和服女孩小鹃"
+                "Kimono Girl Miki": "和服女孩·小鹃"
             },
             "dialog": {
                 "My sisters Zuki and Naoko tell me you have helped them, and I thank you. Please help find my other two sisters, Sayo and Kuni. Please accept this as a token of my gratitude.": "我的姐妹小玉和小梅告诉我你帮了她们，我感谢你。请帮忙找到我的另外两个姐妹，樱花和小桃。请接受这个作为我感激之情的象征。"
@@ -1260,7 +1260,7 @@
     "Blackthorn City": [
         {
             "name": {
-                "Pokéfan Trevor": "发烧友俱乐部多罗巴"
+                "Pokéfan Trevor": "发烧友俱乐部·文雄"
             },
             "dialog": {
                 "On the news, they are getting more reports of roaming Pokémon appearing on {ROUTE_NAME}!": "在新闻上，他们得到更多关于漫游宝可梦出现在{ROUTE_NAME}的报道！"
@@ -1332,7 +1332,7 @@
         },
         {
             "name": {
-                "Kimono Girl Naoko": "和服女孩小梅"
+                "Kimono Girl Naoko": "和服女孩·小梅"
             },
             "dialog": {
                 "I seem to have lost my way in the forest. Can you show me the way out?": "我似乎在森林里迷路了。你能指给我出路吗？"
@@ -1390,7 +1390,7 @@
     "Ice Path": [
         {
             "name": {
-                "Kimono Girl Sayo": "和服女孩樱花"
+                "Kimono Girl Sayo": "和服女孩·樱花"
             },
             "dialog": {
                 "Excuse me! I'm stuck out here on the ice, can you give me a quick push?": "打扰一下！我被困在冰上了，你能给我一个小推吗？"
@@ -1498,7 +1498,7 @@
             },
             "dialog": {
                 "Hey trainer, look at these footprints! Huh, I’ve never seen footprints like these before… They look like they came from two different Pokémon, and I saw two blurs, one red and one blue, quickly fly away just as I exited the Pokémon Center.": "嘿，训练家，看看这些脚印！哼，我以前从未见过这样的脚印……它们看起来像是来自两只不同的宝可梦，当我刚走出宝可梦中心时，我看到两个模糊的身影，一个红色一个蓝色，迅速飞走了。",
-                "They were flying really fast, I bet Pokémon that fast will only challenge trainers who have proven they are as strong as Champion Wallace...": "它们飞得非常快，我敢打赌那么快的宝可梦只会挑战那些证明自己和冠军米可利一样强大的训练家……"
+                "They were flying really fast, I bet Pokémon that fast will only challenge trainers who have proven they are as strong as Champion Wallace...": "它们飞得非常快，我敢打赌那么快的宝可梦只会挑战那些证明自己和冠军·米可利一样强大的训练家……"
             }
         }
     ],
@@ -1540,7 +1540,7 @@
     "Slateport City": [
         {
             "name": {
-                "Reporter Gabby": "记者玛莉"
+                "Reporter Gabby": "记者·玛莉"
             },
             "dialog": {
                 "Our sources indicate that roaming Pokémon are gathering on {ROUTE_NAME}!": "我们的消息来源显示，漫游的宝可梦正在{ROUTE_NAME}聚集！"
@@ -1860,7 +1860,7 @@
         },
         {
             "name": {
-                "Gym Leader Wallace": "道馆馆主米可利"
+                "Gym Leader Wallace": "道馆馆主·米可利"
             },
             "dialog": {
                 "Hello again, $playername$. I can see by the look on your face that this is not just a social call.": "你好，再次见到你，$playername$。从你的表情我可以看出这不仅仅是一次社交拜访。",
@@ -1872,7 +1872,7 @@
     "Battle Frontier": [
         {
             "name": {
-                "Cool Trainer Dillan": "精英训练家杜栗"
+                "Cool Trainer Dillan": "精英训练家·杜栗"
             },
             "dialog": {
                 "Hey newcomer! I see you are the Hoenn Champion. You must be an amazing Trainer!": "嘿，新来的！我看你是丰缘地区的冠军。你一定是个了不起的训练家！",
@@ -1933,7 +1933,7 @@
     "Southern Island": [
         {
             "name": {
-                "Surfer Dave": "冲浪运动员厦门"
+                "Surfer Dave": "冲浪运动员·厦门"
             },
             "dialog": {
                 "What's up? I got here using my Eon Ticket, what about you?": "怎么了？我是用无限船票来到这里的，你呢？"
@@ -1997,7 +1997,7 @@
         },
         {
             "name": {
-                "Mayor Es Cade": "市长巴克雷"
+                "Mayor Es Cade": "市长·巴克雷"
             },
             "dialog": {
                 "Ah, you must be travelers! Welcome to Phenac City! I am Es Cade, the Mayor. Now, you wanted to see me? Is there something that I may be able to assist you with?": "啊，你们一定是旅行者！欢迎来到矽铍市！我是巴克雷，市长。现在，你们想见我吗？有什么我可以帮忙的吗？",
@@ -2018,7 +2018,7 @@
         },
         {
             "name": {
-                "Mayor Trest": "市长达格德"
+                "Mayor Trest": "市长·达格德"
             },
             "dialog": {
                 "Thank you, $playername$, for saving our town from Team Cipher once again.": "感谢你，$playername$，再次从Cipher团队手中拯救了我们的城镇。",
@@ -2083,7 +2083,7 @@
     "Realgam Tower": [
         {
             "name": {
-                "Mayor Es Cade": "市长巴克雷"
+                "Mayor Es Cade": "市长·巴克雷"
             },
             "dialog": {
                 "My, my. That certainly was a battle worth seeing. I must be honest with you. I never imagined that you would get this far.": "哎呀，那绝对是一场值得一看的战斗。我必须对你诚实。我从未想象过你会走这么远。",
@@ -2248,7 +2248,7 @@
             },
             "dialog": {
                 "<i>A large mural depicting  some sort of oceanic whale-like Pokémon. It seems to be engaged in a battle.</i>": "<i>一幅描绘着某种海洋鲸鱼般宝可梦的大型壁画。它似乎正在参与一场战斗。</i>",
-                "<i>You see someone else looking at the mural: Steven Stone!</i>": "<i>你看到有另一个人在观看壁画：兹伏奇大吾！</i>"
+                "<i>You see someone else looking at the mural: Steven Stone!</i>": "<i>你看到有另一个人在观看壁画：兹伏奇·大吾！</i>"
             }
         },
         {
@@ -2429,7 +2429,7 @@
     "Cave of Origin": [
         {
             "name": {
-                "Gym Leader Wallace": "道馆馆主米可利"
+                "Gym Leader Wallace": "道馆馆主·米可利"
             },
             "dialog": {
                 "Ah, so you are the new trainer in the region? I've heard tales of your exploits. My name is Wallace. I was once the Gym Leader of Sootopolis, but something came up. So now, I've entrusted my mentor Juan with the Gym's operation.": "啊，所以你是这个地区的新训练家吗？我听说过你的英勇事迹。我的名字是米可利。我曾是琉璃市的道馆馆主，但发生了一些事情。所以现在，我已将道馆的运营交给了我的导师亚当。",
@@ -2439,7 +2439,7 @@
         },
         {
             "name": {
-                "Gym Leader Wallace": "道馆馆主米可利"
+                "Gym Leader Wallace": "道馆馆主·米可利"
             },
             "dialog": {
                 "My eyes didn't deceive me. Thanks to your help, Sootopolis...": "我的眼睛没有欺骗我。多亏了你的帮助，琉璃市……",
@@ -2631,14 +2631,14 @@
             },
             "dialog": {
                 "Yow! You're too tough!": "哇！你太强了！",
-                "I know the Plusle you're looking for, it got taken by the infamous dance machine, Miror B.": "我知道你在找的那只正电拍拍，它被臭名昭著的舞王镜之队长抓走了。",
+                "I know the Plusle you're looking for, it got taken by the infamous dance machine, Miror B.": "我知道你在找的那只正电拍拍，它被臭名昭著的舞王迪斯裘抓走了。",
                 "You don't want to mess with him, I promise! Oh? You do?": "我保证，你不会想和他过不去的！哦？你想吗？",
                 "Well, his hideout is in the Pyrite Cave. But you shouldn't go there.": "嗯，他的藏身处在黄铁洞窟。但你不应该去那里。"
             }
         },
         {
             "name": {
-                "Cipher Commander Exol": "暗影战斗队长达卡查"
+                "Cipher Commander Exol": "暗影战斗队长·达卡查"
             },
             "dialog": {
                 "Your victory doesn't matter, we got what we came for!": "你的胜利无关紧要，我们得到了我们来此的东西！",
@@ -2653,7 +2653,7 @@
                 "Free Duking's Plusle": "释放银马的正电拍拍"
             },
             "dialog": {
-                "<i>Miror B. flees, leaving Plusle behind. Plusle runs off in the direction of Pyrite Town.</i>": "<i>镜之队长逃跑了，留下正电拍拍。正电拍拍朝着黄铁镇的方向跑去。</i>"
+                "<i>Miror B. flees, leaving Plusle behind. Plusle runs off in the direction of Pyrite Town.</i>": "<i>迪斯裘逃跑了，留下正电拍拍。正电拍拍朝着黄铁镇的方向跑去。</i>"
             }
         }
     ],
@@ -2696,7 +2696,7 @@
     "Cipher Lab": [
         {
             "name": {
-                "Cipher Admin Lovrina": "暗影干部爱丽娜"
+                "Cipher Admin Lovrina": "暗影干部·爱丽娜"
             },
             "dialog": {
                 "Ooh, I so hate to say this! I can't beat you right now. Master Greevil will so be cross with me but… But that's okay.": "哦，我真的很不想这么说！我现在打不过你。格里维尔大师会对我很生气，但……但那没关系。",
@@ -2720,7 +2720,7 @@
     "Phenac Stadium": [
         {
             "name": {
-                "Cipher Admin Snattle": "暗影干部瓦资尔"
+                "Cipher Admin Snattle": "暗影干部·瓦资尔"
             },
             "dialog": {
                 "How is this possible?! I've never seen a trainer so strong! But, no matter! Surely I've bought Gorigan enough time.": "这怎么可能？！我从未见过如此强大的训练家！但是，没关系！我肯定为果力刚争取到了足够的时间。",
@@ -2877,7 +2877,7 @@
     "Eterna City": [
         {
             "name": {
-                "Lass Caroline": "迷你裙丽莎"
+                "Lass Caroline": "迷你裙·丽莎"
             },
             "dialog": {
                 "Oh, you came from the Forest! That Old Chateau is so creepy, isn’t it? I’ve heard that trainers that catch the weird ghost in the TV have found ghosts in other appliances. Even lawnmowers!": "哦，你是从森林来的！那个森之洋馆真的很可怕，不是吗？我听说那些在电视里抓到奇怪幽灵的训练家还在其他家电里发现了幽灵。甚至是割草机！"
@@ -2916,10 +2916,10 @@
         },
         {
             "name": {
-                "Lucy Stevens": "露西史蒂文斯"
+                "Lucy Stevens": "露西·史蒂文斯"
             },
             "dialog": {
-                "Who sent you to talk to me? Howard Clifford himself? That's a little suspicious, but you seem trustworthy enough.": "是谁派你来跟我说话的？霍华德克利福德本人？这有点可疑，但你看起来足够值得信任。",
+                "Who sent you to talk to me? Howard Clifford himself? That's a little suspicious, but you seem trustworthy enough.": "是谁派你来跟我说话的？霍华德·克利福德本人？这有点可疑，但你看起来足够值得信任。",
                 "I've been doing some research on this R compound, and have reason to believe it is being manufactured or used in research at the P2 Lab in Unova.": "我一直在研究这种R化合物，有理由相信它正在合众地区的P2实验室中被制造或用于研究。",
                 "We should investigate!": "我们应该去调查一下！"
             }
@@ -3105,7 +3105,7 @@
     "Fight Area": [
         {
             "name": {
-                "Ace Trainer Quinn": "精英训练家德泽"
+                "Ace Trainer Quinn": "精英训练家·德泽"
             },
             "dialog": {
                 "Something amazing happened on top of Mt. Coronet. We could see it all the way from here. I'm sure everyone in the entire region saw it.": "在天冠山顶发生了一些不可思议的事。我们能一直从这里看到它。我相信整个地区的每个人都看到了。",
@@ -3138,7 +3138,7 @@
     "Survival Area": [
         {
             "name": {
-                "Hiker Kevin": "登山男炭男"
+                "Hiker Kevin": "登山男·炭男"
             },
             "dialog": {
                 "I spotted a bunch of roaming Pokémon on {ROUTE_NAME}!": "我在{ROUTE_NAME}发现了一群漫游的宝可梦！"
@@ -3295,7 +3295,7 @@
                 "Witness the battle": "见证战斗"
             },
             "dialog": {
-                "<i>The Red Genesect and a powerful Pokémon you don't recognize exchange energy blasts. The Red Genesect flees the battle, heading east.</i>": "<i>红色盖诺赛克特和一个你不认识的强大宝可梦交换能量爆炸。红色盖诺赛克特逃离了战斗，向东方飞去。</i>"
+                "<i>The Red Genesect and a powerful Pokémon you don't recognize exchange energy blasts. The Red Genesect flees the battle, heading east.</i>": "<i>赤红的盖诺赛克特和一个你不认识的强大宝可梦交换能量爆炸。赤红的盖诺赛克特逃离了战斗，向东方飞去。</i>"
             }
         }
     ],
@@ -3530,8 +3530,8 @@
                 "Shadow Triad": "黑暗铁三角"
             },
             "dialog": {
-                "Listen well! We swore to be loyal to Lord Ghetsis since he saved us! The only thing we want is the world Lord Ghetsis desires! Even if we lose, Lord Ghetsis simply has to win...": "好好听着！自从他救了我们，我们就发誓忠于盖希斯大人！我们唯一想要的就是盖希斯大人渴望的世界！即使我们输了，盖希斯大人只需要赢……",
-                "The only thing you can do is watch Lord Ghetsis use Kyurem to freeze Unova solid. That's all...": "你唯一能做的就是看着盖希斯大人使用酋雷姆将合众地区冻成冰块。就这样……"
+                "Listen well! We swore to be loyal to Lord Ghetsis since he saved us! The only thing we want is the world Lord Ghetsis desires! Even if we lose, Lord Ghetsis simply has to win...": "好好听着！自从他救了我们，我们就发誓忠于魁奇思大人！我们唯一想要的就是魁奇思大人渴望的世界！即使我们输了，魁奇思大人只需要赢……",
+                "The only thing you can do is watch Lord Ghetsis use Kyurem to freeze Unova solid. That's all...": "你唯一能做的就是看着魁奇思大人使用酋雷姆将合众地区冻成冰块。就这样……"
             }
         }
     ],
@@ -3670,7 +3670,7 @@
                 "Colress": "阿克罗玛"
             },
             "dialog": {
-                "So you defeated Ghetsis. Interesting. You must be a very strong trainer.": "所以你打败了盖希斯。有意思。你一定是一个非常强大的训练家。",
+                "So you defeated Ghetsis. Interesting. You must be a very strong trainer.": "所以你打败了魁奇思。有意思。你一定是一个非常强大的训练家。",
                 "A rare Pokémon is hiding somewhere inside this abandoned laboratory. You can catch it if you want. I have no interest in it.": "一个稀有的宝可梦藏在这个废弃实验室的某个地方。如果你想，你可以捕捉它。我对它不感兴趣。",
                 "However, I do have an interest in you! I want to taste your power. Defeat me, and I'll let you search for the rare Pokémon.": "然而，我对你很感兴趣！我想试试你的实力。打败我，我就让你去寻找那只稀有的宝可梦。",
                 "I'll be waiting for you inside.": "我会在里面等你。"
@@ -3678,7 +3678,7 @@
         },
         {
             "name": {
-                "Investigate the P2 Laboratory": "调查P2实验室"
+                "Investigate the P2 Laboratory": "调查Ｐ２实验室"
             },
             "dialog": {
                 "<i>A bright red Pokémon flies past you at a high speed, heading west.</i>": "<i>一只鲜红色的宝可梦以高速飞过你身边，向西方飞去。</i>"
@@ -3752,7 +3752,7 @@
         },
         {
             "name": {
-                "Sage Chen": "僧侣Chen"
+                "Sage Chen": "僧侣·Chen"
             },
             "dialog": {
                 "Ever since growing old I'm no longer the Pokémon Trainer that I used to be. Now I always like to keep my garden full of Kasib Berries.": "自从长大以后，我不再是以前的宝可梦训练家了。现在我总是喜欢让我的花园里长满Kasib树果。",
@@ -4048,7 +4048,7 @@
     "Laverre City": [
         {
             "name": {
-                "Furisode Girl Katherine": "长袖和服少女华莲"
+                "Furisode Girl Katherine": "长袖和服少女·华莲"
             },
             "dialog": {
                 "Don't you find Goomy to be an interesting Pokémon? I certainly think so, even though it isn't a problem for my Pokémon~": "你不觉得黏黏宝是一个有趣的宝可梦吗？我当然这么认为，尽管它对我的宝可梦来说不是问题~",
@@ -4057,7 +4057,7 @@
         },
         {
             "name": {
-                "Hex Maniac Aster": "灵异迷汐嘉娜"
+                "Hex Maniac Aster": "灵异迷·汐嘉娜"
             },
             "dialog": {
                 "I'm shocked... You have a Pokédex, but you still don't know... you really don't know anything about Pokémon connected to Gengar, do you?": "我震惊了...你有一本宝可梦图鉴，但你仍然不知道...你真的对与耿鬼有关的宝可梦一无所知，对吧？",
@@ -4068,7 +4068,7 @@
         },
         {
             "name": {
-                "Hex Maniac Aster": "灵异迷汐嘉娜"
+                "Hex Maniac Aster": "灵异迷·汐嘉娜"
             },
             "dialog": {
                 "Some Pokémon evolve when exposed to a Linking Cord, or sent through a trade.": "一些宝可梦在接触联系绳或通过交易后会进化。",
@@ -4130,7 +4130,7 @@
     "Anistar City": [
         {
             "name": {
-                "Hex Maniac Melanie": "灵异迷珂莱特"
+                "Hex Maniac Melanie": "灵异迷·珂莱特"
             },
             "dialog": {
                 "The spirits tell me roaming Pokémon have been spotted on {ROUTE_NAME}!": "精神告诉我，漫游的宝可梦已经在{ROUTE_NAME}被发现了！"
@@ -4151,7 +4151,7 @@
     "Couriway Town": [
         {
             "name": {
-                "Old Gentleman Harold": "老绅士哈罗德"
+                "Old Gentleman Harold": "老绅士·哈罗德"
             },
             "dialog": {
                 "I love going on walks at <b>dusk</b>. It's my favourite part of the day, everything's so calm...": "<b>黄昏</b>时分散步是我一天中最喜欢的时刻，一切都那么平静……",
@@ -4225,7 +4225,7 @@
         },
         {
             "name": {
-                "Bug Catcher Elliot": "捕虫少年明彦"
+                "Bug Catcher Elliot": "捕虫少年·明彦"
             },
             "dialog": {
                 "I heard there was a stone hidden in the Friend Safari that makes Scizor stronger!": "我听说在朋友狩猎隐藏着一块能让巨钳螳螂变得更强的石头！",
@@ -4294,7 +4294,7 @@
     "Team Flare Secret HQ": [
         {
             "name": {
-                "Team Flare Lysandre": "闪焰队弗拉达利"
+                "Team Flare Lysandre": "闪焰队·弗拉达利"
             },
             "dialog": {
                 "The ultimate weapon's flower has finally bloomed above the soil. Don't you find its beauty captivating? As we speak, it draws its energy from the Legendary Pokémon.": "终极武器的花终于在土壤上绽放了。难道你不觉得它的美丽迷人吗？正如我们所说，它从传说的宝可梦那里吸取能量。",
@@ -4305,7 +4305,7 @@
         },
         {
             "name": {
-                "Team Flare Boss Lysandre": "闪焰队老大弗拉达利"
+                "Team Flare Boss Lysandre": "闪焰队老大·弗拉达利"
             },
             "dialog": {
                 "What a startling development! I never would've thought you were really a chosen one!": "多么令人震惊的发展！我从未想过你真的是被选中的人！",
@@ -4385,23 +4385,23 @@
     "Iki Town": [
         {
             "name": {
-                "Kahuna Hala": "岛屿之王哈拉"
+                "Kahuna Hala": "岛屿之王·哈拉"
             },
             "dialog": {
                 "Welcome to Alola!": "欢迎来到阿罗拉！",
                 "Here we don't have gyms. We have the Island Challenge. On each of our four islands you will complete one or more trials.": "这里我们没有道馆。我们进行的是岛屿挑战。在我们的四个岛屿上，你将完成一个或多个考验。",
                 "After completing all of an island's trials, you will battle that island's kahuna in a Grand trial.": "完成一个岛屿的所有考验后，你将在一场大考验中与那个岛屿的岛屿之王进行战斗。",
-                "This island only has one trial: Captain Ilima's trial in Verdant Cavern, below the Melemele Woods. Come back here after clearing that challenge for your Grand trial battle.": "这个岛屿只有一个考验：位于美乐美乐森林下的葱郁洞窟中的队长伊利马的考验。完成那个挑战后再回到这里进行你的大考验战斗。"
+                "This island only has one trial: Captain Ilima's trial in Verdant Cavern, below the Melemele Woods. Come back here after clearing that challenge for your Grand trial battle.": "这个岛屿只有一个考验：位于美乐美乐森林下的葱郁洞窟中的队长·伊利马的考验。完成那个挑战后再回到这里进行你的大考验战斗。"
             }
         },
         {
             "name": {
-                "Kahuna Hala": "岛屿之王哈拉"
+                "Kahuna Hala": "岛屿之王·哈拉"
             },
             "dialog": {
                 "Greetings, $playername$. May I help you with something? Oh, you're looking for things called Silvally Memories? Something like this one?": "问候，$playername$。我能帮你做些什么吗？哦，你在找被称为银伴战兽存储碟的东西？像这样的东西吗？",
                 "<img src=\"assets/images/items/quest/Fighting_Memory_Silvally.png\">": "<img src=\"assets/images/items/quest/Fighting_Memory_Silvally.png\">",
-                "I found that while getting back here after helping Ilima in the Verdant Cavern. If you need it, I can give it to you. Here it is. Oh, also Kahuna Olivia told me she found one of these on Akala Island somewhere. Maybe you should go and ask her for it too. She'll probably give it to you as she also doesn't know what it is.": "我在帮助伊利马在葱郁洞窟之后回到这里时发现了这个。如果你需要，我可以给你。就是这个。哦，还有，岛屿之王丽姿告诉我她在阿卡拉岛的某个地方发现了这样一个。也许你也应该去问问她。她可能也会把它给你，因为她也不知道这是什么。"
+                "I found that while getting back here after helping Ilima in the Verdant Cavern. If you need it, I can give it to you. Here it is. Oh, also Kahuna Olivia told me she found one of these on Akala Island somewhere. Maybe you should go and ask her for it too. She'll probably give it to you as she also doesn't know what it is.": "我在帮助伊利马在葱郁洞窟之后回到这里时发现了这个。如果你需要，我可以给你。就是这个。哦，还有，岛屿之王·丽姿告诉我她在阿卡拉岛的某个地方发现了这样一个。也许你也应该去问问她。她可能也会把它给你，因为她也不知道这是什么。"
             }
         },
         {
@@ -4450,7 +4450,7 @@
     "Melemele Woods": [
         {
             "name": {
-                "Kahuna Hala": "岛屿之王哈拉"
+                "Kahuna Hala": "岛屿之王·哈拉"
             },
             "dialog": {
                 "Dooot doo doo, just a kahuna on a stroll to the laguna. ♪": "Dooot doo doo，只是去戏水潟湖散步的路上的一个岛屿之王。♪"
@@ -4506,12 +4506,12 @@
             },
             "dialog": {
                 "Congratulations once again. Looker told me he wants to take us to a great restaurant to celebrate. I don't know how he knows any restaurants around here, we've only just arrived.": "再次祝贺你。帅哥告诉我他想带我们去一家很棒的餐厅庆祝。我不知道他怎么会知道这附近有什么餐厅，我们才刚到。",
-                "It doesn't matter though. There is no rest for us. Captain Mina is here with news, but she insists on battling you before she'll tell us anything.": "不过这无关紧要。我们没有休息的时间。队长茉莉带来了消息，但她坚持要与你战斗后才肯告诉我们任何事情。"
+                "It doesn't matter though. There is no rest for us. Captain Mina is here with news, but she insists on battling you before she'll tell us anything.": "不过这无关紧要。我们没有休息的时间。队长·茉莉带来了消息，但她坚持要与你战斗后才肯告诉我们任何事情。"
             }
         },
         {
             "name": {
-                "Captain Mina": "队长茉莉"
+                "Captain Mina": "队长·茉莉"
             },
             "dialog": {
                 "Still in tip top shape I see. Good. That means you're strong enough to take out this monster I heard about on Akala Island.": "看来你还是状态极佳。很好。这意味着你足够强大，可以去对付我在阿卡拉岛听说的那个怪物。",
@@ -4521,7 +4521,7 @@
         },
         {
             "name": {
-                "Kahuna Nanu": "队长默丹"
+                "Kahuna Nanu": "队长·默丹"
             },
             "dialog": {
                 "...": "...",
@@ -4532,7 +4532,7 @@
         },
         {
             "name": {
-                "Kahuna Nanu": "队长默丹"
+                "Kahuna Nanu": "队长·默丹"
             },
             "dialog": {
                 "...": "...",
@@ -4570,7 +4570,7 @@
             },
             "dialog": {
                 "Akala Island has three trials.": "阿卡拉岛有三次考验。",
-                "Captain Lana's trial in Brooklet Hill, Captain Kiawe's trial in Wela Volcano Park and Captain Mallow's trial in Lush Jungle.": "队长水莲的考验在潺潺之丘，队长卡奇的考验在维拉火山公园，队长玛奥的考验在树荫丛林。",
+                "Captain Lana's trial in Brooklet Hill, Captain Kiawe's trial in Wela Volcano Park and Captain Mallow's trial in Lush Jungle.": "队长·水莲的考验在潺潺之丘，队长·卡奇的考验在维拉火山公园，队长·玛奥的考验在树荫丛林。",
                 "For what it's worth, I say don't go to any of those places. Too wet, too hot and too... jungly. Why not stay here? Have a coffee! Enjoy the city!": "不管怎样，我建议不要去那些地方。太湿、太热还有太……丛林化了。为什么不留在这里呢？喝杯咖啡！享受城市生活！",
                 "Or go to Konikoni City down south. You might even meet our kahuna there!": "或者去往南边的可霓可市。你甚至可能在那里遇见我们的岛屿之王！"
             }
@@ -4628,7 +4628,7 @@
     "Paniola Town": [
         {
             "name": {
-                "Actor Meredith": "剧团成员云雀"
+                "Actor Meredith": "剧团成员·云雀"
             },
             "dialog": {
                 "I love Oricorio. I can tell you all about it!": "我喜欢花舞鸟。我可以告诉你所有关于它的事情！",
@@ -4662,7 +4662,7 @@
     "Konikoni City": [
         {
             "name": {
-                "Kahuna Olivia": "岛屿之王丽姿"
+                "Kahuna Olivia": "岛屿之王·丽姿"
             },
             "dialog": {
                 "What do you mean Grand trials are just like gym battles? It's a totally different thing!": "你是说大考验就像是道馆战斗一样吗？这完全是两码事！",
@@ -4671,7 +4671,7 @@
         },
         {
             "name": {
-                "Kahuna Olivia": "岛屿之王丽姿"
+                "Kahuna Olivia": "岛屿之王·丽姿"
             },
             "dialog": {
                 "Hey, kiddo. What are you doing here? Just visiting Akala Island? Cus y'know lots of tourists come here to see the Battle Royal. So, what're you doing here? Looking for something?": "嘿，小家伙。你在这儿干嘛？就来参观阿卡拉岛？因为你知道很多游客来这里看皇家对战。那么，你在这儿干嘛？找点什么吗？",
@@ -4684,7 +4684,7 @@
     "Aether Paradise": [
         {
             "name": {
-                "Assistant Branch Chief Wicke": "副分部长碧珂"
+                "Assistant Branch Chief Wicke": "副分部长·碧珂"
             },
             "dialog": {
                 "Some very rare Pokémon have been sighted on {ROUTE_NAME}. I hope we can learn more about them.": "在{ROUTE_NAME}上发现了一些非常稀有的宝可梦。我希望我们能了解更多关于它们的信息。"
@@ -4692,7 +4692,7 @@
         },
         {
             "name": {
-                "Aether Branch Chief Faba": "以太分部长扎奥博"
+                "Aether Branch Chief Faba": "以太分部长扎·奥博"
             },
             "dialog": {
                 "Oh, welcome $playername$, the Champion of Alola! I see you <i>still</i> haven't lost that title. You're a pretty... <i>worthy</i> trainer, aren't you? Anyways, I think you should come visit us another time we're... er.. busy! Yes, we're extremely busy right now... ": "哦，欢迎你，$playername$，阿罗拉地区的冠军！我看你<i>仍然</i>没有失去那个头衔。你是个相当……<i>值得尊敬的</i>训练家，对吧？无论如何，我认为你应该在我们……呃..忙的时候再来拜访我们！是的，我们现在非常忙……",
@@ -4745,7 +4745,7 @@
     "Malie City": [
         {
             "name": {
-                "Kahuna Nanu": "队长默丹"
+                "Kahuna Nanu": "队长·默丹"
             },
             "dialog": {
                 "What do I think of Grand trials? They're just like gym battles. Yup, it's totally the same thing. They're even making a Pokémon League.": "我对大考验有什么看法？它们就像道馆对战。是的，完全是一回事。他们甚至还在举办宝可梦联盟。",
@@ -4754,7 +4754,7 @@
         },
         {
             "name": {
-                "Kahuna Nanu": "队长默丹"
+                "Kahuna Nanu": "队长·默丹"
             },
             "dialog": {
                 "Oh, hello. How can I help you? You're looking for Silvally Memories? What do they look like? Oh, so like a disk with a broken part. I think I <i>have</i> seen one while helping Acerola with her trial. Here, you can take it.": "哦，你好。我能为你做什么？你在找银伴战兽存储碟？它们是什么样子的？哦，像是一个有损坏部分的圆盘。我想我在帮助阿塞萝拉完成她的考验时<i>曾</i>见过一个。在这里，你可以拿走它。",
@@ -4832,7 +4832,7 @@
         },
         {
             "name": {
-                "Captain Mina": "队长茉莉"
+                "Captain Mina": "队长·茉莉"
             },
             "dialog": {
                 "My trial is in this town. Right there, inside my very own houseboat. Normally you'd have to clear my trial to find our kahuna on Exeggutor Island, but I guess you took care of some things, huh?": "我的考验就在这个镇上。就在那里，就在我的独立船屋里。通常情况下，你必须通过我的考验才能在椰蛋树岛上找到我们的岛屿之王，但我想你已经处理好了一些事情，是吧？",
@@ -4841,12 +4841,12 @@
         },
         {
             "name": {
-                "Captain Mina": "队长茉莉"
+                "Captain Mina": "队长·茉莉"
             },
             "dialog": {
                 "Hello, $playername$. Here to do my trial again? Oh, I see you're looking for Silvally Memories. Well, I have just the right thing for you. Here, take it.": "你好，$playername$。来再次接受我的考验吗？哦，我看你是在找银伴战兽存储碟。好吧，我这里正好有你需要的东西。来，拿着。",
                 "<img src=\"assets/images/items/quest/Fairy_Memory_Silvally.png\">": "<img src=\"assets/images/items/quest/Fairy_Memory_Silvally.png\">",
-                "Kahuna Hapu gave me that as a gift. She even told me how to use it, but I couldn't afford to buy a Silvally. You can keep it.": "岛屿女王哈普乌送给我这个作为礼物。她甚至告诉我如何使用它，但我买不起银伴战兽。你可以留着它。"
+                "Kahuna Hapu gave me that as a gift. She even told me how to use it, but I couldn't afford to buy a Silvally. You can keep it.": "岛屿女王·哈普乌送给我这个作为礼物。她甚至告诉我如何使用它，但我买不起银伴战兽。你可以留着它。"
             }
         },
         {
@@ -4910,7 +4910,7 @@
         },
         {
             "name": {
-                "Captain Phyco": "队长西奥尼拉"
+                "Captain Phyco": "队长·西奥尼拉"
             },
             "dialog": {
                 "Necrozma...and us ourselves... we have both suffered so many long years in this darkness, living a life we did not wish for...": "奈克洛兹玛……还有我们……我们都在黑暗中受了这么多年的苦，过着自己不想要的生活……",
@@ -5008,7 +5008,7 @@
         },
         {
             "name": {
-                "Roddy Tackle": "垂钓大哥出现"
+                "Roddy Tackle": "垂钓大哥·出现"
             },
             "dialog": {
                 "There are some singularly stunning individuals down at {ROUTE_NAME}! Some Magikarp with real personality!": "在{ROUTE_NAME}有一些独一无二的出色个体！一些有真正个性的鲤鱼王！"
@@ -5100,7 +5100,7 @@
     "Trainers' School": [
         {
             "name": {
-                "Teacher Emily": "老师雅琴"
+                "Teacher Emily": "老师·雅琴"
             },
             "dialog": {
                 "Just as Alola has multiple islands, its dungeons have multiple floors! Hurry to the ladder to find your way to the next floor.": "就像阿罗拉地区有多个岛屿一样，它的地牢有多个楼层！快点找到梯子，前往下一个楼层。",
@@ -5112,10 +5112,10 @@
     "Verdant Cavern": [
         {
             "name": {
-                "Captain Ilima": "队长伊利马"
+                "Captain Ilima": "队长·伊利马"
             },
             "dialog": {
-                "Greetings. Captain Ilima here. In every locale where a captain holds his or her trials, you will encounter a particularly strong boss, known as a Totem Pokémon. To clear a Trial, all you have to do is defeat these Pokémon!": "你好。我是队长伊利马。在每个队长举行考验的地方，你都会遇到一个特别强大的头目，即霸主宝可梦。要通过考验，你只需击败这些宝可梦！",
+                "Greetings. Captain Ilima here. In every locale where a captain holds his or her trials, you will encounter a particularly strong boss, known as a Totem Pokémon. To clear a Trial, all you have to do is defeat these Pokémon!": "你好。我是队长·伊利马。在每个队长举行考验的地方，你都会遇到一个特别强大的头目，即霸主宝可梦。要通过考验，你只需击败这些宝可梦！",
                 "Some Trial Sites are protected by different Pokémon depending on the time of day. The difficulty of each Trial isn't affected by these changes, but it makes for quite the interesting observance!": "一些考验地点会根据每天的时间由不同的宝可梦守护。每个考验的难度不受这些变化的影响，但这确实是一个有趣的观察！"
             }
         }
@@ -5191,7 +5191,7 @@
     "Brooklet Hill": [
         {
             "name": {
-                "Captain Lana": "队长水莲"
+                "Captain Lana": "队长·水莲"
             },
             "dialog": {
                 "Hi, $playername$. How are you doing? I'm not doing so well right now.": "嗨，$playername$。你好吗？我现在状态不太好。",
@@ -5203,7 +5203,7 @@
     "Wela Volcano Park": [
         {
             "name": {
-                "Captain Kiawe": "队长卡奇"
+                "Captain Kiawe": "队长·卡奇"
             },
             "dialog": {
                 "Hey, good to see ya here. How are you doing? I'm doing well, but I need some Battle Points. I need to get more materials for a school project, but I'm not sure how I will get Battle Points in Alola, since the Battle Frontier is only in the Hoenn region. And I don't know anyone who could get them and deliver them to me.": "嘿，很高兴在这里见到你。你怎么样？我过得还不错，但我需要一些战斗点数。我需要更多的材料来做学校的项目，但我不确定我怎样才能在阿罗拉地区得到战斗点数，因为对战开拓区只在丰缘地区。而且我不认识任何能得到它们并送给我的人。",
@@ -5222,7 +5222,7 @@
         },
         {
             "name": {
-                "Captain Mallow": "队长玛奥"
+                "Captain Mallow": "队长·玛奥"
             },
             "dialog": {
                 "Hey, welcome to the Lush Jungle! How are you doing today? I'm not so good. I wanted to try a new ingredient to see if it attracts Lurantis, but it costs too much. Like, a lot of Quest Points. I just can't afford it.": "嘿，欢迎来到树荫丛林！你今天怎么样？我不太好。我想尝试一个新的成分，看看它是否能吸引兰螳花，但它的成本太高了。就像，需要很多任务点数。我实在是负担不起。",
@@ -5234,7 +5234,7 @@
     "Hokulani Observatory": [
         {
             "name": {
-                "Captain Sophocles": "队长马玛内"
+                "Captain Sophocles": "队长·马玛内"
             },
             "dialog": {
                 "Hey, $playername$! How are you doing? I've been doing great, except that my equipment is getting old and rusted. I would like to buy some more, but I don't have enough money to buy any right now.": "嘿，$playername$！你最近怎么样？我一直过得很好，只是我的装备变旧且生锈了。我想再买一些，但我现在没有足够的钱买。",
@@ -5245,7 +5245,7 @@
     "Thrifty Megamart": [
         {
             "name": {
-                "Captain Acerola": "队长阿塞萝拉"
+                "Captain Acerola": "队长·阿塞萝拉"
             },
             "dialog": {
                 "Hey there, $playername$! Have you checked out the trail behind the Thrifty Megamart lately? It's been pretty wild! I ventured there the other day and stumbled upon a Mimikyu holding a Silvally Memory. It was quite a challenge to retrieve it, but I managed to befriend it and recover the disk eventually. I love the thrill of exploring new places and discovering new stuff, don't you?": "嘿，$playername$！你最近有去看看超值超市旧址后面的小径吗？那里真是太野了！我前几天冒险去了那里，偶然发现了一个拿着银伴战兽存储碟的谜拟丘。取回它相当有挑战性，但我最终设法和它成为朋友并恢复了存储碟。我喜欢探索新地方和发现新东西的刺激，你不是也这样吗？",
@@ -5256,7 +5256,7 @@
     "Po Town": [
         {
             "name": {
-                "Officer Nanu": "警察默丹"
+                "Officer Nanu": "警察·默丹"
             },
             "dialog": {
                 "A trial-goer, huh? Figures. Look, I'm not gonna fight someone who is taking on Team Skull. So...go. Just go.": "参加审判的人，嗯？明白了。听着，我不会和骷髅队的人打架。所以……去吧。去吧。"
@@ -5264,7 +5264,7 @@
         },
         {
             "name": {
-                "Office Worker Royce": "商务人士鑫磊"
+                "Office Worker Royce": "商务人士·鑫磊"
             },
             "dialog": {
                 "My house! My car! MY LAWN! What did those Team Skull kids do!?": "我的房子！我的车！我的草坪！骷髅队的孩子们做了什么！？"
@@ -5373,7 +5373,7 @@
                 "People from Ula'ula have seen Guzma walking around Po Town, so I suspect he might've found a Silvally Memory. Go ask him in Po Town.": "乌拉乌拉岛的人看到古兹马在波尔镇周围走动，所以我怀疑他可能找到了银伴战兽存储碟。去魄镇问问他。",
                 "Melemele Island inhabitants have seen Kahili taking daily walks on Ten Carat Hill, she might've found a Silvally Memory during one of those walks.": "美乐美乐岛的居民看到卡希丽每天都在十克拉山丘散步，她可能在其中一次散步中找到了银伴战兽存储碟。",
                 "Some people from Poni Island have seen Plumeria walking around with some old Team Skull grunts around the Vast Poni Canyon. That is really suspicious, so they probably found something rare or presumably a Silvally Memory.": "一些波尼岛的人看到布尔美丽在宽阔的波尼大峡谷周围和一些旧的骷髅队手下一起走动。这真的很可疑，所以他们可能找到了一些稀有的东西或可能是银伴战兽存储碟。",
-                "Ula'ula Island people have seen Captain Acerola inside the Thrifty Megamart with a Mimikyu carrying a disk-shaped item, which I suspect is a Silvally Memory.": "乌拉乌拉岛的人看到队长阿塞萝拉在超值超市旧址里，她的谜拟丘带着一个盘形物品，我怀疑那是银伴战兽存储碟。",
+                "Ula'ula Island people have seen Captain Acerola inside the Thrifty Megamart with a Mimikyu carrying a disk-shaped item, which I suspect is a Silvally Memory.": "乌拉乌拉岛的人看到队长·阿塞萝拉在超值超市旧址里，她的谜拟丘带着一个盘形物品，我怀疑那是银伴战兽存储碟。",
                 "Some people from Akala Island have seen some people in white suits with a lot of boxes travelling to the southwest of the island.": "一些阿卡拉岛的人看到一些穿着白色西装的人带着许多盒子前往岛的西南部。",
                 "I've heard Molayne wanted to brush up on his training a bit. He's at the Royal Avenue, and he's also offering a strange reward which I presume is a Silvally Memory.": "我听说马睿因想稍微提升一下他的训练。他在皇家大道上，也提供了一个奇怪的奖励，我推测那是银伴战兽存储碟。",
                 "Also, while I was walking near A Tree Maybe I saw a guy dressed almost like an old Pokémon that doesn't exist anymore with a Silvally Memory.": "此外，当我在或许是对战树附近散步时，我看到一个几乎穿着像一个不再存在的老神奇宝贝的家伙，手里拿着一块银伴战兽存储碟。",
@@ -5394,7 +5394,7 @@
         },
         {
             "name": {
-                "Kahuna Hapu": "岛屿女王哈普乌"
+                "Kahuna Hapu": "岛屿女王·哈普乌"
             },
             "dialog": {
                 "Hey, $playername$. How's it going? Looking for a rematch, or did you come here explore the Poni Island secrets? Oh, I see. You're looking for a Silvally Memory. I found a memory in the ground here, so I took it and studied it a bit. All I could find out is that it was from some Silvally. I also found another memory while helping Mina out with her trial. I gave it to her, but I'm not sure if she found out how it works.": "嘿，$playername$。近来如何？是来寻求复仇，还是来探索波尼岛的秘密？哦，我明白了。你是在寻找银伴战兽存储碟。我在这里地上找到了一个存储碟，所以我拿走了它并研究了一下。我所能找出的就是它来自某个银伴战兽。我在帮助茉莉完成她的考验时也发现了另一个存储碟。我把它给了她，但我不确定她是否弄清楚了它是如何工作的。",
@@ -5451,7 +5451,7 @@
         },
         {
             "name": {
-                "Veteran Aristo": "资深训练家英倬"
+                "Veteran Aristo": "资深训练家·英倬"
             },
             "dialog": {
                 "Hey, $playername$. Looking for a battle? Hm, ok. Can I say something to you anyway? It will be quick. I want to propose to my girlfriend, but I can't afford the ring she really wants. It's so expensive, and I feel guilty not being able to give her what she deserves. I don't know what to do! Maybe I could pick up some extra work to hire more Miners for some Diamonds.": "嘿，$playername$。寻找战斗吗？嗯，好吧。我能对你说点什么吗？这会很快。我想向我的女朋友求婚，但我买不起她真正想要的戒指。它太贵了，我觉得对不起她，不能给她应得的东西。我不知道该怎么办！也许我可以做一些额外的工作，雇佣更多的矿工来挖一些钻石。",
@@ -5544,7 +5544,7 @@
         },
         {
             "name": {
-                "Professor Sonia": "宝可梦博士索妮亚"
+                "Professor Sonia": "宝可梦博士·索妮亚"
             },
             "dialog": {
                 "I’ve heard there’s been sightings of a never-before-seen, super strong Pokémon on {ROUTE_NAME}! You should go check it out!": "我听说在{ROUTE_NAME}发现了一种前所未见的超级强大的宝可梦！你应该去看看！"
@@ -5592,7 +5592,7 @@
         },
         {
             "name": {
-                "Artist Duncan": "艺术家大辉"
+                "Artist Duncan": "艺术家·大辉"
             },
             "dialog": {
                 "My Kantonian Farfetch’d would never evolve no matter how many fresh Leeks I gave it.": "无论我给我的关都地区大葱鸭多少新鲜的大葱，它都不会进化。",
@@ -5604,7 +5604,7 @@
     "Turffield": [
         {
             "name": {
-                "Cook Stuart": "西餐厨师皓朗"
+                "Cook Stuart": "西餐厨师·皓朗"
             },
             "dialog": {
                 "I love Sweet and Tart Apples! Oh, this is Applin! He isn’t a snack, but helps me make all sorts of dishes!": "我喜欢甜的和酸酸苹果！哦，这是啃果虫！它不是零食，但帮我做各种各样的菜！",
@@ -5672,7 +5672,7 @@
     "Hammerlocke": [
         {
             "name": {
-                "Hiker Donald": "登山男阿岳"
+                "Hiker Donald": "登山男·阿岳"
             },
             "dialog": {
                 "Have you spotted a blue bird walking around with an Arrokuda in its throat? It’s quite a daft Pokémon, but it sure is hungry! I guess if it trains near water it tries to swallow Arrokudas, but they always get stuck in its throat.": "你有没有看到一个蓝色的鸟儿走来走去，喉咙里卡着一条刺梭鱼吗？这真是一个傻乎乎的宝可梦，但它确实很饿！我猜如果它在水边训练，它会试图吞下刺梭鱼，但刺梭鱼总是卡在它的喉咙里。",
@@ -5713,7 +5713,7 @@
         },
         {
             "name": {
-                "Guitarist Justin": "吉他手贾斯汀"
+                "Guitarist Justin": "吉他手·贾斯汀"
             },
             "dialog": {
                 "I caught this Snom on Steamdrift Way and we’ve become really good mates.": "我在泉烟小路上抓到了这只雪吞虫，我们已经成为了非常好的伙伴。",
@@ -5802,7 +5802,7 @@
             "dialog": {
                 "Bah ha ha! I lost! You're pretty strong, aren't you? The way you battle really shows me how much you care about your Pokémon! Even if you've come because of a misunderstanding, as long as you have a will to learn... then you're welcome at the Master Dojo! I think we can all help each other become stronger! I'm happy you've come to join us!": "哈哈哈！我输了！你真的很强，不是吗？你战斗的方式真的向我展示了你有多在乎你的宝可梦！即使你是因为一个误会而来，只要你有学习的意愿……那么欢迎来到马师傅武馆！我认为我们都可以互相帮助变得更强！我很高兴你加入了我们！",
                 "Now then! The dojo's at max capacity! It's time to really start our training! You'll all be facing three trials. And there's more! The person who completes the three trials will receive the secret armor of this dojo!": "现在！武馆的容量已满！是时候真正开始我们的训练了！你们将面临三个考验。还有更多！完成这三个考验的人将会收到这个武馆的秘密铠甲！",
-                "For the first trial, my students... You've all gotta defeat 6 of those fast Galarian Slowpoke, trained with care by little old me! But that's not all... You need to catch them, too!": "对于第一个考验，我的学生们……你们都必须击败6只由我小心培训的快速伽勒尔呆呆兽！但这还不是全部……你也需要捕捉它们！"
+                "For the first trial, my students... You've all gotta defeat 6 of those fast Galarian Slowpoke, trained with care by little old me! But that's not all... You need to catch them, too!": "对于第一个考验，我的学生们……你们都必须击败6只由我小心培训的快速伽勒尔·呆呆兽！但这还不是全部……你也需要捕捉它们！"
             }
         },
         {
@@ -6284,7 +6284,7 @@
             },
             "dialog": {
                 "Champion?! What are you.... no matter, I'm glad you're here!": "冠军？！你是....不重要，我很高兴你在这里！",
-                "Eternamax Eternatus has appeared again! There is no time to talk! Let's fight it together!": "无极巨化无极汰那再次出现了！现在没时间说话！让我们一起战斗！"
+                "Eternamax Eternatus has appeared again! There is no time to talk! Let's fight it together!": "无极巨化·无极汰那再次出现了！现在没时间说话！让我们一起战斗！"
             }
         },
         {
@@ -6389,7 +6389,7 @@
                 "Peonia": "夏科娅"
             },
             "dialog": {
-                "You're back! So I take it you saw one? A Gigantamax Pikachu, huh? Yeah, I saw one of those too! I also saw 2 others: Meowth and Eevee. Maybe you'll see them when you go back in.": "你回来了！那么我猜你看到了一个？超极巨化皮卡丘，对吗？是的，我也看到了一个！我还看到了另外两个：喵喵和伊布。也许当你再次进去时你会看到它们。",
+                "You're back! So I take it you saw one? A Gigantamax Pikachu, huh? Yeah, I saw one of those too! I also saw 2 others: Meowth and Eevee. Maybe you'll see them when you go back in.": "你回来了！那么我猜你看到了一个？超极巨化·皮卡丘，对吗？是的，我也看到了一个！我还看到了另外两个：喵喵和伊布。也许当你再次进去时你会看到它们。",
                 "Unfortunately, it seems these 3 are the only ones here at the moment. However, there's something you could do if you want to lure in more of them.": "不幸的是，看起来这三个是目前唯一在这里的。然而，如果你想吸引更多的它们，有些事情你可以做。",
                 "I imagine you've noticed some hexagonal rock formations on your journey, right? Those are called Raid Dens. You can find them in the mainland's Wild Area, the Isle of Armor, and here in the Crown Tundra.": "我想你在旅途中已经注意到一些六角形的岩石构造了，对吗？那些被称为突袭巢穴。你可以在大陆的旷野地带、铠岛和这里的王冠雪原找到它们。",
                 "Every day some of them glow red and emit a purple beam. It seems there are 10 a day, consistently, for some unknown reason. Here, download this app, and they'll show up on your map!": "每天它们中的一些会发出红光并发射紫色光束。看起来每天有10个，出于某种未知的原因始终如一。在这里下载这个应用程序，它们就会出现在你的地图上！",
@@ -6498,7 +6498,7 @@
     "Naranjuva Academy": [
         {
             "name": {
-                "Student Emily": "学生椰米莉"
+                "Student Emily": "学生·椰米莉"
             },
             "dialog": {
                 "Hey, hey, did you hear? A group of students saw some super rare Pokémon on {ROUTE_NAME}!": "嘿，嘿，你听说了吗？一群学生在{ROUTE_NAME}看到了一些超级稀有的宝可梦！"
