@@ -1,33 +1,96 @@
 {
-    "BattleItem": "pokeclicker/src/modules/items/BattleItem.ts",
-    "BerryItem": "pokeclicker/src/modules/items/BerryItem.ts",
-    "EnergyRestore": "pokeclicker/src/modules/items/EnergyRestore.ts",
-    "BuyKeyItem": "pokeclicker/src/modules/items/buyKeyItem.ts",
-    "BuyOakItem": "pokeclicker/src/modules/items/buyOakItem.ts",
-    "FluteItem": "pokeclicker/src/modules/items/FluteItem.ts",
-    "MulchItem": "pokeclicker/src/modules/items/MulchItem.ts",
-    "PokeballItem": "pokeclicker/src/modules/items/PokeballItem.ts",
-    "ShovelItem": "pokeclicker/src/modules/items/ShovelItem.ts",
-    "MulchShovelItem": "pokeclicker/src/modules/items/ShovelItem.ts",
-    "PokeBlock": "pokeclicker/src/modules/items/PokeBlock.ts",
-    "MegaStoneItem": "pokeclicker/src/modules/items/MegaStoneItem.ts",
-    "EggItem": "pokeclicker/src/modules/items/EggItem.ts",
-    "QuestItem": "pokeclicker/src/modules/items/QuestItem.ts",
-    "Vitamin": "pokeclicker/src/modules/items/Vitamin.ts",
-    "AttackGainConsumable": "pokeclicker/src/modules/items/AttackGainConsumable.ts",
-    "ChristmasPresent": "pokeclicker/src/modules/items/ChristmasPresent.ts",
-    "TreasureItem": "pokeclicker/src/modules/items/TreasureItem.ts",
-    "PokemonItem": "pokeclicker/src/modules/items/PokemonItem.ts",
-    "EvolutionStone": "/src/scripts/items/EvolutionStone.ts",
-    "FarmHandItem": "pokeclicker/src/scripts/items/FarmHandItem.ts",
-    "HatcheryHelperItem": "pokeclicker/src/scripts/items/HatcheryHelperItem.ts",
-    "ExpGainedBonusHeldItem": "pokeclicker/src/scripts/items/HeldItem.ts",
-    "AttackBonusHeldItem": "pokeclicker/src/scripts/items/HeldItem.ts",
-    "PokemonRestrictedAttackBonusHeldItem": "pokeclicker/src/scripts/items/HeldItem.ts",
-    "TypeRestrictedAttackBonusHeldItem": "pokeclicker/src/scripts/items/HeldItem.ts",
-    "TypeRestrictedExceptionAttackBonusHeldItem": "pokeclicker/src/scripts/items/HeldItem.ts",
-    "HybridAttackBonusHeldItem": "pokeclicker/src/scripts/items/HeldItem.ts",
-    "EVsGainedBonusHeldItem": "pokeclicker/src/scripts/items/HeldItem.ts",
-    "HeldItem": "pokeclicker/src/scripts/items/HeldItem.ts",
-    "ZCrystalItem": "pokeclicker/src/scripts/items/ZCrystalItem.ts"
+    "BattleItem": {
+        "filePath": "pokeclicker/src/modules/items/BattleItem.ts"
+    },
+    "BerryItem": {
+        "filePath": "pokeclicker/src/modules/items/BerryItem.ts"
+    },
+    "EnergyRestore": {
+        "filePath": "pokeclicker/src/modules/items/EnergyRestore.ts"
+    },
+    "BuyKeyItem": {
+        "filePath": "pokeclicker/src/modules/items/buyKeyItem.ts"
+    },
+    "BuyOakItem": {
+        "filePath": "pokeclicker/src/modules/items/buyOakItem.ts"
+    },
+    "FluteItem": {
+        "filePath": "pokeclicker/src/modules/items/FluteItem.ts",
+        "extraTracks": ["getDescription", "getFormattedTooltip"]
+    },
+    "MulchItem": {
+        "filePath": "pokeclicker/src/modules/items/MulchItem.ts"
+    },
+    "PokeballItem": {
+        "filePath": "pokeclicker/src/modules/items/PokeballItem.ts"
+    },
+    "ShovelItem": {
+        "filePath": "pokeclicker/src/modules/items/ShovelItem.ts"
+    },
+    "MulchShovelItem": {
+        "filePath": "pokeclicker/src/modules/items/ShovelItem.ts"
+    },
+    "PokeBlock": {
+        "filePath": "pokeclicker/src/modules/items/PokeBlock.ts"
+    },
+    "MegaStoneItem": {
+        "filePath": "pokeclicker/src/modules/items/MegaStoneItem.ts"
+    },
+    "EggItem": {
+        "filePath": "pokeclicker/src/modules/items/EggItem.ts"
+    },
+    "QuestItem": {
+        "filePath": "pokeclicker/src/modules/items/QuestItem.ts"
+    },
+    "Vitamin": {
+        "filePath": "pokeclicker/src/modules/items/Vitamin.ts"
+    },
+    "AttackGainConsumable": {
+        "filePath": "pokeclicker/src/modules/items/AttackGainConsumable.ts"
+    },
+    "ChristmasPresent": {
+        "filePath": "pokeclicker/src/modules/items/ChristmasPresent.ts"
+    },
+    "TreasureItem": {
+        "filePath": "pokeclicker/src/modules/items/TreasureItem.ts"
+    },
+    "PokemonItem": {
+        "filePath": "pokeclicker/src/modules/items/PokemonItem.ts"
+    },
+    "EvolutionStone": {
+        "filePath": "pokeclicker/src/scripts/items/EvolutionStone.ts"
+    },
+    "FarmHandItem": {
+        "filePath": "pokeclicker/src/scripts/items/FarmHandItem.ts"
+    },
+    "HatcheryHelperItem": {
+        "filePath": "pokeclicker/src/scripts/items/HatcheryHelperItem.ts"
+    },
+    "ExpGainedBonusHeldItem": {
+        "filePath": "pokeclicker/src/scripts/items/HeldItem.ts"
+    },
+    "AttackBonusHeldItem": {
+        "filePath": "pokeclicker/src/scripts/items/HeldItem.ts"
+    },
+    "PokemonRestrictedAttackBonusHeldItem": {
+        "filePath": "pokeclicker/src/scripts/items/HeldItem.ts"
+    },
+    "TypeRestrictedAttackBonusHeldItem": {
+        "filePath": "pokeclicker/src/scripts/items/HeldItem.ts"
+    },
+    "TypeRestrictedExceptionAttackBonusHeldItem": {
+        "filePath": "pokeclicker/src/scripts/items/HeldItem.ts"
+    },
+    "HybridAttackBonusHeldItem": {
+        "filePath": "pokeclicker/src/scripts/items/HeldItem.ts"
+    },
+    "EVsGainedBonusHeldItem": {
+        "filePath": "pokeclicker/src/scripts/items/HeldItem.ts"
+    },
+    "HeldItem": {
+        "filePath": "pokeclicker/src/scripts/items/HeldItem.ts"
+    },
+    "ZCrystalItem": {
+        "filePath": "pokeclicker/src/scripts/items/ZCrystalItem.ts"
+    }
 }

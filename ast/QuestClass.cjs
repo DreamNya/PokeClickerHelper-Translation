@@ -5,7 +5,7 @@ const fs = require("fs");
 const project = new Project();
 
 // 读取包含文件映射的 json 数据
-const jsonPath = "dev/Item/item_ts.json";
+const jsonPath = "dev/Quest/quest_ts.json";
 const itemMap = JSON.parse(fs.readFileSync(jsonPath, "utf8"));
 
 const outputData = {};
@@ -13,7 +13,7 @@ const outputData = {};
 console.log("开始解析 TS 文件...");
 
 // 全局默认需要追踪的字段（不包含superArg6）
-const DEFAULT_TRACK_FIELDS = ["description"];
+const DEFAULT_TRACK_FIELDS = ["defaultDescription", "customDescription"];
 
 for (const [className, { filePath, extraTracks = [] }] of Object.entries(itemMap)) {
     // 检查文件是否存在，防止脚本因文件缺失而报错退出
@@ -32,27 +32,7 @@ for (const [className, { filePath, extraTracks = [] }] of Object.entries(itemMap
         continue;
     }
 
-    let superArg6 = null;
-
-    // --- 1. 提取构造函数中 super() 的第 6 个参数 ---
-    const constructors = classDecl.getConstructors();
-    if (constructors.length > 0) {
-        const ctor = constructors[0];
-
-        // 寻找 super 关键字，并获取它的父节点（即 super() 调用表达式）
-        const superCall = ctor.getFirstDescendantByKind(SyntaxKind.SuperKeyword)?.getParentIfKind(SyntaxKind.CallExpression);
-
-        if (superCall) {
-            const args = superCall.getArguments();
-            // 数组索引从 0 开始，第 6 个参数索引为 5
-            if (args.length >= 6) {
-                // .getText() 会原样提取代码字符串（无论是普通字符串、模板、变量等）
-                superArg6 = args[5].getText();
-            }
-        }
-    }
-
-    // --- 2. 动态追溯提取方法 (Method) 或 访问器 (Getter) ---
+    // --- 动态追溯提取方法 (Method) 或 访问器 (Getter) ---
     const trackFields = [...DEFAULT_TRACK_FIELDS, ...extraTracks];
     const trackedFeatures = {};
 
@@ -65,7 +45,6 @@ for (const [className, { filePath, extraTracks = [] }] of Object.entries(itemMap
     // 记录到结果对象中
     outputData[className] = {
         filePath,
-        superArg6,
         trackedFeatures,
     };
 
@@ -73,7 +52,7 @@ for (const [className, { filePath, extraTracks = [] }] of Object.entries(itemMap
 }
 
 // 写入本地用于未来对比比对的 JSON 文件
-const outputPath = "dev/Item/class_tracker.json";
+const outputPath = "dev/Quest/class_tracker.json";
 fs.writeFileSync(outputPath, JSON.stringify(outputData, null, 4), "utf8");
 
 console.log(`\n解析完成！结果已保存至: ${outputPath}`);

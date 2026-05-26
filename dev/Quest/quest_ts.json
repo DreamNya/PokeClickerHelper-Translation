@@ -1,0 +1,56 @@
+{
+    "DefeatPokemonsQuest": {
+        "filePath": "pokeclicker/src/scripts/quests/questTypes/DefeatPokemonsQuest.ts"
+    },
+    "CapturePokemonsQuest": {
+        "filePath": "pokeclicker/src/scripts/quests/questTypes/CapturePokemonsQuest.ts"
+    },
+    "CapturePokemonTypesQuest": {
+        "filePath": "pokeclicker/src/scripts/quests/questTypes/CapturePokemonTypesQuest.ts"
+    },
+    "ClearBattleFrontierQuest": {
+        "filePath": "pokeclicker/src/scripts/quests/questTypes/ClearBattleFrontierQuest.ts"
+    },
+    "GainFarmPointsQuest": {
+        "filePath": "pokeclicker/src/scripts/quests/questTypes/GainFarmPointsQuest.ts"
+    },
+    "GainMoneyQuest": {
+        "filePath": "pokeclicker/src/scripts/quests/questTypes/GainMoneyQuest.ts"
+    },
+    "GainTokensQuest": {
+        "filePath": "pokeclicker/src/scripts/quests/questTypes/GainTokensQuest.ts"
+    },
+    "GainGemsQuest": {
+        "filePath": "pokeclicker/src/scripts/quests/questTypes/GainGemsQuest.ts"
+    },
+    "HatchEggsQuest": {
+        "filePath": "pokeclicker/src/scripts/quests/questTypes/HatchEggsQuest.ts"
+    },
+    "MineLayersQuest": {
+        "filePath": "pokeclicker/src/scripts/quests/questTypes/MineLayersQuest.ts"
+    },
+    "MineItemsQuest": {
+        "filePath": "pokeclicker/src/scripts/quests/questTypes/MineItemsQuest.ts"
+    },
+    "CatchShiniesQuest": {
+        "filePath": "pokeclicker/src/scripts/quests/questTypes/CatchShiniesQuest.ts"
+    },
+    "CatchShadowsQuest": {
+        "filePath": "pokeclicker/src/scripts/quests/questTypes/CatchShadowsQuest.ts"
+    },
+    "DefeatGymQuest": {
+        "filePath": "pokeclicker/src/scripts/quests/questTypes/DefeatGymQuest.ts"
+    },
+    "DefeatDungeonQuest": {
+        "filePath": "pokeclicker/src/scripts/quests/questTypes/DefeatDungeonQuest.ts"
+    },
+    "UsePokeballQuest": {
+        "filePath": "pokeclicker/src/scripts/quests/questTypes/UsePokeballQuest.ts"
+    },
+    "UseOakItemQuest": {
+        "filePath": "pokeclicker/src/scripts/quests/questTypes/UseOakItemQuest.ts"
+    },
+    "HarvestBerriesQuest": {
+        "filePath": "pokeclicker/src/scripts/quests/questTypes/HarvestBerriesQuest.ts"
+    }
+}

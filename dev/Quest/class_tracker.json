@@ -1,0 +1,128 @@
+{
+    "DefeatPokemonsQuest": {
+        "filePath": "pokeclicker/src/scripts/quests/questTypes/DefeatPokemonsQuest.ts",
+        "trackedFeatures": {
+            "defaultDescription": "get defaultDescription(): string {\n        return `Defeat ${this.amount.toLocaleString('en-US')} Pokémon on ${Routes.getName(this.route, this.region, false, true)}.`;\n    }",
+            "customDescription": null
+        }
+    },
+    "CapturePokemonsQuest": {
+        "filePath": "pokeclicker/src/scripts/quests/questTypes/CapturePokemonsQuest.ts",
+        "trackedFeatures": {
+            "defaultDescription": "get defaultDescription(): string {\n        return `Capture or hatch ${this.amount.toLocaleString('en-US')} Pokémon.`;\n    }",
+            "customDescription": null
+        }
+    },
+    "CapturePokemonTypesQuest": {
+        "filePath": "pokeclicker/src/scripts/quests/questTypes/CapturePokemonTypesQuest.ts",
+        "trackedFeatures": {
+            "defaultDescription": "get defaultDescription(): string {\n        return `Capture or hatch ${this.amount.toLocaleString('en-US')} ${PokemonType[this.type]}-type Pokémon.`;\n    }",
+            "customDescription": null
+        }
+    },
+    "ClearBattleFrontierQuest": {
+        "filePath": "pokeclicker/src/scripts/quests/questTypes/ClearBattleFrontierQuest.ts",
+        "trackedFeatures": {
+            "defaultDescription": "get defaultDescription(): string {\n        const suffix = this.amount > 1 ? 's' : '';\n        return `Clear ${this.amount.toLocaleString('en-US')} Stages in the Battle Frontier.`;\n    }",
+            "customDescription": null
+        }
+    },
+    "GainFarmPointsQuest": {
+        "filePath": "pokeclicker/src/scripts/quests/questTypes/GainFarmPointsQuest.ts",
+        "trackedFeatures": {
+            "defaultDescription": "get defaultDescription(): string {\n        return `Gain ${this.amount.toLocaleString('en-US')} Farm Points.`;\n    }",
+            "customDescription": null
+        }
+    },
+    "GainMoneyQuest": {
+        "filePath": "pokeclicker/src/scripts/quests/questTypes/GainMoneyQuest.ts",
+        "trackedFeatures": {
+            "defaultDescription": "get defaultDescription(): string {\n        return `Gain ${this.amount.toLocaleString('en-US')} Pokédollars.`;\n    }",
+            "customDescription": null
+        }
+    },
+    "GainTokensQuest": {
+        "filePath": "pokeclicker/src/scripts/quests/questTypes/GainTokensQuest.ts",
+        "trackedFeatures": {
+            "defaultDescription": "get defaultDescription(): string {\n        return `Gain ${this.amount.toLocaleString('en-US')} Dungeon Tokens.`;\n    }",
+            "customDescription": null
+        }
+    },
+    "GainGemsQuest": {
+        "filePath": "pokeclicker/src/scripts/quests/questTypes/GainGemsQuest.ts",
+        "trackedFeatures": {
+            "defaultDescription": "get defaultDescription(): string {\n        return `Gain ${this.amount.toLocaleString('en-US')} ${PokemonType[this.type]} gems.`;\n    }",
+            "customDescription": null
+        }
+    },
+    "HatchEggsQuest": {
+        "filePath": "pokeclicker/src/scripts/quests/questTypes/HatchEggsQuest.ts",
+        "trackedFeatures": {
+            "defaultDescription": "get defaultDescription(): string {\n        return `Hatch ${this.amount.toLocaleString('en-US')} ${GameConstants.pluralizeString('Egg', this.amount)}.`;\n    }",
+            "customDescription": null
+        }
+    },
+    "MineLayersQuest": {
+        "filePath": "pokeclicker/src/scripts/quests/questTypes/MineLayersQuest.ts",
+        "trackedFeatures": {
+            "defaultDescription": "get defaultDescription(): string {\n        const suffix = this.amount > 1 ? 's' : '';\n        return `Collect all buried treasure ${this.amount.toLocaleString('en-US')} time${suffix} in the Underground mines.`;\n    }",
+            "customDescription": null
+        }
+    },
+    "MineItemsQuest": {
+        "filePath": "pokeclicker/src/scripts/quests/questTypes/MineItemsQuest.ts",
+        "trackedFeatures": {
+            "defaultDescription": "get defaultDescription(): string {\n        const suffix = this.amount > 1 ? 's' : '';\n        return `Collect ${this.amount.toLocaleString('en-US')} item${suffix} from the Underground mines.`;\n    }",
+            "customDescription": null
+        }
+    },
+    "CatchShiniesQuest": {
+        "filePath": "pokeclicker/src/scripts/quests/questTypes/CatchShiniesQuest.ts",
+        "trackedFeatures": {
+            "defaultDescription": "get defaultDescription(): string {\n        return `Capture or hatch ${this.amount.toLocaleString('en-US')} shiny Pokémon.`;\n    }",
+            "customDescription": null
+        }
+    },
+    "CatchShadowsQuest": {
+        "filePath": "pokeclicker/src/scripts/quests/questTypes/CatchShadowsQuest.ts",
+        "trackedFeatures": {
+            "defaultDescription": "get defaultDescription(): string {\n        return `Catch ${this.amount.toLocaleString('en-US')} Shadow Pokémon.`;\n    }",
+            "customDescription": null
+        }
+    },
+    "DefeatGymQuest": {
+        "filePath": "pokeclicker/src/scripts/quests/questTypes/DefeatGymQuest.ts",
+        "trackedFeatures": {
+            "defaultDescription": "get defaultDescription(): string {\n        const elite = this.gymTown.includes('Elite') || this.gymTown.includes('Champion');\n        const displayName = GymList[this.gymTown]?.displayName;\n        const leaderName = GymList[this.gymTown].leaderName.replace(/\\d+/g, '').trim();\n        const { region, subRegion } = GymList[this.gymTown].parent;\n        const subRegionName = SubRegions.getSubRegionById(region, subRegion).name;\n\n        let gymString;\n        if (displayName) {\n            gymString = displayName;\n            if (displayName.includes('Trial')) {\n                gymString += ` at ${this.gymTown}`;\n            }\n        } else if (elite) {\n            gymString = this.gymTown;\n        } else {\n            gymString = `${leaderName}'s Gym at ${this.gymTown}`;\n        }\n\n        return `Defeat ${gymString} in ${subRegionName} ${this.amount.toLocaleString('en-US')} times.`;\n    }",
+            "customDescription": null
+        }
+    },
+    "DefeatDungeonQuest": {
+        "filePath": "pokeclicker/src/scripts/quests/questTypes/DefeatDungeonQuest.ts",
+        "trackedFeatures": {
+            "defaultDescription": "get defaultDescription(): string {\n        const { subRegion } = TownList[this.dungeon];\n        const subRegionName = SubRegions.getSubRegionById(this.region, subRegion).name;\n        return `Defeat the ${this.dungeon} dungeon in ${subRegionName} ${this.amount.toLocaleString('en-US')} times.`;\n    }",
+            "customDescription": null
+        }
+    },
+    "UsePokeballQuest": {
+        "filePath": "pokeclicker/src/scripts/quests/questTypes/UsePokeballQuest.ts",
+        "trackedFeatures": {
+            "defaultDescription": "get defaultDescription(): string {\n        return `Use ${this.amount.toLocaleString('en-US')} ${ItemList[GameConstants.Pokeball[this.pokeball]].displayName}s.`;\n    }",
+            "customDescription": null
+        }
+    },
+    "UseOakItemQuest": {
+        "filePath": "pokeclicker/src/scripts/quests/questTypes/UseOakItemQuest.ts",
+        "trackedFeatures": {
+            "defaultDescription": "get defaultDescription(): string {\n        const desc = [];\n        desc.push(`Equip the ${GameConstants.humanifyString(OakItemType[this.item])} and`);\n        if (this.item == OakItemType.Magic_Ball) {\n            desc.push(`capture ${this.amount.toLocaleString('en-US')} wild Pokémon.`);\n        } else if (this.item == OakItemType.Amulet_Coin) {\n            desc.push(`earn bonus Pokédollars ${this.amount.toLocaleString('en-US')} times.`);\n        } else if (this.item == OakItemType.Exp_Share) {\n            desc.push(`defeat ${this.amount.toLocaleString('en-US')} Pokémon.`);\n        } else {\n            desc.push(`gain its benefit ${this.amount.toLocaleString('en-US')} times.`);\n        }\n        return desc.join(' ');\n    }",
+            "customDescription": null
+        }
+    },
+    "HarvestBerriesQuest": {
+        "filePath": "pokeclicker/src/scripts/quests/questTypes/HarvestBerriesQuest.ts",
+        "trackedFeatures": {
+            "defaultDescription": "get defaultDescription(): string {\n        return `Harvest ${this.amount.toLocaleString('en-US')} ${BerryType[this.berryType]} ${GameConstants.pluralizeString('Berry', this.amount)} at the farm.`;\n    }",
+            "customDescription": null
+        }
+    }
+}

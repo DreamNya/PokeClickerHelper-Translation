@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         宝可梦点击（Poke Clicker）内核汉化脚本
 // @namespace    PokeClickerHelper
-// @version      0.10.25-j
+// @version      0.10.25-k
 // @description  采用内核汉化形式，目前汉化范围：所有任务线、NPC、成就、地区、城镇、道路、道馆、宝可梦、道具
 // @author       DreamNya, ICEYe, iktsuarpok, 我是谁？, 顶不住了, 银☆星, TerVoid
 // @match        https://www.pokeclicker.com
@@ -19,7 +19,8 @@
 // ==/UserScript==
 /* global TownList, QuestLine:true, Notifier, MultipleQuestsQuest, App, NPC, NPCController, GameController, ko,
    GameConstants, SubRegions, Routes, GymList, Gym, Achievement, SecretAchievement, AchievementHandler, AchievementTracker,
-   pokemonMap, PokeballItem, PokemonType, ItemList, UndergroundItemValueType, UndergroundItem, KeyItem, TemporaryBattleList, TemporaryBattle
+   pokemonMap, PokeballItem, PokemonType, ItemList, UndergroundItemValueType, UndergroundItem, KeyItem, TemporaryBattleList, TemporaryBattle,
+   FluteEffectRunner, OakItem, OakItemType, QuestHelper, BerryType, GameHelper
 */
 
 /**
@@ -137,7 +138,7 @@ class TranslationCore {
             if (module.disabled) {
                 continue;
             }
-            if (module.resourceKeys.length > 0) {
+            if (module.pullResource) {
                 await this.#pullResource(module.name);
             }
             if (module.disabled) {
@@ -289,6 +290,7 @@ class TranslationCore {
                 timeout: 6000000,
             });
         }
+        this.TranslationHelper.exporting = false;
     }
 
     /** 从文件选择框导入翻译 */
@@ -324,7 +326,7 @@ class TranslationCore {
      * @type {Object}
      */
     TranslationHelper = {
-        exporting: false,
+        exporting: true,
         _toggleRaw: ko.observable(false).extend({ boolean: null }),
         get toggleRaw() {
             return this._toggleRaw();
@@ -360,14 +362,14 @@ class BaseModule {
     /** @type {string} 模块展示名称，用于 UI 面板显示 */
     displayName = "";
 
-    /** @type {string[]} 模块最终生成的 JSON 资源键名集合 */
-    resourceKeys = [];
-
     /**
      * 暴露给全局 TranslationAPI 的方法集合
      * @type {Record<string, Function>}
      */
     translationAPI = {};
+
+    /** @type {boolean} 是否远程请求资源 */
+    pullResource = true;
 
     /**
      * 框架生命周期钩子：注入核心实例，并将当前模块 API 注册到全局。
@@ -414,7 +416,6 @@ class BaseModule {
 class TownModule extends BaseModule {
     name = "Town";
     displayName = "城镇";
-    resourceKeys = ["Town"];
     #dict = { Town: {} };
 
     init() {
@@ -476,7 +477,6 @@ class TownModule extends BaseModule {
 class QuestLineModule extends BaseModule {
     name = "QuestLine";
     displayName = "任务线";
-    resourceKeys = ["QuestLine"];
     #dict = { QuestLine: {} };
 
     init() {
@@ -617,7 +617,6 @@ class QuestLineModule extends BaseModule {
 class NPCModule extends BaseModule {
     name = "NPC";
     displayName = "NPC";
-    resourceKeys = ["NPC", "NPCName", "NPCDialog"];
     #dict = { NPC: {}, NPCName: {}, NPCDialog: {} };
 
     init() {
@@ -729,7 +728,6 @@ class NPCModule extends BaseModule {
 class AchievementModule extends BaseModule {
     name = "Achievement";
     displayName = "成就";
-    resourceKeys = ["Achievement", "AchievementName", "AchievementDescription", "AchievementHint"];
     #dict = { Achievement: {}, AchievementName: {}, AchievementDescription: {}, AchievementHint: {} };
 
     // 增加结果缓存避免大量正则开销
@@ -926,10 +924,9 @@ class AchievementModule extends BaseModule {
     }
 }
 
-class RegionModule extends BaseModule {
+class RegionsModule extends BaseModule {
     name = "Regions";
     displayName = "地区";
-    resourceKeys = ["Regions", "Region", "RegionFull", "SubRegion"];
     #dict = { Regions: {}, Region: {}, RegionFull: {}, SubRegion: {}, RegionAll: {} };
 
     init() {
@@ -1012,7 +1009,6 @@ class RegionModule extends BaseModule {
 class RouteModule extends BaseModule {
     name = "Route";
     displayName = "道路";
-    resourceKeys = ["Route"];
     #dict = { Route: {} };
 
     #regionRouteReg = new RegExp(`^MISSING_REGION$`);
@@ -1107,7 +1103,6 @@ class RouteModule extends BaseModule {
 class GymModule extends BaseModule {
     name = "Gym";
     displayName = "道馆";
-    resourceKeys = ["Gym"];
     #dict = { Gym: {} };
 
     init() {
@@ -1185,6 +1180,7 @@ class GymModule extends BaseModule {
 
 class UIModule extends BaseModule {
     name = "UI";
+    pullResource = false;
 
     init() {
         this.#hook();
@@ -1376,7 +1372,6 @@ class UIModule extends BaseModule {
 class PokemonModule extends BaseModule {
     name = "Pokemon";
     displayName = "宝可梦";
-    resourceKeys = ["Pokemon"];
     #cache = new Map();
     #dict = { Pokemon: {} };
 
@@ -1436,20 +1431,12 @@ class PokemonModule extends BaseModule {
 class ItemModule extends BaseModule {
     name = "Item";
     displayName = "道具";
-    resourceKeys = ["Item", "ItemName", "ItemDescription", "KeyItem"];
-    #dict = { Item: {}, ItemName: {}, ItemDescription: {}, KeyItem: {} };
+    #dict = { Item: {}, ItemName: {}, ItemDescription: {}, KeyItem: {}, OakItem: {}, PokemonType: {} };
 
     #desMapper = {
         // TODO
         BerryItem: (item) => `获取1个 ${item.berryName}<br/><i>(仅限无高级道具挑战模式)</i>`,
         BuyKeyItem: () => "",
-        FluteItem: (item) => {
-            item.getDescription = function () {
-                // TODO
-                return `+${(this.getMultiplier() - 1).toLocaleString("en-US", { style: "percent", minimumFractionDigits: 2, maximumFractionDigits: 2 })} ${this.description} 加成`;
-            };
-            return "";
-        },
         // TODO
         PokeBlock: (item) => item._description || "Unobtainable item for future uses",
         MegaStoneItem: (item) => {
@@ -1471,8 +1458,8 @@ class ItemModule extends BaseModule {
         PokemonItem: (item) => () => `获得宝可梦 ${this.core.TranslationAPI.Pokemon(item.type)}`,
         ZCrystalItem: (item) => {
             const type = GameConstants.zCrystalItemType.indexOf(item.name);
-            // TODO
-            return `允许 ${PokemonType[type]}属性宝可梦在下场战斗中使用Ｚ招式。接着，他们需要稍微休息一下`;
+            const typeDisplayName = this.translationAPI.PokemonType(PokemonType[type]);
+            return `允许 ${typeDisplayName}属性宝可梦在下场战斗中使用Ｚ招式。接着，他们需要稍微休息一下`;
         },
     };
 
@@ -1486,6 +1473,8 @@ class ItemModule extends BaseModule {
         this.#dict.ItemName = this.#dict.Item.ItemName ?? {};
         this.#dict.ItemDescription = this.#dict.Item.ItemDescription ?? {};
         this.#dict.KeyItem = this.#dict.Item.KeyItem ?? {};
+        this.#dict.OakItem = this.#dict.Item.OakItem ?? {};
+        this.#dict.PokemonType = this.#dict.Item.PokemonType ?? {};
     };
 
     translationAPI = {
@@ -1510,10 +1499,36 @@ class ItemModule extends BaseModule {
             }
             return this.#dict.KeyItem[keyItemString] ?? fallback;
         },
+        OakItem: (oakItemString, fallback = oakItemString) => {
+            if (this.disabled) {
+                return oakItemString;
+            }
+            return this.#dict.OakItem[oakItemString] ?? fallback;
+        },
+        // TODO 暂时将PokemonType放在Item中
+        PokemonType: (typeString, fallback = typeString) => {
+            if (this.disabled) {
+                return typeString;
+            }
+            return this.#dict.PokemonType[typeString] ?? fallback;
+        },
     };
 
     #hook() {
         const that = this;
+        // 通过遍历实例反向查找闭包class
+        const FluteItem = Object.values(ItemList).find((i) => i.constructor.name == "FluteItem")?.constructor;
+        FluteItem.prototype.getDescription = function () {
+            return `+${(this.getMultiplier() - 1).toLocaleString("en-US", { style: "percent", minimumFractionDigits: 2, maximumFractionDigits: 2 })} ${this.description} 加成`;
+        };
+        FluteItem.prototype.getFormattedTooltip = function () {
+            let tooltipString = "";
+            tooltipString += `<div><strong>${this.displayName}</strong></div>`;
+            tooltipString += `<div>${this.getDescription()}</div>`;
+            tooltipString += `<div>消耗 ${FluteEffectRunner.numActiveFlutes()} 宝石/秒</div>`;
+            return tooltipString;
+        };
+
         // KeyItem
         Object.defineProperties(KeyItem.prototype, {
             displayName: {
@@ -1537,6 +1552,33 @@ class ItemModule extends BaseModule {
                 },
             },
         });
+
+        // OakItem
+        Object.defineProperties(OakItem.prototype, {
+            displayName: {
+                get() {
+                    return that.core.TranslationHelper.exporting || that.core.TranslationHelper.toggleRaw
+                        ? this.rawDisplayName
+                        : that.translationAPI.OakItem(this.rawDisplayName);
+                },
+                set(rawDisplayName) {
+                    this.rawDisplayName = rawDisplayName;
+                },
+            },
+            description: {
+                get() {
+                    return that.core.TranslationHelper.exporting || that.core.TranslationHelper.toggleRaw
+                        ? this.rawDescription
+                        : that.translationAPI.OakItem(this.rawDescription);
+                },
+                set(rawDescription) {
+                    this.rawDescription = rawDescription;
+                },
+            },
+        });
+        $(
+            '#oakItemsModal strong[data-bind="text: GameConstants.humanifyString(OakItemType[OakItemController.inspectedItem])"]'
+        ).attr("data-bind", "text: App.game.oakItems.itemList[OakItemController.inspectedItem].displayName");
 
         // PokeballItem 兼容大师球
         Object.defineProperties(PokeballItem.prototype, {
@@ -1621,11 +1663,11 @@ class ItemModule extends BaseModule {
     exportData = () => {
         this.core.TranslationHelper.exporting = true;
         const displayName = Object.values(ItemList).reduce((obj, i) => {
-            const filters = ["PokemonItem"];
-            const type = i.constructor.name;
-            if (!filters.includes(type)) {
-                obj[i.displayName] = this.translationAPI.ItemName(i.displayName, "");
-            }
+            //const filters = ["PokemonItem"];
+            //const type = i.constructor.name;
+            //if (!filters.includes(type)) {
+            obj[i.displayName] = this.translationAPI.ItemName(i.displayName, "");
+            //}
             return obj;
         }, {});
 
@@ -1642,10 +1684,20 @@ class ItemModule extends BaseModule {
             obj[i.description] = this.translationAPI.KeyItem(i.description, "");
             return obj;
         }, {});
+        const oakItem = App.game.oakItems.itemList.reduce((obj, i) => {
+            obj[i.displayName] = this.translationAPI.OakItem(i.displayName, "");
+            obj[i.description] = this.translationAPI.OakItem(i.description, "");
+            return obj;
+        }, {});
+        const pokemonType = Object.fromEntries(
+            GameHelper.enumStrings(PokemonType).map((type) => [type, this.translationAPI.PokemonType(type, "")])
+        );
         const json = {
             ItemName: displayName,
             ItemDescription: description,
             KeyItem: keyItem,
+            OakItem: oakItem,
+            PokemonType: pokemonType,
         };
         this.core.TranslationHelper.exporting = false;
         return json;
@@ -1654,7 +1706,6 @@ class ItemModule extends BaseModule {
 class TemporaryBattleModule extends BaseModule {
     name = "TemporaryBattle";
     displayName = "临时对战";
-    resourceKeys = ["TemporaryBattle", "TemporaryBattleName", "TemporaryBattleDefeatMessage"];
     #dict = { TemporaryBattle: {}, TemporaryBattleName: {}, TemporaryBattleDefeatMessage: {} };
 
     init() {
@@ -1751,11 +1802,134 @@ class TemporaryBattleModule extends BaseModule {
     };
 }
 
+class QuestModule extends BaseModule {
+    name = "Quest";
+    displayName = "任务";
+    // 不适合以json形式翻译，配合AST进行硬编码
+    pullResource = false;
+
+    init() {
+        this.#hook();
+    }
+    #hook() {
+        const that = this;
+
+        const questLists = {
+            DefeatPokemonsQuest: function () {
+                const routeName = Routes.getName(this.route, this.region, false, that.core.modules.Route.disabled);
+                return `在 ${routeName} 击败 ${this.amount.toLocaleString("en-US")} 只宝可梦`;
+            },
+            CapturePokemonsQuest: function () {
+                return `捕捉或孵化 ${this.amount.toLocaleString("en-US")} 只宝可梦`;
+            },
+            CapturePokemonTypesQuest: function () {
+                const type = PokemonType[this.type];
+                const typeDisplayName = that.core.modules.Item.translationAPI.PokemonType(type);
+                return `捕捉或孵化 ${this.amount.toLocaleString("en-US")} 只 ${typeDisplayName}属性宝可梦`;
+            },
+            ClearBattleFrontierQuest: function () {
+                return `通过 ${this.amount.toLocaleString("en-US")} 层战斗开拓区`;
+            },
+            GainFarmPointsQuest: function () {
+                return `获得 ${this.amount.toLocaleString("en-US")} 个农场代币`;
+            },
+            GainMoneyQuest: function () {
+                return `获得 ${this.amount.toLocaleString("en-US")} 个宝可币`;
+            },
+            GainTokensQuest: function () {
+                return `获得 ${this.amount.toLocaleString("en-US")} 个地牢代币`;
+            },
+            GainGemsQuest: function () {
+                const type = PokemonType[this.type];
+                const typeDisplayName = that.core.modules.Item.translationAPI.PokemonType(type);
+                const gemDisplayName = typeDisplayName + (typeDisplayName.length == 1 ? "之" : "") + "宝石";
+                return `获得 ${this.amount.toLocaleString("en-US")} 个${gemDisplayName}`;
+            },
+            HatchEggsQuest: function () {
+                return `孵化 ${this.amount.toLocaleString("en-US")} 个蛋`;
+            },
+            MineLayersQuest: function () {
+                return `在地下矿场采集每层所有宝物 ${this.amount.toLocaleString("en-US")} 次`;
+            },
+            MineItemsQuest: function () {
+                return `在地下矿场采集 ${this.amount.toLocaleString("en-US")} 个宝物`;
+            },
+            CatchShiniesQuest: function () {
+                return `捕捉或孵化 ${this.amount.toLocaleString("en-US")} 只闪光宝可梦`;
+            },
+            CatchShadowsQuest: function () {
+                return `捕捉 ${this.amount.toLocaleString("en-US")} 只暗影宝可梦`;
+            },
+            DefeatGymQuest: function () {
+                // 原文逻辑太复杂了 如果Gym模块未启用直接返回原文
+                if (that.core.modules.Gym.disabled) {
+                    return this.customDescription ?? this.defaultDescription;
+                } else {
+                    const gym = GymList[this.gymTown];
+                    const town = gym.parent;
+                    const { region, subRegion } = GymList[this.gymTown].parent;
+                    const rawSubRegionName = SubRegions.getSubRegionById(region, subRegion).name;
+                    const townDisplayName = town.displayName ?? town.name;
+                    const subRegionDisplayName = that.core.modules.Regions.translationAPI.RegionAll(rawSubRegionName);
+                    const gymDisplayName = gym.displayName;
+                    return `击败 ${subRegionDisplayName}${townDisplayName} ${gymDisplayName} ${this.amount.toLocaleString("en-US")} 次`;
+                }
+            },
+            DefeatDungeonQuest: function () {
+                const dungeon = TownList[this.dungeon];
+                const rawSubRegionName = SubRegions.getSubRegionById(this.region, dungeon.subRegion).name;
+                const dungeonDisplayName = dungeon.displayName ?? this.dungeon;
+                const subRegionDisplayName = that.core.modules.Regions.translationAPI.RegionAll(rawSubRegionName);
+                return `清理 ${subRegionDisplayName}地牢 ${dungeonDisplayName} ${this.amount.toLocaleString("en-US")} 次`;
+            },
+            UsePokeballQuest: function () {
+                return `使用 ${ItemList[GameConstants.Pokeball[this.pokeball]].displayName} ${this.amount.toLocaleString("en-US")}次`;
+            },
+            UseOakItemQuest: function () {
+                const oakItem = App.game.oakItems.itemList[this.item].displayName;
+                const amount = this.amount.toLocaleString("en-US");
+
+                // 1. 将不同的道具行为抽离成映射表
+                const oakItemMap = {
+                    [OakItemType.Magic_Ball]: `捕捉 ${amount} 个野生宝可梦`,
+                    [OakItemType.Amulet_Coin]: `获得 ${amount} 次宝可币`,
+                    [OakItemType.Exp_Share]: `击败 ${amount} 个宝可梦`,
+                };
+
+                // 2. 获取对应的文本，如果没有匹配到则走兜底逻辑
+                const actionText = oakItemMap[this.item] || `触发 ${amount} 次`;
+
+                // 3. 直接通过模板字符串返回，省去数组操作
+                return `装备 ${oakItem} 并 ${actionText}`;
+            },
+            HarvestBerriesQuest: function () {
+                return `在农场收获 ${this.amount.toLocaleString("en-US")} 个 ${BerryType[this.berryType]} 树果`;
+            },
+        };
+
+        Object.entries(questLists).forEach(([quest, getter]) => {
+            const prototype = QuestHelper.quests[quest].prototype;
+            Object.defineProperties(prototype, {
+                description: {
+                    get() {
+                        return that.core.TranslationHelper.exporting || that.core.TranslationHelper.toggleRaw
+                            ? (this.customDescription ?? this.defaultDescription)
+                            : this.displayDescription;
+                    },
+                },
+                displayDescription: {
+                    get: getter,
+                },
+            });
+        });
+    }
+}
+
 const Core = new TranslationCore();
 
 Core.registerModule(new PokemonModule());
 Core.registerModule(new ItemModule());
-Core.registerModule(new RegionModule());
+Core.registerModule(new RegionsModule());
 Core.registerModule(new RouteModule());
 Core.registerModule(new TownModule());
 Core.registerModule(new NPCModule());
@@ -1763,6 +1937,7 @@ Core.registerModule(new GymModule());
 Core.registerModule(new TemporaryBattleModule());
 Core.registerModule(new QuestLineModule());
 Core.registerModule(new AchievementModule());
+Core.registerModule(new QuestModule());
 
 Core.registerModule(new UIModule());
 

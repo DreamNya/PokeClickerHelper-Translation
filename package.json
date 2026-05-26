@@ -7,6 +7,7 @@
         "export-achievement": "node ast/Achievement.cjs",
         "export-itemlist": "node ast/ItemList.cjs",
         "check-itemclass": "node ast/ItemClass.cjs",
+        "check-questclass": "node ast/QuestClass.cjs",
         "update-submodule": "git submodule update --remote --rebase",
         "purge-jsdelivr": "node script/purge-jsdelivr.mjs"
     },
