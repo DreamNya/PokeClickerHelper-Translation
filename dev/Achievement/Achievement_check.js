@@ -20,7 +20,7 @@ Object.entries({ ...t.Achievement.name, ...t.Achievement.description }).forEach(
             Achievement_Pokemon.push([en, cn, rawEN, rawCN]);
         }
     });
-    Object.entries(t.Gym).forEach(([en, cn]) => {
+    Object.entries({ ...t.Gym.GymLeaderName, ...t.Gym.GymBadge }).forEach(([en, cn]) => {
         if (rawEN.includes(en) && !rawCN.includes(cn)) {
             Achievement_Gym.push([en, cn, rawEN, rawCN]);
         }

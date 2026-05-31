@@ -21,7 +21,7 @@ Object.entries(Object.assign(...Object.values(t.QuestLine).map((i) => ({ ...i.de
                 QuestLine_Pokemon.push([en, cn, rawEN, rawCN]);
             }
         });
-        Object.entries(t.Gym).forEach(([en, cn]) => {
+        Object.entries({ ...t.Gym.GymLeaderName, ...t.Gym.GymBadge }).forEach(([en, cn]) => {
             if (rawEN.includes(en) && !rawCN.includes(cn)) {
                 QuestLine_Gym.push([en, cn, rawEN, rawCN]);
             }

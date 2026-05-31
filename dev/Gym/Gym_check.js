@@ -1,56 +1,48 @@
 const t = Object.fromEntries(Object.entries(TranslationCore.TranslationCache).map(([a, b]) => [a, JSON.parse(b)]));
 
-const NPCDialog_NPCName = [];
-const NPCDialog_Pokemon = [];
-const NPCDialog_Gym = [];
-const NPCDialog_Item = [];
-const NPCDialog_Regions = [];
-const NPCDialog_Route = [];
-const NPCDialog_Town = [];
-const NPCDialog_TemporatyBattle = [];
+const Gym_NPCName = [];
+const Gym_Pokemon = [];
+const Gym_Gym = [];
+const Gym_Item = [];
+const Gym_Regions = [];
+const Gym_Route = [];
+const Gym_Town = [];
 
-Object.entries(t.NPC.NPCDialog).forEach(([rawEN, rawCN]) => {
+Object.entries(t.Gym.GymDefeateMessage).forEach(([rawEN, rawCN]) => {
     Object.entries(t.NPC.NPCName).forEach(([en, cn]) => {
         if (rawEN.includes(en) && !rawCN.includes(cn)) {
-            NPCDialog_NPCName.push([en, cn, rawEN, rawCN]);
+            Gym_NPCName.push([en, cn, rawEN, rawCN]);
         }
     });
     Object.entries(t.Pokemon).forEach(([en, cn]) => {
         if (rawEN.includes(en) && !rawCN.includes(cn)) {
-            NPCDialog_Pokemon.push([en, cn, rawEN, rawCN]);
+            Gym_Pokemon.push([en, cn, rawEN, rawCN]);
         }
     });
     Object.entries({ ...t.Gym.GymLeaderName, ...t.Gym.GymBadge }).forEach(([en, cn]) => {
         if (rawEN.includes(en) && !rawCN.includes(cn)) {
-            NPCDialog_Gym.push([en, cn, rawEN, rawCN]);
+            Gym_Gym.push([en, cn, rawEN, rawCN]);
         }
     });
     Object.entries({ ...t.Item.ItemName, ...t.ItemKeyItem }).forEach(([en, cn]) => {
         if (rawEN.includes(en) && !rawCN.includes(cn)) {
-            NPCDialog_Item.push([en, cn, rawEN, rawCN]);
+            Gym_Item.push([en, cn, rawEN, rawCN]);
         }
     });
 
     Object.entries({ ...t.Regions.Region, ...t.Regions.SubRegion }).forEach(([en, cn]) => {
         if (rawEN.includes(en) && !rawCN.includes(cn)) {
-            NPCDialog_Regions.push([en, cn, rawEN, rawCN]);
+            Gym_Regions.push([en, cn, rawEN, rawCN]);
         }
     });
     Object.entries(t.Route).forEach(([en, cn]) => {
         if (rawEN.includes(en) && !rawCN.includes(cn)) {
-            NPCDialog_Route.push([en, cn, rawEN, rawCN]);
+            Gym_Route.push([en, cn, rawEN, rawCN]);
         }
     });
     Object.entries(t.Town).forEach(([en, cn]) => {
         if (rawEN.includes(en) && !rawCN.includes(cn)) {
-            NPCDialog_Town.push([en, cn, rawEN, rawCN]);
+            Gym_Town.push([en, cn, rawEN, rawCN]);
         }
     });
-    Object.entries({ ...t.TemporaryBattle.TemporaryBattleName, ...t.TemporaryBattle.TemporaryBattleDefeatMessage }).forEach(
-        ([en, cn]) => {
-            if (rawEN.includes(en) && !rawCN.includes(cn)) {
-                NPCDialog_TemporatyBattle.push([en, cn, rawEN, rawCN]);
-            }
-        }
-    );
 });

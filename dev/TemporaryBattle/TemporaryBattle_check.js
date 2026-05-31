@@ -19,7 +19,7 @@ Object.entries(t.TemporaryBattle.TemporaryBattleDefeatMessage).forEach(([rawEN, 
             TemporaryBattle_Pokemon.push([en, cn, rawEN, rawCN]);
         }
     });
-    Object.entries(t.Gym).forEach(([en, cn]) => {
+    Object.entries({ ...t.Gym.GymLeaderName, ...t.Gym.GymBadge }).forEach(([en, cn]) => {
         if (rawEN.includes(en) && !rawCN.includes(cn)) {
             TemporaryBattle_Gym.push([en, cn, rawEN, rawCN]);
         }

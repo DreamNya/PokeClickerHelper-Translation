@@ -28,6 +28,15 @@
             "Blue is getting in your way. Defeat him in Silph Co.": "青绿挡住了你的路。在西尔佛公司击败他",
             "Team Rocket has occupied Silph Co. Clear Silph Co. in Saffron City once more to foil their plans.": "再次前往金黄市挫败他们的计划，清理被火箭队占领的西尔佛公司",
             "If you take down Team Rocket's leader one more time they will surely never come back from this! Clear Viridian City Gym.": "如果你再击败火箭队的领导者，他们肯定再也不会回来了！击败常青市道馆"
+        },
+        "clearedMessage": {
+            "I see that you raise Pokémon with utmost care. A child like you would never understand what I hope to achieve. I shall step aside this time! I hope we meet again...": "我看得出你培育宝可梦时倾注了极大的心血。像你这样的孩子是永远不会明白我的理想的。这次我就先退让了！希望我们后会有期……",
+            "What kept you $playername$? Hahaha! I thought you'd turn up if I waited here! I guess Team Rocket slowed you down! Not that I care! I saw you in Saffron, so I decided to see if you got better!": "你怎么这么慢才来， $playername$？ 哈哈哈！我就知道只要在这里等着，你总会现身的！看来火箭队让你费了不少功夫吧！不过我才不在乎呢！我在金黄市看到你了，所以决定来看看你有没有变得更强！",
+            "Arrgh!! I lost again!? Blast it all! You ruined our plans for Silph! But Team Rocket will never fall! $playername$, never forget that all Pokémon exist for Team Rocket! I must go, but I shall return!": "啊啊啊！！我又输了！？该死！你毁掉了我们夺取西尔佛的计划！但是火箭队是绝对不会倒下的！ $playername$，永远不要忘记，所有的宝可梦都是为了火箭队而存在的！我必须走了，但我一定会回来的！"
+        },
+        "npcDisplayName": {
+            "Team Rocket Boss Giovanni": "火箭队老大·坂木",
+            "Rival Blue": "劲敌·青绿"
         }
     },
     "Bill's Grandpa Treasure Hunt": {
@@ -144,7 +153,7 @@
             "Talk to Eusine in Mahogany Town.": "前往卡吉镇与水京谈谈",
             "Talk to Eusine in Vermilion City.": "前往枯叶市与水京谈谈",
             "Talk to Eusine in Fuchsia City.": "前往浅红市与水京谈谈",
-            "Talk to Eusine in Bill's House.": "在正辉的家中和水京对话",
+            "Talk to Eusine in Bill's House.": "在正辉的家中与水京谈谈",
             "Capture Suicune.": "捕捉水君"
         }
     },
@@ -383,6 +392,18 @@
             "From the top of Realgam Tower, you see Mayor Es Cade. Go ask him for help.": "从雄黄塔塔顶，你可以看到市长·巴克雷。去找他帮忙吧",
             "Team Cipher's leaders have holed up in the Realgam Colosseum. Fight them to end this once and for all!": "暗影队的领导者躲在雄黄竞技场里。打败他们，彻底终结这一切！",
             "Just when you have him cornered, Evice calls in a helicopter. Watch him escape the Realgam Colosseum.": "就在你把他逼入绝境的时候，厄犽呼叫了直升机。只能看着他逃出雄黄竞技场"
+        },
+        "clearedMessage": {
+            "How, how, how dare you! Don't you dare think you'll get away with your latest outrage! One of these days, I will take great pleasure in kicking you about with my elegant dance steps! Oh, and I'm not giving up our Shadow Pokémon plan!": "你、你、你竟敢这样！别以为你最近的无礼行为能就此作罢！总有一天，我会非常乐意用我优雅的舞步把你踢得落花流水！哦，还有，我是绝对不会放弃我们的暗影宝可梦计划的！",
+            "This isn't over yet. Stronger Pokémon are being made even now. You'd better get serious about training your Pokémon for our next meeting. Daahahah!": "这事还没完呢。更强大的宝可梦现在也正在被制造出来。你最好认真训练你的宝可梦，以应对我们的下一次见面。哒哈哈哈！",
+            "Aiyeeeeh! How dare you! How could I get bested by a mere child? Remember this! I'll get you back for this!": "哎呀呀呀！你竟敢！我怎么会被一个乳臭未干的孩子打败？给我记好了！我一定会找你算账的！",
+            "Humph! Your struggle to get here was all in vain! The Shadow Pokémon we produced have already been moved elsewhere. And that, of course, includes the ultimate Shadow Pokémon I created for the boss! Wahahahah!": "哼！你千辛万苦来到这里全都是徒劳！我们制造的暗影宝可梦早就已经转移到别的地方去了。当然，这也包括了我为老大创造的终极暗影宝可梦！哇哈哈哈哈！"
+        },
+        "npcDisplayName": {
+            "Miror B.": "迪斯裘",
+            "Dakim": "达奇姆",
+            "Venus": "维纳斯",
+            "Ein": "博格"
         }
     },
     "A New World": {
@@ -396,11 +417,11 @@
             "All is quiet. Team Galactic isn't doing anything. Maybe they learned their lesson. Just keep traveling, I guess. Clear the Pastoria City Gym.": "一切都很安静，银河队什么都没做。也许他们吸取了教训，继续旅行吧。击败野原市道馆",
             "The boss of Team Galactic has been spotted in Celestic Town!": "银河队老大出现在神和镇",
             "Cyrus is gone. Nothing to do but proceed. Adventure awaits! Clear the Canalave City Gym.": "赤日已经离开，无事可做，只能继续前进，冒险继续！击败水脉市道馆",
-            "A commotion was heard at Lake Valor. You must protect the lake's guardian! Clear Lake Valor.": "立志湖传来一阵骚动，务必保护好湖的守护者！立即清理立志湖",
-            "Lake Valor's guardian was taken. Better try again at the next lake. Clear Lake Verity.": "立志湖的守护者被抓走了，前往另一个湖中寻找，清理心齐湖",
-            "Lake Verity's guardian was also taken. Only one lake remains. Clear Lake Acuity.": "心齐湖的守护者也被带走了，现在只剩下一个湖了。清理睿智湖",
-            "You failed to protect any of the lake guardians. They have been taken to Veilstone City. So that's what that strange building was... Clear Team Galactic HQ in Veilstone City.": "你没能保护好湖里的守护者，它们被带到帷幕市。所以，这就是那个奇怪的建筑……清理银河队基地",
-            "The lake guardians have been rescued, but Cyrus has used them to forge the Red Chain. He is taking it to the top of Mount Coronet. Follow him! Clear Spear Pillar.": "湖中守护者得救了，但赤日利用它们铸造了红色锁链，他要把红色锁链带到天冠山。跟着他！清理枪之柱",
+            "A commotion was heard at Lake Valor. You must protect the lake's guardian! Clear Lake Valor.": "立志湖传来一阵骚动，务必保护好湖之神！立即清理立志湖",
+            "Lake Valor's guardian was taken. Better try again at the next lake. Clear Lake Verity.": "立志湖之神被抓走了，前往另一个湖中寻找，清理心齐湖",
+            "Lake Verity's guardian was also taken. Only one lake remains. Clear Lake Acuity.": "心齐湖之神也被带走了，现在只剩下一个湖了。清理睿智湖",
+            "You failed to protect any of the lake guardians. They have been taken to Veilstone City. So that's what that strange building was... Clear Team Galactic HQ in Veilstone City.": "你没能保护好湖之众神，它们被带到帷幕市。所以，这就是那个奇怪的建筑……清理银河队基地",
+            "The lake guardians have been rescued, but Cyrus has used them to forge the Red Chain. He is taking it to the top of Mount Coronet. Follow him! Clear Spear Pillar.": "湖之众神得救了，但赤日利用它们铸造了红色锁链，他要把红色锁链带到天冠山。跟着他！清理枪之柱",
             "Cyrus planned to use the Red Chain to enslave Dialga and Palkia, but he accidentally angered Giratina and has been taken to its realm. A portal has appeared on top of Mount Coronet. Use it to follow Cyrus and end his threat once and for all. Clear Distortion World.": "赤日计划用红色锁链控制帝牙卢卡和帕路奇亚，但他不小心激怒了骑拉帝纳，并被带到它的领域。一个传送门出现在天冠山上。用它追踪赤日，彻底消除威胁。清理毁坏的世界"
         }
     },
@@ -601,6 +622,18 @@
             "Talk to Professor Krane at the Pokémon HQ Lab.": "前往宝可梦综合研究所与暮阴博士谈谈",
             "Battle through Team Cipher on Citadark Isle": "前往镍暗岛与暗影队战斗",
             "Defeat Grand Master Greevil and XD001 in the Citadark Isle Dome.": "前往镍暗岛巨蛋击败暗影总帅死金和ＸＤ００１"
+        },
+        "clearedMessage": {
+            "Cipher? Nah, I don't play with those punks. I'm my own man, flying solo. No, I won't say where I got this Zangoose.": "暗影？切，我才不跟那帮小混混一起玩。我是我自己的老大，单打独斗。不，我是不会告诉你我是从哪得到这只猫鼬斩的。",
+            "Wow, you've got some strong Pokémon! You might be able to beat Team Cipher! I heard they re-activated their operations at the Cipher Lab.": "哇，你的宝可梦好强啊！你或许真的能够打败暗影队！我听说他们在暗影研究所重新启动了他们的行动。",
+            "This is Marcia live on the scene! Chaos in Pyrite Town as Team Cipher has returned! Rumors are swirling about an infamous dance machine making a scene!": "我是前方记者蕊拉，正在为您带来现场直播！随着暗影队的回归，黄铁镇陷入了一片混乱！有传言称，一个臭名昭著的跳舞机器正在大肆闹事！",
+            "Bah! No fair! Fine, you can take your precious Professor Krane. Get out of here!": "呸！太不公平了！行吧，你可以带走你那宝贝的暮阴博士。快从这里滚出去！"
+        },
+        "npcDisplayName": {
+            "Thug Zook": "暴徒·扎酷斯加",
+            "Vander": "塞尼迪",
+            "Marcia": "蕊拉",
+            "Gorigan": "果力刚"
         }
     },
     "The Delta Episode": {
@@ -785,10 +818,10 @@
             "Xerosic offers you the possibility to stop the ultimate weapon in Lumiose City. Blue or Red Button, press one!": "库瑟洛斯奇向你提供了停下在密阿雷市的最终兵器的可能性。蓝色或红色按钮，选一个吧！",
             "Press the blue button!": "按下蓝色按钮！",
             "Press the red button!": "按下红色按钮！",
-            "The ultimate weapon was activated in Geosenge Town! Go to the Team Flare Secret HQ to put a stop to it! First step: Beating Team Flare Aliana.": "最终兵器在石香镇被激活了！为了停下它前往闪焰队秘密基地！第一步：打败闪焰队阿可碧",
-            "Continue traversing through the Team Flare Secret HQ! Second step: Beating Team Flare Celosia.": "继续深入闪焰队秘密基地！第二步：击败闪焰队克蕾儿",
-            "You should be halfway through. Go further in the Team Flare Secret HQ! Third step: Beating Team Flare Bryony.": "你应该走了一半了，进一步深入闪焰队秘密基地！第三步：击败闪焰队芭菈",
-            "You are getting close. Resume delving into the Team Flare Secret HQ! Fourth step: Beating Team Flare Mable.": "更接近了，继续深入闪焰队秘密基地！第四步：击败闪焰队茉蜜姬",
+            "The ultimate weapon was activated in Geosenge Town! Go to the Team Flare Secret HQ to put a stop to it! First step: Beating Team Flare Aliana.": "最终兵器在石香镇被激活了！为了停下它前往闪焰队秘密基地！第一步：打败闪焰队·阿可碧",
+            "Continue traversing through the Team Flare Secret HQ! Second step: Beating Team Flare Celosia.": "继续深入闪焰队秘密基地！第二步：击败闪焰队·克蕾儿",
+            "You should be halfway through. Go further in the Team Flare Secret HQ! Third step: Beating Team Flare Bryony.": "你应该走了一半了，进一步深入闪焰队秘密基地！第三步：击败闪焰队·芭菈",
+            "You are getting close. Resume delving into the Team Flare Secret HQ! Fourth step: Beating Team Flare Mable.": "更接近了，继续深入闪焰队秘密基地！第四步：击败闪焰队·茉蜜姬",
             "You are almost there! One more time traversing through the Team Flare Secret HQ and you'll get to the end! Fifth step: Beating Team Flare Lysandre.": "你几乎要到了！再一次深入闪焰队秘密基地然后你就能到达！第五步：击败闪焰队·弗拉达利",
             "This is it, you've beaten Lysandre at the top of his game in Team Flare Secret HQ, right? He might have something else to say...": "就是这样，你在闪焰队秘密基地打败了弗拉达利，对吧？他可能还有其他的话想说",
             "You go to the lowest level of the Team Flare Secret HQ as Lysandre told you to. There you find Xerneas and Yveltal fighting each other! Fight them yourself and calm them down!": "你前往了弗拉达利告诉你的闪焰队秘密基地最底层，在哪里你发现了哲尔尼亚斯和伊裴尔塔尔正在互相对战！击败他们来让他们冷静下来！",
@@ -798,6 +831,23 @@
             "Stop Team Flare Boss Lysandre in Team Flare Secret HQ once and for all!!": "在闪焰队秘密基地彻底击败闪焰队老大·弗拉达利",
             "You did it! You saved Kalos! There is nothing else to do except to continue your journey to beat the Kalos Pokémon League!": "你做到了！你拯救了卡洛斯！你只需要继续你的旅程并击败卡洛斯联盟！",
             "What an amazing trainer! You became Kalos Champion! There is a parade in your honor in Lumiose City. But wait, AZ is there asking you for a battle. Show him what being a Pokémon Trainer is like!": "多么厉害的训练家啊！你成为卡洛斯冠军！在密阿雷市举行这为你庆祝的游行。但是，ＡＺ想要和你进行一场战斗，向他展示什么叫做宝可梦训练家！"
+        },
+        "clearedMessage": {
+            "What's this? Well, well. What do we have here? A nosy little trainer has come poking around. Listen up! We're the fashionable team whose very name makes people tremble in fear: Team Flare! Team Flare's goal is to make it so we're the only ones who are happy! We don't care one bit about what happens to other trainers or Pokémon. Get out of here, kid. Don't you know not to play with fire? We'll obliterate you!": "这是怎么回事？哎呀呀，看看这是谁？一个爱管闲事的小小训练家找上门来了。听好了！我们就是那个单是名字就会让人闻风丧胆的时尚团队——闪焰队！闪焰队的目标是让我们成为世界上唯一获得幸福的人！我们一点也不在乎其他的训练家或宝可梦会怎么样。快从这里滚出去，小鬼。你难道不知道玩火自焚的道理吗？我们会把你彻底消灭！",
+            "You're quite strong. Oh yes... very strong, indeed. I certainly didn't expect you to be so interesting. But it matters not, we already have enough energy to power the device. I do hope we can meet again!": "你挺强的嘛。哦，是的……确实非常强。我真没想到你竟然会这么有趣。不过这都无所谓了，我们已经收集到了足够的能量来启动这个装置。真希望我们能再次见面！",
+            "No way you beat us! Wow, we are lame. Probability is just probability after all... Absolutes do not exist. But enough already! We've already stolen the Poké Balls, Great Balls, and Ultra Balls. Let's call it good and leave.": "你不可能打败我们的！哇，我们太差劲了。概率终究只是概率……绝对的事物是不存在的。不过也差不多够了！我们已经偷到了精灵球、超级球和高级球。见好就收，闪人！",
+            "Not just strong... TOO strong! Not ordinary, indeed. Whatever, it doesn't matter, we already tested what we wanted to know. The Abomasnow from this cavern is a fine specimen. The more we agitate it, the stronger its Snow Warning ability becomes, making the snow fall even more furiously. Whoever has the most energy will come out on top! And it's Team Flare, and only Team Flare who will survive!": "不只是强……是太强了！确实非同一般。算了，无确定，反正我们已经试出了想知道的情报。这个洞穴里的暴雪王是一个很好的样本。我们越是激怒它，它的降雪特性就会变得越强，让雪下得更加猛烈。谁拥有最多的能量，谁就能笑到最后！而只有闪焰队，也唯有闪焰队才能幸存下来！",
+            "I had fun at the Kalos Power Plant. Of course, we could have generated electricity with Team Flare's technology, too, you know. We just didn't think it justified the cost. To create a world for us and us alone, we have to play it smart, you see.": "我在卡洛斯发电厂玩得很开心。当然，你要知道，用我们闪焰队的科技其实也是可以发电的。我们只是觉得那样不划算。毕竟为了创造一个只属于我们的世界，我们必须聪明地行事，你懂吧。",
+            "In reality, those stones that line Route 10 are the graves of Pokémon. When the ultimate weapon was used to end that horrible war over 3,000 years ago, it stole the lives of all those Pokémon. Their lives were the price of peace then. And if we want to make our own wishes come true today, we in Team Flare also have to sacrifice something precious.": "实际上，排列在１０号道路上的那些石头是宝可梦的坟墓。当３０００多年前那场可怕的战争被终极武器平息时，它夺走了所有那些宝可梦的生命。它们的生命是当时和平的代价。而今天，如果我们想要实现我们自己的愿望，我们闪焰队也必须牺牲一些珍贵的东西。",
+            "We've been using the electricity we stole from the Power Plant to get everything prepared for activating the ultimate weapon. But it's not like that's all we'll need to use it. Are you following me? We'll need energy absorbed from Pokémon to power the device! Yes! It's the stones on Route 10 that will steal that energy for us and power the ultimate weapon.": "我们一直用从发电厂偷来的电力，为激活终极武器做着万全的准备。但这并不意味着只要有电力就足够使用了。你听明白我的话了吗？我们还需要从宝可梦身上吸收能量来为这个装置供能！没错！正是１０号道路上的那些石头会为我们夺走那些能量，并为终极武器提供动力。",
+            "The power of the Legendary Pokémon... The power to grant life to all around it... The power to steal life from all around it... It's a mysterious ability that even scientists like us haven't been able to really decode. What d'you think will happen to the world if we fuel the ultimate weapon with something like that?": "传说的宝可梦的力量……赋予周围一切生命的力量……夺走周围一切生命的力量……这是一种连我们这样的科学家都未能真正破解的神秘能力。要是我们用这种东西来作为终极武器的燃料，你觉得这个世界会变成什么样？"
+        },
+        "npcDisplayName": {
+            "Team Flare Grunt": "闪焰队手下",
+            "Team Flare Aliana": "闪焰队·阿可碧",
+            "Team Flare Bryony": "闪焰队·芭菈",
+            "Team Flare Mable": "闪焰队·茉蜜姬",
+            "Team Flare Celosia": "闪焰队·克蕾儿"
         }
     },
     "Princess Diancie": {
@@ -891,6 +941,24 @@
             "Lillie still has something on her mind. Talk to her in Iki Town.": "莉莉艾心里还有事。在利利小镇与她交谈",
             "Defeat Hala in Iki Town to complete Melemele's Grand Trial!": "在利利小镇击败哈拉，完成美乐美乐岛的大考验！",
             "There is one more Z Crystal on Ten Carat Hill. Find the Trial Site and claim it!": "在十克拉山丘上还有一个Ｚ纯晶。找到考验地点并获取它！"
+        },
+        "clearedMessage": {
+            "<i>The bridge collapses and you and the floating Pokémon start falling to your doom... But you are saved by a mysterious Pokémon!</i>": "<i>桥梁坍塌了，你和漂浮的宝可梦开始向毁灭的深渊坠落……但你被一只神秘的宝可梦救了！</i>",
+            "You seemed to be in perfect sync with your Pokémon—weren't you? Um... Since we've come this far together, why don't I show you some more of the city?": "你看起来和你的宝可梦配合得天衣无缝—— communication 不是吗？嗯……既然我们都已经一起走到这里了，不如我再带你多逛逛这座城市吧？",
+            "My thanks to you and your Pokémon. These grunts are always bothering me and my trial site. You... you're the trainer who cleared the Trainers' School so effortlessly! Allow me to see if you're ready for my trial!": "向你和你的宝可梦表示感谢。这些手下总是来打扰我和我的考验地点。你……你就是那个毫不费力就通过了训练家学校的训练家！就让我来看看你是否已经准备好迎接我的考验了吧！",
+            "What an incredible Trainer you are! The Z-Crystal from the pedestal is yours now! It is known as Normalium Z!</br></br><img width=\"100\" src=\"assets/images/items/zCrystal/Normalium Z.svg\"/>": "你真是一位不可思议的训练家！台座上的Ｚ纯晶现在是你的了！它被称为一般Ｚ！</br></br><img width=\"100\" src=\"assets/images/items/zCrystal/Normalium Z.svg\"/>",
+            "Pew!<br><br><i>Nebby flees.</i>": "Pew!<br><br><i>小星云逃走了。</i>",
+            "Pew~<br><br><i>Nebby stays. It seems like it's following you now!</i>": "Pew~<br><br><i>小星云留了下来。它现在似乎在跟着你！</i>",
+            "That one you have come to collect... You must know that it is able to warp away when threatened, but the holes that are created when it does so leave a path open to dangerous beings. Be careful of who you trust it to.": "你要找的那孩子……你应该知道，它在受到威胁时可以通过瞬间移动逃走，但在这个过程中产生的空洞会给危险的生物打开一条通路。把它托付给别人时一定要多加小心。",
+            "Hello there. There's a wonderful breeze blowing out here today. The glistening Flyinium Z... It's yours now. Use it well.</br></br><img width=\"100\" src=\"assets/images/items/zCrystal/Flyinium Z.svg\"/>": "你好啊。今天这里的微风真舒服。闪闪发光的飞行Ｚ……现在是你的了。好好使用它吧。</br></br><img width=\"100\" src=\"assets/images/items/zCrystal/Flyinium Z.svg\"/>"
+        },
+        "npcDisplayName": {
+            "Melemele Guardian": "美乐美乐岛守护神",
+            "Lillie": "莉莉艾",
+            "Ilima": "伊利马",
+            "Nebby": "小星云",
+            "Phyco": "西奥尼拉",
+            "Kahili": "卡希丽"
         }
     },
     "Symbiotic Relations": {
@@ -909,6 +977,24 @@
             "You hear the echoes of bad rap and low self-esteem in the distance. Clear Diglett's Tunnel.": "你远处听到了糟糕说唱和低自尊的回音。清理地鼠隧道",
             "Reach Kahuna Olivia and Lillie at the Ruins of Life and complete Akala's Grand Trial!": "到达生命遗迹与岛屿之王·丽姿和莉莉艾会面并完成阿卡拉的大考验！",
             "A strange creature has appeared in Aether Paradise. Make it go away. Clear the Ultra Wormhole.": "在以太乐园中出现了一个奇怪的生物。赶走它，清理究极之洞"
+        },
+        "clearedMessage": {
+            "Very well done! You do know what this is, don't you? Please take this Waterium Z.</br></br><img width=\"100\" src=\"assets/images/items/zCrystal/Waterium Z.svg\"/>": "做得非常好！你知道这是什么，对吧？请收下这个水Ｚ。</br></br><img width=\"100\" src=\"assets/images/items/zCrystal/Waterium Z.svg\"/>",
+            "That must have been the Pokémon known as Sudowoodo. Our research is insufficient to define what it means to be a Pokémon Trainer... We'll never be able to stop the Blinding One like this...": "那一定就是被称为树才怪的宝可梦了。我们的研究还不足以定义什么是宝可梦训练家……这样下去，我们永远也无法阻止光辉大神……",
+            "Give me your name, Trainer. $playername$, eh? That's a fine name. I like the way you handled yourself in battle. Perhaps we'll meet again someday.": "告诉我你的名字，训练家。 $playername$是吗？真是个不错的名字。我喜欢你在对战中的表现。也许某天我们还会再见面的。",
+            "Whoa! S-spectacular! That Pokémon was protecting this Firium Z. Now it is yours.</br></br><img width=\"100\" src=\"assets/images/items/zCrystal/Firium Z.svg\"/>": "哇！太、太壮观了！那只宝可梦保护着这个火Ｚ。现在它是你的了。</br></br><img width=\"100\" src=\"assets/images/items/zCrystal/Firium Z.svg\"/>",
+            "Wow, you're even stronger than I thought! Looks like you've cleared all three of Akala's trials! Here! A gift for such an inspiring young Trainer!</br></br><img width=\"100\" src=\"assets/images/items/zCrystal/Grassium Z.svg\"/>": "哇，你比我想象的还要强！看来你已经通过了阿卡拉岛的所有三个考验！来！给这位令人振奋的年轻训练家的礼物！</br></br><img width=\"100\" src=\"assets/images/items/zCrystal/Grassium Z.svg\"/>",
+            "Just when things were startin' to heat up, yo, I got surrounded by Diglett and beat up, yo!": "正当对战开始火热起来，哟，就被一群地鼠围攻痛扁，真是失败，哟！",
+            "Why so shocked? Was it your first time seeing an Ultra Beast? Those mysterious creatures that live beyond the Ultra Wormholes, the holes that suddenly open in the sky and lead to Ultra Space... It would serve you well to remember this.": "为什么这么震惊？这是你第一次见到究极异兽吗？那些生活在究极之洞另一端的神秘生物，那些突然在天空中打开并通往究极空间的洞穴……你最好能记住这一点。"
+        },
+        "npcDisplayName": {
+            "Lana": "水莲",
+            "Dulse": "达尔斯",
+            "Hapu": "哈普乌",
+            "Kiawe": "卡奇",
+            "Mallow": "玛奥",
+            "Team Skull": "骷髅队",
+            "Phyco": "西奥尼拉"
         }
     },
     "Child of the Stars": {
@@ -927,7 +1013,7 @@
             "Team Skull have stolen Nebby! Battle Gladion at Aether House.": "骷髅队偷走了小星云！在以太之家与格拉吉欧战斗",
             "Kahuna Nanu is challenging you to a Grand Trial in Malie City! Test your strength before you go to Aether by defeating him.": "队长·默丹在马利埃静市道馆对你进行大考验！在前往以太之家前通过击败他来测试你的实力",
             "Aether president Lusamine has recruited Team Skull and is using Nebby to open an Ultra Wormhole. Stop her. Clear the Aether Foundation dungeon.": "以太理事长露莎米奈招募了骷髅队并利用小星云开启了究极之洞。阻止她。清理以太基金会地牢",
-            "Aether Branch Faba's ego is blocking your way. Defeat him in the Aether Foundation dungeon to get closer to Lusamine.": "以太分部长扎·奥博的自负阻碍了你的前进。在以太基金会地牢击败他，接近露莎米奈",
+            "Aether Branch Faba's ego is blocking your way. Defeat him in the Aether Foundation dungeon to get closer to Lusamine.": "以太分部长·扎奥博的自负阻碍了你的前进。在以太基金会地牢击败他，接近露莎米奈",
             "Ya boy Guzma is here. Defeat him in the Aether Foundation dungeon. Lusamine is next.": "古兹马也在这里。在以太基金会地牢打败他。下一个是露莎米奈",
             "Lusamine is using Nebby to open an Ultra Wormhole! Defeat her in the Aether Foundation dungeon to put a stop to this.": "露莎米奈利用小星云开启了究极之洞！在以太基金会地牢打败她，阻止这一切",
             "Talk to Lillie and Gladion at Aether Paradise when you're ready to go to the next island.": "准备前往下一个岛屿时，在以太乐园与莉莉艾和格拉吉欧交谈",
@@ -935,6 +1021,25 @@
             "Talk to Gladion.": "与格拉吉欧交谈",
             "There are more Z Crystals on Ula'ula. Find the Trial Site hidden in Haina Desert after clearing the Route.": "在乌拉乌拉岛上还有更多Ｚ纯晶。清理完道路后，在哈伊纳沙漠中找到隐藏的考验地点",
             "Get the Steelium Z. Defeat Molayne in Hokulani Observatory.": "获得钢Ｚ。在辉克拉尼天文台击败马睿因"
+        },
+        "clearedMessage": {
+            "That Pokémon was really something else! Here, I'll give you this Electrium Z to reward you for beating it.</br></br><img width=\"100\" src=\"assets/images/items/zCrystal/Electrium Z.svg\"/>": "那只宝可梦真是不简单！来，我把这个电Ｚ送给你，作为你打败它的奖励。</br></br><img width=\"100\" src=\"assets/images/items/zCrystal/Electrium Z.svg\"/>",
+            "I just wanted to go for a stroll on my own, to see what it must feel like to be a Trainer... So Hapu and I went our separate ways... but then Nebby tried to get out of my bag...": "我只是想一个人去散散步，体验一下当训练家的感觉……所以哈普乌和我分头行动了……但接着小星云就拼命想从我的包里钻出来……",
+            "Welcome back! Now let's see how you did... Yup! You passed my trial! Here you go!</br></br><img width=\"100\" src=\"assets/images/items/zCrystal/Ghostium Z.svg\"/>": "欢迎回来！现在让我来看看你表现得怎么样……没错！你通过了我的考验！拿好这个！</br></br><img width=\"100\" src=\"assets/images/items/zCrystal/Ghostium Z.svg\"/>",
+            "<i>There is a chest full of Bug-type Z-Crystals next to Guzma. You obtained a Buginium Z!<i></br></br><img width=\"100\" src=\"assets/images/items/zCrystal/Buginium Z.svg\"/>": "<i>在古兹马身旁有一个装满虫属性Ｚ纯晶的箱子。你获得了虫Ｚ！<i></br></br><img width=\"100\" src=\"assets/images/items/zCrystal/Buginium Z.svg\"/>",
+            "That Lusamine! We will need you to leave us in peace so that we may do our job. Please don't get in our way. Leave Cosmog to us.": "那个露莎米奈！我们需要你离我们远点，好让我们能清静地做我们的工作。请不要妨碍我们。把科斯莫古交给我们吧。",
+            "H-h-how can this be?! How could this child... If you're looking for Cosmog, I suppose it might be downstairs.": "这、这、这怎么可能？！这个孩子怎么会……如果你在寻找科斯莫古的话，我想它可能在楼下。",
+            "The daughter who stole my Cosmog from me and the son who took my Type: Null! All I ever did was give you two all the love I had, and all you did was betray me! You have no right to ask for my attention now!</br>But it doesn't matter now. None of that matters now! Watch... I will open the Ultra Wormhole for you... Come to me, my sweet beast!": "偷走我科斯莫古的女儿，还有带走我属性：空的儿子！我曾对你们两个倾注了我所有的爱，而你们却只会背叛我！你们现在没有任何权利要求我的关注！</br>不过现在这都无所谓了。那些现在都不重要了！看着吧……我会为你们打开究极之洞……来到我身边吧，我可爱的异兽！",
+            "All that I want is my precious beast! I don't care about any of the rest of you! I don't care if you are my child or not! If you're not beautiful enough to be worthy of my love, then I don't NEED you!</br></br><i>Lusamine left into the Ultra Wormhole.</i></br><img src=\"assets/images/npcs/specialNPCs/Wormhole.png\"></img>": "我想要的只有我那珍贵的异兽！我根本不在乎你们其余的人！不管你是不是我的孩子！如果你不够美丽，不配得到我的爱，那么我根本不需要你！</br></br><i>露莎米奈走进了究极之洞。</i></br><img src=\"assets/images/npcs/specialNPCs/Wormhole.png\"></img>"
+        },
+        "npcDisplayName": {
+            "Sophocles": "马玛内",
+            "Lillie": "莉莉艾",
+            "Acerola": "阿塞萝拉",
+            "Guzma": "古兹马",
+            "Ultra Recon Squad": "究极调查队",
+            "Faba": "扎奥博",
+            "Lusamine": "露莎米奈"
         }
     },
     "Emissary of Light": {
@@ -954,6 +1059,20 @@
             "Play the Moon Flute during Night or Dawn.": "在夜晚或黎明吹奏月亮之笛",
             "Help Lillie get through to her mother! Defeat Lusamine at the Altar of the Sunne and Moone.": "帮助莉莉艾理解她的母亲！在日月祭坛打败露莎米奈",
             "Everyone is finally safe. Talk to Lillie.": "大家终于安全了。与莉莉艾交谈"
+        },
+        "clearedMessage": {
+            "Oh! Been a while, friends. The kahuna? Hrmm. Well, I suppose the time might be right now... All right. Let us all proceed to the ruins. You stick with me, you two.": "哦！好久不见了，朋友们。岛屿之王？嗯……好吧，我想现在时机差不多了……很好。让我们一起前往遗迹吧。你们两个，紧跟着我。",
+            "Now we have both the Sun Flute and the Moon Flute!</br><img src=\"assets/images/items/fluteItem/Sun_Flute.png\"/><img src=\"assets/images/items/fluteItem/Moon_Flute.png\"/>": "现在太阳之笛和月亮之笛我们都拿到了！</br><img src=\"assets/images/items/fluteItem/Sun_Flute.png\"/><img src=\"assets/images/items/fluteItem/Moon_Flute.png\"/>",
+            "That's enough, grunts. No one wants to see a sore loser.</br></br>You. To be honest, I've treated you really badly. Even if I apologize, I know it's probably too late for you to forgive me. This is my way of saying sorry, OK? Take it. It's Poisonium Z.</br><img width=\"100\" src=\"assets/images/items/zCrystal/Poisonium Z.svg\">": "够了，手下们。没人想看到一个输不起的失败者。</br></br>你。说实话，我之前对你的态度的确很恶劣。即使我道歉，我也知道想让你原谅我可能已经太迟了。这是我表示歉意的方式，好吗？拿去吧。这是毒Ｚ。</br><img width=\"100\" src=\"assets/images/items/zCrystal/Poisonium Z.svg\">",
+            "<i>You obtained a Dragon-Type Z-Crystal. The Dragonium Z is yours!<i></br></br><img width=\"100\" src=\"assets/images/items/zCrystal/Dragonium Z.svg\"/>": "<i>你获得了龙属性的Ｚ纯晶。龙Ｚ是你的了！<i></br></br><img width=\"100\" src=\"assets/images/items/zCrystal/Dragonium Z.svg\"/>",
+            "Lillie...</br>...</br>Heh...</br>When did you... start becoming so beautiful?": "莉莉艾……</br>……</br>呵……</br>你是什么时候……开始变得这么美丽的？"
+        },
+        "npcDisplayName": {
+            "Hapu": "哈普乌",
+            "Lillie": "莉莉艾",
+            "Plumeria": "布尔美丽",
+            "Trial Site": "考验地点",
+            "Lusamine": "露莎米奈"
         }
     },
     "Eater of Light": {
@@ -969,6 +1088,17 @@
             "Battle Gladion on Ula'ula one last time before ascending to the Pokémon League.": "在乌拉乌拉岛与格拉吉欧最后一次战斗，然后前往宝可梦联盟",
             "One step closer to victory: Clear Mount Lanakila!": "距离胜利更近一步：清理拉纳基拉山！",
             "You were so distracted by Necrozma you forgot about the Z Crystal! Find the Trial Site in the Mount Lanakila dungeon.": "你被奈克洛兹玛分心忘记了Ｚ纯晶！在拉纳基拉山地牢找到考验地点"
+        },
+        "clearedMessage": {
+            "Necrozma shone with such blinding light, as it used to, only to lose that light all over again... It seems to have fled somewhere now. We are grateful to you, human of Alola. May we all eventually be awash in light again.": "奈克洛兹玛曾像过去那样散发出如此耀眼的光芒，却又再次失去了那道光……它现在似乎逃到什么地方去了。我们由衷地感谢你，阿罗拉的人类。愿我们最终都能再次沐浴在光芒之中。",
+            "That's a pretty great picture. You and your Pokémon! You're a great Pokémon Trainer! So here you go! A piece of Fairium Z for you!</br></br><img width=\"100\" src=\"assets/images/items/zCrystal/Fairium Z.svg\"/>": "这是一张非常棒的照片。你和你的宝可梦！你是一位优秀的宝可梦训练家！所以拿好这个！送你一个妖精Ｚ！</br></br><img width=\"100\" src=\"assets/images/items/zCrystal/Fairium Z.svg\"/>",
+            "<i>You see Necrozma unconscious in a crater, drained of light and in a dormant state. Best to let it rest for a while.</i>": "<i>你看到奈克洛兹玛在陨石坑里失去了意识，失去了光芒，处于休眠状态。最好让它休息一段时间。</i>",
+            "Congratulations! You've claimed the Icium Z! Onwards to the Pokémon League now!</br></br><img width=\"100\" src=\"assets/images/items/zCrystal/Icium Z.svg\"/>": "恭喜你！你获得了冰Ｚ！现在向着宝可梦联盟前进吧！</br></br><img width=\"100\" src=\"assets/images/items/zCrystal/Icium Z.svg\"/>"
+        },
+        "npcDisplayName": {
+            "Ultra Recon Squad": "究极调查队",
+            "Mina": "茉莉",
+            "Trial Site": "考验地点"
         }
     },
     "Island Challenge": {
@@ -978,6 +1108,12 @@
         },
         "descriptions": {
             "Start your Island Challenge at Professor Kukui's Lab.": "从库库伊博士实验室开始你的诸岛巡礼"
+        },
+        "clearedMessage": {
+            "Woah there, tester! This quest is still under development! You should go out there and test the story in the meantime, yeah!": "哇，那边的测试员！这个任务目前还在开发中！与此同时，你可以先去测试一下外面的剧情，对吧！"
+        },
+        "npcDisplayName": {
+            "Kukui": "库库伊"
         }
     },
     "Typing some Memories": {
@@ -1035,12 +1171,28 @@
             "Search for Silvally's Memory near an abandoned village. Ask Gladion at Aether Foundation if you're lost.": "在一个废弃的村庄附近寻找银伴战兽的存储碟。如果你迷路了，可以前往以太基金会询问格拉吉欧",
             "Defeat Captain Acerola to get the Memory back.": "打败队长·阿塞萝拉找回存储碟",
             "Search for Silvally's Memory in a modern haven. Ask Gladion at Aether Foundation if you're lost.": "在一个现代的避风港里寻找银伴战兽的存储碟。如果你迷路了，可以前往以太基金会询问格拉吉欧",
-            "Defeat Aether Branch Chief Faba to get the Memory back.": "打败以太分部长扎·奥博找回存储碟",
+            "Defeat Aether Branch Chief Faba to get the Memory back.": "打败以太分部长·扎奥博找回存储碟",
             "Search for Silvally's Memory near a steel dome. Ask Gladion at Aether Foundation if you're lost.": "在一个钢穹顶附近寻找银伴战兽的存储碟。如果你迷路了，可以前往以太基金会询问格拉吉欧",
             "Defeat Molayne to get the Memory back.": "打败马睿因找回存储碟",
             "Search for Silvally's Memory near a tree. Ask Gladion at Aether Foundation if you're lost.": "在一棵树附近寻找银伴战兽的存储碟。如果你迷路了，可以前往以太基金会询问格拉吉欧",
             "Defeat Ryuki to get the Memory back.": "打败龙葵找回存储碟",
             "Go talk to Gladion in the Aether Foundation and tell him you've recovered all the Silvally Memories!": "前往以太基金会与格拉吉欧谈谈，告诉他，你恢复了银伴战兽的所有存储碟"
+        },
+        "clearedMessage": {
+            "Thank you so much $playername$! Now I can finally buy that rod I've always wanted!": "非常感谢你， $playername$！现在我终于可以去买我梦寐以求的那根钓竿了！",
+            "Thank you, $playername$. I'll go to the market and buy the new ingredients right now!": "谢谢你， $playername$。我这就去市场把新食材买回来！",
+            "Thanks, $playername$. I'll be going to the market to buy the project supplies this instant.": "谢谢， $playername$。我马上就去市场购买项目所需的物资。",
+            "Thank you, $playername$! Now I'll go buy some new equipment for my laboratory.": "谢谢你， $playername$！现在我要去为我的实验室购买一些新设备了。",
+            "You're the best, kiddo! I'm sure she'll love the ring I'll buy her with these diamonds!": "你最棒了，小家伙！我确信她一定会喜欢我用这些钻石给她买的戒指！",
+            "Wow you're pretty good at the farm, $playername$! I'll go buy the palm tree seeds right this instant!": "哇，你在农场干得挺不错的嘛， $playername$！我这就去买棕榈树的种子！"
+        },
+        "npcDisplayName": {
+            "Captain Lana": "队长·水莲",
+            "Captain Mallow": "队长·玛奥",
+            "Captain Kiawe": "队长·卡奇",
+            "Captain Sophocles": "队长·马玛内",
+            "Veteran Aristo": "资深训练家·英倬",
+            "Kahuna Hapu": "岛屿女王·哈普乌"
         }
     },
     "Ultra Beast Hunt": {
@@ -1498,7 +1650,7 @@
         },
         "descriptions": {
             "Defeat the Grunts guarding the Aether Foundation takeover.": "击败守护以太基金会的手下",
-            "Defeat Aether Branch Chief Faba.": "击败以太分部长扎·奥博",
+            "Defeat Aether Branch Chief Faba.": "击败以太分部长·扎奥博",
             "Defeat Archie and Maxie.": "击败水梧桐和赤焰松",
             "Defeat Team Aqua Leader Archie.": "击败海洋队老大·水梧桐",
             "Defeat Team Magma Leader Maxie.": "击败熔岩队老大·赤焰松",
