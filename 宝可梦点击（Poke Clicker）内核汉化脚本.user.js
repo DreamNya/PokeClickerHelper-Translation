@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         宝可梦点击（Poke Clicker）内核汉化脚本
 // @namespace    PokeClickerHelper
-// @version      0.10.25-m
-// @description  采用内核汉化形式，目前汉化范围：所有任务线、NPC、成就、地区、城镇、道路、道馆、宝可梦、道具
+// @version      0.10.25-n
+// @description  采用内核汉化形式，目前汉化范围：所有任务线、NPC、成就、地区、城镇、道路、道馆、宝可梦、道具、临时对战、任务
 // @author       DreamNya, ICEYe, iktsuarpok, 我是谁？, 顶不住了, 银☆星, TerVoid
 // @match        https://www.pokeclicker.com
 // @match        https://g8hh.github.io/pokeclicker/
@@ -16,6 +16,10 @@
 // @license      MIT
 // @connect      cdn.jsdelivr.net
 // @connect      raw.githubusercontent.com
+// @connect      raw.githack.com
+// @connect      cdn.statically.io
+// @connect      cdn.jsdmirror.cn
+// @connect      cdn.jsdmirror.com
 // ==/UserScript==
 
 /* global 
@@ -75,6 +79,10 @@ class TranslationCore {
     CDN = {
         jsDelivr: "https://cdn.jsdelivr.net/gh/DreamNya/PokeClickerHelper-Translation@main/json/",
         GitHub: "https://raw.githubusercontent.com/DreamNya/PokeClickerHelper-Translation/main/json/",
+        GitHack: "https://raw.githack.com/DreamNya/PokeClickerHelper-Translation/main/json/",
+        Statically: "https://cdn.statically.io/gh/DreamNya/PokeClickerHelper-Translation@main/json/",
+        JSDMirrorCN: "https://cdn.jsdmirror.cn/gh/DreamNya/PokeClickerHelper-Translation@main/json/",
+        JSDMirrorCOM: "https://cdn.jsdmirror.com/gh/DreamNya/PokeClickerHelper-Translation@main/json/",
     };
 
     /**
@@ -490,7 +498,8 @@ class TownModule extends BaseModule {
         };
 
         MoveToDungeon.prototype.text = function () {
-            return this.dungeon.displayName;
+            const dungeonName = this.dungeon.name;
+            return TownList[dungeonName]?.displayName ?? dungeonName;
         };
     }
 
@@ -567,7 +576,8 @@ class QuestLineModule extends BaseModule {
             real_description: descriptor,
             description: {
                 get() {
-                    if (this.inQuestLine) {
+                    // 兼容MultipleQuestsQuest子任务
+                    if (this.inQuestLine || this.mainQuest?.inQuestLine) {
                         return this.hook_QuestLineModule_description ?? this.real_description;
                     } else {
                         return this.hook_QuestModule_description ?? this.real_description;
@@ -582,10 +592,14 @@ class QuestLineModule extends BaseModule {
         Object.defineProperties(Quest.prototype, {
             hook_QuestLineModule_description: {
                 get() {
-                    //const description = this.customDescription || this.defaultDescription;
-                    return that.core.TranslationHelper.exporting || that.core.TranslationHelper.toggleRaw
-                        ? this.rawDescription
-                        : that.translationAPI.QuestDescription(this.parentQuestLine.name, this.rawDescription);
+                    if (that.core.TranslationHelper.exporting || that.core.TranslationHelper.toggleRaw) {
+                        return this.rawDescription;
+                    }
+                    const questLineName = this.parentQuestLine?.name ?? this.mainQuest?.parentQuestLine?.name;
+                    if (!questLineName) {
+                        return this.rawDescription;
+                    }
+                    return that.translationAPI.QuestDescription(questLineName, this.rawDescription);
                 },
             },
             getClearedMessage: {
@@ -1389,8 +1403,7 @@ class UIModule extends BaseModule {
                     <div class="m-auto d-flex" style="align-items: baseline; width: 100%;">
                         <label>CDN</label>
                         <select id="${prefix}CDN" title="选择任一可连通CDN即可" data-save="global" class="custom-select m-2" style="width: 67%; text-align: center;">
-                            <option value="jsDelivr">cdn.jsdelivr.net</option>
-                            <option value="GitHub">raw.githubusercontent.com</option>
+                            ${Object.entries(this.core.CDN).reduce((str, [value, url]) => str + `<option value="${value}">${url.replace(/^https:\/\//, "").split("/")[0]}</option>`, "")}
                         </select>
                         <button id="${prefix}Test" class="btn btn-sm btn-primary" data-save="false" title="测试CDN连通情况">测试</button>
                     </div>

@@ -26,9 +26,14 @@
 
 CDN-jsDelivr: <https://cdn.jsdelivr.net>  
 CDN-GitHub: <https://raw.githubusercontent.com>  
+CDN-GitHack: <https://raw.githack.com>  
+CDN-Statically: <https://cdn.statically.io>  
+CDN-JSDMirrorCN: <https://cdn.jsdmirror.cn>  
+CDN-JSDMirrorCOM: <https://cdn.jsdmirror.com>  
 GIT: <https://github.com/DreamNya/PokeClickerHelper-Translation>  
 
-脚本代码、汉化文本完全由GitHub仓库开源托管
+脚本代码、汉化文本完全由GitHub仓库开源托管  
+CDN仅用于远程获取汉化文本json文件，可自由选择使用的CDN  
 
 自v0.10.19起，脚本主版本号与游戏版本号相同，  
 脚本代码`.user.js`与汉化文本`.json`分离维护，脚本内采用`fetch`形式请求外部CDN资源  
