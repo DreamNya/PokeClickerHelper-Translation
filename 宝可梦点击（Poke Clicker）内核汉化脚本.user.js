@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         宝可梦点击（Poke Clicker）内核汉化脚本
 // @namespace    PokeClickerHelper
-// @version      0.10.25-n
+// @version      0.10.25-o
 // @description  采用内核汉化形式，目前汉化范围：所有任务线、NPC、成就、地区、城镇、道路、道馆、宝可梦、道具、临时对战、任务
 // @author       DreamNya, ICEYe, iktsuarpok, 我是谁？, 顶不住了, 银☆星, TerVoid
 // @match        https://www.pokeclicker.com
@@ -567,24 +567,26 @@ class QuestLineModule extends BaseModule {
     };
 
     // 公开的静态方法，用于QuestModules重复调用
+    static QuestPrototypeHooked = false;
     static QuestPrototypeHook = () => {
-        if ("real_description" in Quest.prototype) {
+        if (this.QuestPrototypeHooked) {
             return;
         }
-        const descriptor = Object.getOwnPropertyDescriptor(Quest.prototype, "description");
         Object.defineProperties(Quest.prototype, {
-            real_description: descriptor,
             description: {
                 get() {
                     // 兼容MultipleQuestsQuest子任务
-                    if (this.inQuestLine || this.mainQuest?.inQuestLine) {
-                        return this.hook_QuestLineModule_description ?? this.real_description;
-                    } else {
-                        return this.hook_QuestModule_description ?? this.real_description;
-                    }
+                    const isInQuestLine = this.inQuestLine || this.mainQuest?.inQuestLine;
+
+                    return (
+                        (isInQuestLine ? this.hook_QuestLineModule_description : this.hook_QuestModule_description) ??
+                        this.customDescription ??
+                        this.defaultDescription
+                    );
                 },
             },
         });
+        this.QuestPrototypeHooked = true;
     };
     #hook() {
         QuestLineModule.QuestPrototypeHook();
@@ -1466,7 +1468,7 @@ class UIModule extends BaseModule {
             `);
 
         CoreModule.UIstyle.push(`
-            #PokeClickerHelperTranslationHelper .AdvanceTable-T {
+            #${prefix} .AdvanceTable-T {
                 flex: auto !important;
                 display: flex;
                 flex-wrap: wrap !important;
@@ -1475,19 +1477,19 @@ class UIModule extends BaseModule {
                 padding: 0 5px !important;;
             }
             /*
-            #PokeClickerHelperTranslationHelper .AdvanceTable-T .AdvanceOption-T {
+            #${prefix} .AdvanceTable-T .AdvanceOption-T {
                 height: 36px !important;
                 width: 15% !important;
                 display: flex !important;
                 align-items: center !important;
             }
 
-            #PokeClickerHelperTranslationHelper .AdvanceTable-T .AdvanceOption-T div {
+            #${prefix} .AdvanceTable-T .AdvanceOption-T div {
                 width: 100% !important;
                 text-align: center !important;
             }
 
-            #PokeClickerHelperTranslationHelper .AdvanceTable-T .AdvanceOption-T input {
+            #${prefix} .AdvanceTable-T .AdvanceOption-T input {
                 width: 25% !important;
             }*/
         `);
