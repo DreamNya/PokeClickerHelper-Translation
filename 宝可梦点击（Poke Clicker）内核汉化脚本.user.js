@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         宝可梦点击（Poke Clicker）内核汉化脚本
 // @namespace    PokeClickerHelper
-// @version      0.10.25-p
+// @version      0.10.25-q
 // @description  采用内核汉化形式，目前汉化范围：所有任务线、NPC、成就、地区、城镇、道路、道馆、宝可梦、道具、临时对战、任务
 // @author       DreamNya, ICEYe, iktsuarpok, 我是谁？, 顶不住了, 银☆星, TerVoid
 // @match        https://www.pokeclicker.com
@@ -26,7 +26,7 @@
    TownList, QuestLine:true, Notifier, MultipleQuestsQuest, App, NPC, NPCController, GameController, ko,
    GameConstants, SubRegions, Routes, GymList, Gym, Achievement, SecretAchievement, AchievementHandler, AchievementTracker,
    pokemonMap, PokeballItem, PokemonType, ItemList, UndergroundItemValueType, UndergroundItem, KeyItem, TemporaryBattleList, TemporaryBattle,
-   FluteEffectRunner, OakItem, OakItemType, QuestHelper, BerryType, GameHelper, BadgeEnums, GameLoadState, Quest, Town, MoveToDungeon,
+   FluteEffectRunner, OakItem, OakItemType, QuestHelper, BerryType, GameHelper, BadgeEnums, GameLoadState, Quest, Town, MoveToDungeon, MoveToTown
    BattleFrontier, BattleFrontierRunner
 */
 
@@ -501,6 +501,11 @@ class TownModule extends BaseModule {
         MoveToDungeon.prototype.text = function () {
             const dungeonName = this.dungeon.name;
             return TownList[dungeonName]?.displayName ?? dungeonName;
+        };
+
+        MoveToTown.prototype.text = function () {
+            const townName = this.townName;
+            return TownList[townName]?.displayName ?? townName;
         };
     }
 
