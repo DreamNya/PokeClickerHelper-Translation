@@ -94,7 +94,7 @@
     },
     "QuestItem": {
         "filePath": "pokeclicker/src/modules/items/QuestItem.ts",
-        "superArg6": "description",
+        "superArg6": "currency",
         "trackedFeatures": {
             "description": null
         }
@@ -117,7 +117,7 @@
         "filePath": "pokeclicker/src/modules/items/ChristmasPresent.ts",
         "superArg6": null,
         "trackedFeatures": {
-            "description": "get description(): string {\n        return 'A lovely Christmas Present.';\n    }"
+            "description": null
         }
     },
     "TreasureItem": {
@@ -156,56 +156,56 @@
         }
     },
     "ExpGainedBonusHeldItem": {
-        "filePath": "pokeclicker/src/scripts/items/HeldItem.ts",
+        "filePath": "pokeclicker/src/modules/items/HeldItem.ts",
         "superArg6": "`A held item that earns ${pokemonDescription} ${(gainedBonus - 1).toLocaleString('en-US', { style: 'percent', minimumFractionDigits: 0, maximumFractionDigits: 0 })} bonus Experience Points.`",
         "trackedFeatures": {
             "description": null
         }
     },
     "AttackBonusHeldItem": {
-        "filePath": "pokeclicker/src/scripts/items/HeldItem.ts",
+        "filePath": "pokeclicker/src/modules/items/HeldItem.ts",
         "superArg6": "`A held item that ${_attackBonus > 1 ? 'raises' : 'lowers'} the attack of ${pokemonDescription} by ${(Math.abs(_attackBonus - 1)).toLocaleString('en-US', { style: 'percent', minimumFractionDigits: 0, maximumFractionDigits: 0 })}${additionDescription}.`",
         "trackedFeatures": {
             "description": null
         }
     },
     "PokemonRestrictedAttackBonusHeldItem": {
-        "filePath": "pokeclicker/src/scripts/items/HeldItem.ts",
-        "superArg6": "_attackBonus",
+        "filePath": "pokeclicker/src/modules/items/HeldItem.ts",
+        "superArg6": null,
         "trackedFeatures": {
             "description": null
         }
     },
     "TypeRestrictedAttackBonusHeldItem": {
-        "filePath": "pokeclicker/src/scripts/items/HeldItem.ts",
+        "filePath": "pokeclicker/src/modules/items/HeldItem.ts",
         "superArg6": "_attackBonus",
         "trackedFeatures": {
             "description": null
         }
     },
     "TypeRestrictedExceptionAttackBonusHeldItem": {
-        "filePath": "pokeclicker/src/scripts/items/HeldItem.ts",
+        "filePath": "pokeclicker/src/modules/items/HeldItem.ts",
         "superArg6": "_attackBonus",
         "trackedFeatures": {
             "description": null
         }
     },
     "HybridAttackBonusHeldItem": {
-        "filePath": "pokeclicker/src/scripts/items/HeldItem.ts",
+        "filePath": "pokeclicker/src/modules/items/HeldItem.ts",
         "superArg6": "attackBonus",
         "trackedFeatures": {
             "description": null
         }
     },
     "EVsGainedBonusHeldItem": {
-        "filePath": "pokeclicker/src/scripts/items/HeldItem.ts",
+        "filePath": "pokeclicker/src/modules/items/HeldItem.ts",
         "superArg6": "`A held item that increases EV gains for the holding Pokémon by ${(gainedBonus - 1).toLocaleString('en-US', { style: 'percent', minimumFractionDigits: 0, maximumFractionDigits: 0 })}.`",
         "trackedFeatures": {
             "description": null
         }
     },
     "HeldItem": {
-        "filePath": "pokeclicker/src/scripts/items/HeldItem.ts",
+        "filePath": "pokeclicker/src/modules/items/HeldItem.ts",
         "superArg6": "description",
         "trackedFeatures": {
             "description": null

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         宝可梦点击（Poke Clicker）内核汉化脚本
 // @namespace    PokeClickerHelper
-// @version      0.10.25-q
+// @version      0.10.26-a
 // @description  采用内核汉化形式，目前汉化范围：所有任务线、NPC、成就、地区、城镇、道路、道馆、宝可梦、道具、临时对战、任务
 // @author       DreamNya, ICEYe, iktsuarpok, 我是谁？, 顶不住了, 银☆星, TerVoid
 // @match        https://www.pokeclicker.com
@@ -1003,6 +1003,7 @@ class AchievementModule extends BaseModule {
                 return regionStr + gymStr;
             });
         },
+        Event: (i) => i,
     };
 
     #formatRegex(text, reg, value) {
@@ -1632,7 +1633,7 @@ class ItemModule extends BaseModule {
         // TODO
         PokeBlock: (item) => item._description || "Unobtainable item for future uses",
         MegaStoneItem: (item) => {
-            const description = item._description || `一块${this.core.TranslationAPI.Pokemon(item.basePokemon)}的Mega进化石`;
+            const description = /* item._description || */ `一块${this.core.TranslationAPI.Pokemon(item.basePokemon)}的Mega进化石`;
             item.getDescription = () => {
                 return this.translationAPI.ItemDescription(description);
             };

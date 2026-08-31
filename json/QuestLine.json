@@ -110,7 +110,7 @@
             "Clear the Olivine Lighthouse dungeon in Olivine City.": "清理浅葱市的浅葱灯塔地牢",
             "Talk to Jasmine in the Olivine Lighthouse.": "在浅葱灯塔和阿蜜谈谈",
             "Talk to the Pharmacist in Cianwood City.": "在湛蓝市和药剂师谈谈",
-            "The Pharmacist said he needs some time to finish Amphys medicine. Clear the Cianwood City Gym in the meantime.": "药剂师说他需要一些时间来完成光儿的药物。与此同时清理湛蓝市道馆",
+            "The Pharmacist said he needs some time to finish Amphy's medicine. Clear the Cianwood City Gym in the meantime.": "药剂师说他需要一些时间来制作光儿的药物。与此同时清理湛蓝市道馆",
             "Give Amphy their medicine in the Olivine Lighthouse.": "在浅葱灯塔将药物给光儿"
         }
     },
@@ -1658,6 +1658,15 @@
             "Defeat Team Flare Leader Lysandre.": "击败闪焰队老大·弗拉达利",
             "Defeat Team Plasma Leader Ghetsis.": "击败等离子队老大·魁奇思",
             "Defeat Team Rainbow Leader Giovanni.": "击败彩虹火箭队老大·坂木"
+        }
+    },
+    "Pirate Treasure Map": {
+        "name": "海盗藏宝图",
+        "description": {
+            "You obtained a Treasure Map.": "你获得了一张藏宝图"
+        },
+        "descriptions": {
+            "The map you obtained says there is a treasure waiting in Iron Ruins. Go clear it out.": "你获得的地图显示，黑金遗迹里藏着宝藏。去把它清理干净吧"
         }
     }
 }

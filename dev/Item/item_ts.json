@@ -67,28 +67,28 @@
         "filePath": "pokeclicker/src/scripts/items/HatcheryHelperItem.ts"
     },
     "ExpGainedBonusHeldItem": {
-        "filePath": "pokeclicker/src/scripts/items/HeldItem.ts"
+        "filePath": "pokeclicker/src/modules/items/HeldItem.ts"
     },
     "AttackBonusHeldItem": {
-        "filePath": "pokeclicker/src/scripts/items/HeldItem.ts"
+        "filePath": "pokeclicker/src/modules/items/HeldItem.ts"
     },
     "PokemonRestrictedAttackBonusHeldItem": {
-        "filePath": "pokeclicker/src/scripts/items/HeldItem.ts"
+        "filePath": "pokeclicker/src/modules/items/HeldItem.ts"
     },
     "TypeRestrictedAttackBonusHeldItem": {
-        "filePath": "pokeclicker/src/scripts/items/HeldItem.ts"
+        "filePath": "pokeclicker/src/modules/items/HeldItem.ts"
     },
     "TypeRestrictedExceptionAttackBonusHeldItem": {
-        "filePath": "pokeclicker/src/scripts/items/HeldItem.ts"
+        "filePath": "pokeclicker/src/modules/items/HeldItem.ts"
     },
     "HybridAttackBonusHeldItem": {
-        "filePath": "pokeclicker/src/scripts/items/HeldItem.ts"
+        "filePath": "pokeclicker/src/modules/items/HeldItem.ts"
     },
     "EVsGainedBonusHeldItem": {
-        "filePath": "pokeclicker/src/scripts/items/HeldItem.ts"
+        "filePath": "pokeclicker/src/modules/items/HeldItem.ts"
     },
     "HeldItem": {
-        "filePath": "pokeclicker/src/scripts/items/HeldItem.ts"
+        "filePath": "pokeclicker/src/modules/items/HeldItem.ts"
     },
     "ZCrystalItem": {
         "filePath": "pokeclicker/src/scripts/items/ZCrystalItem.ts"
