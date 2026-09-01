@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         宝可梦点击（Poke Clicker）内核汉化脚本
 // @namespace    PokeClickerHelper
-// @version      0.10.26-a
+// @version      0.10.26-b
 // @description  采用内核汉化形式，目前汉化范围：所有任务线、NPC、成就、地区、城镇、道路、道馆、宝可梦、道具、临时对战、任务
 // @author       DreamNya, ICEYe, iktsuarpok, 我是谁？, 顶不住了, 银☆星, TerVoid
 // @match        https://www.pokeclicker.com
@@ -527,6 +527,7 @@ class QuestLineModule extends BaseModule {
 
     init() {
         this.parser();
+        this.#specialHook();
         this.#hook();
     }
     parser = () => {
@@ -625,12 +626,14 @@ class QuestLineModule extends BaseModule {
                 },
             },
         });
+
         // TODO 解耦
         GameLoadState.onLoadState(
             GameLoadState.states.appliedBindings,
             () => {
                 App.game.quests
                     .questLines()
+                    .filter((questLine) => !this.#specialHookList.includes(questLine.name))
                     .flatMap((q) => q.quests())
                     .forEach((quest) => {
                         quest.rawDescription = quest.description;
@@ -643,6 +646,17 @@ class QuestLineModule extends BaseModule {
             },
             true
         );
+
+        /* QuestLine.prototype.realAddQuest = QuestLine.prototype.addQuest;
+        QuestLine.prototype.addQuest = function (quest, ...args) {
+            quest.rawDescription = quest.description;
+            if (quest instanceof MultipleQuestsQuest) {
+                quest.quests.forEach((subQuest) => {
+                    subQuest.rawDescription = subQuest.description;
+                });
+            }
+            QuestLine.prototype.realAddQuest.call(this, quest, ...args);
+        }; */
 
         Object.defineProperties(QuestLine.prototype, {
             displayName: {
@@ -658,6 +672,47 @@ class QuestLineModule extends BaseModule {
                         ? this._description
                         : that.translationAPI.QuestLineDescription(this.name, this._description);
                 },
+            },
+        });
+    }
+
+    // 特殊活动任务处理，动态添加
+    #specialHookList = ["Pirate Treasure Map"];
+    #specialHook() {
+        TreasureMapQuestLine = new Proxy(TreasureMapQuestLine, {
+            construct: (target, argArray, newTarget) => {
+                const questline = Reflect.construct(target, argArray, newTarget);
+                const quest = questline.quests()[0];
+                quest._rawDescription = quest.description;
+                if (
+                    !/^The map you obtained says there is a treasure waiting in .*\. Go clear it out\.$/.test(
+                        quest._rawDescription
+                    )
+                ) {
+                    alert("TreasureMapQuestLine 汉化文本变动需要更新hook");
+                    return questline;
+                }
+                const that = this;
+                Object.defineProperties(quest, {
+                    rawDescription: {
+                        get() {
+                            if (that.core.TranslationHelper.exporting) {
+                                return "";
+                            } else {
+                                return this._rawDescription;
+                            }
+                        },
+                    },
+                    description: {
+                        get() {
+                            if (that.core.TranslationHelper.exporting || that.core.TranslationHelper.toggleRaw) {
+                                return this.rawDescription;
+                            }
+                            return `你获得的地图显示，${that.core.TranslationAPI.Town(this.dungeon)}里藏着宝藏。去把它清理干净吧`;
+                        },
+                    },
+                });
+                return questline;
             },
         });
     }
