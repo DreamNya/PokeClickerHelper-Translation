@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         宝可梦点击（Poke Clicker）内核汉化脚本
 // @namespace    PokeClickerHelper
-// @version      0.10.26-b
+// @version      0.10.26-c
 // @description  采用内核汉化形式，目前汉化范围：所有任务线、NPC、成就、地区、城镇、道路、道馆、宝可梦、道具、临时对战、任务
 // @author       DreamNya, ICEYe, iktsuarpok, 我是谁？, 顶不住了, 银☆星, TerVoid
 // @match        https://www.pokeclicker.com
@@ -27,7 +27,7 @@
    GameConstants, SubRegions, Routes, GymList, Gym, Achievement, SecretAchievement, AchievementHandler, AchievementTracker,
    pokemonMap, PokeballItem, PokemonType, ItemList, UndergroundItemValueType, UndergroundItem, KeyItem, TemporaryBattleList, TemporaryBattle,
    FluteEffectRunner, OakItem, OakItemType, QuestHelper, BerryType, GameHelper, BadgeEnums, GameLoadState, Quest, Town, MoveToDungeon, MoveToTown
-   BattleFrontier, BattleFrontierRunner
+   BattleFrontier, BattleFrontierRunner, veteranShop, pokeMartShop
 */
 
 /**
@@ -123,7 +123,7 @@ class TranslationCore {
 
     /** @private 初始化全局入口 */
     #init() {
-        window.TranslationHelper = this.TranslationHelper;
+        window.PCHTranslationHelper = this.TranslationHelper;
         if (this.CoreModule) {
             this.CoreModule.TranslationHelper = this.TranslationHelper;
         }
@@ -1764,10 +1764,11 @@ class ItemModule extends BaseModule {
         },
     };
 
+    #ItemLists = [...new Set([...Object.values(ItemList), ...veteranShop.items, ...pokeMartShop.items])];
     #hook() {
         const that = this;
         // 通过遍历实例反向查找闭包class
-        const FluteItem = Object.values(ItemList).find((i) => i.constructor.name == "FluteItem")?.constructor;
+        const FluteItem = this.#ItemLists.find((i) => i.constructor.name == "FluteItem")?.constructor;
         FluteItem.prototype.getDescription = function () {
             return `+${(this.getMultiplier() - 1).toLocaleString("en-US", { style: "percent", minimumFractionDigits: 2, maximumFractionDigits: 2 })} ${this.description} 加成`;
         };
@@ -1874,7 +1875,7 @@ class ItemModule extends BaseModule {
         $("#shovelMulch > li > span:nth-child(2)").text(this.translationAPI.Item("Mulch Shovel"));
 
         // Item
-        Object.values(ItemList).forEach((item) => {
+        this.#ItemLists.forEach((item) => {
             const type = item.constructor.name;
             const rawDisplayName = item.displayName;
             const rawDescription = type == "BuyKeyItem" ? "" : item.description;
@@ -1926,7 +1927,7 @@ class ItemModule extends BaseModule {
 
     exportData = () => {
         this.core.TranslationHelper.exporting = true;
-        const displayName = Object.values(ItemList).reduce((obj, i) => {
+        const displayName = this.#ItemLists.reduce((obj, i) => {
             //const filters = ["PokemonItem"];
             //const type = i.constructor.name;
             //if (!filters.includes(type)) {
@@ -1935,7 +1936,7 @@ class ItemModule extends BaseModule {
             return obj;
         }, {});
 
-        const description = Object.values(ItemList).reduce((obj, i) => {
+        const description = this.#ItemLists.reduce((obj, i) => {
             const type = i.constructor.name;
             if (!(type in this.#desMapper)) {
                 obj[i.description] = this.translationAPI.ItemDescription(i.description, "");

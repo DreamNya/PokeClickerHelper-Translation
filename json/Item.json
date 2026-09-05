@@ -493,7 +493,12 @@
         "Dragonium Z": "龙Ｚ",
         "Darkinium Z": "恶Ｚ",
         "Steelium Z": "钢Ｚ",
-        "Fairium Z": "妖精Ｚ"
+        "Fairium Z": "妖精Ｚ",
+        "Pokérus Virus": "宝可病毒",
+        "Holo Caster": "全息影像通讯器",
+        "Wailmer Pail": "吼吼鲸喷壶",
+        "Gem Case": "宝石盒",
+        "Super Rod": "厉害钓竿"
     },
     "ItemDescription": {
         "+50% Bonus to Pokémon attack for 30 seconds": "30秒内提升50%宝可梦攻击力",
