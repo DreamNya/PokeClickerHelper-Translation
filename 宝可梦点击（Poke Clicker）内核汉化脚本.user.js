@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         宝可梦点击（Poke Clicker）内核汉化脚本
 // @namespace    PokeClickerHelper
-// @version      0.10.26-c
+// @version      0.10.26-d
 // @description  采用内核汉化形式，目前汉化范围：所有任务线、NPC、成就、地区、城镇、道路、道馆、宝可梦、道具、临时对战、任务
 // @author       DreamNya, ICEYe, iktsuarpok, 我是谁？, 顶不住了, 银☆星, TerVoid
 // @match        https://www.pokeclicker.com
@@ -298,13 +298,13 @@ class TranslationCore {
         if (this.#failed.length === 0) {
             Notifier.notify({
                 title: "宝可梦点击内核汉化脚本",
-                message: `汉化加载完毕\n可以正常加载存档\n\n<div class="d-flex" style="justify-content: space-around;"><button class="btn btn-block btn-info m-0 col-5" onclick="window.TranslationHelper.ForceRefreshTranslation()">清空汉化缓存</button><button class="btn btn-block btn-info m-0 col-5" onclick="window.TranslationHelper.ImportAction()">本地导入汉化</button></div>`,
+                message: `汉化加载完毕\n可以正常加载存档\n\n<div class="d-flex" style="justify-content: space-around;"><button class="btn btn-block btn-info m-0 col-5" onclick="window.PCHTranslationHelper.ForceRefreshTranslation()">清空汉化缓存</button><button class="btn btn-block btn-info m-0 col-5" onclick="window.PCHTranslationHelper.ImportAction()">本地导入汉化</button></div>`,
                 timeout: 15000,
             });
         } else {
             Notifier.notify({
                 title: "宝可梦点击内核汉化脚本",
-                message: `请求汉化json失败，请检查网络链接或更新脚本\n无法完成汉化：${this.#failed.join(" / ")}\n\n<div class="d-flex" style="justify-content: space-around;"><button class="btn btn-block btn-info m-0 col-5" onclick="window.TranslationHelper.ForceRefreshTranslation()">清空汉化缓存</button><button class="btn btn-block btn-info m-0 col-5" onclick="window.TranslationHelper.ImportAction()">本地导入汉化</button></div>`,
+                message: `请求汉化json失败，请检查网络链接或更新脚本\n无法完成汉化：${this.#failed.join(" / ")}\n\n<div class="d-flex" style="justify-content: space-around;"><button class="btn btn-block btn-info m-0 col-5" onclick="window.PCHTranslationHelper.ForceRefreshTranslation()">清空汉化缓存</button><button class="btn btn-block btn-info m-0 col-5" onclick="window.PCHTranslationHelper.ImportAction()">本地导入汉化</button></div>`,
                 timeout: 6000000,
             });
         }
@@ -1157,11 +1157,11 @@ class RegionsModule extends BaseModule {
     #hook() {
         $("[href='#mapBody'] > span").attr(
             "data-bind",
-            "text: `城镇地图 (${TranslationHelper.TranslationAPI.RegionFull(GameConstants.camelCaseToString(GameConstants.Region[player.region]))})`"
+            "text: `城镇地图 (${window.PCHTranslationHelper.TranslationAPI.RegionFull(GameConstants.camelCaseToString(GameConstants.Region[player.region]))})`"
         );
         $("#subregion-travel-buttons > button.btn.btn-sm.btn-primary").attr(
             "data-bind",
-            "click: () => SubRegions.openModal(), text: `副区域旅行 (${TranslationHelper.TranslationAPI.RegionAll(player.subregionObject()?.name)})`"
+            "click: () => SubRegions.openModal(), text: `副区域旅行 (${window.PCHTranslationHelper.TranslationAPI.RegionAll(player.subregionObject()?.name)})`"
         );
     }
 }
